@@ -495,6 +495,7 @@ function formatTags(cell) {
 
 function formatReadingTimeWithColor(cell) {
   const seconds = cell.getValue();
+  if (!readingTimeColorScale || !seconds) return seconds;
   const backgroundColor = readingTimeColorScale(seconds);
   const textColor = getContrastColor(backgroundColor);
   const element = cell.getElement();
@@ -505,6 +506,7 @@ function formatReadingTimeWithColor(cell) {
 
 function formatInteractionDaysWithColor(cell) {
   const seconds = cell.getValue();
+  if (!interactionDaysColorScale || !seconds) return seconds;
   const backgroundColor = interactionDaysColorScale(seconds);
   const textColor = getContrastColor(backgroundColor);
   const element = cell.getElement();
