@@ -1,5 +1,68 @@
 {
-  "snapshot_time": "2026-02-07T00:00:00+00:00",
+  "snapshot_time": "2026-02-07T23:35:07.912744+00:00",
   "repository": "chtmp223/papers-feed",
-  "objects": {}
+  "objects": {
+    "interactions:acl-anthology.2023.acl-long.1": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2023.acl-long.1",
+        "interactions": []
+      },
+      "meta": {
+        "issue_number": 3,
+        "object_id": "interactions:acl-anthology.2023.acl-long.1",
+        "created_at": "2026-02-07T23:34:25+00:00",
+        "updated_at": "2026-02-07T23:34:27+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2023.acl-long.1.pdf": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2023.acl-long.1.pdf",
+        "url": "https://aclanthology.org/2023.acl-long.1.pdf",
+        "title": "2023.acl-long.1.pdf",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-07T23:34:25.284Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "pdf"
+      },
+      "meta": {
+        "issue_number": 2,
+        "object_id": "paper:acl-anthology.2023.acl-long.1.pdf",
+        "created_at": "2026-02-07T23:34:25+00:00",
+        "updated_at": "2026-02-07T23:34:44+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2023.acl-long.1": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2023.acl-long.1",
+        "url": "https://aclanthology.org/2023.acl-long.1/",
+        "title": "One Cannot Stand for Everyone! Leveraging Multiple User Simulators to train Task-oriented Dialogue Systems",
+        "authors": "Yajiao Liu, Xin Jiang, Yichun Yin, Yasheng Wang, Fei Mi, Qun Liu, Xiang Wan, Benyou Wang",
+        "abstract": "AbstractUser simulators are agents designed to imitate human users; recent advances have found that Task-oriented Dialogue (ToD) systems optimized toward a user simulator could better satisfy the need of human users. However, this might result in a sub-optimal ToD system if it is tailored to only one ad hoc user simulator, since human users can behave differently. In this paper, we propose a framework called MUST to optimize ToD systems via leveraging Multiple User SimulaTors. The main challenges of implementing MUST fall in 1) how to adaptively determine which user simulator to interact with the ToD system at each optimization step, since the ToD system might be over-fitted to some specific user simulators, and simultaneously under-fitted to some others; 2) how to avoid catastrophic forgetting of the adaption for a simulator that is not selected for several consecutive optimization steps.To tackle these challenges, we formulate MUST as a Multi-armed bandits (MAB) problem and provide a method called MUSTadaptive that balances i) the boosting adaption for adaptive interactions between different user simulators and the ToD system andii) the uniform adaption to avoid the catastrophic forgetting issue.With both automatic evaluations and human evaluations, our experimental results on MultiWOZ show that the dialogue system trained by MUST achieves a better performance than those trained by a single user simulator. It also has a better generalization ability when testing with unseen user simulators.",
+        "timestamp": "2026-02-07T23:34:04.497Z",
+        "rating": "novote",
+        "publishedDate": "2023/7",
+        "tags": [],
+        "doi": "10.18653/v1/2023.acl-long.1",
+        "journalName": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 1,
+        "object_id": "paper:acl-anthology.2023.acl-long.1",
+        "created_at": "2026-02-07T23:34:04+00:00",
+        "updated_at": "2026-02-07T23:34:23+00:00",
+        "version": 1
+      }
+    }
+  }
 }
