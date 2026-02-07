@@ -29,7 +29,6 @@ export class MiscIntegration extends BaseSourceIntegration {
     "jstor.org/",
     "proceedings.mlr.press/",
     "journals.plos.org/plosone/article",
-    "ieeexplore.ieee.org/document/",
     "royalsocietypublishing.org/doi/",
     "papers.nips.cc/paper_files/paper/",
     "philarchive.org/archive/",
@@ -48,7 +47,6 @@ export class MiscIntegration extends BaseSourceIntegration {
     "bmj.com/content/",
     "ntsb.gov/investigations/pages",
     "ntsb.gov/investigations/AccidentReports",
-    "aclanthology.org/",
     "journals.ametsoc.org/view/journals/",
     
     "substack.com/p/",

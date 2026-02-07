@@ -6,6 +6,10 @@ import { arxivIntegration } from './arxiv';
 import { openReviewIntegration } from './openreview';
 import { natureIntegration } from './nature';
 import { pnasIntegration } from './pnas';
+import { aclAnthologyIntegration } from './acl-anthology';
+import { ieeeIntegration } from './ieee';
+import { nberIntegration } from './nber';
+import { newspapersIntegration } from './newspapers';
 import { miscIntegration } from './misc';
 
 export const sourceIntegrations: SourceIntegration[] = [
@@ -13,7 +17,11 @@ export const sourceIntegrations: SourceIntegration[] = [
   openReviewIntegration,
   natureIntegration,
   pnasIntegration,
-  miscIntegration,
+  aclAnthologyIntegration,
+  ieeeIntegration,
+  nberIntegration,
+  newspapersIntegration,
+  miscIntegration, // must be last (catch-all)
 ];
 
 /*     *     *     *     */
