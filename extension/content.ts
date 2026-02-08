@@ -360,12 +360,7 @@ async function processCurrentPage(force: boolean = false): Promise<PaperMetadata
       });
       
       logger.debug(`Sent extracted metadata to background script for ${metadata.sourceId}:${metadata.paperId}`);
-      
-      // Start session tracking if tab is visible
-      if (isTabVisible) {
-        startSessionTracking(metadata.sourceId, metadata.paperId);
-      }
-      
+
       return metadata;
     }
   } catch (error) {
@@ -387,9 +382,6 @@ document.addEventListener('visibilitychange', () => {
     // If we have a current session, restart it
     if (currentSession) {
       startSessionTracking(currentSession.sourceId, currentSession.paperId);
-    } else {
-      // Otherwise, try to process the page
-      processCurrentPage();
     }
   } else if (!isTabVisible && wasVisible) {
     // Tab has become hidden - end current session
@@ -409,9 +401,6 @@ window.addEventListener('focus', () => {
   // If we have a current session, restart it
   if (currentSession) {
     startSessionTracking(currentSession.sourceId, currentSession.paperId);
-  } else {
-    // Otherwise, try to process the page
-    processCurrentPage();
   }
 });
 
@@ -519,7 +508,6 @@ chrome.runtime.onMessage.addListener((message: any, sender, sendResponse) => {
   if (message.type === 'processPage') {
     // Re-process the entire page
     linkProcessor.processLinks(document);
-    processCurrentPage();
     sendResponse({ success: true });
     return true;
   }
@@ -541,9 +529,6 @@ chrome.runtime.onMessage.addListener((message: any, sender, sendResponse) => {
   
   // Set initial tab visibility
   isTabVisible = document.visibilityState === 'visible';
-  
-  // Process current page
-  processCurrentPage();
   
   // Tell background script we're ready and what page we're on
   chrome.runtime.sendMessage(
@@ -569,8 +554,6 @@ new MutationObserver(() => {
       endCurrentSession('url_change');
     }
     
-    // Update URL and process new page
     lastUrl = url;
-    processCurrentPage();
   }
 }).observe(document, { subtree: true, childList: true });
