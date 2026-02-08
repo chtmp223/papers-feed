@@ -1,5 +1,33 @@
 {
-  "snapshot_time": "2026-02-08T00:30:00+00:00",
+  "snapshot_time": "2026-02-08T01:08:36.516675+00:00",
   "repository": "chtmp223/papers-feed",
-  "objects": {}
+  "objects": {
+    "paper:nber.w34777": {
+      "data": {
+        "rating": "novote",
+        "doi": "10.3386/w34777",
+        "timestamp": "2026-02-08T01:07:44.172Z",
+        "abstract": "Founded in 1920, the NBER is a private, non-profit, non-partisan organization dedicated to conducting economic research and to disseminating research findings among academics, public policy makers, and business professionals.",
+        "url": "https://www.nber.org/papers/w34777",
+        "authors": "Imke Reimers, Joel Waldfogel",
+        "publishedDate": "2026/02/02",
+        "title": "AI and the Quantity and Quality of Creative Products: Have LLMs Boosted Creation of Valuable Books?",
+        "sourceId": "nber",
+        "tags": [
+          "Imke Reimers",
+          "Joel Waldfogel"
+        ],
+        "paperId": "w34777",
+        "journalName": "NBER Working Papers",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 12,
+        "object_id": "paper:nber.w34777",
+        "created_at": "2026-02-08T01:07:44+00:00",
+        "updated_at": "2026-02-08T01:08:12+00:00",
+        "version": 1
+      }
+    }
+  }
 }
