@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T16:12:23.957794+00:00",
+  "snapshot_time": "2026-02-08T16:31:19.954854+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -160,6 +160,94 @@
         "object_id": "paper:url.7BCFC2D3",
         "created_at": "2026-02-08T16:11:42+00:00",
         "updated_at": "2026-02-08T16:12:02+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.64A41AB2": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "64A41AB2",
+        "url": "https://siddhantkhare.com/writing/ai-fatigue-is-real",
+        "title": "AI fatigue is real and nobody talks about it | Siddhant Khare",
+        "authors": "Siddhant Khare",
+        "abstract": "You're using AI to be more productive. So why are you more exhausted than ever? The paradox every engineer needs to confront.",
+        "timestamp": "2026-02-08T16:30:33.826Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-08",
+        "tags": [
+          "Siddhant Khare",
+          "AI agent infrastructure",
+          "LLM agents",
+          "agentic AI",
+          "AI security",
+          "OpenFGA",
+          "CNCF",
+          "memory systems",
+          "authorization",
+          "ReBAC",
+          "agent orchestration",
+          "context engineering",
+          "context efficiency",
+          "RAG deduplication",
+          "KV-cache",
+          "inference optimization",
+          "software engineer",
+          "open source",
+          "Gitpod",
+          "Ona",
+          "machine learning infrastructure",
+          "Zanzibar authorization",
+          "distributed systems",
+          "GPU profiling",
+          "MCP servers"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 19,
+        "object_id": "paper:url.64A41AB2",
+        "created_at": "2026-02-08T16:30:34+00:00",
+        "updated_at": "2026-02-08T16:30:53+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.4F5694F4": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "4F5694F4",
+        "url": "https://daplab.cs.columbia.edu/general/2026/01/07/why-vibe-coding-fails-and-how-to-fix-it.html",
+        "title": "DAPLab - Data, Agents, and Processes | Columbia University",
+        "authors": "DAPLab, Columbia University",
+        "abstract": "A research lab at Columbia University working at the intersection of AI, systems, and automation.",
+        "timestamp": "2026-02-08T16:30:05.829Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [
+          "DAPLab",
+          "Columbia University",
+          "agent-based systems",
+          "systems research",
+          "AI safety",
+          "RL",
+          "ML",
+          "HCI",
+          "cloud computing",
+          "large language models",
+          "trustworthy AI",
+          "automation research",
+          "operations research"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 18,
+        "object_id": "paper:url.4F5694F4",
+        "created_at": "2026-02-08T16:30:06+00:00",
+        "updated_at": "2026-02-08T16:30:24+00:00",
         "version": 1
       }
     }
