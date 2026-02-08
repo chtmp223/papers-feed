@@ -163,5 +163,7 @@ cython_debug/
 
 .secret
 .aider*
+frontend/config.js
+frontend/.env
 
 !extension/dist/

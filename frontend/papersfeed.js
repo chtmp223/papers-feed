@@ -11,26 +11,26 @@ let currentHeatmapMetric = 'papers';
 // Utility function to normalize dates using Chrono
 function normalizeDate(dateString) {
   if (!dateString) return null;
-  
+
   try {
     // Try to parse with Chrono
     const parsedDate = chrono.parseDate(dateString);
-    
+
     if (parsedDate) {
       // Return in YYYY-MM-DD format for consistency
       return parsedDate.toISOString().split('T')[0];
     }
-    
+
     // Fallback to native Date parsing if Chrono fails
     const fallbackDate = new Date(dateString);
     if (!isNaN(fallbackDate.getTime())) {
       return fallbackDate.toISOString().split('T')[0];
     }
-    
+
     // If all parsing fails, return original string
     console.warn(`Could not parse date: ${dateString}`);
     return dateString;
-    
+
   } catch (error) {
     console.warn(`Date parsing error for "${dateString}":`, error);
     return dateString;
@@ -46,13 +46,13 @@ function normalizeDate(dateString) {
 function daysBetween(startDate, endDate) {
   const start = new Date(startDate);
   const end = new Date(endDate);
-  
+
   // Calculate the difference in milliseconds
   const diffTime = end - start;
-  
+
   // Convert to days (1 day = 24 * 60 * 60 * 1000 milliseconds)
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
+
   return diffDays;
 }
 
@@ -63,25 +63,25 @@ class FilterManager {
     this.filters = new Map(); // name -> {fn, description}
     this.listeners = new Set();
   }
-  
+
   setFilter(name, filterFunction, description) {
     this.filters.set(name, { fn: filterFunction, desc: description });
     this.applyFilters();
     this.notifyListeners();
   }
-  
+
   removeFilter(name) {
     this.filters.delete(name);
     this.applyFilters();
     this.notifyListeners();
   }
-  
+
   clearAll() {
     this.filters.clear();
     this.applyFilters();
     this.notifyListeners();
   }
-  
+
   applyFilters() {
     if (this.filters.size === 0) {
       this.table.clearFilter();
@@ -91,11 +91,11 @@ class FilterManager {
           .every(filter => filter.fn(data));
       });
     }
-    
+
     // Update heatmap with filtered data
     this.updateHeatmap();
   }
-  
+
   updateHeatmap() {
     // If viewing paper details, show only that paper's activity
     if (currentDetailsPaper) {
@@ -103,31 +103,31 @@ class FilterManager {
       createReadingHeatmap(singlePaperActivity);
       return;
     }
-    
+
     // Otherwise, get currently filtered data from the table
     const filteredData = this.table.getData("active");
     console.log("Updating heatmap with", filteredData.length, "filtered papers");
-    
+
     // Extract reading activity from filtered data
     const filteredActivityData = extractReadingActivityData(filteredData, currentHeatmapMetric);
-    
+
     // Recreate the heatmap with filtered data
     createReadingHeatmap(filteredActivityData);
   }
-  
+
   getActiveFilters() {
     return Array.from(this.filters.entries())
-      .map(([name, {desc}]) => ({name, description: desc}));
+      .map(([name, { desc }]) => ({ name, description: desc }));
   }
-  
+
   addListener(callback) {
     this.listeners.add(callback);
   }
-  
+
   removeListener(callback) {
     this.listeners.delete(callback);
   }
-  
+
   notifyListeners() {
     this.listeners.forEach(callback => callback());
   }
@@ -140,62 +140,62 @@ class FilterStatusBar {
     this.container = document.getElementById('filter-status-bar');
     this.badgeContainer = document.getElementById('filter-badges');
     this.clearAllBtn = document.getElementById('clear-all-filters');
-    
+
     // Listen for filter changes
     this.filterManager.addListener(() => this.render());
-    
+
     // Set up clear all button
     this.clearAllBtn.addEventListener('click', () => {
       this.filterManager.clearAll();
     });
   }
-  
+
   render() {
     const activeFilters = this.filterManager.getActiveFilters();
-    
+
     if (activeFilters.length === 0) {
       this.container.style.display = 'none';
       return;
     }
-    
+
     this.container.style.display = 'block';
     this.badgeContainer.innerHTML = '';
-    
-    activeFilters.forEach(({name, description}) => {
+
+    activeFilters.forEach(({ name, description }) => {
       const badge = this.createFilterBadge(name, description);
       this.badgeContainer.appendChild(badge);
     });
   }
-  
+
   createFilterBadge(name, description) {
     const badge = document.createElement('div');
     badge.className = 'filter-badge';
-    
+
     // Add preview styling for search preview
     if (name === 'search-preview') {
       badge.classList.add('preview');
     }
-    
+
     const text = document.createElement('span');
     text.textContent = description;
-    
+
     const removeBtn = document.createElement('button');
     removeBtn.className = 'filter-badge-remove';
     removeBtn.innerHTML = '×';
     removeBtn.title = `Remove ${description} filter`;
     removeBtn.addEventListener('click', () => {
       this.filterManager.removeFilter(name);
-      
+
       // If removing search preview, also clear the input
       if (name === 'search-preview') {
         document.getElementById("search-input").value = "";
         currentPreviewSearchTerm = null;
       }
     });
-    
+
     badge.appendChild(text);
     badge.appendChild(removeBtn);
-    
+
     return badge;
   }
 }
@@ -207,14 +207,14 @@ let filterStatusBar;
 // Extract reading activity data from interaction data
 function extractReadingActivityData(data, metric = 'papers') {
   const dailyActivity = new Map();
-  
+
   data.forEach(paper => {
     if (paper.rawInteractionData && paper.rawInteractionData.length > 0) {
       paper.rawInteractionData.forEach(interaction => {
         if (interaction.type === "reading_session" && interaction.timestamp) {
           const date = new Date(interaction.timestamp);
           const dateStr = d3.timeFormat("%Y-%m-%d")(date);
-          
+
           if (!dailyActivity.has(dateStr)) {
             dailyActivity.set(dateStr, {
               papers: new Set(),
@@ -223,7 +223,7 @@ function extractReadingActivityData(data, metric = 'papers') {
               discoveries: new Set()
             });
           }
-          
+
           const dayData = dailyActivity.get(dateStr);
           dayData.papers.add(paper.paperKey);
           dayData.totalTime += interaction.data.duration_seconds || 0;
@@ -231,7 +231,7 @@ function extractReadingActivityData(data, metric = 'papers') {
         }
       });
     }
-    
+
     // Track paper discoveries (first read date)
     if (paper.firstRead) {
       const firstReadStr = paper.firstRead;
@@ -246,7 +246,7 @@ function extractReadingActivityData(data, metric = 'papers') {
       dailyActivity.get(firstReadStr).discoveries.add(paper.paperKey);
     }
   });
-  
+
   // Convert to array format based on selected metric
   const result = Array.from(dailyActivity.entries()).map(([dateStr, dayData]) => {
     let count;
@@ -266,13 +266,13 @@ function extractReadingActivityData(data, metric = 'papers') {
       default:
         count = dayData.papers.size;
     }
-    
+
     return {
       date: new Date(dateStr),
       count: count
     };
   });
-  
+
   return result.filter(d => d.count > 0).sort((a, b) => a.date - b.date);
 }
 
@@ -280,7 +280,7 @@ function extractReadingActivityData(data, metric = 'papers') {
 function createReadingHeatmap(data) {
   const container = d3.select("#reading-heatmap");
   container.selectAll("*").remove(); // Clear existing content
-  
+
   if (!data || data.length === 0) {
     container.append("div")
       .style("text-align", "center")
@@ -290,41 +290,41 @@ function createReadingHeatmap(data) {
       .text(currentDetailsPaper ? "No reading sessions for this paper" : "No reading activity data available");
     return;
   }
-  
+
   // Calculate date range - 8 months back, ending today
   const endDateTime = new Date();
   endDateTime.setHours(23, 59, 59, 999); // End of today
-  
+
   const startDateTime = new Date(endDateTime);
   startDateTime.setMonth(startDateTime.getMonth() - 8);
   startDateTime.setHours(0, 0, 0, 0); // Start of day 8 months ago
-  
+
   // Calculate the Sunday of the week containing endDateTime (for right alignment)
   const endSunday = new Date(endDateTime);
   endSunday.setDate(endDateTime.getDate() - endDateTime.getDay());
   endSunday.setHours(0, 0, 0, 0);
-  
+
   // Calculate how many weeks we need to show
   const totalWeeks = Math.ceil(d3.timeWeek.count(startDateTime, endSunday)) + 1;
-  
+
   // Dimensions
   const cellSize = 11;
   const cellGap = 2;
   const width = totalWeeks * (cellSize + cellGap);
   const height = 7 * (cellSize + cellGap) + 20; // 7 days + month labels
-  
+
   // Create SVG
   const svg = container
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-  
+
   // Set the header width to match the heatmap width
   const headerElement = document.querySelector('.heatmap-title');
   if (headerElement) {
     headerElement.style.width = width + 'px';
   }
-  
+
   // Create tooltip
   let tooltip = d3.select("body").select(".heatmap-tooltip");
   if (tooltip.empty()) {
@@ -333,25 +333,25 @@ function createReadingHeatmap(data) {
       .attr("class", "heatmap-tooltip")
       .style("opacity", 0);
   }
-  
+
   // Process data into a map for quick lookup
   const dataMap = new Map();
   data.forEach(d => {
     const dateStr = d3.timeFormat("%Y-%m-%d")(d.date);
     dataMap.set(dateStr, d.count);
   });
-  
+
   // Create color scale - let D3 handle everything
   const maxCount = d3.max(data, d => d.count) || 1;
 
   const paletteHeatmap = d3.interpolateGreens; //d3.interpolateYlGn; //d3.interpolateBlues;
-  const colorScale = maxCount > 10 
+  const colorScale = maxCount > 10
     ? d3.scaleSequentialLog(paletteHeatmap).domain([1, maxCount])
     : d3.scaleSequential(paletteHeatmap).domain([0, maxCount]);
-  
+
   // Generate all dates in our range
   const allDates = d3.timeDays(startDateTime, new Date(endDateTime.getTime() + 24 * 60 * 60 * 1000));
-  
+
   // Create cells
   const cells = svg.selectAll(".heatmap-cell")
     .data(allDates)
@@ -374,15 +374,15 @@ function createReadingHeatmap(data) {
       const count = dataMap.get(dateStr) || 0;
       return colorScale(count);
     })
-    .on("mouseover", function(event, d) {
+    .on("mouseover", function (event, d) {
       const dateStr = d3.timeFormat("%Y-%m-%d")(d);
       const count = dataMap.get(dateStr) || 0;
       const formatDate = d3.timeFormat("%B %d, %Y");
-      
+
       tooltip.transition()
         .duration(200)
         .style("opacity", .9);
-      
+
       // Adjust tooltip text based on context and metric
       let paperText;
       if (currentDetailsPaper) {
@@ -405,7 +405,7 @@ function createReadingHeatmap(data) {
             paperText = `${count} paper${count !== 1 ? 's' : ''} read`;
         }
       }
-      
+
       tooltip.html(`
         <div><strong>${formatDate(d)}</strong></div>
         <div>${paperText}</div>
@@ -413,26 +413,26 @@ function createReadingHeatmap(data) {
         .style("left", (event.pageX + 10) + "px")
         .style("top", (event.pageY - 28) + "px");
     })
-    .on("mouseout", function(d) {
+    .on("mouseout", function (d) {
       tooltip.transition()
         .duration(500)
         .style("opacity", 0);
     })
-    .on("click", function(event, d) {
+    .on("click", function (event, d) {
       // Only allow filtering when not viewing paper details
       if (currentDetailsPaper) {
         return; // Disable click filtering when viewing single paper
       }
-      
+
       // Filter table to show papers read on this date
       const dateStr = d3.timeFormat("%Y-%m-%d")(d);
       const count = dataMap.get(dateStr) || 0;
-      
+
       if (count > 0) {
         const formatDate = d3.timeFormat("%B %d, %Y");
-        const dateFilter = function(data) {
+        const dateFilter = function (data) {
           if (!data.rawInteractionData || data.rawInteractionData.length === 0) return false;
-          
+
           return data.rawInteractionData.some(interaction => {
             if (interaction.type === "reading_session" && interaction.timestamp) {
               const interactionDateStr = d3.timeFormat("%Y-%m-%d")(new Date(interaction.timestamp));
@@ -441,13 +441,13 @@ function createReadingHeatmap(data) {
             return false;
           });
         };
-        
+
         // Remove any existing heatmap-date filter and add new one
         filterManager.removeFilter('heatmap-date');
         filterManager.setFilter('heatmap-date', dateFilter, `Read on ${formatDate(d)}`);
       }
     });
-  
+
   // Add month labels - only show months that have visible weeks
   const monthsInRange = d3.timeMonths(startDateTime, endDateTime);
   svg.selectAll(".month-label")
@@ -461,7 +461,7 @@ function createReadingHeatmap(data) {
     })
     .attr("y", 12)
     .text(d => d3.timeFormat("%b")(d));
-  
+
   // Add day labels (M, W, F)
   const dayLabels = ["M", "", "W", "", "F", "", ""];
   svg.selectAll(".day-label")
@@ -470,7 +470,7 @@ function createReadingHeatmap(data) {
     .append("text")
     .attr("class", "day-label")
     .attr("x", -8)
-    .attr("y", (d, i) => i * (cellSize + cellGap) + 20 + cellSize/2 + 3)
+    .attr("y", (d, i) => i * (cellSize + cellGap) + 20 + cellSize / 2 + 3)
     .attr("text-anchor", "end")
     .text(d => d);
 }
@@ -488,7 +488,7 @@ function formatTags(cell) {
   if (!tags || !Array.isArray(tags) || tags.length === 0) {
     return '';
   }
-  return tags.map(tag => 
+  return tags.map(tag =>
     `<span class="tag">${tag}</span>`
   ).join(' ');
 }
@@ -520,14 +520,14 @@ function getContrastColor(rgbColor) {
   // D3 returns rgb() format, parse it
   const rgb = rgbColor.match(/\d+/g);
   if (!rgb) return '#000000';
-  
+
   const r = parseInt(rgb[0]);
-  const g = parseInt(rgb[1]); 
+  const g = parseInt(rgb[1]);
   const b = parseInt(rgb[2]);
-  
+
   // Calculate relative luminance
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  
+
   // Return black for light backgrounds, white for dark backgrounds
   return luminance > 0.5 ? '#000000' : '#ffffff';
 }
@@ -536,7 +536,7 @@ function formatInteractions(interactions) {
   if (!interactions || interactions.length === 0) {
     return '<p>No reading sessions recorded</p>';
   }
-  
+
   return `
     <table class="sessions-table">
       <thead>
@@ -548,15 +548,15 @@ function formatInteractions(interactions) {
       </thead>
       <tbody>
         ${interactions.map(interaction => {
-          const date = new Date(interaction.timestamp);
-          return `
+    const date = new Date(interaction.timestamp);
+    return `
             <tr>
               <td>${date.toLocaleString()}</td>
               <td>${interaction.data.duration_seconds} seconds</td>
               <td>${interaction.data.session_id}</td>
             </tr>
           `;
-        }).join('')}
+  }).join('')}
       </tbody>
     </table>
   `;
@@ -564,22 +564,22 @@ function formatInteractions(interactions) {
 
 function displayPaperDetails(paperId) {
   console.log("Displaying details for paper ID:", paperId);
-  
+
   const paper = allData.find(p => p.paperKey === paperId);
   if (!paper) {
     console.error('Paper not found:', paperId);
     return;
   }
-  
+
   currentDetailsPaper = paper;
-  
+
   // Update heatmap to show only this paper's activity
   const singlePaperActivity = extractReadingActivityData([paper], currentHeatmapMetric);
   createReadingHeatmap(singlePaperActivity);
-  
+
   const detailsSidebar = document.getElementById('details-sidebar');
   const detailsContent = document.getElementById('details-content');
-  
+
   // Content no longer includes close button - it's now fixed in HTML
   detailsContent.innerHTML = `
     <div class="details-header">
@@ -639,7 +639,7 @@ function displayPaperDetails(paperId) {
       ${formatInteractions(paper.rawInteractionData)}
     </div>
   `;
-  
+
   // Show the sidebar
   detailsSidebar.classList.add('active');
 }
@@ -720,7 +720,7 @@ function hideDetails() {
   const detailsSidebar = document.getElementById('details-sidebar');
   detailsSidebar.classList.remove('active');
   currentDetailsPaper = null;
-  
+
   // Restore heatmap to show filtered data or all data
   if (filterManager && filterManager.filters.size > 0) {
     // If filters are active, show filtered data
@@ -743,19 +743,19 @@ function extractObjectId(string, prefix) {
   // Case 1: Format is "prefix:id"
   let result = removePrefix(string, prefix, ':');
   if (result !== null) return result;
-  
+
   // Case 2: Format is "prefix.id"
   result = removePrefix(string, prefix, '.');
   if (result !== null) return result;
-  
+
   // Case 3: Format is "prefix:prefix:id"
   result = removePrefix(string, prefix + ':' + prefix, ':');
   if (result !== null) return result;
-  
+
   // Case 3 alternate: Format is "prefix.prefix.id"
   result = removePrefix(string, prefix + '.' + prefix, '.');
   if (result !== null) return result;
-  
+
   // Case 4: If none of the above, return the original string
   return string;
 }
@@ -764,19 +764,19 @@ function extractDomain(url) {
   try {
     const urlObj = new URL(url);
     let domain = urlObj.hostname;
-    
+
     // Remove www. prefix
     if (domain.startsWith('www.')) {
       domain = domain.substring(4);
     }
-    
+
     // Remove .com or .org suffix
     if (domain.endsWith('.com')) {
       domain = domain.substring(0, domain.length - 4);
     } else if (domain.endsWith('.org')) {
       domain = domain.substring(0, domain.length - 4);
     }
-    
+
     return domain;
   } catch (error) {
     // Handle invalid URLs
@@ -792,17 +792,17 @@ const publishedColorScale = d3.scaleSequential(d3.interpolateGreens)
 function formatPublishedWithColor(cell) {
   const publishedDate = cell.getValue();
   const cellElement = cell.getElement();
-  
+
   if (!publishedDate || publishedDate === 'N/A') {
     cellElement.style.backgroundColor = 'white';
     return publishedDate || '';
   }
-  
+
   try {
     const pubDate = new Date(publishedDate);
     const today = new Date();
     const daysAgo = Math.floor((today - pubDate) / (1000 * 60 * 60 * 24));
-    
+
     if (daysAgo < 0 || daysAgo > 90) {
       // More than 3 months old or future date - white
       cellElement.style.backgroundColor = 'white';
@@ -813,7 +813,7 @@ function formatPublishedWithColor(cell) {
       cellElement.style.backgroundColor = backgroundColor;
       cellElement.style.color = textColor;
     }
-    
+
     return publishedDate;
   } catch (error) {
     cellElement.style.backgroundColor = 'white';
@@ -826,7 +826,7 @@ function processComplexData(data) {
   const result = [];
   const objects = data.objects;
   const paperKeys = Object.keys(objects).filter(key => key.startsWith("paper:"));
-  
+
   for (const paperKey of paperKeys) {
     const paperId = extractObjectId(paperKey, "paper");
     const paperRaw = objects[paperKey];
@@ -834,27 +834,27 @@ function processComplexData(data) {
     const paperMeta = paperRaw.meta;
     const interactionKey = `interactions:${paperId}`;
     const interactionData = objects[interactionKey] ? objects[interactionKey].data : null;
-    
+
     // Calculate reading time
     let totalReadingTime = 0;
     let lastReadDate = null;
-    
+
     // Calculate unique days with interactions
     let uniqueInteractionDays = 0;
-    
+
     if (interactionData && interactionData.interactions) {
       const uniqueDays = new Set();
-      
+
       for (const interaction of interactionData.interactions) {
         if (interaction.type === "reading_session") {
           totalReadingTime += interaction.data.duration_seconds || 0;
-          
+
           // Find the most recent reading session
           const sessionDate = new Date(interaction.timestamp);
           if (!lastReadDate || sessionDate > lastReadDate) {
             lastReadDate = sessionDate;
           }
-          
+
           // Track unique days
           if (interaction.timestamp) {
             const date = new Date(interaction.timestamp);
@@ -863,27 +863,27 @@ function processComplexData(data) {
           }
         }
       }
-      
+
       uniqueInteractionDays = uniqueDays.size;
     }
 
-    const source = paperData.sourceId === 'arxiv' || paperData.sourceType === 'arxiv' ? 
-               'arxiv' : (paperData.url ? extractDomain(paperData.url) : null) ||
-                 paperData.sourceId || paperData.sourceType;
-    
+    const source = paperData.sourceId === 'arxiv' || paperData.sourceType === 'arxiv' ?
+      'arxiv' : (paperData.url ? extractDomain(paperData.url) : null) ||
+      paperData.sourceId || paperData.sourceType;
+
     // Ensure all fields are properly typed
     const authors = Array.isArray(paperData.authors) ? paperData.authors.join(', ') : (paperData.authors || '');
     const title = paperData.title || '';
     const abstract = paperData.abstract || '';
     const tags = paperData.tags || paperData.arxiv_tags || [];
-    
+
     let freshness = -1;
     if (lastReadDate && paperData.publishedDate) {
       const lastReadStr = lastReadDate.toISOString().split('T')[0];  // Convert to YYYY-MM-DD
       const publishedStr = normalizeDate(paperData.publishedDate);  // Normalize first
       freshness = daysBetween(publishedStr, lastReadStr);
     }
-    
+
     // Create the row data
     result.push({
       paperKey: paperKey,
@@ -905,7 +905,7 @@ function processComplexData(data) {
       issueNumber: paperMeta.issue_number
     });
   }
-  
+
   return result;
 }
 
@@ -925,9 +925,9 @@ function initTable(data) {
     readingTimeColorScale = d3.scaleSequential(d3.interpolateBlues)
       .domain([1, p75]);
   }
-  
+
   console.log("Reading time color scale domain:", readingTimeColorScale ? readingTimeColorScale.domain() : "No scale");
-  
+
   table = new Tabulator("#papers-table", {
     data: data,
     layout: "fitColumns",
@@ -938,8 +938,8 @@ function initTable(data) {
     movableColumns: true,
     groupBy: "lastRead",
     initialSort: [
-      {column: "lastReadTimestamp", dir: "desc"},
-      {column: "lastRead", dir: "desc"}
+      { column: "lastReadTimestamp", dir: "desc" },
+      { column: "lastRead", dir: "desc" }
     ],
     columns: [
       {
@@ -948,44 +948,44 @@ function initTable(data) {
         width: 40,
         headerSort: false,
         resizable: false,
-        formatter: function(cell) {
+        formatter: function (cell) {
           return '<button class="table-delete-btn" title="Delete paper"><i class="fas fa-trash"></i></button>';
         },
-        cellClick: function(e, cell) {
+        cellClick: function (e, cell) {
           e.stopPropagation(); // Prevent row click from triggering
           const paper = cell.getRow().getData();
           deletePaper(paper);
         }
       },
       {
-        title: "Read Dates", 
-        field: "interactionDays", 
+        title: "Read Dates",
+        field: "interactionDays",
         widthGrow: 1,
         formatter: formatInteractionDaysWithColor
       },
       {
-        title: "Read Time (s)", 
-        field: "readingTimeSeconds",  
+        title: "Read Time (s)",
+        field: "readingTimeSeconds",
         widthGrow: 1,
         formatter: formatReadingTimeWithColor
       },
       {
-        title: "Title", 
-        field: "title", 
+        title: "Title",
+        field: "title",
         widthGrow: 6,
-        formatter: function(cell) {
+        formatter: function (cell) {
           const value = cell.getValue();
           return value;
         }
       },
       {
-        title: "Source", 
-        field: "source", 
+        title: "Source",
+        field: "source",
         widthGrow: 1
       },
       {
-        title: "Published", 
-        field: "published", 
+        title: "Published",
+        field: "published",
         widthGrow: 1,
         formatter: formatPublishedWithColor
         // formatter: function(cell) {
@@ -996,23 +996,23 @@ function initTable(data) {
         // }
       },
       {
-        title: "Tags", 
-        field: "tags", 
+        title: "Tags",
+        field: "tags",
         widthGrow: 1,
         formatter: formatTags
       },
       {
-        title: "Last Read Date", 
-        field: "lastRead", 
+        title: "Last Read Date",
+        field: "lastRead",
         widthGrow: 1
       },
       {
-        title: "Last Read time", 
-        field: "lastReadTimestamp", 
+        title: "Last Read time",
+        field: "lastReadTimestamp",
         widthGrow: 1
       }
     ],
-    rowFormatter: function(row) {
+    rowFormatter: function (row) {
       // Add paper ID as data attribute
       const rowElement = row.getElement();
       const paper_Id = row.getData().paperKey;
@@ -1020,16 +1020,16 @@ function initTable(data) {
       rowElement.setAttribute("data-paper-id", paper_Id);
     }
   });
-  
+
   // Initialize filter manager and status bar
   filterManager = new FilterManager(table);
   filterStatusBar = new FilterStatusBar(filterManager);
-  
+
   // Remove loading message
   document.querySelector(".loading").style.display = "none";
-  
+
   // Set up global click handler for the table
-  document.getElementById("papers-table").addEventListener("click", function(e) {
+  document.getElementById("papers-table").addEventListener("click", function (e) {
     // Find the closest row element
     const rowElement = e.target.closest(".tabulator-row");
     if (rowElement) {
@@ -1045,70 +1045,70 @@ function initTable(data) {
 // Helper functions for filters
 function createSearchFilter(searchTerm) {
   const term = searchTerm.toLowerCase().trim();
-  return function(data) {
+  return function (data) {
     if (!term) return true;
-    
+
     const searchableText = [
       data.title,
       data.authors,
       data.abstract,
       ...(data.tags || [])
     ].join(' ').toLowerCase();
-    
+
     return searchableText.includes(term);
   };
 }
 
 function createMultiSearchFilter(searchTerms) {
   // OR logic: papers must contain ANY of the search terms
-  return function(data) {
+  return function (data) {
     if (!searchTerms || searchTerms.length === 0) return true;
-    
+
     const searchableText = [
       data.title,
       data.authors,
       data.abstract,
       ...(data.tags || [])
     ].join(' ').toLowerCase();
-    
-    return searchTerms.some(term => 
+
+    return searchTerms.some(term =>
       searchableText.includes(term.toLowerCase().trim())
     );
   };
 }
 
 function createDateRangeFilter(fromDate, toDate) {
-  return function(data) {
+  return function (data) {
     if (!fromDate && !toDate) return true;
     if (!data.published) return false;
-    
+
     const publishedDate = data.published;
-    
+
     if (fromDate && toDate) {
       return publishedDate >= fromDate && publishedDate <= toDate;
     }
-    
+
     if (fromDate) {
       return publishedDate >= fromDate;
     }
-    
+
     if (toDate) {
       return publishedDate <= toDate;
     }
-    
+
     return true;
   };
 }
 
 function createReadingTimeFilter(minMinutes) {
   const minSeconds = minMinutes * 60;
-  return function(data) {
+  return function (data) {
     return data.readingTimeSeconds >= minSeconds;
   };
 }
 
 function createInteractionDaysFilter(minDays) {
-  return function(data) {
+  return function (data) {
     return data.interactionDays >= minDays;
   };
 }
@@ -1120,12 +1120,12 @@ let currentPreviewSearchTerm = null;
 // Setup event listeners for filters and search
 function setupEventListeners() {
   const searchInput = document.getElementById("search-input");
-  
+
   // Heatmap metric selector
-  document.getElementById("heatmap-metric-selector").addEventListener("change", function(e) {
+  document.getElementById("heatmap-metric-selector").addEventListener("change", function (e) {
     currentHeatmapMetric = e.target.value;
     console.log("Heatmap metric changed to:", currentHeatmapMetric);
-    
+
     // Update heatmap based on current state
     if (currentDetailsPaper) {
       const singlePaperActivity = extractReadingActivityData([currentDetailsPaper], currentHeatmapMetric);
@@ -1137,15 +1137,15 @@ function setupEventListeners() {
       createReadingHeatmap(activityData);
     }
   });
-  
+
   // Global search with debouncing for preview
   let searchTimeout;
-  searchInput.addEventListener("input", function(e) {
+  searchInput.addEventListener("input", function (e) {
     const searchTerm = e.target.value.trim();
-    
+
     // Clear previous timeout
     clearTimeout(searchTimeout);
-    
+
     // Debounce search input for preview
     searchTimeout = setTimeout(() => {
       if (searchTerm) {
@@ -1159,64 +1159,64 @@ function setupEventListeners() {
       }
     }, 300);
   });
-  
+
   // Handle Enter key to commit search term
-  searchInput.addEventListener("keydown", function(e) {
+  searchInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") {
       e.preventDefault();
       const searchTerm = e.target.value.trim();
-      
+
       if (searchTerm) {
         // Remove the preview filter
         filterManager.removeFilter('search-preview');
         currentPreviewSearchTerm = null;
-        
+
         // Add committed search term with unique ID
         const searchId = `search-${++searchTermCounter}`;
         filterManager.setFilter(searchId, createSearchFilter(searchTerm), `Search: "${searchTerm}"`);
-        
+
         // Clear the input for next search term
         e.target.value = "";
       }
     }
   });
-  
+
   // Clear search button - clears current input and preview
-  document.getElementById("clear-search").addEventListener("click", function() {
+  document.getElementById("clear-search").addEventListener("click", function () {
     document.getElementById("search-input").value = "";
     filterManager.removeFilter('search-preview');
     currentPreviewSearchTerm = null;
   });
-  
+
   // Toggle filter sidebar
-  document.getElementById("sidebar-toggle").addEventListener("click", function() {
+  document.getElementById("sidebar-toggle").addEventListener("click", function () {
     document.getElementById("sidebar").classList.toggle("active");
-    
+
     // Close details sidebar if open (to avoid both being open at once)
     document.getElementById("details-sidebar").classList.remove("active");
   });
-  
+
   // Floating filter button
-  document.getElementById("filter-toggle-btn").addEventListener("click", function() {
+  document.getElementById("filter-toggle-btn").addEventListener("click", function () {
     document.getElementById("sidebar").classList.toggle("active");
-    
+
     // Close details sidebar if open (to avoid both being open at once)
     document.getElementById("details-sidebar").classList.remove("active");
   });
-  
+
   // Toggle details with keyboard escape key
-  document.addEventListener("keydown", function(e) {
+  document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       document.getElementById("details-sidebar").classList.remove("active");
       document.getElementById("sidebar").classList.remove("active");
     }
   });
-  
+
   // Date range filters
-  document.getElementById("apply-date-filter").addEventListener("click", function() {
+  document.getElementById("apply-date-filter").addEventListener("click", function () {
     const fromDate = document.getElementById("date-filter-from").value;
     const toDate = document.getElementById("date-filter-to").value;
-    
+
     if (fromDate || toDate) {
       const description = formatDateRangeDescription(fromDate, toDate);
       filterManager.setFilter('dateRange', createDateRangeFilter(fromDate, toDate), description);
@@ -1224,67 +1224,67 @@ function setupEventListeners() {
       filterManager.removeFilter('dateRange');
     }
   });
-  
-  document.getElementById("clear-date-filter").addEventListener("click", function() {
+
+  document.getElementById("clear-date-filter").addEventListener("click", function () {
     document.getElementById("date-filter-from").value = "";
     document.getElementById("date-filter-to").value = "";
     filterManager.removeFilter('dateRange');
   });
-  
+
   // Reading time filter
-  document.getElementById("apply-reading-filter").addEventListener("click", function() {
+  document.getElementById("apply-reading-filter").addEventListener("click", function () {
     const minReading = document.getElementById("min-reading-time").value;
-    
+
     if (minReading && minReading > 0) {
       filterManager.setFilter(
-        'readingTime', 
-        createReadingTimeFilter(parseInt(minReading)), 
+        'readingTime',
+        createReadingTimeFilter(parseInt(minReading)),
         `Reading time: ≥${minReading} min`
       );
     } else {
       filterManager.removeFilter('readingTime');
     }
   });
-  
-  document.getElementById("clear-reading-filter").addEventListener("click", function() {
+
+  document.getElementById("clear-reading-filter").addEventListener("click", function () {
     document.getElementById("min-reading-time").value = "";
     filterManager.removeFilter('readingTime');
   });
-  
+
   // Interaction days filter
-  document.getElementById("apply-days-filter").addEventListener("click", function() {
+  document.getElementById("apply-days-filter").addEventListener("click", function () {
     const minDays = document.getElementById("min-interaction-days").value;
-    
+
     if (minDays && minDays > 0) {
       const days = parseInt(minDays);
       filterManager.setFilter(
-        'interactionDays', 
-        createInteractionDaysFilter(days), 
+        'interactionDays',
+        createInteractionDaysFilter(days),
         `Interaction days: ≥${days}`
       );
     } else {
       filterManager.removeFilter('interactionDays');
     }
   });
-  
-  document.getElementById("clear-days-filter").addEventListener("click", function() {
+
+  document.getElementById("clear-days-filter").addEventListener("click", function () {
     document.getElementById("min-interaction-days").value = "";
     filterManager.removeFilter('interactionDays');
   });
-  
+
   // Reset all filters
-  document.getElementById("reset-all-filters").addEventListener("click", function() {
+  document.getElementById("reset-all-filters").addEventListener("click", function () {
     // Clear all input fields
     document.getElementById("search-input").value = "";
     document.getElementById("date-filter-from").value = "";
     document.getElementById("date-filter-to").value = "";
     document.getElementById("min-reading-time").value = "";
     document.getElementById("min-interaction-days").value = "";
-    
+
     // Reset search counter and preview state
     searchTermCounter = 0;
     currentPreviewSearchTerm = null;
-    
+
     // Clear all filters through filter manager
     filterManager.clearAll();
   });
@@ -1303,7 +1303,7 @@ function formatDateRangeDescription(fromDate, toDate) {
 }
 
 // Load and initialize
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Password gate
   const overlay = document.getElementById("password-overlay");
   const passwordForm = document.getElementById("password-form");
@@ -1313,37 +1313,56 @@ document.addEventListener("DOMContentLoaded", function() {
   function loadApp() {
     // Fetch data file
     fetch("gh-store-snapshot.json")
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Failed to load data.json");
-      }
-      return response.json();
-    })
-    .then(data => {
-      allData = processComplexData(data);
-      
-      // Initialize table and heatmap
-      initTable(allData);
-      
-      // Create initial heatmap with default metric
-      const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
-      createReadingHeatmap(activityData);
-      
-      setupEventListeners();
-    })
-    .catch(error => {
-      document.querySelector(".loading").innerHTML =
-        `Error loading data: ${error.message}. Make sure data.json exists in the same directory as this HTML file.`;
-    });
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to load data.json");
+        }
+        return response.json();
+      })
+      .then(data => {
+        allData = processComplexData(data);
+
+        // Initialize table and heatmap
+        initTable(allData);
+
+        // Create initial heatmap with default metric
+        const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
+        createReadingHeatmap(activityData);
+
+        setupEventListeners();
+      })
+      .catch(error => {
+        document.querySelector(".loading").innerHTML =
+          `Error loading data: ${error.message}. Make sure data.json exists in the same directory as this HTML file.`;
+      });
   }
 
   if (sessionStorage.getItem("pf_authenticated")) {
     overlay.classList.add("hidden");
     loadApp();
   } else {
-    passwordForm.addEventListener("submit", function(e) {
+    // Password hash is loaded from config.js (gitignored)
+    // Generate a new hash with: echo -n "your_password" | shasum -a 256 | cut -d' ' -f1
+    const EXPECTED_HASH = typeof CONFIG !== 'undefined' ? CONFIG.EXPECTED_HASH : null;
+
+    if (!EXPECTED_HASH) {
+      console.error("Password configuration not found. Please create frontend/config.js with CONFIG.EXPECTED_HASH");
+      document.querySelector(".loading").innerHTML = "Configuration error: config.js not found";
+      return;
+    }
+
+    async function hashPassword(password) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(password);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    passwordForm.addEventListener("submit", async function (e) {
       e.preventDefault();
-      if (passwordInput.value === "nicetry") {
+      const inputHash = await hashPassword(passwordInput.value);
+      if (inputHash === EXPECTED_HASH) {
         sessionStorage.setItem("pf_authenticated", "1");
         overlay.classList.add("hidden");
         loadApp();
