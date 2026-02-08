@@ -1327,8 +1327,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load manually read papers from localStorage
     loadManuallyReadPapers();
 
-    // Fetch data file
-    fetch("gh-store-snapshot.json")
+    // Fetch data file with cache-busting to ensure fresh data
+    fetch(`gh-store-snapshot.json?t=${Date.now()}`)
       .then(response => {
         if (!response.ok) {
           throw new Error("Failed to load data.json");
