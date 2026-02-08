@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T16:00:11.266151+00:00",
+  "snapshot_time": "2026-02-08T16:12:23.957794+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -134,6 +134,32 @@
         "object_id": "paper:arxiv.2602.03183",
         "created_at": "2026-02-08T15:57:27+00:00",
         "updated_at": "2026-02-08T15:59:45+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.7BCFC2D3": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "7BCFC2D3",
+        "url": "https://www.abhinavomprakash.com/posts/i-am-happier-writing-code-by-hand/",
+        "title": "I Am Happier Writing Code by Hand",
+        "authors": "Abhinav Omprakash",
+        "abstract": "I felt the familiar feeling of depression and lethargy creep in while my eyes darted from watching claude-code work and my phone. \u201cWhat\u2019s the point of it all?\u201d I thought, LLMs can generate decent-ish and correct-ish looking code while I have more time to do what? doomscroll? This was the third time I gave claude-code a try. I felt the same feelings every single time and ended up deleting claude-code after 2-3 weeks, and whaddyouknow?",
+        "timestamp": "2026-02-08T16:11:42.767Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-07T15:30:23+02:00",
+        "tags": [
+          "essays"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 17,
+        "object_id": "paper:url.7BCFC2D3",
+        "created_at": "2026-02-08T16:11:42+00:00",
+        "updated_at": "2026-02-08T16:12:02+00:00",
         "version": 1
       }
     }
