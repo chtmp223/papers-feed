@@ -769,13 +769,6 @@ function displayPaperDetails(paperId) {
 
 function getGitHubToken() {
   let token = localStorage.getItem('github_pat');
-  if (!token) {
-    token = prompt('Enter your GitHub Personal Access Token (PAT).\nIt will be stored in localStorage for reuse.');
-    if (token) {
-      localStorage.setItem('github_pat', token.trim());
-      token = token.trim();
-    }
-  }
   return token || null;
 }
 
