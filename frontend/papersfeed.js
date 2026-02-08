@@ -60,8 +60,12 @@ function toggleReadStatus(paper, cell) {
 
 // Update heatmap after toggling read status
 function updateHeatmapAfterReadToggle() {
-  const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
-  createReadingHeatmap(activityData);
+  if (filterManager) {
+    filterManager.updateHeatmap();
+  } else {
+    const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
+    createReadingHeatmap(activityData);
+  }
 }
 
 // Utility function to normalize dates using Chrono
