@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T17:03:09.822115+00:00",
+  "snapshot_time": "2026-02-08T17:05:26.170475+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -272,6 +272,86 @@
         "object_id": "paper:url.7744C59C",
         "created_at": "2026-02-08T17:02:29+00:00",
         "updated_at": "2026-02-08T17:02:47+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.214C1B64": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "214C1B64",
+        "url": "https://ezhik.jp/ai-slop-terrifies-me/",
+        "title": "(AI) Slop Terrifies Me \u2013 ezhik.jp",
+        "authors": "",
+        "abstract": "What if this is as good as software is ever going to be? What if AI stops getting better and what if people stop caring?",
+        "timestamp": "2026-02-08T17:04:48.390Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 22,
+        "object_id": "paper:url.214C1B64",
+        "created_at": "2026-02-08T17:04:48+00:00",
+        "updated_at": "2026-02-08T17:05:05+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.223BF1B6": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "223BF1B6",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41506004/",
+        "title": "Blood omega-3 is inversely related to risk of early-onset dementia",
+        "authors": "",
+        "abstract": "This study expands the evidence of a beneficial association of omega-3 and LOD to EOD as well. These findings suggest that an increased intake of omega-3 fatty acids earlier in life may slow the development of EOD. Additional research is needed to confirm our findings, particularly in more diverse p \u2026",
+        "timestamp": "2026-02-08T17:04:30.033Z",
+        "rating": "novote",
+        "publishedDate": "2026 Feb",
+        "tags": [
+          "pmid:41506004",
+          "doi:10.1016/j.clnu.2025.106559",
+          "Aleix Sala-Vila",
+          "Nathan L Tintle",
+          "William S Harris",
+          "Adult",
+          "Age of Onset",
+          "Apolipoprotein E4 / genetics",
+          "Cohort Studies",
+          "Dementia* / blood",
+          "Dementia* / epidemiology",
+          "Dementia* / genetics",
+          "Dementia* / prevention & control",
+          "Diet* / statistics & numerical data",
+          "Fatty Acids",
+          "Omega-3* / blood",
+          "Female",
+          "Humans",
+          "Male",
+          "Middle Aged",
+          "Proportional Hazards Models",
+          "Risk Factors",
+          "United Kingdom / epidemiology",
+          "PubMed Abstract",
+          "NIH",
+          "NLM",
+          "NCBI",
+          "National Institutes of Health",
+          "National Center for Biotechnology Information",
+          "National Library of Medicine",
+          "MEDLINE"
+        ],
+        "doi": "10.1016/j.clnu.2025.106559",
+        "journalName": "Clinical nutrition (Edinburgh, Scotland)",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 21,
+        "object_id": "paper:url-misc.223BF1B6",
+        "created_at": "2026-02-08T17:04:30+00:00",
+        "updated_at": "2026-02-08T17:04:50+00:00",
         "version": 1
       }
     }
