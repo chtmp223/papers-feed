@@ -499,20 +499,57 @@ function createReadingHeatmap(data) {
       if (count > 0) {
         const formatDate = d3.timeFormat("%B %d, %Y");
         const dateFilter = function (data) {
-          if (!data.rawInteractionData || data.rawInteractionData.length === 0) return false;
+          // Check based on current metric
+          switch (currentHeatmapMetric) {
+            case 'papers':
+              // Check reading sessions
+              if (data.rawInteractionData && data.rawInteractionData.length > 0) {
+                const hasSession = data.rawInteractionData.some(interaction => {
+                  if (interaction.type === "reading_session" && interaction.timestamp) {
+                    const interactionDateStr = d3.timeFormat("%Y-%m-%d")(new Date(interaction.timestamp));
+                    return interactionDateStr === dateStr;
+                  }
+                  return false;
+                });
+                if (hasSession) return true;
+              }
+              // Check manually marked read papers
+              if (manuallyReadPapers.has(data.paperKey)) {
+                const manualReadDate = manuallyReadPapers.get(data.paperKey);
+                if (manualReadDate === dateStr) return true;
+              }
+              return false;
 
-          return data.rawInteractionData.some(interaction => {
-            if (interaction.type === "reading_session" && interaction.timestamp) {
-              const interactionDateStr = d3.timeFormat("%Y-%m-%d")(new Date(interaction.timestamp));
-              return interactionDateStr === dateStr;
-            }
-            return false;
-          });
+            case 'discoveries':
+              // Check first read date (discovery date)
+              return data.firstRead === dateStr;
+
+            default:
+              // Fallback to reading sessions
+              if (!data.rawInteractionData || data.rawInteractionData.length === 0) return false;
+              return data.rawInteractionData.some(interaction => {
+                if (interaction.type === "reading_session" && interaction.timestamp) {
+                  const interactionDateStr = d3.timeFormat("%Y-%m-%d")(new Date(interaction.timestamp));
+                  return interactionDateStr === dateStr;
+                }
+                return false;
+              });
+          }
         };
+
+        // Label based on metric
+        let filterLabel;
+        switch (currentHeatmapMetric) {
+          case 'discoveries':
+            filterLabel = `Discovered on ${formatDate(d)}`;
+            break;
+          default:
+            filterLabel = `Read on ${formatDate(d)}`;
+        }
 
         // Remove any existing heatmap-date filter and add new one
         filterManager.removeFilter('heatmap-date');
-        filterManager.setFilter('heatmap-date', dateFilter, `Read on ${formatDate(d)}`);
+        filterManager.setFilter('heatmap-date', dateFilter, filterLabel);
       }
     });
 
