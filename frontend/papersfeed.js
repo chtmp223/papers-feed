@@ -657,63 +657,23 @@ function getGitHubToken() {
 }
 
 async function deletePaper(paper) {
-  if (!paper || !paper.issueNumber) {
-    alert('Cannot delete: missing issue number for this paper.');
+  if (!paper) {
+    alert('Cannot delete: no paper selected.');
     return;
   }
 
-  if (!confirm(`Delete "${paper.title}"?\n\nThis will close the GitHub issue and remove its gh-store label.`)) {
+  if (!confirm(`Delete "${paper.title}" from your view?\n\nNote: This only removes it from the current session. It will reappear on page refresh.`)) {
     return;
   }
 
-  const token = getGitHubToken();
-  if (!token) return;
+  // Remove paper from in-memory data
+  allData = allData.filter(p => p.paperKey !== paper.paperKey);
 
-  const repo = 'chtmp223/papers-feed';
-  const issueNum = paper.issueNumber;
-  const headers = {
-    'Authorization': `token ${token}`,
-    'Accept': 'application/vnd.github.v3+json'
-  };
+  // Refresh the table
+  table.replaceData(allData);
 
-  try {
-    // 1. Close the issue
-    const closeRes = await fetch(`https://api.github.com/repos/${repo}/issues/${issueNum}`, {
-      method: 'PATCH',
-      headers: { ...headers, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ state: 'closed' })
-    });
-    if (!closeRes.ok) {
-      const err = await closeRes.json();
-      throw new Error(err.message || `Failed to close issue (${closeRes.status})`);
-    }
-
-    // 2. Remove the gh-store label (ignore 404 if label already absent)
-    const labelRes = await fetch(`https://api.github.com/repos/${repo}/issues/${issueNum}/labels/gh-store`, {
-      method: 'DELETE',
-      headers
-    });
-    if (!labelRes.ok && labelRes.status !== 404) {
-      console.warn('Could not remove gh-store label:', labelRes.status);
-    }
-
-    // 3. Remove paper and its interactions entry from in-memory data
-    const paperId = paper.id;
-    allData = allData.filter(p => p.paperKey !== paper.paperKey);
-
-    // 4. Refresh the table
-    table.replaceData(allData);
-
-    // 5. Close the sidebar
-    hideDetails();
-
-  } catch (err) {
-    // If auth failed, clear the stored token so user can re-enter
-    if (err.message && err.message.toLowerCase().includes('bad credentials')) {
-      localStorage.removeItem('github_pat');
-    }
-    alert('Delete failed: ' + err.message);
-  }
+  // Close the sidebar
+  hideDetails();
 }
 
 function hideDetails() {
