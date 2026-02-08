@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <!-- frontend/index.html - Root of GitHub Pages site -->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chau Pham's Reading List</title>
-  
+
   <!-- Tabulator CSS and JS -->
   <link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
   <script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
 
   <!-- D3.js for color scales -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-  
+
   <!-- Date parsing and normalizaiton -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chrono-node/1.0.5/chrono.min.js"></script>
-  
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="papersfeed.css">
 </head>
+
 <body>
   <!-- Password Overlay -->
   <div id="password-overlay" class="password-overlay">
@@ -27,7 +29,8 @@
       <h2>Papers Feed</h2>
       <p>Enter password to continue</p>
       <form id="password-form">
-        <input type="password" id="password-input" class="password-input" placeholder="Password" autocomplete="off" autofocus>
+        <input type="password" id="password-input" class="password-input" placeholder="Password" autocomplete="off"
+          autofocus>
         <button type="submit" class="password-submit">Enter</button>
       </form>
       <p id="password-error" class="password-error"></p>
@@ -36,8 +39,9 @@
 
   <div class="header">
     <div class="header-title">
-        <h1>Chau Pham's Reading List</h1>
-        <p class="header-desc">By <a href="https://github.com/chtmp223">@chtmp223</a>. Learn more <a href="https://github.com/chtmp223/papers-feed">here</a>.</p>
+      <h1>Chau Pham's Reading List</h1>
+      <p class="header-desc">By <a href="https://github.com/chtmp223">@chtmp223</a>. Learn more <a
+          href="https://github.com/chtmp223/papers-feed">here</a>.</p>
     </div>
 
     <div class="heatmap-container">
@@ -82,18 +86,18 @@
       <button class="clear-all-filters-btn" id="clear-all-filters">Clear All</button>
     </div>
   </div>
-  
+
   <div class="dashboard-container">
     <div class="main-content">
       <div id="papers-table">
         <div class="loading">Loading papers data...</div>
       </div>
     </div>
-    
+
     <!-- Filter Sidebar -->
     <div class="sidebar" id="sidebar">
       <h3>Filters</h3>
-      
+
       <div class="filter-section">
         <h4>Publication Date</h4>
         <div id="date-filter-controls">
@@ -111,7 +115,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="filter-section">
         <h4>Reading Time</h4>
         <div>
@@ -123,7 +127,7 @@
           <button id="clear-reading-filter" class="filter-button">Clear</button>
         </div>
       </div>
-      
+
       <div class="filter-section">
         <h4>Interaction Days</h4>
         <div>
@@ -135,13 +139,13 @@
           <button id="clear-days-filter" class="filter-button">Clear</button>
         </div>
       </div>
-      
+
       <div class="filter-section">
         <h4>Reset All Filters</h4>
         <button id="reset-all-filters" class="filter-button">Reset All</button>
       </div>
     </div>
-    
+
     <div class="sidebar" id="details-sidebar">
       <button class="close-button" onclick="hideDetails()">×</button>
       <div class="details-scroll-content">
@@ -149,12 +153,13 @@
       </div>
     </div>
   </div>
-  
+
   <button id="filter-toggle-btn" title="Toggle Filters">
     <i class="fas fa-filter"></i>
   </button>
 
-  <script src="config.js"></script>
+  <script src="config.js?v=2"></script>
   <script src="papersfeed.js"></script>
 </body>
+
 </html>
