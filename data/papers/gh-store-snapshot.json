@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T01:08:36.516675+00:00",
+  "snapshot_time": "2026-02-08T01:24:18.543300+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -26,6 +26,33 @@
         "object_id": "paper:nber.w34777",
         "created_at": "2026-02-08T01:07:44+00:00",
         "updated_at": "2026-02-08T01:08:12+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.05125": {
+      "data": {
+        "rating": "novote",
+        "doi": "",
+        "timestamp": "2026-02-08T01:23:36.193Z",
+        "abstract": "Recently, rubrics have been used to guide LLM judges in capturing subjective, nuanced, multi-dimensional human preferences, and have been extended from evaluation to reward signals for reinforcement fine-tuning (RFT). However, rubric generation remains hard to control: rubrics often lack coverage, conflate dimensions, misalign preference direction, and contain redundant or highly correlated criteria, degrading judge accuracy and producing suboptimal rewards during RFT. We propose RRD, a principled framework for rubric refinement built on a recursive decompose-filter cycle. RRD decomposes coarse rubrics into fine-grained, discriminative criteria, expanding coverage while sharpening separation between responses. A complementary filtering mechanism removes misaligned and redundant rubrics, and a correlation-aware weighting scheme prevents over-representing highly correlated criteria, yielding rubric sets that are informative, comprehensive, and non-redundant. Empirically, RRD delivers large, consistent gains across both evaluation and training: it improves preference-judgment accuracy on JudgeBench and PPE for both GPT-4o and Llama3.1-405B judges, achieving top performance in all settings with up to +17.7 points on JudgeBench. When used as the reward source for RFT on WildChat, it yields substantially stronger and more stable learning signals, boosting reward by up to 160% (Qwen3-4B) and 60% (Llama3.1-8B) versus 10-20% for prior rubric baselines, with gains that transfer to HealthBench-Hard and BiGGen Bench. Overall, RRD establishes recursive rubric refinement as a scalable and interpretable foundation for LLM judging and reward modeling in open-ended domains.",
+        "url": "https://arxiv.org/abs/2602.05125",
+        "authors": "William F. Shen, Xinchi Qiu, Chenxi Whitehouse, Lisa Alazraki, Shashwat Goel, Francesco Barbieri, Timon Willi, Akhil Mathur, Ilias Leontiadis",
+        "publishedDate": "2026/02/04",
+        "title": "Rethinking Rubric Generation for Improving LLM Judge and Reward Modeling for Open-ended Tasks",
+        "sourceId": "arxiv",
+        "tags": [
+          "Machine Learning (cs.LG)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "paperId": "2602.05125",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 13,
+        "object_id": "paper:arxiv.2602.05125",
+        "created_at": "2026-02-08T01:23:36+00:00",
+        "updated_at": "2026-02-08T01:23:54+00:00",
         "version": 1
       }
     }
