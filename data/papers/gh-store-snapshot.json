@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T01:24:18.543300+00:00",
+  "snapshot_time": "2026-02-08T02:10:48.201590+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -53,6 +53,60 @@
         "object_id": "paper:arxiv.2602.05125",
         "created_at": "2026-02-08T01:23:36+00:00",
         "updated_at": "2026-02-08T01:23:54+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2601.21996": {
+      "data": {
+        "rating": "novote",
+        "doi": "",
+        "timestamp": "2026-02-08T02:10:02.187Z",
+        "abstract": "While Mechanistic Interpretability has identified interpretable circuits in LLMs, their causal origins in training data remain elusive. We introduce Mechanistic Data Attribution (MDA), a scalable framework that employs Influence Functions to trace interpretable units back to specific training samples. Through extensive experiments on the Pythia family, we causally validate that targeted intervention--removing or augmenting a small fraction of high-influence samples--significantly modulates the emergence of interpretable heads, whereas random interventions show no effect. Our analysis reveals that repetitive structural data (e.g., LaTeX, XML) acts as a mechanistic catalyst. Furthermore, we observe that interventions targeting induction head formation induce a concurrent change in the model's in-context learning (ICL) capability. This provides direct causal evidence for the long-standing hypothesis regarding the functional link between induction heads and ICL. Finally, we propose a mechanistic data augmentation pipeline that consistently accelerates circuit convergence across model scales, providing a principled methodology for steering the developmental trajectories of LLMs.",
+        "url": "https://arxiv.org/abs/2601.21996",
+        "authors": "Jianhui Chen, Yuzhang Luo, Liangming Pan",
+        "publishedDate": "2026/01/29",
+        "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+        "sourceId": "arxiv",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "paperId": "2601.21996",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 15,
+        "object_id": "paper:arxiv.2601.21996",
+        "created_at": "2026-02-08T02:10:02+00:00",
+        "updated_at": "2026-02-08T02:10:26+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2504.12501": {
+      "data": {
+        "rating": "novote",
+        "doi": "",
+        "timestamp": "2026-02-08T02:09:57.564Z",
+        "abstract": "Reinforcement learning from human feedback (RLHF) has become an important technical and storytelling tool to deploy the latest machine learning systems. In this book, we hope to give a gentle introduction to the core methods for people with some level of quantitative background. The book starts with the origins of RLHF -- both in recent literature and in a convergence of disparate fields of science in economics, philosophy, and optimal control. We then set the stage with definitions, problem formulation, data collection, and other common math used in the literature. The core of the book details every optimization stage in using RLHF, from starting with instruction tuning to training a reward model and finally all of rejection sampling, reinforcement learning, and direct alignment algorithms. The book concludes with advanced topics -- understudied research questions in synthetic data and evaluation -- and open questions for the field.",
+        "url": "https://arxiv.org/abs/2504.12501",
+        "authors": "Nathan Lambert",
+        "publishedDate": "2025/04/16",
+        "title": "Reinforcement Learning from Human Feedback",
+        "sourceId": "arxiv",
+        "tags": [
+          "Machine Learning (cs.LG)"
+        ],
+        "paperId": "2504.12501",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 14,
+        "object_id": "paper:arxiv.2504.12501",
+        "created_at": "2026-02-08T02:09:57+00:00",
+        "updated_at": "2026-02-08T02:10:16+00:00",
         "version": 1
       }
     }
