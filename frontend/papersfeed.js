@@ -1289,8 +1289,15 @@ function formatDateRangeDescription(fromDate, toDate) {
 
 // Load and initialize
 document.addEventListener("DOMContentLoaded", function() {
-  // Fetch data file
-  fetch("gh-store-snapshot.json")
+  // Password gate
+  const overlay = document.getElementById("password-overlay");
+  const passwordForm = document.getElementById("password-form");
+  const passwordInput = document.getElementById("password-input");
+  const passwordError = document.getElementById("password-error");
+
+  function loadApp() {
+    // Fetch data file
+    fetch("gh-store-snapshot.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("Failed to load data.json");
@@ -1310,7 +1317,30 @@ document.addEventListener("DOMContentLoaded", function() {
       setupEventListeners();
     })
     .catch(error => {
-      document.querySelector(".loading").innerHTML = 
+      document.querySelector(".loading").innerHTML =
         `Error loading data: ${error.message}. Make sure data.json exists in the same directory as this HTML file.`;
     });
+  }
+
+  if (sessionStorage.getItem("pf_authenticated")) {
+    overlay.classList.add("hidden");
+    loadApp();
+  } else {
+    passwordForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      if (passwordInput.value === "nicetry") {
+        sessionStorage.setItem("pf_authenticated", "1");
+        overlay.classList.add("hidden");
+        loadApp();
+      } else {
+        passwordError.textContent = "Incorrect password";
+        const card = overlay.querySelector(".password-card");
+        card.classList.remove("shake");
+        void card.offsetWidth; // reflow to restart animation
+        card.classList.add("shake");
+        passwordInput.value = "";
+        passwordInput.focus();
+      }
+    });
+  }
 });

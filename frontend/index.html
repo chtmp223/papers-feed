@@ -21,6 +21,19 @@
   <link rel="stylesheet" href="papersfeed.css">
 </head>
 <body>
+  <!-- Password Overlay -->
+  <div id="password-overlay" class="password-overlay">
+    <div class="password-card">
+      <h2>Papers Feed</h2>
+      <p>Enter password to continue</p>
+      <form id="password-form">
+        <input type="password" id="password-input" class="password-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="password-submit">Enter</button>
+      </form>
+      <p id="password-error" class="password-error"></p>
+    </div>
+  </div>
+
   <div class="header">
     <div class="header-title">
         <h1>Chau Pham's Reading List</h1>
