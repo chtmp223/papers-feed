@@ -105,8 +105,13 @@ jobs:
           path: web/
 
       - name: Build web directory
+        env:
+          PASSWORD_HASH: ${{ secrets.PASSWORD_HASH }}
         run: |
           cp frontend/* web/
+          
+          # Inject password hash from GitHub secret
+          echo "const CONFIG = { EXPECTED_HASH: \"${PASSWORD_HASH}\" };" > web/config.js
           
           # Copy paper features maintaining directory structure
           cd data
