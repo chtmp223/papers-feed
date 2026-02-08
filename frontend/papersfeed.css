@@ -86,11 +86,27 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-10px); }
-  40% { transform: translateX(10px); }
-  60% { transform: translateX(-6px); }
-  80% { transform: translateX(6px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-6px);
+  }
+
+  80% {
+    transform: translateX(6px);
+  }
 }
 
 body {
@@ -111,7 +127,7 @@ body {
   gap: 30px;
   padding: 20px;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-title {
@@ -130,9 +146,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 0; /* Allow shrinking */
+  min-width: 0;
+  /* Allow shrinking */
   padding: 0 20px;
-  width: 100%; /* Ensure full width */
+  width: 100%;
+  /* Ensure full width */
 }
 
 .heatmap-title {
@@ -140,11 +158,13 @@ h1 {
   color: #666;
   margin-bottom: 8px;
   font-weight: 500;
-  min-height: 16px; /* Reserve space to prevent layout shift */
+  min-height: 16px;
+  /* Reserve space to prevent layout shift */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px; /* Space between dropdown and legend */
+  gap: 20px;
+  /* Space between dropdown and legend */
   /* Width will be set dynamically by JavaScript to match heatmap */
 }
 
@@ -158,7 +178,8 @@ h1 {
   cursor: pointer;
   font-weight: 500;
   outline: none;
-  flex-shrink: 0; /* Don't shrink the dropdown */
+  flex-shrink: 0;
+  /* Don't shrink the dropdown */
 }
 
 .heatmap-dropdown:hover {
@@ -176,7 +197,8 @@ h1 {
   gap: 4px;
   font-size: 11px;
   color: #666;
-  flex-shrink: 0; /* Don't shrink the legend */
+  flex-shrink: 0;
+  /* Don't shrink the legend */
 }
 
 .heatmap-legend {
@@ -185,7 +207,8 @@ h1 {
   gap: 4px;
   font-size: 11px;
   color: #666;
-  flex-shrink: 0; /* Don't shrink the legend */
+  flex-shrink: 0;
+  /* Don't shrink the legend */
 }
 
 .legend-cell {
@@ -394,7 +417,7 @@ h1 {
 /* Shared sidebar styles */
 .sidebar {
   background-color: white;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
   position: absolute;
@@ -429,7 +452,9 @@ h1 {
 
 /* Details sidebar specific */
 #details-sidebar {
-  z-index: 101; /* Higher than filter sidebar */
+  z-index: 101;
+  /* Higher than filter sidebar */
+  overflow-x: hidden;
 }
 
 .details-header {
@@ -459,12 +484,19 @@ h1 {
 .details-scroll-content {
   height: 100%;
   overflow-y: auto;
-  padding: 20px 20px 20px 20px; /* Top padding leaves space for close button */
+  overflow-x: hidden;
+  padding: 20px 20px 20px 20px;
+  /* Top padding leaves space for close button */
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .details-header h2 {
   margin: 0;
   line-height: 1.3;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
 }
 
 .delete-paper-btn {
@@ -492,11 +524,35 @@ h1 {
   background-color: #b71c1c;
 }
 
+/* Inline table delete button */
+.table-delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.table-delete-btn:hover {
+  background-color: #ffebee;
+  color: #f44336;
+}
+
+.table-delete-btn:active {
+  background-color: #ffcdd2;
+  color: #d32f2f;
+}
+
 .detail-section {
   margin-bottom: 25px;
   background-color: #f9f9f9;
   border-radius: 6px;
   padding: 15px;
+  overflow-x: hidden;
+  word-break: break-word;
 }
 
 .detail-section h3 {
@@ -511,6 +567,7 @@ h1 {
 .detail-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .detail-table th {
@@ -583,14 +640,15 @@ h1 {
   background-color: #1a73e8;
   color: white;
   border: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   transition: background-color 0.3s;
-  z-index: 102; /* Above both sidebars */
+  z-index: 102;
+  /* Above both sidebars */
 }
 
 #filter-toggle-btn:hover {
@@ -619,7 +677,8 @@ h1 {
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .heatmap-container {
-    display: none; /* Hide heatmap on smaller screens */
+    display: none;
+    /* Hide heatmap on smaller screens */
   }
 }
 
@@ -629,15 +688,15 @@ h1 {
     align-items: stretch;
     gap: 15px;
   }
-  
+
   .controls {
     max-width: none;
   }
-  
+
   .sidebar.active {
     width: 85%;
   }
-  
+
   .detail-grid {
     grid-template-columns: 1fr;
   }

@@ -943,6 +943,21 @@ function initTable(data) {
     ],
     columns: [
       {
+        title: "",
+        field: "actions",
+        width: 40,
+        headerSort: false,
+        resizable: false,
+        formatter: function(cell) {
+          return '<button class="table-delete-btn" title="Delete paper"><i class="fas fa-trash"></i></button>';
+        },
+        cellClick: function(e, cell) {
+          e.stopPropagation(); // Prevent row click from triggering
+          const paper = cell.getRow().getData();
+          deletePaper(paper);
+        }
+      },
+      {
         title: "Read Dates", 
         field: "interactionDays", 
         widthGrow: 1,
