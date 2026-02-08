@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-07T23:47:06.562033+00:00",
+  "snapshot_time": "2026-02-08T00:00:33.518551+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "interactions:acl-anthology.2023.acl-long.1": {
@@ -98,6 +98,56 @@
         "object_id": "interactions:arxiv.2305.13304",
         "created_at": "2026-02-07T23:44:14+00:00",
         "updated_at": "2026-02-07T23:46:43+00:00",
+        "version": 1
+      }
+    },
+    "interactions:url.733A5FB9": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "733A5FB9",
+        "interactions": []
+      },
+      "meta": {
+        "issue_number": 7,
+        "object_id": "interactions:url.733A5FB9",
+        "created_at": "2026-02-07T23:59:51+00:00",
+        "updated_at": "2026-02-07T23:59:52+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.733A5FB9": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "733A5FB9",
+        "url": "https://www.nytimes.com/",
+        "title": "The New York Times - Breaking News, US News, World News and Videos",
+        "authors": "",
+        "abstract": "Live news, investigations, opinion, photos and video by the journalists of The New York Times from more than 150 countries around the world. Subscribe for coverage of U.S. and international news, politics, business, technology, science, health, arts, sports and more.",
+        "timestamp": "2026-02-07T23:59:46.397Z",
+        "rating": "thumbsdown",
+        "publishedDate": "",
+        "tags": [
+          "news",
+          "live updates",
+          "latest news",
+          "breaking news",
+          "local news",
+          "current events",
+          "top stories",
+          "livestream",
+          "live video",
+          "world news",
+          "us news"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 6,
+        "object_id": "paper:url.733A5FB9",
+        "created_at": "2026-02-07T23:59:46+00:00",
+        "updated_at": "2026-02-08T00:00:05+00:00",
         "version": 1
       }
     }
