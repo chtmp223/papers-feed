@@ -546,6 +546,30 @@ h1 {
   color: #d32f2f;
 }
 
+/* Inline table read toggle button */
+.table-read-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.table-read-btn:hover {
+  color: #4caf50;
+}
+
+.table-read-btn.read {
+  color: #4caf50;
+}
+
+.table-read-btn.read:hover {
+  color: #2e7d32;
+}
+
 .detail-section {
   margin-bottom: 25px;
   background-color: #f9f9f9;

@@ -7,6 +7,39 @@ let readingTimeColorScale = null;
 let interactionDaysColorScale = null;
 let readingActivityData = [];
 let currentHeatmapMetric = 'papers';
+let manuallyReadPapers = new Set();
+
+// Load manually read papers from localStorage
+function loadManuallyReadPapers() {
+  try {
+    const stored = localStorage.getItem('manuallyReadPapers');
+    if (stored) {
+      manuallyReadPapers = new Set(JSON.parse(stored));
+    }
+  } catch (e) {
+    console.warn('Failed to load manually read papers:', e);
+  }
+}
+
+// Save manually read papers to localStorage
+function saveManuallyReadPapers() {
+  try {
+    localStorage.setItem('manuallyReadPapers', JSON.stringify([...manuallyReadPapers]));
+  } catch (e) {
+    console.warn('Failed to save manually read papers:', e);
+  }
+}
+
+// Toggle read status for a paper
+function toggleReadStatus(paper, cell) {
+  if (manuallyReadPapers.has(paper.paperKey)) {
+    manuallyReadPapers.delete(paper.paperKey);
+  } else {
+    manuallyReadPapers.add(paper.paperKey);
+  }
+  saveManuallyReadPapers();
+  cell.getRow().reformat();
+}
 
 // Utility function to normalize dates using Chrono
 function normalizeDate(dateString) {
@@ -904,6 +937,26 @@ function initTable(data) {
     columns: [
       {
         title: "",
+        field: "manualRead",
+        width: 40,
+        headerSort: false,
+        resizable: false,
+        hozAlign: "center",
+        formatter: function (cell) {
+          const paper = cell.getRow().getData();
+          const isRead = manuallyReadPapers.has(paper.paperKey);
+          return `<button class="table-read-btn ${isRead ? 'read' : ''}" title="${isRead ? 'Mark as unread' : 'Mark as read'}">
+            <i class="fas ${isRead ? 'fa-check-circle' : 'fa-circle'}"></i>
+          </button>`;
+        },
+        cellClick: function (e, cell) {
+          e.stopPropagation();
+          const paper = cell.getRow().getData();
+          toggleReadStatus(paper, cell);
+        }
+      },
+      {
+        title: "",
         field: "actions",
         width: 40,
         headerSort: false,
@@ -912,7 +965,7 @@ function initTable(data) {
           return '<button class="table-delete-btn" title="Delete paper"><i class="fas fa-trash"></i></button>';
         },
         cellClick: function (e, cell) {
-          e.stopPropagation(); // Prevent row click from triggering
+          e.stopPropagation();
           const paper = cell.getRow().getData();
           deletePaper(paper);
         }
@@ -1271,6 +1324,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const passwordError = document.getElementById("password-error");
 
   function loadApp() {
+    // Load manually read papers from localStorage
+    loadManuallyReadPapers();
+
     // Fetch data file
     fetch("gh-store-snapshot.json")
       .then(response => {
