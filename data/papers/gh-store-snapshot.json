@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T21:36:09.955932+00:00",
+  "snapshot_time": "2026-02-08T22:19:18.316568+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -403,6 +403,61 @@
         "object_id": "paper:arxiv.2408.08506",
         "created_at": "2026-02-08T21:35:30+00:00",
         "updated_at": "2026-02-08T21:35:48+00:00",
+        "version": 1
+      }
+    },
+    "paper:openreview.H1ncX6O6Yh": {
+      "data": {
+        "sourceId": "openreview",
+        "paperId": "H1ncX6O6Yh",
+        "url": "https://openreview.net/forum?id=H1ncX6O6Yh",
+        "title": "Orak: A Foundational Benchmark for Training and Evaluating LLM Agents on Diverse Video Games",
+        "authors": "",
+        "abstract": "Large Language Model (LLM) agents are reshaping the game industry, by enabling more intelligent and human-preferable characters. Yet, current game benchmarks fall short of practical needs: they lack evaluations of diverse LLM capabilities across various game genres, studies of agentic modules crucial for complex gameplay, and fine-tuning datasets to adapt pre-trained LLMs into gaming agents. To fill these gaps, we present Orak, a benchmark for training and evaluating LLM agents across 12 popular video games spanning all major genres. Using a plug-and-play interface built on Model Context Protocol (MCP), Orak supports systematic and reproducible studies of agentic modules in varied game scenarios. We further release a fine-tuning dataset of expert LLM gameplay trajectories spanning multiple genres, turning general LLMs into effective game agents. Orak offers a comprehensive evaluation framework, including game leaderboards, LLM battle arenas, and in-depth analyses of input modality, agentic strategies, and fine-tuning effects, establishing a foundation towards versatile gaming agents. Code is available at https://anonymous.4open.science/r/Orak-5013/.",
+        "timestamp": "2026-02-08T22:18:39.325Z",
+        "rating": "novote",
+        "publishedDate": "26 Jan 2026",
+        "tags": [
+          "LLM",
+          "Agents",
+          "Benchmark",
+          "Games"
+        ],
+        "doi": "",
+        "journalName": "ICLR 2026 Poster",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 26,
+        "object_id": "paper:openreview.H1ncX6O6Yh",
+        "created_at": "2026-02-08T22:18:39+00:00",
+        "updated_at": "2026-02-08T22:18:55+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2503.15655": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2503.15655",
+        "url": "https://arxiv.org/abs/2503.15655",
+        "title": "R$^2$: A LLM Based Novel-to-Screenplay Generation Framework with Causal Plot Graphs",
+        "authors": "Zefeng Lin, Yi Xiao, Zhiqiang Mo, Qifan Zhang, Jie Wang, Jiayang Chen, Jiajing Zhang, Hui Zhang, Zhengyi Liu, Xianyong Fang, Xiaohua Xu",
+        "abstract": "Automatically adapting novels into screenplays is important for the TV, film, or opera industries to promote products with low costs. The strong performances of large language models (LLMs) in long-text generation call us to propose a LLM based framework Reader-Rewriter (R2^2) for this task. However, there are two fundamental challenges here. First, the LLM hallucinations may cause inconsistent plot extraction and screenplay generation. Second, the causality-embedded plot lines should be effectively extracted for coherent rewriting. Therefore, two corresponding tactics are proposed: 1) A hallucination-aware refinement method (HAR) to iteratively discover and eliminate the affections of hallucinations; and 2) a causal plot-graph construction method (CPC) based on a greedy cycle-breaking algorithm to efficiently construct plot lines with event causalities. Recruiting those efficient techniques, R2^2 utilizes two modules to mimic the human screenplay rewriting process: The Reader module adopts a sliding window and CPC to build the causal plot graphs, while the Rewriter module generates first the scene outlines based on the graphs and then the screenplays. HAR is integrated into both modules for accurate inferences of LLMs. Experimental results demonstrate the superiority of R2^2, which substantially outperforms three existing approaches (51.3%, 22.6%, and 57.1% absolute increases) in pairwise comparison at the overall win rate for GPT-4o.",
+        "timestamp": "2026-02-08T22:18:27.981Z",
+        "rating": "novote",
+        "publishedDate": "2025/03/19",
+        "tags": [
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 25,
+        "object_id": "paper:arxiv.2503.15655",
+        "created_at": "2026-02-08T22:18:28+00:00",
+        "updated_at": "2026-02-08T22:18:47+00:00",
         "version": 1
       }
     }
