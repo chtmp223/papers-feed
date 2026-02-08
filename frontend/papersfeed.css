@@ -373,6 +373,31 @@ h1 {
   line-height: 1.3;
 }
 
+.delete-paper-btn {
+  flex-shrink: 0;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.delete-paper-btn:hover {
+  background-color: #d32f2f;
+}
+
+.delete-paper-btn:active {
+  background-color: #b71c1c;
+}
+
 .detail-section {
   margin-bottom: 25px;
   background-color: #f9f9f9;

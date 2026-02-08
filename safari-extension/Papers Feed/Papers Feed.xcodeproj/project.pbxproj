@@ -1,0 +1,1043 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C792A26A2F380F2E00579E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A2692F380F2E00579E7C /* AppDelegate.swift */; };
+		C792A26C2F380F2E00579E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A26B2F380F2E00579E7C /* SceneDelegate.swift */; };
+		C792A26F2F380F2E00579E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C792A26D2F380F2E00579E7C /* LaunchScreen.storyboard */; };
+		C792A2722F380F2E00579E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C792A2702F380F2E00579E7C /* Main.storyboard */; };
+		C792A27B2F380F2E00579E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A27A2F380F2E00579E7C /* AppDelegate.swift */; };
+		C792A27E2F380F2E00579E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C792A27C2F380F2E00579E7C /* Main.storyboard */; };
+		C792A2852F380F2E00579E7C /* Papers Feed Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C792A2842F380F2E00579E7C /* Papers Feed Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C792A28F2F380F2E00579E7C /* Papers Feed Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C792A28E2F380F2E00579E7C /* Papers Feed Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C792A2942F380F2E00579E7C /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = C792A2592F380F2D00579E7C /* Main.html */; };
+		C792A2952F380F2E00579E7C /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = C792A2592F380F2D00579E7C /* Main.html */; };
+		C792A2962F380F2E00579E7C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C792A25B2F380F2D00579E7C /* Icon.png */; };
+		C792A2972F380F2E00579E7C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C792A25B2F380F2D00579E7C /* Icon.png */; };
+		C792A2982F380F2E00579E7C /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = C792A25C2F380F2D00579E7C /* Style.css */; };
+		C792A2992F380F2E00579E7C /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = C792A25C2F380F2D00579E7C /* Style.css */; };
+		C792A29A2F380F2E00579E7C /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = C792A25D2F380F2D00579E7C /* Script.js */; };
+		C792A29B2F380F2E00579E7C /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = C792A25D2F380F2D00579E7C /* Script.js */; };
+		C792A29C2F380F2E00579E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A25E2F380F2D00579E7C /* ViewController.swift */; };
+		C792A29D2F380F2E00579E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A25E2F380F2D00579E7C /* ViewController.swift */; };
+		C792A29E2F380F2E00579E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C792A25F2F380F2E00579E7C /* Assets.xcassets */; };
+		C792A29F2F380F2E00579E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C792A25F2F380F2E00579E7C /* Assets.xcassets */; };
+		C792A2A02F380F2E00579E7C /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A2612F380F2E00579E7C /* SafariWebExtensionHandler.swift */; };
+		C792A2A12F380F2E00579E7C /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792A2612F380F2E00579E7C /* SafariWebExtensionHandler.swift */; };
+		C792A2C42F380F2F00579E7C /* source-integration in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B32F380F2F00579E7C /* source-integration */; };
+		C792A2C52F380F2F00579E7C /* papers in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B42F380F2F00579E7C /* papers */; };
+		C792A2C62F380F2F00579E7C /* dist in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B52F380F2F00579E7C /* dist */; };
+		C792A2C72F380F2F00579E7C /* config in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B62F380F2F00579E7C /* config */; };
+		C792A2C82F380F2F00579E7C /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B72F380F2F00579E7C /* popup.html */; };
+		C792A2C92F380F2F00579E7C /* node_modules in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B82F380F2F00579E7C /* node_modules */; };
+		C792A2CA2F380F2F00579E7C /* utils in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BA2F380F2F00579E7C /* utils */; };
+		C792A2CB2F380F2F00579E7C /* rollup.config.js in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BC2F380F2F00579E7C /* rollup.config.js */; };
+		C792A2CC2F380F2F00579E7C /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BE2F380F2F00579E7C /* package-lock.json */; };
+		C792A2CD2F380F2F00579E7C /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BF2F380F2F00579E7C /* package.json */; };
+		C792A2CE2F380F2F00579E7C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2C02F380F2F00579E7C /* manifest.json */; };
+		C792A2CF2F380F2F00579E7C /* tsconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2C12F380F2F00579E7C /* tsconfig.json */; };
+		C792A2D02F380F2F00579E7C /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = C792A2C22F380F2F00579E7C /* options.html */; };
+		C792A2D12F380F2F00579E7C /* source-integration in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B32F380F2F00579E7C /* source-integration */; };
+		C792A2D22F380F2F00579E7C /* papers in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B42F380F2F00579E7C /* papers */; };
+		C792A2D32F380F2F00579E7C /* dist in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B52F380F2F00579E7C /* dist */; };
+		C792A2D42F380F2F00579E7C /* config in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B62F380F2F00579E7C /* config */; };
+		C792A2D52F380F2F00579E7C /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B72F380F2F00579E7C /* popup.html */; };
+		C792A2D62F380F2F00579E7C /* node_modules in Resources */ = {isa = PBXBuildFile; fileRef = C792A2B82F380F2F00579E7C /* node_modules */; };
+		C792A2D72F380F2F00579E7C /* utils in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BA2F380F2F00579E7C /* utils */; };
+		C792A2D82F380F2F00579E7C /* rollup.config.js in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BC2F380F2F00579E7C /* rollup.config.js */; };
+		C792A2D92F380F2F00579E7C /* package-lock.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BE2F380F2F00579E7C /* package-lock.json */; };
+		C792A2DA2F380F2F00579E7C /* package.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2BF2F380F2F00579E7C /* package.json */; };
+		C792A2DB2F380F2F00579E7C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2C02F380F2F00579E7C /* manifest.json */; };
+		C792A2DC2F380F2F00579E7C /* tsconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C792A2C12F380F2F00579E7C /* tsconfig.json */; };
+		C792A2DD2F380F2F00579E7C /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = C792A2C22F380F2F00579E7C /* options.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C792A2862F380F2E00579E7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C792A2532F380F2D00579E7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C792A2832F380F2E00579E7C;
+			remoteInfo = "Papers Feed Extension (iOS)";
+		};
+		C792A2902F380F2E00579E7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C792A2532F380F2D00579E7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C792A28D2F380F2E00579E7C;
+			remoteInfo = "Papers Feed Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C792A2A72F380F2E00579E7C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C792A2852F380F2E00579E7C /* Papers Feed Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2AE2F380F2E00579E7C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C792A28F2F380F2E00579E7C /* Papers Feed Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C792A25A2F380F2D00579E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		C792A25B2F380F2D00579E7C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C792A25C2F380F2D00579E7C /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		C792A25D2F380F2D00579E7C /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		C792A25E2F380F2D00579E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C792A25F2F380F2E00579E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C792A2612F380F2E00579E7C /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		C792A2662F380F2E00579E7C /* Papers Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Papers Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C792A2692F380F2E00579E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C792A26B2F380F2E00579E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C792A26E2F380F2E00579E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C792A2712F380F2E00579E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C792A2732F380F2E00579E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C792A2782F380F2E00579E7C /* Papers Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Papers Feed.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C792A27A2F380F2E00579E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C792A27D2F380F2E00579E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C792A27F2F380F2E00579E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C792A2842F380F2E00579E7C /* Papers Feed Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Papers Feed Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C792A2892F380F2E00579E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C792A28E2F380F2E00579E7C /* Papers Feed Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Papers Feed Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C792A2932F380F2E00579E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C792A2B32F380F2F00579E7C /* source-integration */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "source-integration"; path = "../../../extension/source-integration"; sourceTree = "<group>"; };
+		C792A2B42F380F2F00579E7C /* papers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = papers; path = ../../../extension/papers; sourceTree = "<group>"; };
+		C792A2B52F380F2F00579E7C /* dist */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dist; path = ../../../extension/dist; sourceTree = "<group>"; };
+		C792A2B62F380F2F00579E7C /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; name = config; path = ../../../extension/config; sourceTree = "<group>"; };
+		C792A2B72F380F2F00579E7C /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = popup.html; path = ../../../extension/popup.html; sourceTree = "<group>"; };
+		C792A2B82F380F2F00579E7C /* node_modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = node_modules; path = ../../../extension/node_modules; sourceTree = "<group>"; };
+		C792A2B92F380F2F00579E7C /* content.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; name = content.ts; path = ../../../extension/content.ts; sourceTree = "<group>"; };
+		C792A2BA2F380F2F00579E7C /* utils */ = {isa = PBXFileReference; lastKnownFileType = folder; name = utils; path = ../../../extension/utils; sourceTree = "<group>"; };
+		C792A2BB2F380F2F00579E7C /* popup.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; name = popup.ts; path = ../../../extension/popup.ts; sourceTree = "<group>"; };
+		C792A2BC2F380F2F00579E7C /* rollup.config.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = rollup.config.js; path = ../../../extension/rollup.config.js; sourceTree = "<group>"; };
+		C792A2BD2F380F2F00579E7C /* background.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; name = background.ts; path = ../../../extension/background.ts; sourceTree = "<group>"; };
+		C792A2BE2F380F2F00579E7C /* package-lock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = "package-lock.json"; path = "../../../extension/package-lock.json"; sourceTree = "<group>"; };
+		C792A2BF2F380F2F00579E7C /* package.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = package.json; path = ../../../extension/package.json; sourceTree = "<group>"; };
+		C792A2C02F380F2F00579E7C /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
+		C792A2C12F380F2F00579E7C /* tsconfig.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tsconfig.json; path = ../../../extension/tsconfig.json; sourceTree = "<group>"; };
+		C792A2C22F380F2F00579E7C /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = ../../../extension/options.html; sourceTree = "<group>"; };
+		C792A2C32F380F2F00579E7C /* options.ts */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.typescript; name = options.ts; path = ../../../extension/options.ts; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C792A2632F380F2E00579E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2752F380F2E00579E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2812F380F2E00579E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A28B2F380F2E00579E7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C792A2522F380F2D00579E7C = {
+			isa = PBXGroup;
+			children = (
+				C792A2572F380F2D00579E7C /* Shared (App) */,
+				C792A2602F380F2E00579E7C /* Shared (Extension) */,
+				C792A2682F380F2E00579E7C /* iOS (App) */,
+				C792A2792F380F2E00579E7C /* macOS (App) */,
+				C792A2882F380F2E00579E7C /* iOS (Extension) */,
+				C792A2922F380F2E00579E7C /* macOS (Extension) */,
+				C792A2672F380F2E00579E7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C792A2572F380F2D00579E7C /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				C792A25E2F380F2D00579E7C /* ViewController.swift */,
+				C792A25F2F380F2E00579E7C /* Assets.xcassets */,
+				C792A2582F380F2D00579E7C /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		C792A2582F380F2D00579E7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2592F380F2D00579E7C /* Main.html */,
+				C792A25B2F380F2D00579E7C /* Icon.png */,
+				C792A25C2F380F2D00579E7C /* Style.css */,
+				C792A25D2F380F2D00579E7C /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C792A2602F380F2E00579E7C /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2B22F380F2F00579E7C /* Resources */,
+				C792A2612F380F2E00579E7C /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		C792A2672F380F2E00579E7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2662F380F2E00579E7C /* Papers Feed.app */,
+				C792A2782F380F2E00579E7C /* Papers Feed.app */,
+				C792A2842F380F2E00579E7C /* Papers Feed Extension.appex */,
+				C792A28E2F380F2E00579E7C /* Papers Feed Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C792A2682F380F2E00579E7C /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2692F380F2E00579E7C /* AppDelegate.swift */,
+				C792A26B2F380F2E00579E7C /* SceneDelegate.swift */,
+				C792A26D2F380F2E00579E7C /* LaunchScreen.storyboard */,
+				C792A2702F380F2E00579E7C /* Main.storyboard */,
+				C792A2732F380F2E00579E7C /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		C792A2792F380F2E00579E7C /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				C792A27A2F380F2E00579E7C /* AppDelegate.swift */,
+				C792A27C2F380F2E00579E7C /* Main.storyboard */,
+				C792A27F2F380F2E00579E7C /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		C792A2882F380F2E00579E7C /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2892F380F2E00579E7C /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		C792A2922F380F2E00579E7C /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2932F380F2E00579E7C /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		C792A2B22F380F2F00579E7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C792A2B32F380F2F00579E7C /* source-integration */,
+				C792A2B42F380F2F00579E7C /* papers */,
+				C792A2B52F380F2F00579E7C /* dist */,
+				C792A2B62F380F2F00579E7C /* config */,
+				C792A2B72F380F2F00579E7C /* popup.html */,
+				C792A2B82F380F2F00579E7C /* node_modules */,
+				C792A2B92F380F2F00579E7C /* content.ts */,
+				C792A2BA2F380F2F00579E7C /* utils */,
+				C792A2BB2F380F2F00579E7C /* popup.ts */,
+				C792A2BC2F380F2F00579E7C /* rollup.config.js */,
+				C792A2BD2F380F2F00579E7C /* background.ts */,
+				C792A2BE2F380F2F00579E7C /* package-lock.json */,
+				C792A2BF2F380F2F00579E7C /* package.json */,
+				C792A2C02F380F2F00579E7C /* manifest.json */,
+				C792A2C12F380F2F00579E7C /* tsconfig.json */,
+				C792A2C22F380F2F00579E7C /* options.html */,
+				C792A2C32F380F2F00579E7C /* options.ts */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C792A2652F380F2E00579E7C /* Papers Feed (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C792A2A82F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed (iOS)" */;
+			buildPhases = (
+				C792A2622F380F2E00579E7C /* Sources */,
+				C792A2632F380F2E00579E7C /* Frameworks */,
+				C792A2642F380F2E00579E7C /* Resources */,
+				C792A2A72F380F2E00579E7C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C792A2872F380F2E00579E7C /* PBXTargetDependency */,
+			);
+			name = "Papers Feed (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Papers Feed (iOS)";
+			productReference = C792A2662F380F2E00579E7C /* Papers Feed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C792A2772F380F2E00579E7C /* Papers Feed (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C792A2AF2F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed (macOS)" */;
+			buildPhases = (
+				C792A2742F380F2E00579E7C /* Sources */,
+				C792A2752F380F2E00579E7C /* Frameworks */,
+				C792A2762F380F2E00579E7C /* Resources */,
+				C792A2AE2F380F2E00579E7C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C792A2912F380F2E00579E7C /* PBXTargetDependency */,
+			);
+			name = "Papers Feed (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Papers Feed (macOS)";
+			productReference = C792A2782F380F2E00579E7C /* Papers Feed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C792A2832F380F2E00579E7C /* Papers Feed Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C792A2A42F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed Extension (iOS)" */;
+			buildPhases = (
+				C792A2802F380F2E00579E7C /* Sources */,
+				C792A2812F380F2E00579E7C /* Frameworks */,
+				C792A2822F380F2E00579E7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Papers Feed Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Papers Feed Extension (iOS)";
+			productReference = C792A2842F380F2E00579E7C /* Papers Feed Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C792A28D2F380F2E00579E7C /* Papers Feed Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C792A2AB2F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed Extension (macOS)" */;
+			buildPhases = (
+				C792A28A2F380F2E00579E7C /* Sources */,
+				C792A28B2F380F2E00579E7C /* Frameworks */,
+				C792A28C2F380F2E00579E7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Papers Feed Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Papers Feed Extension (macOS)";
+			productReference = C792A28E2F380F2E00579E7C /* Papers Feed Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C792A2532F380F2D00579E7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					C792A2652F380F2E00579E7C = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C792A2772F380F2E00579E7C = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C792A2832F380F2E00579E7C = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C792A28D2F380F2E00579E7C = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = C792A2562F380F2D00579E7C /* Build configuration list for PBXProject "Papers Feed" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C792A2522F380F2D00579E7C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C792A2672F380F2E00579E7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C792A2652F380F2E00579E7C /* Papers Feed (iOS) */,
+				C792A2772F380F2E00579E7C /* Papers Feed (macOS) */,
+				C792A2832F380F2E00579E7C /* Papers Feed Extension (iOS) */,
+				C792A28D2F380F2E00579E7C /* Papers Feed Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C792A2642F380F2E00579E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A2962F380F2E00579E7C /* Icon.png in Resources */,
+				C792A26F2F380F2E00579E7C /* LaunchScreen.storyboard in Resources */,
+				C792A2942F380F2E00579E7C /* Main.html in Resources */,
+				C792A29A2F380F2E00579E7C /* Script.js in Resources */,
+				C792A29E2F380F2E00579E7C /* Assets.xcassets in Resources */,
+				C792A2722F380F2E00579E7C /* Main.storyboard in Resources */,
+				C792A2982F380F2E00579E7C /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2762F380F2E00579E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A2972F380F2E00579E7C /* Icon.png in Resources */,
+				C792A2992F380F2E00579E7C /* Style.css in Resources */,
+				C792A27E2F380F2E00579E7C /* Main.storyboard in Resources */,
+				C792A29B2F380F2E00579E7C /* Script.js in Resources */,
+				C792A29F2F380F2E00579E7C /* Assets.xcassets in Resources */,
+				C792A2952F380F2E00579E7C /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2822F380F2E00579E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A2D42F380F2F00579E7C /* config in Resources */,
+				C792A2D52F380F2F00579E7C /* popup.html in Resources */,
+				C792A2DD2F380F2F00579E7C /* options.html in Resources */,
+				C792A2D92F380F2F00579E7C /* package-lock.json in Resources */,
+				C792A2D32F380F2F00579E7C /* dist in Resources */,
+				C792A2DA2F380F2F00579E7C /* package.json in Resources */,
+				C792A2DB2F380F2F00579E7C /* manifest.json in Resources */,
+				C792A2DC2F380F2F00579E7C /* tsconfig.json in Resources */,
+				C792A2D72F380F2F00579E7C /* utils in Resources */,
+				C792A2D12F380F2F00579E7C /* source-integration in Resources */,
+				C792A2D82F380F2F00579E7C /* rollup.config.js in Resources */,
+				C792A2D62F380F2F00579E7C /* node_modules in Resources */,
+				C792A2D22F380F2F00579E7C /* papers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A28C2F380F2E00579E7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A2C72F380F2F00579E7C /* config in Resources */,
+				C792A2C82F380F2F00579E7C /* popup.html in Resources */,
+				C792A2D02F380F2F00579E7C /* options.html in Resources */,
+				C792A2CC2F380F2F00579E7C /* package-lock.json in Resources */,
+				C792A2C62F380F2F00579E7C /* dist in Resources */,
+				C792A2CD2F380F2F00579E7C /* package.json in Resources */,
+				C792A2CE2F380F2F00579E7C /* manifest.json in Resources */,
+				C792A2CF2F380F2F00579E7C /* tsconfig.json in Resources */,
+				C792A2CA2F380F2F00579E7C /* utils in Resources */,
+				C792A2C42F380F2F00579E7C /* source-integration in Resources */,
+				C792A2CB2F380F2F00579E7C /* rollup.config.js in Resources */,
+				C792A2C92F380F2F00579E7C /* node_modules in Resources */,
+				C792A2C52F380F2F00579E7C /* papers in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C792A2622F380F2E00579E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A29C2F380F2E00579E7C /* ViewController.swift in Sources */,
+				C792A26A2F380F2E00579E7C /* AppDelegate.swift in Sources */,
+				C792A26C2F380F2E00579E7C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2742F380F2E00579E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A29D2F380F2E00579E7C /* ViewController.swift in Sources */,
+				C792A27B2F380F2E00579E7C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A2802F380F2E00579E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A2A02F380F2E00579E7C /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C792A28A2F380F2E00579E7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C792A2A12F380F2E00579E7C /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C792A2872F380F2E00579E7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C792A2832F380F2E00579E7C /* Papers Feed Extension (iOS) */;
+			targetProxy = C792A2862F380F2E00579E7C /* PBXContainerItemProxy */;
+		};
+		C792A2912F380F2E00579E7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C792A28D2F380F2E00579E7C /* Papers Feed Extension (macOS) */;
+			targetProxy = C792A2902F380F2E00579E7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C792A2592F380F2D00579E7C /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C792A25A2F380F2D00579E7C /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		C792A26D2F380F2E00579E7C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C792A26E2F380F2E00579E7C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C792A2702F380F2E00579E7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C792A2712F380F2E00579E7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C792A27C2F380F2E00579E7C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C792A27D2F380F2E00579E7C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C792A2A22F380F2E00579E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C792A2A32F380F2E00579E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C792A2A52F380F2E00579E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed.Extension";
+				PRODUCT_NAME = "Papers Feed Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C792A2A62F380F2E00579E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed.Extension";
+				PRODUCT_NAME = "Papers Feed Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C792A2A92F380F2E00579E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed";
+				PRODUCT_NAME = "Papers Feed";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C792A2AA2F380F2E00579E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed";
+				PRODUCT_NAME = "Papers Feed";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C792A2AC2F380F2E00579E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed.Extension";
+				PRODUCT_NAME = "Papers Feed Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C792A2AD2F380F2E00579E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed.Extension";
+				PRODUCT_NAME = "Papers Feed Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C792A2B02F380F2E00579E7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed";
+				PRODUCT_NAME = "Papers Feed";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C792A2B12F380F2E00579E7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Papers Feed";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chtmp223.papers-feed";
+				PRODUCT_NAME = "Papers Feed";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C792A2562F380F2D00579E7C /* Build configuration list for PBXProject "Papers Feed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C792A2A22F380F2E00579E7C /* Debug */,
+				C792A2A32F380F2E00579E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C792A2A42F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C792A2A52F380F2E00579E7C /* Debug */,
+				C792A2A62F380F2E00579E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C792A2A82F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C792A2A92F380F2E00579E7C /* Debug */,
+				C792A2AA2F380F2E00579E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C792A2AB2F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C792A2AC2F380F2E00579E7C /* Debug */,
+				C792A2AD2F380F2E00579E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C792A2AF2F380F2E00579E7C /* Build configuration list for PBXNativeTarget "Papers Feed (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C792A2B02F380F2E00579E7C /* Debug */,
+				C792A2B12F380F2E00579E7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C792A2532F380F2D00579E7C /* Project object */;
+}

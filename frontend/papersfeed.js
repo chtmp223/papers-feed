@@ -584,6 +584,9 @@ function displayPaperDetails(paperId) {
   detailsContent.innerHTML = `
     <div class="details-header">
       <h2>${paper.title}</h2>
+      <button class="delete-paper-btn" title="Delete paper" onclick="deletePaper(currentDetailsPaper)">
+        <i class="fas fa-trash"></i> Delete
+      </button>
     </div>
     
     <div class="detail-section">
@@ -639,6 +642,78 @@ function displayPaperDetails(paperId) {
   
   // Show the sidebar
   detailsSidebar.classList.add('active');
+}
+
+function getGitHubToken() {
+  let token = localStorage.getItem('github_pat');
+  if (!token) {
+    token = prompt('Enter your GitHub Personal Access Token (PAT).\nIt will be stored in localStorage for reuse.');
+    if (token) {
+      localStorage.setItem('github_pat', token.trim());
+      token = token.trim();
+    }
+  }
+  return token || null;
+}
+
+async function deletePaper(paper) {
+  if (!paper || !paper.issueNumber) {
+    alert('Cannot delete: missing issue number for this paper.');
+    return;
+  }
+
+  if (!confirm(`Delete "${paper.title}"?\n\nThis will close the GitHub issue and remove its gh-store label.`)) {
+    return;
+  }
+
+  const token = getGitHubToken();
+  if (!token) return;
+
+  const repo = 'chtmp223/papers-feed';
+  const issueNum = paper.issueNumber;
+  const headers = {
+    'Authorization': `token ${token}`,
+    'Accept': 'application/vnd.github.v3+json'
+  };
+
+  try {
+    // 1. Close the issue
+    const closeRes = await fetch(`https://api.github.com/repos/${repo}/issues/${issueNum}`, {
+      method: 'PATCH',
+      headers: { ...headers, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ state: 'closed' })
+    });
+    if (!closeRes.ok) {
+      const err = await closeRes.json();
+      throw new Error(err.message || `Failed to close issue (${closeRes.status})`);
+    }
+
+    // 2. Remove the gh-store label (ignore 404 if label already absent)
+    const labelRes = await fetch(`https://api.github.com/repos/${repo}/issues/${issueNum}/labels/gh-store`, {
+      method: 'DELETE',
+      headers
+    });
+    if (!labelRes.ok && labelRes.status !== 404) {
+      console.warn('Could not remove gh-store label:', labelRes.status);
+    }
+
+    // 3. Remove paper and its interactions entry from in-memory data
+    const paperId = paper.id;
+    allData = allData.filter(p => p.paperKey !== paper.paperKey);
+
+    // 4. Refresh the table
+    table.replaceData(allData);
+
+    // 5. Close the sidebar
+    hideDetails();
+
+  } catch (err) {
+    // If auth failed, clear the stored token so user can re-enter
+    if (err.message && err.message.toLowerCase().includes('bad credentials')) {
+      localStorage.removeItem('github_pat');
+    }
+    alert('Delete failed: ' + err.message);
+  }
 }
 
 function hideDetails() {
@@ -826,7 +901,8 @@ function processComplexData(data) {
       interactionDays: uniqueInteractionDays,
       tags: tags,
       url: paperData.url,
-      rawInteractionData: interactionData ? interactionData.interactions : []
+      rawInteractionData: interactionData ? interactionData.interactions : [],
+      issueNumber: paperMeta.issue_number
     });
   }
   
