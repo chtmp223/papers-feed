@@ -7,14 +7,23 @@ let readingTimeColorScale = null;
 let interactionDaysColorScale = null;
 let readingActivityData = [];
 let currentHeatmapMetric = 'papers';
-let manuallyReadPapers = new Set();
+let manuallyReadPapers = new Map(); // Maps paperKey -> dateString (YYYY-MM-DD)
 
 // Load manually read papers from localStorage
 function loadManuallyReadPapers() {
   try {
     const stored = localStorage.getItem('manuallyReadPapers');
     if (stored) {
-      manuallyReadPapers = new Set(JSON.parse(stored));
+      const parsed = JSON.parse(stored);
+      // Handle both old format (array) and new format (object with dates)
+      if (Array.isArray(parsed)) {
+        // Migrate old format: assign today's date to all entries
+        const today = new Date().toISOString().split('T')[0];
+        manuallyReadPapers = new Map(parsed.map(key => [key, today]));
+        saveManuallyReadPapers(); // Save in new format
+      } else {
+        manuallyReadPapers = new Map(Object.entries(parsed));
+      }
     }
   } catch (e) {
     console.warn('Failed to load manually read papers:', e);
@@ -24,7 +33,8 @@ function loadManuallyReadPapers() {
 // Save manually read papers to localStorage
 function saveManuallyReadPapers() {
   try {
-    localStorage.setItem('manuallyReadPapers', JSON.stringify([...manuallyReadPapers]));
+    const obj = Object.fromEntries(manuallyReadPapers);
+    localStorage.setItem('manuallyReadPapers', JSON.stringify(obj));
   } catch (e) {
     console.warn('Failed to save manually read papers:', e);
   }
@@ -35,10 +45,21 @@ function toggleReadStatus(paper, cell) {
   if (manuallyReadPapers.has(paper.paperKey)) {
     manuallyReadPapers.delete(paper.paperKey);
   } else {
-    manuallyReadPapers.add(paper.paperKey);
+    // Store the date when marked as read
+    const today = new Date().toISOString().split('T')[0];
+    manuallyReadPapers.set(paper.paperKey, today);
   }
   saveManuallyReadPapers();
   cell.getRow().reformat();
+
+  // Update heatmap to reflect the change
+  updateHeatmapAfterReadToggle();
+}
+
+// Update heatmap after toggling read status
+function updateHeatmapAfterReadToggle() {
+  const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
+  createReadingHeatmap(activityData);
 }
 
 // Utility function to normalize dates using Chrono
@@ -277,6 +298,20 @@ function extractReadingActivityData(data, metric = 'papers') {
         });
       }
       dailyActivity.get(firstReadStr).discoveries.add(paper.paperKey);
+    }
+
+    // Include manually marked read papers
+    if (manuallyReadPapers.has(paper.paperKey)) {
+      const manualReadDate = manuallyReadPapers.get(paper.paperKey);
+      if (!dailyActivity.has(manualReadDate)) {
+        dailyActivity.set(manualReadDate, {
+          papers: new Set(),
+          totalTime: 0,
+          sessions: 0,
+          discoveries: new Set()
+        });
+      }
+      dailyActivity.get(manualReadDate).papers.add(paper.paperKey);
     }
   });
 
