@@ -8,6 +8,7 @@ let interactionDaysColorScale = null;
 let readingActivityData = [];
 let currentHeatmapMetric = 'papers';
 let manuallyReadPapers = new Map(); // Maps paperKey -> dateString (YYYY-MM-DD)
+let snapshotRepo = '';
 
 // Load manually read papers from localStorage
 function loadManuallyReadPapers() {
@@ -43,16 +44,23 @@ function saveManuallyReadPapers() {
 
 // Toggle read status for a paper
 function toggleReadStatus(paper, cell) {
+  let dateStr;
   if (manuallyReadPapers.has(paper.paperKey)) {
     manuallyReadPapers.delete(paper.paperKey);
+    dateStr = null;
   } else {
     // Store the date when marked as read (use local time to match heatmap)
     const now = new Date();
-    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
-    manuallyReadPapers.set(paper.paperKey, today);
+    dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+    manuallyReadPapers.set(paper.paperKey, dateStr);
   }
   saveManuallyReadPapers();
   cell.getRow().reformat();
+
+  // Persist to gh-store in background
+  updatePaperReadStatus(paper, dateStr).catch(err =>
+    console.warn('Failed to persist read status to gh-store:', err)
+  );
 
   // Update heatmap to reflect the change
   updateHeatmapAfterReadToggle();
@@ -771,6 +779,42 @@ function getGitHubToken() {
   return token || null;
 }
 
+async function updatePaperReadStatus(paper, dateStr) {
+  const token = getGitHubToken();
+  if (!token || !snapshotRepo || !paper.issueNumber) return;
+
+  const apiBase = `https://api.github.com/repos/${snapshotRepo}/issues/${paper.issueNumber}`;
+  const headers = {
+    'Authorization': `token ${token}`,
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+
+  const payload = {
+    _data: { manuallyRead: dateStr },
+    _meta: {
+      client_version: '1.0.0',
+      timestamp: new Date().toISOString(),
+      update_mode: 'append',
+      issue_number: paper.issueNumber
+    }
+  };
+
+  // Post comment with the update
+  await fetch(`${apiBase}/comments`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ body: JSON.stringify(payload) })
+  });
+
+  // Reopen the issue to trigger gh-store processing
+  await fetch(apiBase, {
+    method: 'PATCH',
+    headers,
+    body: JSON.stringify({ state: 'open' })
+  });
+}
+
 async function deletePaper(paper) {
   if (!paper) {
     alert('Cannot delete: no paper selected.');
@@ -979,6 +1023,11 @@ function processComplexData(data) {
       rawInteractionData: interactionData ? interactionData.interactions : [],
       issueNumber: paperMeta.issue_number
     });
+
+    // Load manuallyRead from snapshot if present and not already tracked locally
+    if (paperData.manuallyRead && !manuallyReadPapers.has(paperKey)) {
+      manuallyReadPapers.set(paperKey, paperData.manuallyRead);
+    }
   }
 
   return result;
@@ -1418,7 +1467,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then(data => {
+        snapshotRepo = data.repository || '';
         allData = processComplexData(data);
+
+        // Persist merged read status (snapshot + localStorage) back to localStorage
+        saveManuallyReadPapers();
 
         // Initialize table and heatmap
         initTable(allData);
