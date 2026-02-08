@@ -88,7 +88,7 @@ jobs:
       
   deploy:
     needs: update-snapshot
-    if: github.event_name == 'workflow_dispatch' || needs.update-snapshot.outputs.changes_detected == 'true'
+    if: always() && needs.update-snapshot.result != 'failure'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
