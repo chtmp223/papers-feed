@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T00:05:33.310374+00:00",
+  "snapshot_time": "2026-02-08T00:14:43.622679+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "interactions:acl-anthology.2023.acl-long.1": {
@@ -172,6 +172,57 @@
         "object_id": "paper:arxiv.2305.13304",
         "created_at": "2026-02-08T00:04:33+00:00",
         "updated_at": "2026-02-08T00:04:56+00:00",
+        "version": 1
+      }
+    },
+    "paper:nber.w34777": {
+      "data": {
+        "sourceId": "nber",
+        "paperId": "w34777",
+        "url": "https://www.nber.org/papers/w34777",
+        "title": "AI and the Quantity and Quality of Creative Products: Have LLMs Boosted Creation of Valuable Books?",
+        "authors": "Imke Reimers, Joel Waldfogel",
+        "abstract": "Founded in 1920, the NBER is a private, non-profit, non-partisan organization dedicated to conducting economic research and to disseminating research findings among academics, public policy makers, and business professionals.",
+        "timestamp": "2026-02-08T00:13:57.415Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/02",
+        "tags": [
+          "Imke Reimers",
+          "Joel Waldfogel"
+        ],
+        "doi": "10.3386/w34777",
+        "journalName": "NBER Working Papers",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 10,
+        "object_id": "paper:nber.w34777",
+        "created_at": "2026-02-08T00:13:57+00:00",
+        "updated_at": "2026-02-08T00:14:24+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.40D4410B": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "40D4410B",
+        "url": "https://www2.nber.org/system/files/working_papers/w34777",
+        "title": "Page Not Found - MyNBER",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-08T00:13:38.763Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 9,
+        "object_id": "paper:url.40D4410B",
+        "created_at": "2026-02-08T00:13:38+00:00",
+        "updated_at": "2026-02-08T00:13:57+00:00",
         "version": 1
       }
     }
