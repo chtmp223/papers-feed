@@ -493,9 +493,9 @@ function createReadingHeatmap(data) {
         .style("opacity", 0);
     })
     .on("click", function (event, d) {
-      // Only allow filtering when not viewing paper details
+      // Close paper details sidebar if open, so heatmap click filters all papers
       if (currentDetailsPaper) {
-        return; // Disable click filtering when viewing single paper
+        hideDetails();
       }
 
       // Filter table to show papers read on this date
