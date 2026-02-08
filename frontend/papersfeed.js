@@ -18,7 +18,8 @@ function loadManuallyReadPapers() {
       // Handle both old format (array) and new format (object with dates)
       if (Array.isArray(parsed)) {
         // Migrate old format: assign today's date to all entries
-        const today = new Date().toISOString().split('T')[0];
+        const now = new Date();
+        const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
         manuallyReadPapers = new Map(parsed.map(key => [key, today]));
         saveManuallyReadPapers(); // Save in new format
       } else {
@@ -45,8 +46,9 @@ function toggleReadStatus(paper, cell) {
   if (manuallyReadPapers.has(paper.paperKey)) {
     manuallyReadPapers.delete(paper.paperKey);
   } else {
-    // Store the date when marked as read
-    const today = new Date().toISOString().split('T')[0];
+    // Store the date when marked as read (use local time to match heatmap)
+    const now = new Date();
+    const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
     manuallyReadPapers.set(paper.paperKey, today);
   }
   saveManuallyReadPapers();
@@ -71,14 +73,14 @@ function normalizeDate(dateString) {
     const parsedDate = chrono.parseDate(dateString);
 
     if (parsedDate) {
-      // Return in YYYY-MM-DD format for consistency
-      return parsedDate.toISOString().split('T')[0];
+      // Return in YYYY-MM-DD format using local time for consistency with heatmap
+      return `${parsedDate.getFullYear()}-${String(parsedDate.getMonth() + 1).padStart(2, '0')}-${String(parsedDate.getDate()).padStart(2, '0')}`;
     }
 
     // Fallback to native Date parsing if Chrono fails
     const fallbackDate = new Date(dateString);
     if (!isNaN(fallbackDate.getTime())) {
-      return fallbackDate.toISOString().split('T')[0];
+      return `${fallbackDate.getFullYear()}-${String(fallbackDate.getMonth() + 1).padStart(2, '0')}-${String(fallbackDate.getDate()).padStart(2, '0')}`;
     }
 
     // If all parsing fails, return original string
@@ -584,7 +586,11 @@ function createReadingHeatmap(data) {
 function formatDate(dateString) {
   if (!dateString) return '';
   const date = new Date(dateString);
-  return date.toISOString().split('T')[0]; // YYYY-MM-DD format
+  // Use local time (not UTC) to match d3.timeFormat used in the heatmap
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 }
 
 // Custom cell formatter for tags
@@ -923,7 +929,7 @@ function processComplexData(data) {
           // Track unique days
           if (interaction.timestamp) {
             const date = new Date(interaction.timestamp);
-            const dateString = date.toISOString().split('T')[0]; // YYYY-MM-DD
+            const dateString = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
             uniqueDays.add(dateString);
           }
         }
@@ -944,7 +950,7 @@ function processComplexData(data) {
 
     let freshness = -1;
     if (lastReadDate && paperData.publishedDate) {
-      const lastReadStr = lastReadDate.toISOString().split('T')[0];  // Convert to YYYY-MM-DD
+      const lastReadStr = `${lastReadDate.getFullYear()}-${String(lastReadDate.getMonth() + 1).padStart(2, '0')}-${String(lastReadDate.getDate()).padStart(2, '0')}`;
       const publishedStr = normalizeDate(paperData.publishedDate);  // Normalize first
       freshness = daysBetween(publishedStr, lastReadStr);
     }
