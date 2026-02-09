@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T15:20:02.859122+00:00",
+  "snapshot_time": "2026-02-09T15:52:36.908028+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -714,6 +714,30 @@
         "object_id": "paper:url-misc.68D79817",
         "created_at": "2026-02-09T15:18:48+00:00",
         "updated_at": "2026-02-09T15:19:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6F62DF27": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6F62DF27",
+        "url": "https://huggingface.co/opendatalab/PDF-Extract-Kit-1.0",
+        "title": "opendatalab/PDF-Extract-Kit-1.0 \u00b7 Hugging Face",
+        "authors": "",
+        "abstract": "We\u2019re on a journey to advance and democratize artificial intelligence through open source and open science.",
+        "timestamp": "2026-02-09T15:51:48.576Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 37,
+        "object_id": "paper:url.6F62DF27",
+        "created_at": "2026-02-09T15:51:48+00:00",
+        "updated_at": "2026-02-09T15:52:08+00:00",
         "version": 1
       }
     }
