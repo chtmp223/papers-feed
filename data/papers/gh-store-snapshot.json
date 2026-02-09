@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T20:58:54.812423+00:00",
+  "snapshot_time": "2026-02-09T21:14:41.965646+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -866,6 +866,61 @@
         "object_id": "paper:url.5DD06E7F",
         "created_at": "2026-02-09T20:58:08+00:00",
         "updated_at": "2026-02-09T20:58:31+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6D647947": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6D647947",
+        "url": "https://techxplore.com/news/2018-09-behavior-goodreads-amazon-bestsellers.html",
+        "title": "Analyzing book reading behavior on Goodreads to predict Amazon Bestsellers",
+        "authors": "",
+        "abstract": "Researchers at Northwestern University, Microsoft Research India, and the Indian Institute of Technology Kharagpur have recently developed a model to predict whether a book will become a bestseller on Amazon within 15 days of its publication. Their model, outlined in a study pre-published on arXiv, works by analyzing reading behavior on the online platform Goodreads.",
+        "timestamp": "2026-02-09T21:13:48.739Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [
+          "hi-tech news",
+          "hitech",
+          "innovation",
+          "inventions",
+          "computer news",
+          "information technology"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 47,
+        "object_id": "paper:url.6D647947",
+        "created_at": "2026-02-09T21:13:49+00:00",
+        "updated_at": "2026-02-09T21:14:12+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.30331C8C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "30331C8C",
+        "url": "https://www.semanticscholar.org/paper/Who-decides-what-is-read-on-Goodreads-Uncovering-Hu-Diesner/4f53942e0621d172ae60ec090ecd76fc012fb6f8",
+        "title": "The Goodreads \u201cClassics\u201d: A Computational Study of Readers, Amazon, and Crowdsourced Amateur Criticism",
+        "authors": "Melanie Walsh, Maria Antoniak",
+        "abstract": "The scale of the phenomena of incentivized book reviews is revealed for the first time, which illuminates the rise of sponsored content while contributing to broader discussions on computational approaches to digital economies of prestige and the responsible use of platform-mediated cultural datasets across disciplines. Attracted by the promise of a broader and more egalitarian sample of readers than published book reviews provide, researchers are increasingly scraping social reviewing platforms like Goodreads for data about readers\u2019 behavior. Yet, treating online book reviews as direct proxies for readers and books can be problematic, as they are socially and technically constructed artifacts shaped by platform dynamics, whether between developers and users, or book industry stakeholders and reviewers. To uncover these complexities, we computationally curated 331,211 self-identified incentivized book reviews to understand the growth of incentivized content, and how these purportedly equal-access social reviewing spaces are re-inscribing the inequalities of traditional book reviewing and publishing. Our findings underscore the necessity of critical examination of both online book reviewing and cultural datasets derived from social media platforms. With the growing restrictions on access to platform data for research, this study also demonstrates the potential for a mixed-method analysis of historical scraped datasets; an approach that will likely be of interest to many researchers working with cultural data moderated by black-box algorithms. With this method, our research reveals for the first time the scale of the phenomena of incentivized book reviews that is well known to users of Goodreads but remains largely anecdotal. Additionally, it illuminates the rise of sponsored content while contributing to broader discussions on computational approaches to digital economies of prestige and the responsible use of platform-mediated cultural datasets across disciplines.",
+        "timestamp": "2026-02-09T21:13:37.301Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "Journal of Cultural Analytics",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 46,
+        "object_id": "paper:url.30331C8C",
+        "created_at": "2026-02-09T21:13:37+00:00",
+        "updated_at": "2026-02-09T21:13:59+00:00",
         "version": 1
       }
     }
