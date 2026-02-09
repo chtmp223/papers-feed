@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T21:34:51.126920+00:00",
+  "snapshot_time": "2026-02-09T21:55:22.409774+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1216,6 +1216,33 @@
         "object_id": "paper:url.5F9A774A",
         "created_at": "2026-02-09T21:33:43+00:00",
         "updated_at": "2026-02-09T21:34:04+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2503.14499": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2503.14499",
+        "url": "https://arxiv.org/abs/2503.14499",
+        "title": "Measuring AI Ability to Complete Long Tasks",
+        "authors": "Thomas Kwa, Ben West, Joel Becker, Amy Deng, Katharyn Garcia, Max Hasin, Sami Jawhar, Megan Kinniment, Nate Rush, Sydney Von Arx, Ryan Bloom, Thomas Broadley, Haoxing Du, Brian Goodrich, Nikola Jurkovic, Luke Harold Miles, Seraphina Nix, Tao Lin, Neev Parikh, David Rein, Lucas Jun Koba Sato, Hjalmar Wijk, Daniel M. Ziegler, Elizabeth Barnes, Lawrence Chan",
+        "abstract": "Despite rapid progress on AI benchmarks, the real-world meaning of benchmark performance remains unclear. To quantify the capabilities of AI systems in terms of human capabilities, we propose a new metric: 50%-task-completion time horizon. This is the time humans typically take to complete tasks that AI models can complete with 50% success rate. We first timed humans with relevant domain expertise on a combination of RE-Bench, HCAST, and 66 novel shorter tasks. On these tasks, current frontier AI models such as Claude 3.7 Sonnet have a 50% time horizon of around 50 minutes. Furthermore, frontier AI time horizon has been doubling approximately every seven months since 2019, though the trend may have accelerated in 2024. The increase in AI models' time horizons seems to be primarily driven by greater reliability and ability to adapt to mistakes, combined with better logical reasoning and tool use capabilities. We discuss the limitations of our results -- including their degree of external validity -- and the implications of increased autonomy for dangerous capabilities. If these results generalize to real-world software tasks, extrapolation of this trend predicts that within 5 years, AI systems will be capable of automating many software tasks that currently take humans a month.",
+        "timestamp": "2026-02-09T21:54:25.085Z",
+        "rating": "novote",
+        "publishedDate": "2025/03/18",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 60,
+        "object_id": "paper:arxiv.2503.14499",
+        "created_at": "2026-02-09T21:54:25+00:00",
+        "updated_at": "2026-02-09T21:54:54+00:00",
         "version": 1
       }
     }
