@@ -1310,14 +1310,6 @@ function setupEventListeners() {
     document.getElementById("details-sidebar").classList.remove("active");
   });
 
-  // Floating filter button
-  document.getElementById("filter-toggle-btn").addEventListener("click", function () {
-    document.getElementById("sidebar").classList.toggle("active");
-
-    // Close details sidebar if open (to avoid both being open at once)
-    document.getElementById("details-sidebar").classList.remove("active");
-  });
-
   // Toggle details with keyboard escape key
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
