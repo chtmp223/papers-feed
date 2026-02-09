@@ -902,42 +902,6 @@ function extractDomain(url) {
   }
 }
 
-// Simple color formatter for published dates
-const publishedColorScale = d3.scaleSequential(d3.interpolateGreens)
-  .domain([90, 0]); // 90 days ago = white, 0 days ago = green
-
-function formatPublishedWithColor(cell) {
-  const publishedDate = cell.getValue();
-  const cellElement = cell.getElement();
-
-  if (!publishedDate || publishedDate === 'N/A') {
-    cellElement.style.backgroundColor = 'white';
-    return publishedDate || '';
-  }
-
-  try {
-    const pubDate = new Date(publishedDate);
-    const today = new Date();
-    const daysAgo = Math.floor((today - pubDate) / (1000 * 60 * 60 * 24));
-
-    if (daysAgo < 0 || daysAgo > 90) {
-      // More than 3 months old or future date - white
-      cellElement.style.backgroundColor = 'white';
-    } else {
-      // 0-90 days: use D3 color scale
-      const backgroundColor = publishedColorScale(daysAgo);
-      const textColor = getContrastColor(backgroundColor);
-      cellElement.style.backgroundColor = backgroundColor;
-      cellElement.style.color = textColor;
-    }
-
-    return publishedDate;
-  } catch (error) {
-    cellElement.style.backgroundColor = 'white';
-    return publishedDate;
-  }
-}
-
 // read and reshape gh-store scnapshot
 function processComplexData(data) {
   const result = [];
@@ -1128,14 +1092,7 @@ function initTable(data) {
       {
         title: "Published",
         field: "published",
-        widthGrow: 1,
-        formatter: formatPublishedWithColor
-        // formatter: function(cell) {
-        //   const cellElement = cell.getElement();
-        //   const freshness = cell.getData().paperFreshness;
-        //   cellElement.setAttribute("data-paper-freshness", freshness);
-        //   return cell.getData().published;
-        // }
+        widthGrow: 1
       },
       {
         title: "Tags",
@@ -1158,8 +1115,8 @@ function initTable(data) {
       // Add paper ID as data attribute
       const rowElement = row.getElement();
       const paper_Id = row.getData().paperKey;
-      console.log("formatter detected paperId:", paper_Id);
       rowElement.setAttribute("data-paper-id", paper_Id);
+      rowElement.classList.toggle("row-read", manuallyReadPapers.has(paper_Id));
     }
   });
 
