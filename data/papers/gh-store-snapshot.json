@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T21:29:31.582887+00:00",
+  "snapshot_time": "2026-02-09T21:31:07.566064+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1096,6 +1096,54 @@
         "object_id": "paper:url.2F912D55",
         "created_at": "2026-02-09T21:28:30+00:00",
         "updated_at": "2026-02-09T21:28:53+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1EA16CE": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1EA16CE",
+        "url": "https://www.publicbooks.org/how-translations-sell-three-u-s-eras-of-international-bestsellers/",
+        "title": "How Translations Sell: Three U.S. Eras of International Bestsellers - Public Books",
+        "authors": "Megan Cummins",
+        "abstract": "A translation renaissance in US publishing just ended. And you probably missed it.",
+        "timestamp": "2026-02-09T21:30:06.854Z",
+        "rating": "novote",
+        "publishedDate": "2025-09-16T15:00:31+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 56,
+        "object_id": "paper:url.1EA16CE",
+        "created_at": "2026-02-09T21:30:07+00:00",
+        "updated_at": "2026-02-09T21:30:44+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.5BC116CB": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "5BC116CB",
+        "url": "https://www.publicbooks.org/on-our-nightstands-september-2023/",
+        "title": "On Our Nightstands: September 2023 - Public Books",
+        "authors": "Imani Radney",
+        "abstract": "A behind-the-scenes look at what \u201cPublic Books\u201d editors and staff have been reading this month.",
+        "timestamp": "2026-02-09T21:29:53.905Z",
+        "rating": "novote",
+        "publishedDate": "2023-09-08T15:00:33+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 55,
+        "object_id": "paper:url.5BC116CB",
+        "created_at": "2026-02-09T21:29:54+00:00",
+        "updated_at": "2026-02-09T21:30:15+00:00",
         "version": 1
       }
     }
