@@ -1544,18 +1544,21 @@ function setupEventListeners() {
     }
   });
 
-  // Toggle metadata sidebar
-  document.getElementById("metadata-toggle").addEventListener("click", function () {
-    document.getElementById("sidebar").classList.remove("active");
-    const detailsSidebar = document.getElementById("details-sidebar");
+  // Toggle metadata sidebar (if metadata button is present)
+  const metadataToggle = document.getElementById("metadata-toggle");
+  if (metadataToggle) {
+    metadataToggle.addEventListener("click", function () {
+      document.getElementById("sidebar").classList.remove("active");
+      const detailsSidebar = document.getElementById("details-sidebar");
 
-    if (detailsSidebar.classList.contains("active")) {
-      hideDetails();
-      return;
-    }
+      if (detailsSidebar.classList.contains("active")) {
+        hideDetails();
+        return;
+      }
 
-    openMetadataSidebar();
-  });
+      openMetadataSidebar();
+    });
+  }
 
   // Toggle details with keyboard escape key
   document.addEventListener("keydown", function (e) {

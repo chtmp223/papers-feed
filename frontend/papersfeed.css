@@ -363,8 +363,7 @@ h1 {
 }
 
 /* Match header filter button height to the search input */
-#sidebar-toggle,
-#metadata-toggle {
+#sidebar-toggle {
   height: 44px;
 }
 
