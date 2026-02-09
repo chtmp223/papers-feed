@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T21:14:41.965646+00:00",
+  "snapshot_time": "2026-02-09T21:17:04.310193+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -921,6 +921,85 @@
         "object_id": "paper:url.30331C8C",
         "created_at": "2026-02-09T21:13:37+00:00",
         "updated_at": "2026-02-09T21:13:59+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.64A6F94C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "64A6F94C",
+        "url": "https://www.publishersweekly.com/pw/by-topic/digital/copyright/article/99019-new-report-examines-writers-attitudes-toward-ai.html",
+        "title": "New Report Examines Writers\u2019 Attitudes toward AI",
+        "authors": "",
+        "abstract": "A study commissioned by the Gotham Ghostwriters and Bernoff.com found that while 61% of professional writers are embracing AI tools, authors, specifically fiction authors, are much more wary.",
+        "timestamp": "2026-02-09T21:16:19.122Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [
+          "Gotham Ghostwriters",
+          "Josh Bernoff",
+          "AI",
+          "Chat GPT"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 50,
+        "object_id": "paper:url.64A6F94C",
+        "created_at": "2026-02-09T21:16:19+00:00",
+        "updated_at": "2026-02-09T21:16:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1EB56418": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1EB56418",
+        "url": "https://insights.bookbub.com/how-authors-are-thinking-about-ai-survey/",
+        "title": "How Authors Are Thinking About AI (Survey of 1,200+ Authors)",
+        "authors": "Carlyn Robertson",
+        "abstract": "We surveyed more than 1,200 authors to learn how they're thinking about generative AI as it relates to their work. Here's what they had to say.",
+        "timestamp": "2026-02-09T21:16:09.683Z",
+        "rating": "novote",
+        "publishedDate": "2025-05-15T13:04:25+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 49,
+        "object_id": "paper:url.1EB56418",
+        "created_at": "2026-02-09T21:16:09+00:00",
+        "updated_at": "2026-02-09T21:16:29+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2502.09747": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2502.09747",
+        "url": "https://arxiv.org/abs/2502.09747",
+        "title": "The Widespread Adoption of Large Language Model-Assisted Writing Across Society",
+        "authors": "Weixin Liang, Yaohui Zhang, Mihai Codreanu, Jiayu Wang, Hancheng Cao, James Zou",
+        "abstract": "The recent advances in large language models (LLMs) attracted significant public and policymaker interest in its adoption patterns. In this paper, we systematically analyze LLM-assisted writing across four domains-consumer complaints, corporate communications, job postings, and international organization press releases-from January 2022 to September 2024. Our dataset includes 687,241 consumer complaints, 537,413 corporate press releases, 304.3 million job postings, and 15,919 United Nations (UN) press releases. Using a robust population-level statistical framework, we find that LLM usage surged following the release of ChatGPT in November 2022. By late 2024, roughly 18% of financial consumer complaint text appears to be LLM-assisted, with adoption patterns spread broadly across regions and slightly higher in urban areas. For corporate press releases, up to 24% of the text is attributable to LLMs. In job postings, LLM-assisted writing accounts for just below 10% in small firms, and is even more common among younger firms. UN press releases also reflect this trend, with nearly 14% of content being generated or modified by LLMs. Although adoption climbed rapidly post-ChatGPT, growth appears to have stabilized by 2024, reflecting either saturation in LLM adoption or increasing subtlety of more advanced models. Our study shows the emergence of a new reality in which firms, consumers and even international organizations substantially rely on generative AI for communications.",
+        "timestamp": "2026-02-09T21:15:40.332Z",
+        "rating": "novote",
+        "publishedDate": "2025/02/13",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 48,
+        "object_id": "paper:arxiv.2502.09747",
+        "created_at": "2026-02-09T21:15:40+00:00",
+        "updated_at": "2026-02-09T21:16:04+00:00",
         "version": 1
       }
     }
