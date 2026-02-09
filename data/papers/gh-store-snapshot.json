@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-08T22:19:18.316568+00:00",
+  "snapshot_time": "2026-02-09T00:24:01.841052+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -458,6 +458,30 @@
         "object_id": "paper:arxiv.2503.15655",
         "created_at": "2026-02-08T22:18:28+00:00",
         "updated_at": "2026-02-08T22:18:47+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.46149ECF": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "46149ECF",
+        "url": "https://www.theatlantic.com/ideas/2026/02/books-news-washington-post/685897/?utm_source=feed",
+        "title": "The Literary Ecosystem Is Dying",
+        "authors": "Adam Kirsch",
+        "abstract": "In a sense, the decline of book reviews, like the decline of newspapers themselves, is a story about disaggregation.",
+        "timestamp": "2026-02-09T00:23:17.078Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-06T12:00:00Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 27,
+        "object_id": "paper:url.46149ECF",
+        "created_at": "2026-02-09T00:23:17+00:00",
+        "updated_at": "2026-02-09T00:23:35+00:00",
         "version": 1
       }
     }
