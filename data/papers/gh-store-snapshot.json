@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T15:52:36.908028+00:00",
+  "snapshot_time": "2026-02-09T17:58:16.939634+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -738,6 +738,33 @@
         "object_id": "paper:url.6F62DF27",
         "created_at": "2026-02-09T15:51:48+00:00",
         "updated_at": "2026-02-09T15:52:08+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2501.18099": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2501.18099",
+        "url": "https://arxiv.org/abs/2501.18099",
+        "title": "Learning to Plan & Reason for Evaluation with Thinking-LLM-as-a-Judge",
+        "authors": "Swarnadeep Saha, Xian Li, Marjan Ghazvininejad, Jason Weston, Tianlu Wang",
+        "abstract": "LLM-as-a-Judge models generate chain-of-thought (CoT) sequences intended to capture the step-bystep reasoning process that underlies the final evaluation of a response. However, due to the lack of human annotated CoTs for evaluation, the required components and structure of effective reasoning traces remain understudied. Consequently, previous approaches often (1) constrain reasoning traces to hand-designed components, such as a list of criteria, reference answers, or verification questions and (2) structure them such that planning is intertwined with the reasoning for evaluation. In this work, we propose EvalPlanner, a preference optimization algorithm for Thinking-LLM-as-a-Judge that first generates an unconstrained evaluation plan, followed by its execution, and then the final judgment. In a self-training loop, EvalPlanner iteratively optimizes over synthetically constructed evaluation plans and executions, leading to better final verdicts. Our method achieves a new state-of-the-art performance for generative reward models on RewardBench (with a score of 93.9), despite being trained on fewer amount of, and synthetically generated, preference pairs. Additional experiments on other benchmarks like RM-Bench, JudgeBench, and FollowBenchEval further highlight the utility of both planning and reasoning for building robust LLM-as-a-Judge reasoning models.",
+        "timestamp": "2026-02-09T17:57:24.729Z",
+        "rating": "novote",
+        "publishedDate": "2025/01/30",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 40,
+        "object_id": "paper:arxiv.2501.18099",
+        "created_at": "2026-02-09T17:57:24+00:00",
+        "updated_at": "2026-02-09T17:57:45+00:00",
         "version": 1
       }
     }
