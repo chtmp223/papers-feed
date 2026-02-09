@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T00:24:01.841052+00:00",
+  "snapshot_time": "2026-02-09T02:09:52.120680+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -482,6 +482,30 @@
         "object_id": "paper:url.46149ECF",
         "created_at": "2026-02-09T00:23:17+00:00",
         "updated_at": "2026-02-09T00:23:35+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2DB787B1": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2DB787B1",
+        "url": "https://odd-lots-books.netlify.app/",
+        "title": "Odd Lots Books",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-09T02:09:07.679Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 28,
+        "object_id": "paper:url.2DB787B1",
+        "created_at": "2026-02-09T02:09:07+00:00",
+        "updated_at": "2026-02-09T02:09:29+00:00",
         "version": 1
       }
     }
