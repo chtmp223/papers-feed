@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T20:54:23.152112+00:00",
+  "snapshot_time": "2026-02-09T20:57:54.077261+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -818,6 +818,30 @@
         "object_id": "paper:arxiv.2601.11868",
         "created_at": "2026-02-09T20:53:37+00:00",
         "updated_at": "2026-02-09T20:53:57+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.26DA80ED": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "26DA80ED",
+        "url": "https://anthology.ach.org/",
+        "title": "Anthology of Computers and the Humanities",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-09T20:56:26.187Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 44,
+        "object_id": "paper:url.26DA80ED",
+        "created_at": "2026-02-09T20:56:26+00:00",
+        "updated_at": "2026-02-09T20:57:13+00:00",
         "version": 1
       }
     }
