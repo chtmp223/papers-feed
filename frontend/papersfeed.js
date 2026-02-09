@@ -1091,18 +1091,6 @@ function initTable(data) {
         }
       },
       {
-        title: "Read Dates",
-        field: "interactionDays",
-        widthGrow: 1,
-        formatter: formatInteractionDaysWithColor
-      },
-      {
-        title: "Read Time (s)",
-        field: "readingTimeSeconds",
-        widthGrow: 1,
-        formatter: formatReadingTimeWithColor
-      },
-      {
         title: "Title",
         field: "title",
         widthGrow: 6,
