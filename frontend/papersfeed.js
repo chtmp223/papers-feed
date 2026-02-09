@@ -8,6 +8,8 @@ let interactionDaysColorScale = null;
 let readingActivityData = [];
 let currentHeatmapMetric = 'papers';
 let manuallyReadPapers = new Map(); // Maps paperKey -> dateString (YYYY-MM-DD)
+let quickNotes = new Map(); // Maps paperKey -> note text
+let selectedPaperKey = null;
 let snapshotRepo = '';
 const FRONTEND_BRIDGE_REQUEST_SOURCE = 'papers-feed-frontend';
 const FRONTEND_BRIDGE_RESPONSE_SOURCE = 'papers-feed-extension';
@@ -41,6 +43,62 @@ function saveManuallyReadPapers() {
     localStorage.setItem('manuallyReadPapers', JSON.stringify(obj));
   } catch (e) {
     console.warn('Failed to save manually read papers:', e);
+  }
+}
+
+// Load per-paper quick notes from localStorage
+function loadQuickNotes() {
+  try {
+    const stored = localStorage.getItem('quickNotes');
+    if (!stored) return;
+    const parsed = JSON.parse(stored);
+    if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+      quickNotes = new Map(
+        Object.entries(parsed).filter(([, value]) => typeof value === 'string')
+      );
+    }
+  } catch (e) {
+    console.warn('Failed to load quick notes:', e);
+  }
+}
+
+// Save per-paper quick notes to localStorage
+function saveQuickNotes() {
+  try {
+    const obj = Object.fromEntries(quickNotes);
+    localStorage.setItem('quickNotes', JSON.stringify(obj));
+  } catch (e) {
+    console.warn('Failed to save quick notes:', e);
+  }
+}
+
+function setQuickNote(paperKey, noteText) {
+  if (!paperKey) return;
+
+  const normalizedNote = typeof noteText === 'string' ? noteText : '';
+  if (normalizedNote.trim()) {
+    quickNotes.set(paperKey, normalizedNote);
+  } else {
+    quickNotes.delete(paperKey);
+  }
+  saveQuickNotes();
+
+  const paper = allData.find(item => item.paperKey === paperKey);
+  if (paper) {
+    paper.quickNote = normalizedNote;
+  }
+
+  if (currentDetailsPaper && currentDetailsPaper.paperKey === paperKey) {
+    currentDetailsPaper.quickNote = normalizedNote;
+  }
+}
+
+function getTableRowByPaperKey(paperKey) {
+  if (!table || !paperKey) return null;
+  try {
+    return table.getRow(paperKey);
+  } catch (e) {
+    return null;
   }
 }
 
@@ -728,6 +786,7 @@ function displayPaperDetails(paperId) {
   }
 
   currentDetailsPaper = paper;
+  selectedPaperKey = paperId;
 
   // Update heatmap to show only this paper's activity
   const singlePaperActivity = extractReadingActivityData([paper], currentHeatmapMetric);
@@ -746,7 +805,7 @@ function displayPaperDetails(paperId) {
     </div>
     
     <div class="detail-section">
-      <h3>Paper Details</h3>
+      <h3>Metadata</h3>
       <table class="detail-table">
         <tr>
           <th>ID:</th>
@@ -782,6 +841,12 @@ function displayPaperDetails(paperId) {
         </tr>
       </table>
     </div>
+
+    <div class="detail-section">
+      <h3>Quick Note</h3>
+      <textarea id="paper-quick-note-input" class="quick-note-input" placeholder="Add a quick note for this paper..."></textarea>
+      <div class="quick-note-help">Saved automatically in this browser.</div>
+    </div>
     
     <div class="detail-section">
       <h3>Abstract</h3>
@@ -796,8 +861,53 @@ function displayPaperDetails(paperId) {
     </div>
   `;
 
+  const quickNoteInput = document.getElementById('paper-quick-note-input');
+  if (quickNoteInput) {
+    quickNoteInput.value = paper.quickNote || '';
+    quickNoteInput.addEventListener('input', function (event) {
+      const note = event.target.value || '';
+      setQuickNote(paper.paperKey, note);
+
+      const row = getTableRowByPaperKey(paper.paperKey);
+      if (row) {
+        row.update({ quickNote: note });
+        row.reformat();
+      }
+    });
+  }
+
   // Show the sidebar
   detailsSidebar.classList.add('active');
+}
+
+function openMetadataSidebar() {
+  let targetPaper = null;
+
+  if (selectedPaperKey) {
+    targetPaper = allData.find(p => p.paperKey === selectedPaperKey) || null;
+  }
+
+  if (!targetPaper && currentDetailsPaper) {
+    targetPaper = allData.find(p => p.paperKey === currentDetailsPaper.paperKey) || null;
+  }
+
+  if (!targetPaper && table) {
+    const activeRows = table.getData("active");
+    if (activeRows.length > 0) {
+      targetPaper = activeRows[0];
+    }
+  }
+
+  if (!targetPaper && allData.length > 0) {
+    targetPaper = allData[0];
+  }
+
+  if (!targetPaper) {
+    alert('No papers available to display metadata.');
+    return;
+  }
+
+  displayPaperDetails(targetPaper.paperKey);
 }
 
 function getPostMessageTargetOrigin() {
@@ -1051,6 +1161,11 @@ function processComplexData(data) {
     const title = paperData.title || '';
     const abstract = paperData.abstract || '';
     const tags = paperData.tags || paperData.arxiv_tags || [];
+    const snapshotQuickNote = typeof paperData.quickNote === 'string' ? paperData.quickNote : '';
+    if (snapshotQuickNote.trim() && !quickNotes.has(paperKey)) {
+      quickNotes.set(paperKey, snapshotQuickNote);
+    }
+    const quickNote = quickNotes.get(paperKey) || '';
 
     let freshness = -1;
     if (lastReadDate && paperData.publishedDate) {
@@ -1075,6 +1190,7 @@ function processComplexData(data) {
       readingTimeSeconds: totalReadingTime,
       interactionDays: uniqueInteractionDays,
       tags: tags,
+      quickNote: quickNote,
       url: paperData.url,
       rawInteractionData: interactionData ? interactionData.interactions : [],
       issueNumber: paperMeta.issue_number
@@ -1110,6 +1226,7 @@ function initTable(data) {
 
   table = new Tabulator("#papers-table", {
     data: data,
+    index: "paperKey",
     layout: "fitColumns",
     responsiveLayout: "collapse",
     pagination: "local",
@@ -1167,6 +1284,47 @@ function initTable(data) {
         }
       },
       {
+        title: "Quick Notes",
+        field: "quickNote",
+        widthGrow: 3,
+        minWidth: 200,
+        formatter: function (cell) {
+          const note = cell.getValue() || '';
+          const element = document.createElement('span');
+          if (note.trim()) {
+            element.className = 'quick-note-value';
+            element.textContent = note;
+          } else {
+            element.className = 'quick-note-placeholder';
+            element.textContent = 'Add note...';
+          }
+          return element;
+        },
+        editor: "input",
+        editorParams: {
+          elementAttributes: {
+            maxlength: 240,
+            placeholder: "Add quick note..."
+          }
+        },
+        cellClick: function (e, cell) {
+          e.stopPropagation();
+          cell.edit(true);
+        },
+        cellEdited: function (cell) {
+          const paper = cell.getRow().getData();
+          const note = cell.getValue() || '';
+          setQuickNote(paper.paperKey, note);
+
+          const quickNoteInput = document.getElementById('paper-quick-note-input');
+          if (quickNoteInput && currentDetailsPaper && currentDetailsPaper.paperKey === paper.paperKey) {
+            quickNoteInput.value = note;
+          }
+
+          cell.getRow().reformat();
+        }
+      },
+      {
         title: "Source",
         field: "source",
         widthGrow: 1
@@ -1211,6 +1369,11 @@ function initTable(data) {
 
   // Set up global click handler for the table
   document.getElementById("papers-table").addEventListener("click", function (e) {
+    // Ignore clicks while editing inline inputs (for quick notes)
+    if (e.target.closest("input, textarea")) {
+      return;
+    }
+
     // Find the closest row element
     const rowElement = e.target.closest(".tabulator-row");
     if (rowElement) {
@@ -1233,6 +1396,7 @@ function createSearchFilter(searchTerm) {
       data.title,
       data.authors,
       data.abstract,
+      data.quickNote,
       ...(data.tags || [])
     ].join(' ').toLowerCase();
 
@@ -1249,6 +1413,7 @@ function createMultiSearchFilter(searchTerms) {
       data.title,
       data.authors,
       data.abstract,
+      data.quickNote,
       ...(data.tags || [])
     ].join(' ').toLowerCase();
 
@@ -1374,13 +1539,30 @@ function setupEventListeners() {
     document.getElementById("sidebar").classList.toggle("active");
 
     // Close details sidebar if open (to avoid both being open at once)
-    document.getElementById("details-sidebar").classList.remove("active");
+    if (document.getElementById("details-sidebar").classList.contains("active")) {
+      hideDetails();
+    }
+  });
+
+  // Toggle metadata sidebar
+  document.getElementById("metadata-toggle").addEventListener("click", function () {
+    document.getElementById("sidebar").classList.remove("active");
+    const detailsSidebar = document.getElementById("details-sidebar");
+
+    if (detailsSidebar.classList.contains("active")) {
+      hideDetails();
+      return;
+    }
+
+    openMetadataSidebar();
   });
 
   // Toggle details with keyboard escape key
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      document.getElementById("details-sidebar").classList.remove("active");
+      if (document.getElementById("details-sidebar").classList.contains("active")) {
+        hideDetails();
+      }
       document.getElementById("sidebar").classList.remove("active");
     }
   });
@@ -1486,6 +1668,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function loadApp() {
     // Load manually read papers from localStorage
     loadManuallyReadPapers();
+    loadQuickNotes();
 
     // Fetch data file with cache-busting to ensure fresh data
     fetch(`gh-store-snapshot.json?t=${Date.now()}`)
@@ -1501,6 +1684,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Persist merged read status (snapshot + localStorage) back to localStorage
         saveManuallyReadPapers();
+        saveQuickNotes();
 
         // Initialize table and heatmap
         initTable(allData);

@@ -363,7 +363,8 @@ h1 {
 }
 
 /* Match header filter button height to the search input */
-#sidebar-toggle {
+#sidebar-toggle,
+#metadata-toggle {
   height: 44px;
 }
 
@@ -616,6 +617,19 @@ h1 {
   color: #2e7d32;
 }
 
+.quick-note-placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.quick-note-value {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .detail-section {
   margin-bottom: 25px;
   background-color: #f9f9f9;
@@ -632,6 +646,29 @@ h1 {
   font-size: 1.1em;
   border-bottom: 1px solid #eee;
   padding-bottom: 8px;
+}
+
+.quick-note-input {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.quick-note-input:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.15);
+}
+
+.quick-note-help {
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 12px;
 }
 
 .detail-table {
