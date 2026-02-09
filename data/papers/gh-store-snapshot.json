@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T20:57:54.077261+00:00",
+  "snapshot_time": "2026-02-09T20:58:54.812423+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -842,6 +842,30 @@
         "object_id": "paper:url.26DA80ED",
         "created_at": "2026-02-09T20:56:26+00:00",
         "updated_at": "2026-02-09T20:57:13+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.5DD06E7F": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "5DD06E7F",
+        "url": "https://anthology.ach.org/volumes/vol0003/cultural-collapse-toward-generative-formalism-for/",
+        "title": "Cultural Collapse: Toward a Generative Formalism for AI Cultural\nProduction",
+        "authors": "Heuser, Ryan",
+        "abstract": "This paper examines systematic patterns of idealization in large\nlanguage model outputs through computational analysis of over 15,000\nAI-generated poems and artificial bibliographic data. The study reveals\nand theorizes \u2018cultural collapse\u2019\u2014the tendency of LLMs to generate\ncultural content that is more formulaic and idealized than can be\nobserved in any historical period. Analysis of rhyme patterns shows that\nmodels produce formally conservative verse at rates that exceed even the\nmost traditional historical periods. This bias persists even when models\nare explicitly instructed against traditional forms and cannot be\nexplained by training data composition, suggesting deep computational\ntendencies toward idealization. Extending beyond poetics, parallel\npatterns emerge in historical domains: when prompted to generate\nhistorical publication data, models systematically produce demographic\ndistributions that obscure well-known exclusion patterns, creating\nrevisionist narratives where marginalized authors were published at\nrates far exceeding historical reality. The study identifies instruction\ntuning as one contributing mechanism, with models fine-tuned to be\nhelpful assistants showing significantly greater \u2018idealization\u2019 than\nbase models. These findings suggest that cultural collapse operates\nthrough a computational logic that privileges satisfaction over\nfrustration, regularity over variation, and conformity over\ncontradiction. As generative systems become ubiquitous in cultural\nproduction, their idealizing tendencies threaten to flatten cultural\ndiversity and historical complexity, requiring new critical frameworks\nfor understanding computational mediation of cultural transmission.",
+        "timestamp": "2026-02-09T20:58:08.450Z",
+        "rating": "novote",
+        "publishedDate": "2025",
+        "tags": [],
+        "doi": "10.63744/USvuyzSIapvy",
+        "journalName": "Anthology of Computers and the Humanities",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 45,
+        "object_id": "paper:url.5DD06E7F",
+        "created_at": "2026-02-09T20:58:08+00:00",
+        "updated_at": "2026-02-09T20:58:31+00:00",
         "version": 1
       }
     }
