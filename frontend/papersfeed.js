@@ -330,6 +330,8 @@ function extractReadingActivityData(data, metric = 'papers') {
   });
 
   // Convert to array format based on selected metric
+  // Parse YYYY-MM-DD as local time to avoid UTC date shifting in the heatmap.
+  const parseLocalDay = d3.timeParse("%Y-%m-%d");
   const result = Array.from(dailyActivity.entries()).map(([dateStr, dayData]) => {
     let count;
     switch (metric) {
@@ -349,13 +351,16 @@ function extractReadingActivityData(data, metric = 'papers') {
         count = dayData.papers.size;
     }
 
+    const parsedDate = parseLocalDay(dateStr);
+    if (!parsedDate) return null;
+
     return {
-      date: new Date(dateStr),
+      date: parsedDate,
       count: count
     };
   });
 
-  return result.filter(d => d.count > 0).sort((a, b) => a.date - b.date);
+  return result.filter(d => d && d.count > 0).sort((a, b) => a.date - b.date);
 }
 
 // Create reading activity heatmap
