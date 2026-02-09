@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T17:58:16.939634+00:00",
+  "snapshot_time": "2026-02-09T18:33:53.800429+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -765,6 +765,32 @@
         "object_id": "paper:arxiv.2501.18099",
         "created_at": "2026-02-09T17:57:24+00:00",
         "updated_at": "2026-02-09T17:57:45+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2504.11900": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2504.11900",
+        "url": "https://arxiv.org/abs/2504.11900",
+        "title": "Finding Flawed Fictions: Evaluating Complex Reasoning in Language Models via Plot Hole Detection",
+        "authors": "Kabir Ahuja, Melanie Sclar, Yulia Tsvetkov",
+        "abstract": "Stories are a fundamental aspect of human experience. Engaging deeply with stories and spotting plot holes -- inconsistencies in a storyline that break the internal logic or rules of a story's world -- requires nuanced reasoning skills, including tracking entities and events and their interplay, abstract thinking, pragmatic narrative understanding, commonsense and social reasoning, and theory of mind. As Large Language Models (LLMs) increasingly generate, interpret, and modify text, rigorously assessing their narrative consistency and deeper language understanding becomes critical. However, existing benchmarks focus mainly on surface-level comprehension. In this work, we propose plot hole detection in stories as a proxy to evaluate language understanding and reasoning in LLMs. We introduce FlawedFictionsMaker, a novel algorithm to controllably and carefully synthesize plot holes in human-written stories. Using this algorithm, we construct a benchmark to evaluate LLMs' plot hole detection abilities in stories -- FlawedFictions -- , which is robust to contamination, with human filtering ensuring high quality. We find that state-of-the-art LLMs struggle in accurately solving FlawedFictions regardless of the reasoning effort allowed, with performance significantly degrading as story length increases. Finally, we show that LLM-based story summarization and story generation are prone to introducing plot holes, with more than 50% and 100% increases in plot hole detection rates with respect to human-written originals.",
+        "timestamp": "2026-02-09T18:33:04.122Z",
+        "rating": "novote",
+        "publishedDate": "2025/04/16",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 41,
+        "object_id": "paper:arxiv.2504.11900",
+        "created_at": "2026-02-09T18:33:04+00:00",
+        "updated_at": "2026-02-09T18:33:26+00:00",
         "version": 1
       }
     }
