@@ -42,6 +42,31 @@ function saveManuallyReadPapers() {
   }
 }
 
+function getReadProgressCounts() {
+  const total = allData.length;
+  const read = allData.reduce((count, paper) =>
+    count + (manuallyReadPapers.has(paper.paperKey) ? 1 : 0), 0
+  );
+  return { read, total };
+}
+
+function updateReadProgressBar() {
+  const countEl = document.getElementById("reading-progress-count");
+  const fillEl = document.getElementById("reading-progress-fill");
+  const trackEl = document.querySelector(".reading-progress-track");
+  if (!countEl || !fillEl || !trackEl) return;
+
+  const { read, total } = getReadProgressCounts();
+  const percent = total > 0 ? (read / total) * 100 : 0;
+  const roundedPercent = Math.round(percent);
+
+  countEl.textContent = `${read} / ${total} read (${roundedPercent}%)`;
+  fillEl.style.width = `${percent}%`;
+  trackEl.setAttribute("aria-valuemax", String(total));
+  trackEl.setAttribute("aria-valuenow", String(read));
+  trackEl.setAttribute("aria-valuetext", `${read} out of ${total} papers read`);
+}
+
 // Toggle read status for a paper
 function toggleReadStatus(paper, cell) {
   let dateStr;
@@ -56,6 +81,7 @@ function toggleReadStatus(paper, cell) {
   }
   saveManuallyReadPapers();
   cell.getRow().reformat();
+  updateReadProgressBar();
 
   // Persist to gh-store in background
   updatePaperReadStatus(paper, dateStr).catch(err =>
@@ -828,6 +854,7 @@ async function deletePaper(paper) {
 
   // Refresh the table
   table.replaceData(allData);
+  updateReadProgressBar();
 
   // Close the sidebar
   hideDetails();
@@ -1430,6 +1457,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Initialize table and heatmap
         initTable(allData);
+        updateReadProgressBar();
 
         // Create initial heatmap with default metric
         const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
