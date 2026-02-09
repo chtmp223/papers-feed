@@ -55,21 +55,24 @@ function updateUI(paperData) {
     }
 }
 // Function to log current page as a paper (using content script extraction)
-async function logCurrentPage() {
+async function logCurrentPage(autoTriggered = false) {
     console.log("attempting to log paper");
+    const statusElement = document.getElementById('status');
+    const manualLogSection = document.getElementById('manualLogSection');
     // Get the active tab
     const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tabs[0] || !tabs[0].id) {
-        const statusElement = document.getElementById('status');
         if (statusElement) {
             statusElement.textContent = 'Error: Could not access current tab';
         }
         return;
     }
     // Show loading state
-    const statusElement = document.getElementById('status');
     if (statusElement) {
-        statusElement.textContent = 'Extracting paper metadata...';
+        statusElement.textContent = autoTriggered ? 'Tracking current page...' : 'Extracting paper metadata...';
+    }
+    if (manualLogSection) {
+        manualLogSection.style.display = 'none';
     }
     // Send message to content script requesting extraction
     chrome.tabs.sendMessage(tabs[0].id, {
@@ -78,27 +81,42 @@ async function logCurrentPage() {
         if (chrome.runtime.lastError) {
             // Handle error
             if (statusElement) {
-                statusElement.textContent = 'Error: ' + chrome.runtime.lastError.message;
+                if (autoTriggered) {
+                    statusElement.textContent = 'Auto-track failed. You can retry manually below.';
+                }
+                else {
+                    statusElement.textContent = 'Error: ' + chrome.runtime.lastError.message;
+                }
+            }
+            if (manualLogSection) {
+                manualLogSection.style.display = 'block';
             }
             return;
         }
         if (!response || !response.success || !response.metadata) {
             // Handle extraction failure
             if (statusElement) {
-                statusElement.textContent = 'Error: ' + (response?.error || 'Failed to extract metadata');
+                if (autoTriggered) {
+                    statusElement.textContent = 'This page could not be auto-tracked. You can retry manually.';
+                }
+                else {
+                    statusElement.textContent = 'Error: ' + (response?.error || 'Failed to extract metadata');
+                }
+            }
+            if (manualLogSection) {
+                manualLogSection.style.display = 'block';
             }
             return;
         }
         // Success - update UI
         updateUI(response.metadata);
         if (statusElement) {
-            statusElement.textContent = 'Paper tracked successfully!';
+            statusElement.textContent = autoTriggered ? 'Page tracked automatically!' : 'Paper tracked successfully!';
         }
         // The content script has already:
         // 1. Sent metadata to background script
         // 2. Started a session if the tab is visible
         // Hide manual log section
-        const manualLogSection = document.getElementById('manualLogSection');
         if (manualLogSection) {
             manualLogSection.style.display = 'none';
         }
@@ -125,6 +143,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
     updateUI(paperData);
+    // Auto-track current page when no paper is already available.
+    // This removes the extra manual click requirement for most pages.
+    if (!paperData) {
+        await logCurrentPage(true);
+    }
     // Set up rating handlers
     const thumbsUpButton = document.getElementById('thumbsUp');
     if (thumbsUpButton) {
@@ -180,7 +203,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("Attaching logPageButton event listener...");
         logPageButton.addEventListener('click', () => {
             console.log("logPageButton clicked...");
-            logCurrentPage();
+            logCurrentPage(false);
         });
     }
 });
