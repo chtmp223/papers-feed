@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T21:27:16.997391+00:00",
+  "snapshot_time": "2026-02-09T21:29:31.582887+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1072,6 +1072,30 @@
         "object_id": "paper:url.7274CFA9",
         "created_at": "2026-02-09T21:26:26+00:00",
         "updated_at": "2026-02-09T21:26:48+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2F912D55": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2F912D55",
+        "url": "https://www.publicbooks.org/defending-the-possibility-of-the-university-a-roundtable-on-university-keywords/",
+        "title": "Defending the Possibility of the University: A Roundtable on \u201cUniversity Keywords\u201d - Public Books",
+        "authors": "Megan Cummins",
+        "abstract": "\u201cWhat would it look like for faculty unions and graduate student unions to collaborate or work together with K-12 teachers\u2019 unions to push back against anti-DEI legislation or book bans?\u201d",
+        "timestamp": "2026-02-09T21:28:30.011Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-04T16:00:00+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 54,
+        "object_id": "paper:url.2F912D55",
+        "created_at": "2026-02-09T21:28:30+00:00",
+        "updated_at": "2026-02-09T21:28:53+00:00",
         "version": 1
       }
     }
