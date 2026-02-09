@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T13:50:56.186436+00:00",
+  "snapshot_time": "2026-02-09T13:56:36.047012+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -586,6 +586,30 @@
         "object_id": "paper:arxiv.2601.10387",
         "created_at": "2026-02-09T13:50:07+00:00",
         "updated_at": "2026-02-09T13:50:32+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6D0A3CDE": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6D0A3CDE",
+        "url": "https://hedgehogreview.com/web-features/thr/posts/a-mosaic",
+        "title": "A Mosaic",
+        "authors": "",
+        "abstract": "I was looking for a hobby in prison but I found an education.",
+        "timestamp": "2026-02-09T13:54:31.443Z",
+        "rating": "novote",
+        "publishedDate": "2026-01-08T11:59:00-05:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 32,
+        "object_id": "paper:url.6D0A3CDE",
+        "created_at": "2026-02-09T13:54:31+00:00",
+        "updated_at": "2026-02-09T13:54:56+00:00",
         "version": 1
       }
     }
