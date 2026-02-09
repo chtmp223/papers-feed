@@ -22,6 +22,31 @@ let paperManager: PaperManager | null = null;
 let sessionService: SessionService | null = null;
 let popupManager: PopupManager | null = null;
 let sourceManager: SourceIntegrationManager | null = null;
+const READ_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+
+function isTrustedFrontendUrl(url: string | undefined): boolean {
+  if (!url || !githubRepo) return false;
+
+  try {
+    const parsedUrl = new URL(url);
+    const [owner, repo] = githubRepo.split('/');
+    if (!owner || !repo) return false;
+
+    const host = parsedUrl.hostname.toLowerCase();
+    const path = parsedUrl.pathname.toLowerCase();
+    const repoPath = `/${repo.toLowerCase()}`;
+    const expectedHost = `${owner.toLowerCase()}.github.io`;
+
+    const isGitHubPagesPath =
+      host === expectedHost &&
+      (path === repoPath || path === `${repoPath}/` || path.startsWith(`${repoPath}/`));
+    const isLocalDev = host === 'localhost' || host === '127.0.0.1';
+
+    return isGitHubPagesPath || isLocalDev;
+  } catch {
+    return false;
+  }
+}
 
 // Initialize sources
 function initializeSources() {
@@ -148,6 +173,11 @@ function setupMessageListeners() {
         });
       return true; // Will respond asynchronously
     }
+
+    if (message.type === 'frontendUpdateManualReadStatus') {
+      handleFrontendUpdateManualReadStatus(message, sender, sendResponse);
+      return true; // Will respond asynchronously
+    }
     
     // Other message handlers are managed by PopupManager
     
@@ -268,6 +298,50 @@ async function handleManualPaperLog(metadata: PaperMetadata): Promise<void> {
   } catch (error) {
     logger.error('Error handling manual paper log', error);
     throw error;
+  }
+}
+
+async function handleFrontendUpdateManualReadStatus(
+  message: {
+    paperKey?: string;
+    manuallyRead?: string | null;
+  },
+  sender: chrome.runtime.MessageSender,
+  sendResponse: (response: any) => void
+): Promise<void> {
+  const paperKey = typeof message.paperKey === 'string' ? message.paperKey.trim() : '';
+  const manuallyRead = message.manuallyRead ?? null;
+
+  if (!isTrustedFrontendUrl(sender.url)) {
+    sendResponse({ success: false, error: 'Untrusted frontend origin' });
+    return;
+  }
+
+  if (!paperKey) {
+    sendResponse({ success: false, error: 'Invalid paper key' });
+    return;
+  }
+
+  if (manuallyRead !== null && (typeof manuallyRead !== 'string' || !READ_DATE_PATTERN.test(manuallyRead))) {
+    sendResponse({ success: false, error: 'Invalid manuallyRead date format' });
+    return;
+  }
+
+  if (!paperManager) {
+    sendResponse({ success: false, error: 'GitHub sync is not configured in extension options' });
+    return;
+  }
+
+  try {
+    await paperManager.getClient().updateObject(paperKey, { manuallyRead });
+    logger.info(`Synced manual read status for ${paperKey}`, { manuallyRead, sender: sender.url });
+    sendResponse({ success: true });
+  } catch (error) {
+    logger.error('Error syncing manual read status from frontend', error);
+    sendResponse({
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 }
 

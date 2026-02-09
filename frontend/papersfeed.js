@@ -9,6 +9,8 @@ let readingActivityData = [];
 let currentHeatmapMetric = 'papers';
 let manuallyReadPapers = new Map(); // Maps paperKey -> dateString (YYYY-MM-DD)
 let snapshotRepo = '';
+const FRONTEND_BRIDGE_REQUEST_SOURCE = 'papers-feed-frontend';
+const FRONTEND_BRIDGE_RESPONSE_SOURCE = 'papers-feed-extension';
 
 // Load manually read papers from localStorage
 function loadManuallyReadPapers() {
@@ -798,14 +800,70 @@ function displayPaperDetails(paperId) {
   detailsSidebar.classList.add('active');
 }
 
-function getGitHubToken() {
-  let token = localStorage.getItem('github_pat');
+function getPostMessageTargetOrigin() {
+  return window.location.origin === 'null' ? '*' : window.location.origin;
+}
+
+async function persistReadStatusViaExtension(paperKey, dateStr) {
+  if (!paperKey) {
+    throw new Error('Missing paper key');
+  }
+
+  const requestId = `pf-read-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+  return new Promise((resolve, reject) => {
+    let timeoutId = null;
+
+    function cleanup() {
+      window.removeEventListener('message', onMessage);
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
+    }
+
+    function onMessage(event) {
+      if (event.source !== window) return;
+      const message = event.data;
+      if (!message || message.source !== FRONTEND_BRIDGE_RESPONSE_SOURCE) return;
+      if (message.requestId !== requestId) return;
+
+      cleanup();
+
+      if (message.success) {
+        resolve();
+      } else {
+        reject(new Error(message.error || 'Extension rejected request'));
+      }
+    }
+
+    timeoutId = setTimeout(() => {
+      cleanup();
+      reject(new Error('Timed out waiting for extension response'));
+    }, 5000);
+
+    window.addEventListener('message', onMessage);
+    window.postMessage({
+      source: FRONTEND_BRIDGE_REQUEST_SOURCE,
+      type: 'updateManualReadStatus',
+      requestId,
+      payload: {
+        paperKey,
+        manuallyRead: dateStr
+      }
+    }, getPostMessageTargetOrigin());
+  });
+}
+
+function getLegacyGitHubToken() {
+  const token = localStorage.getItem('github_pat');
   return token || null;
 }
 
-async function updatePaperReadStatus(paper, dateStr) {
-  const token = getGitHubToken();
-  if (!token || !snapshotRepo || !paper.issueNumber) return;
+async function persistReadStatusViaLegacyGitHub(paper, dateStr) {
+  const token = getLegacyGitHubToken();
+  if (!token || !snapshotRepo || !paper.issueNumber) {
+    throw new Error('No extension bridge and no legacy GitHub token configured');
+  }
 
   const apiBase = `https://api.github.com/repos/${snapshotRepo}/issues/${paper.issueNumber}`;
   const headers = {
@@ -824,19 +882,28 @@ async function updatePaperReadStatus(paper, dateStr) {
     }
   };
 
-  // Post comment with the update
   await fetch(`${apiBase}/comments`, {
     method: 'POST',
     headers,
     body: JSON.stringify({ body: JSON.stringify(payload) })
   });
 
-  // Reopen the issue to trigger gh-store processing
   await fetch(apiBase, {
     method: 'PATCH',
     headers,
     body: JSON.stringify({ state: 'open' })
   });
+}
+
+async function updatePaperReadStatus(paper, dateStr) {
+  try {
+    await persistReadStatusViaExtension(paper.paperKey, dateStr);
+    return;
+  } catch (extensionError) {
+    console.warn('Extension sync unavailable; falling back to legacy GitHub token path', extensionError);
+  }
+
+  await persistReadStatusViaLegacyGitHub(paper, dateStr);
 }
 
 async function deletePaper(paper) {

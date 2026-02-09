@@ -30,6 +30,10 @@ let isTabVisible = true;
 
 // Track current session
 let currentSession: { sourceId: string; paperId: string } | null = null;
+let frontendBridgeEnabled = false;
+const FRONTEND_BRIDGE_REQUEST_SOURCE = 'papers-feed-frontend';
+const FRONTEND_BRIDGE_RESPONSE_SOURCE = 'papers-feed-extension';
+const READ_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
 // Create link processor
 const linkProcessor = new LinkProcessor((sourceId, paperId, link) => {
@@ -322,6 +326,116 @@ function endCurrentSession(reason: string) {
   currentSession = null;
 }
 
+function getPostMessageTargetOrigin(): string {
+  return window.location.origin === 'null' ? '*' : window.location.origin;
+}
+
+function postFrontendBridgeResponse(
+  requestId: string,
+  success: boolean,
+  error?: string
+): void {
+  window.postMessage(
+    {
+      source: FRONTEND_BRIDGE_RESPONSE_SOURCE,
+      requestId,
+      success,
+      error
+    },
+    getPostMessageTargetOrigin()
+  );
+}
+
+async function shouldEnableFrontendBridge(): Promise<boolean> {
+  try {
+    const { githubRepo } = await chrome.storage.sync.get(['githubRepo']);
+    if (!githubRepo || typeof githubRepo !== 'string') {
+      return false;
+    }
+
+    const [owner, repo] = githubRepo.split('/');
+    if (!owner || !repo) {
+      return false;
+    }
+
+    const host = window.location.hostname.toLowerCase();
+    const path = window.location.pathname.toLowerCase();
+    const repoPath = `/${repo.toLowerCase()}`;
+
+    const isGitHubPagesPath =
+      host === `${owner.toLowerCase()}.github.io` &&
+      (path === repoPath || path === `${repoPath}/` || path.startsWith(`${repoPath}/`));
+    const isLocalDev = host === 'localhost' || host === '127.0.0.1';
+    const hasFeedMarkers =
+      document.getElementById('papers-table') !== null &&
+      document.getElementById('reading-heatmap') !== null;
+
+    return hasFeedMarkers && (isGitHubPagesPath || isLocalDev);
+  } catch (error) {
+    logger.warn('Failed to check frontend bridge eligibility', error);
+    return false;
+  }
+}
+
+function setupFrontendBridgeListener(): void {
+  window.addEventListener('message', (event: MessageEvent) => {
+    if (event.source !== window) return;
+
+    const message = event.data;
+    if (!message || typeof message !== 'object') return;
+    if (message.source !== FRONTEND_BRIDGE_REQUEST_SOURCE) return;
+    if (message.type !== 'updateManualReadStatus') return;
+
+    const requestId = message.requestId;
+    if (typeof requestId !== 'string' || requestId.length === 0) return;
+
+    if (!frontendBridgeEnabled) {
+      postFrontendBridgeResponse(requestId, false, 'Frontend bridge is not enabled for this page');
+      return;
+    }
+
+    const payload = message.payload || {};
+    const paperKey = typeof payload.paperKey === 'string' ? payload.paperKey.trim() : '';
+    const rawManuallyRead = payload.manuallyRead;
+    let manuallyRead: string | null = null;
+
+    if (!paperKey) {
+      postFrontendBridgeResponse(requestId, false, 'Invalid paper key');
+      return;
+    }
+
+    if (rawManuallyRead === null || rawManuallyRead === undefined || rawManuallyRead === '') {
+      manuallyRead = null;
+    } else if (typeof rawManuallyRead === 'string' && READ_DATE_PATTERN.test(rawManuallyRead)) {
+      manuallyRead = rawManuallyRead;
+    } else {
+      postFrontendBridgeResponse(requestId, false, 'Invalid read date format');
+      return;
+    }
+
+    chrome.runtime.sendMessage(
+      {
+        type: 'frontendUpdateManualReadStatus',
+        paperKey,
+        manuallyRead
+      },
+      (response) => {
+        if (chrome.runtime.lastError) {
+          postFrontendBridgeResponse(requestId, false, chrome.runtime.lastError.message);
+          return;
+        }
+
+        if (!response?.success) {
+          postFrontendBridgeResponse(requestId, false, response?.error || 'Manual read sync failed');
+          return;
+        }
+
+        postFrontendBridgeResponse(requestId, true);
+      }
+    );
+  });
+}
+
 // Process the current page
 async function processCurrentPage(force: boolean = false): Promise<PaperMetadata | null> {
   const url = window.location.href;
@@ -515,6 +629,12 @@ chrome.runtime.onMessage.addListener((message: any, sender, sendResponse) => {
 
 // Initialize
 (async function initialize() {
+  setupFrontendBridgeListener();
+  frontendBridgeEnabled = await shouldEnableFrontendBridge();
+  if (frontendBridgeEnabled) {
+    logger.info(`Enabled Papers Feed frontend bridge for ${window.location.href}`);
+  }
+
   // Inject styles
   injectStyles();
   
