@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T03:29:31.721922+00:00",
+  "snapshot_time": "2026-02-10T13:46:30.255503+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1481,6 +1481,30 @@
         "object_id": "paper:url.3818B53E",
         "created_at": "2026-02-10T03:28:51+00:00",
         "updated_at": "2026-02-10T03:29:09+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.11D58564": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "11D58564",
+        "url": "https://x.com/emollick/status/2020993610540605560",
+        "title": "Ethan Mollick on X: \"So far \u201ctelling a satisfying and well-written medium-length story\u201d has proved far harder for LLMs than mathematical proofs, music generation, research reports, code, and many other forms of work.\n\nThe technical reasons are pretty clear, but they are supposed to be language models\" / X",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-10T13:45:28.930Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 68,
+        "object_id": "paper:url.11D58564",
+        "created_at": "2026-02-10T13:45:29+00:00",
+        "updated_at": "2026-02-10T13:45:53+00:00",
         "version": 1
       }
     }
