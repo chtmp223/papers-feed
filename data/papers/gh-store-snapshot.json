@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T15:55:35.668447+00:00",
+  "snapshot_time": "2026-02-10T16:14:54.797771+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1896,6 +1896,30 @@
         "object_id": "paper:url.7ED72707",
         "created_at": "2026-02-10T15:54:44+00:00",
         "updated_at": "2026-02-10T15:55:08+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.77BF89F0": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "77BF89F0",
+        "url": "https://code.claude.com/docs/en/agent-teams",
+        "title": "Orchestrate teams of Claude Code sessions - Claude Code Docs",
+        "authors": "",
+        "abstract": "Coordinate multiple Claude Code instances working together as a team, with shared tasks, inter-agent messaging, and centralized management.",
+        "timestamp": "2026-02-10T16:13:54.177Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 84,
+        "object_id": "paper:url.77BF89F0",
+        "created_at": "2026-02-10T16:13:54+00:00",
+        "updated_at": "2026-02-10T16:14:28+00:00",
         "version": 1
       }
     }
