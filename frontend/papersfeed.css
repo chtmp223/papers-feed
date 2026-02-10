@@ -1079,14 +1079,16 @@ h1 {
 
 [data-theme="dark"] .tabulator .tabulator-cell {
   border-right-color: #1f2937 !important;
+  color: #e2e8f0;
 }
 
 [data-theme="dark"] .tabulator-row {
+  background-color: #0b1220 !important;
   border-bottom-color: #1f2937;
 }
 
 [data-theme="dark"] .tabulator-row.tabulator-row-even {
-  background-color: #0f172a;
+  background-color: #101a2f !important;
 }
 
 [data-theme="dark"] .tabulator-row:hover {
@@ -1100,6 +1102,18 @@ h1 {
 
 [data-theme="dark"] .tabulator-row.row-read:hover {
   background-color: #1f4a34 !important;
+}
+
+[data-theme="dark"] .tabulator-row.tabulator-selected,
+[data-theme="dark"] .tabulator-row.tabulator-selected:hover {
+  background-color: #1d3a5c !important;
+}
+
+[data-theme="dark"] .tabulator .tabulator-group {
+  background-color: #111827 !important;
+  color: #e2e8f0 !important;
+  border-top: 1px solid #1f2937 !important;
+  border-bottom: 1px solid #1f2937 !important;
 }
 
 [data-theme="dark"] .heatmap-tooltip {
