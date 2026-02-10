@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T14:35:19.359150+00:00",
+  "snapshot_time": "2026-02-10T14:41:06.439855+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1664,6 +1664,34 @@
         "object_id": "paper:url.4376E96",
         "created_at": "2026-02-10T14:34:19+00:00",
         "updated_at": "2026-02-10T14:34:45+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.04029": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.04029",
+        "url": "https://arxiv.org/abs/2602.04029",
+        "title": "PluRel: Synthetic Data unlocks Scaling Laws for Relational Foundation Models",
+        "authors": "Vignesh Kothapalli, Rishabh Ranjan, Valter Hudovernik, Vijay Prakash Dwivedi, Johannes Hoffart, Carlos Guestrin, Jure Leskovec",
+        "abstract": "Relational Foundation Models (RFMs) facilitate data-driven decision-making by learning from complex multi-table databases. However, the diverse relational databases needed to train such models are rarely public due to privacy constraints. While there are methods to generate synthetic tabular data of arbitrary size, incorporating schema structure and primary--foreign key connectivity for multi-table generation remains challenging. Here we introduce PluRel, a framework to synthesize multi-tabular relational databases from scratch. In a step-by-step fashion, PluRel models (1) schemas with directed graphs, (2) inter-table primary-foreign key connectivity with bipartite graphs, and, (3) feature distributions in tables via conditional causal mechanisms. The design space across these stages supports the synthesis of a wide range of diverse databases, while being computationally lightweight. Using PluRel, we observe for the first time that (1) RFM pretraining loss exhibits power-law scaling with the number of synthetic databases and total pretraining tokens, (2) scaling the number of synthetic databases improves generalization to real databases, and (3) synthetic pretraining yields strong base models for continued pretraining on real databases. Overall, our framework and results position synthetic data scaling as a promising paradigm for RFMs.",
+        "timestamp": "2026-02-10T14:40:02.415Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/03",
+        "tags": [
+          "Databases (cs.DB)",
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 75,
+        "object_id": "paper:arxiv.2602.04029",
+        "created_at": "2026-02-10T14:40:02+00:00",
+        "updated_at": "2026-02-10T14:40:31+00:00",
         "version": 1
       }
     }
