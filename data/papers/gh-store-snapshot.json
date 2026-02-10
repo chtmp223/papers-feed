@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T16:14:54.797771+00:00",
+  "snapshot_time": "2026-02-10T17:50:07.053943+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1920,6 +1920,32 @@
         "object_id": "paper:url.77BF89F0",
         "created_at": "2026-02-10T16:13:54+00:00",
         "updated_at": "2026-02-10T16:14:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.08237": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.08237",
+        "url": "https://arxiv.org/abs/2602.08237",
+        "title": "Document Reconstruction Unlocks Scalable Long-Context RLVR",
+        "authors": "Yao Xiao, Lei Wang, Yue Deng, Guanzheng Chen, Ziqi Jin, Jung-jae Kim, Xiaoli Li, Roy Ka-wei Lee, Lidong Bing",
+        "abstract": "Reinforcement Learning with Verifiable Rewards~(RLVR) has become a prominent paradigm to enhance the capabilities (i.e.\\ long-context) of Large Language Models~(LLMs). However, it often relies on gold-standard answers or explicit evaluation rubrics provided by powerful teacher models or human experts, which are costly and time-consuming. In this work, we investigate unsupervised approaches to enhance the long-context capabilities of LLMs, eliminating the need for heavy human annotations or teacher models' supervision. Specifically, we first replace a few paragraphs with special placeholders in a long document. LLMs are trained through reinforcement learning to reconstruct the document by correctly identifying and sequencing missing paragraphs from a set of candidate options. This training paradigm enables the model to capture global narrative coherence, significantly boosting long-context performance. We validate the effectiveness of our method on two widely used benchmarks, RULER and LongBench~v2. While acquiring noticeable gains on RULER, it can also achieve a reasonable improvement on LongBench~v2 without any manually curated long-context QA data. Furthermore, we conduct extensive ablation studies to analyze the impact of reward design, data curation strategies, training schemes, and data scaling effects on model performance. We publicly release our code, data, and models.",
+        "timestamp": "2026-02-10T17:48:55.509Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/09",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 85,
+        "object_id": "paper:arxiv.2602.08237",
+        "created_at": "2026-02-10T17:48:55+00:00",
+        "updated_at": "2026-02-10T17:49:34+00:00",
         "version": 1
       }
     }
