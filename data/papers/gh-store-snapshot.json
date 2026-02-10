@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T14:03:46.282042+00:00",
+  "snapshot_time": "2026-02-10T14:31:16.560296+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1610,6 +1610,36 @@
         "object_id": "paper:newspapers.4CFA6FAA",
         "created_at": "2026-02-10T14:02:36+00:00",
         "updated_at": "2026-02-10T14:03:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:newspapers.7E0B6343": {
+      "data": {
+        "sourceId": "newspapers",
+        "paperId": "7E0B6343",
+        "url": "https://www.newyorker.com/books/page-turner/the-death-of-book-world",
+        "title": "The End of Books Coverage at the Washington Post ",
+        "authors": "Becca Rothfeld",
+        "abstract": "Becca Rothfeld, a former critic at the Washington Post, on the death of the paper\u2019s books section.",
+        "timestamp": "2026-02-10T14:30:13.475Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-10T11:00:00.000Z",
+        "tags": [
+          "books",
+          "media",
+          "the washington post",
+          "book criticism",
+          "criticism"
+        ],
+        "doi": "",
+        "journalName": "The New Yorker",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 73,
+        "object_id": "paper:newspapers.7E0B6343",
+        "created_at": "2026-02-10T14:30:13+00:00",
+        "updated_at": "2026-02-10T14:30:47+00:00",
         "version": 1
       }
     }
