@@ -1123,15 +1123,26 @@ async function persistPaperDeletionViaLegacyGitHub(paper) {
   }
 }
 
+function canUseLegacyDeleteSync(paper) {
+  const token = getLegacyGitHubToken();
+  return Boolean(token && snapshotRepo && paper && paper.issueNumber);
+}
+
 async function persistPaperDeletion(paper) {
   try {
     await persistPaperDeletionViaExtension(paper.paperKey);
-    return;
+    return { synced: true, via: 'extension' };
   } catch (extensionError) {
     console.warn('Extension delete sync unavailable; falling back to legacy GitHub token path', extensionError);
   }
 
+  if (!canUseLegacyDeleteSync(paper)) {
+    // Local-only deletion mode: keep row deleted in this browser without raising an error.
+    return { synced: false, via: 'local-only' };
+  }
+
   await persistPaperDeletionViaLegacyGitHub(paper);
+  return { synced: true, via: 'legacy-token' };
 }
 
 function removePaperFromLocalState(paperKey) {
@@ -1159,8 +1170,9 @@ async function deletePaper(paper) {
   }
 
   let syncError = null;
+  let deletionSyncResult = null;
   try {
-    await persistPaperDeletion(paper);
+    deletionSyncResult = await persistPaperDeletion(paper);
   } catch (error) {
     syncError = error;
     console.warn('Failed to sync paper deletion to gh-store:', error);
@@ -1177,6 +1189,8 @@ async function deletePaper(paper) {
 
   if (syncError) {
     alert(`Paper was deleted locally, but sync failed: ${syncError.message || 'Unknown error'}`);
+  } else if (deletionSyncResult && deletionSyncResult.synced === false) {
+    console.info('Paper deleted in local-only mode (no extension bridge or GitHub token configured).');
   }
 }
 
