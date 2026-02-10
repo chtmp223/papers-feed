@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T22:55:30.067239+00:00",
+  "snapshot_time": "2026-02-10T23:42:46.835805+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2124,6 +2124,32 @@
         "object_id": "paper:url.12B1909E",
         "created_at": "2026-02-10T22:54:17+00:00",
         "updated_at": "2026-02-10T22:55:02+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2601.21257": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2601.21257",
+        "url": "https://arxiv.org/abs/2601.21257",
+        "title": "MoCo: A One-Stop Shop for Model Collaboration Research",
+        "authors": "Shangbin Feng, Yuyang Bai, Ziyuan Yang, Yike Wang, Zhaoxuan Tan, Jiajie Yan, Zhenyu Lei, Wenxuan Ding, Weijia Shi, Haojin Wang, Zhenting Qi, Yuru Jiang, Heng Wang, Chengsong Huang, Yu Fei, Jihan Yao, Yilun Du, Luke Zettlemoyer, Yejin Choi, Yulia Tsvetkov",
+        "abstract": "Advancing beyond single monolithic language models (LMs), recent research increasingly recognizes the importance of model collaboration, where multiple LMs collaborate, compose, and complement each other. Existing research on this topic has mostly been disparate and disconnected, from different research communities, and lacks rigorous comparison. To consolidate existing research and establish model collaboration as a school of thought, we present MoCo: a one-stop Python library of executing, benchmarking, and comparing model collaboration algorithms at scale. MoCo features 26 model collaboration methods, spanning diverse levels of cross-model information exchange such as routing, text, logit, and model parameters. MoCo integrates 25 evaluation datasets spanning reasoning, QA, code, safety, and more, while users could flexibly bring their own data. Extensive experiments with MoCo demonstrate that most collaboration strategies outperform models without collaboration in 61.0% of (model, data) settings on average, with the most effective methods outperforming by up to 25.8%. We further analyze the scaling of model collaboration strategies, the training/inference efficiency of diverse methods, highlight that the collaborative system solves problems where single LMs struggle, and discuss future work in model collaboration, all made possible by MoCo. We envision MoCo as a valuable toolkit to facilitate and turbocharge the quest for an open, modular, decentralized, and collaborative AI future.",
+        "timestamp": "2026-02-10T23:41:54.103Z",
+        "rating": "novote",
+        "publishedDate": "2026/01/29",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 93,
+        "object_id": "paper:arxiv.2601.21257",
+        "created_at": "2026-02-10T23:41:54+00:00",
+        "updated_at": "2026-02-10T23:42:12+00:00",
         "version": 1
       }
     }
