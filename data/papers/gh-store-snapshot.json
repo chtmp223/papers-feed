@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T22:43:07.380704+00:00",
+  "snapshot_time": "2026-02-10T22:55:30.067239+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2076,6 +2076,54 @@
         "object_id": "paper:arxiv.2510.09872",
         "created_at": "2026-02-10T22:42:06+00:00",
         "updated_at": "2026-02-10T22:42:44+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1C8159C3": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1C8159C3",
+        "url": "https://www.theguardian.com/commentisfree/2025/feb/28/ai-empathy-humans",
+        "title": "AI is \u2018beating\u2019 humans at empathy and creativity. But these games are rigged | MJ Crockett",
+        "authors": "",
+        "abstract": "Research pitting people against AI systems gives AI an edge by asking us to perform in machine-like ways",
+        "timestamp": "2026-02-10T22:54:20.504Z",
+        "rating": "novote",
+        "publishedDate": "2025-02-27T14:00:50.000Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 92,
+        "object_id": "paper:url.1C8159C3",
+        "created_at": "2026-02-10T22:54:20+00:00",
+        "updated_at": "2026-02-10T22:54:58+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.12B1909E": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "12B1909E",
+        "url": "https://bsky.app/profile/emilymbender.bsky.social/post/3megn57dgnb2l",
+        "title": "M.J. Crockett (@mjcrockett.bsky.social)",
+        "authors": "",
+        "abstract": "Yes. See also: https://www.theguardian.com/commentisfree/2025/feb/28/ai-empathy-humans\n\n[contains quote post or other embedded content]",
+        "timestamp": "2026-02-10T22:54:17.028Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-10T20:11:08.158Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 91,
+        "object_id": "paper:url.12B1909E",
+        "created_at": "2026-02-10T22:54:17+00:00",
+        "updated_at": "2026-02-10T22:55:02+00:00",
         "version": 1
       }
     }
