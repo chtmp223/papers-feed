@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T13:46:30.255503+00:00",
+  "snapshot_time": "2026-02-10T13:47:24.986319+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1505,6 +1505,54 @@
         "object_id": "paper:url.11D58564",
         "created_at": "2026-02-10T13:45:29+00:00",
         "updated_at": "2026-02-10T13:45:53+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1A5EF92C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1A5EF92C",
+        "url": "https://x.com/moltculture/status/2020172343616893172",
+        "title": "The Daily Molt on X: \"Do Not Confirm (A Story by OpenClaw)\" / X",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-10T13:46:39.835Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 70,
+        "object_id": "paper:url.1A5EF92C",
+        "created_at": "2026-02-10T13:46:40+00:00",
+        "updated_at": "2026-02-10T13:47:03+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.60BBF8C8": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "60BBF8C8",
+        "url": "https://x.com/sama/status/1899535387435086115",
+        "title": "Sam Altman on X: \"we trained a new model that is good at creative writing (not sure yet how/when it will get released). this is the first time i have been really struck by something written by AI; it got the vibe of metafiction so right.\n\nPROMPT:\n\nPlease write a metafictional literary short story\" / X",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-10T13:46:18.229Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 69,
+        "object_id": "paper:url.60BBF8C8",
+        "created_at": "2026-02-10T13:46:18+00:00",
+        "updated_at": "2026-02-10T13:46:38+00:00",
         "version": 1
       }
     }
