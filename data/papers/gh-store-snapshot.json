@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-09T23:56:08.891287+00:00",
+  "snapshot_time": "2026-02-10T03:29:31.721922+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1457,6 +1457,30 @@
         "object_id": "paper:openreview.Q6PAnqYVpo",
         "created_at": "2026-02-09T23:54:52+00:00",
         "updated_at": "2026-02-09T23:55:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.3818B53E": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "3818B53E",
+        "url": "https://www.reddit.com/r/washingtondc/comments/20oli9/ama_request_someone_who_works_in_or_explores_the/",
+        "title": "[AMA Request] Someone who works in (or explores) the Metro tunnels : r/washingtondc",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-10T03:28:50.981Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 67,
+        "object_id": "paper:url.3818B53E",
+        "created_at": "2026-02-10T03:28:51+00:00",
+        "updated_at": "2026-02-10T03:29:09+00:00",
         "version": 1
       }
     }
