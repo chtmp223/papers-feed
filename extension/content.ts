@@ -384,7 +384,7 @@ function setupFrontendBridgeListener(): void {
     const message = event.data;
     if (!message || typeof message !== 'object') return;
     if (message.source !== FRONTEND_BRIDGE_REQUEST_SOURCE) return;
-    if (message.type !== 'updateManualReadStatus') return;
+    if (message.type !== 'updateManualReadStatus' && message.type !== 'deletePaper') return;
 
     const requestId = message.requestId;
     if (typeof requestId !== 'string' || requestId.length === 0) return;
@@ -396,14 +396,37 @@ function setupFrontendBridgeListener(): void {
 
     const payload = message.payload || {};
     const paperKey = typeof payload.paperKey === 'string' ? payload.paperKey.trim() : '';
-    const rawManuallyRead = payload.manuallyRead;
-    let manuallyRead: string | null = null;
 
     if (!paperKey) {
       postFrontendBridgeResponse(requestId, false, 'Invalid paper key');
       return;
     }
 
+    if (message.type === 'deletePaper') {
+      chrome.runtime.sendMessage(
+        {
+          type: 'frontendDeletePaper',
+          paperKey
+        },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            postFrontendBridgeResponse(requestId, false, chrome.runtime.lastError.message);
+            return;
+          }
+
+          if (!response?.success) {
+            postFrontendBridgeResponse(requestId, false, response?.error || 'Paper deletion sync failed');
+            return;
+          }
+
+          postFrontendBridgeResponse(requestId, true);
+        }
+      );
+      return;
+    }
+
+    const rawManuallyRead = payload.manuallyRead;
+    let manuallyRead: string | null = null;
     if (rawManuallyRead === null || rawManuallyRead === undefined || rawManuallyRead === '') {
       manuallyRead = null;
     } else if (typeof rawManuallyRead === 'string' && READ_DATE_PATTERN.test(rawManuallyRead)) {

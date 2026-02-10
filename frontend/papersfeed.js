@@ -9,6 +9,7 @@ let readingActivityData = [];
 let currentHeatmapMetric = 'papers';
 let manuallyReadPapers = new Map(); // Maps paperKey -> dateString (YYYY-MM-DD)
 let quickNotes = new Map(); // Maps paperKey -> note text
+let deletedPaperKeys = new Set(); // Set of paperKeys deleted in this browser
 let selectedPaperKey = null;
 let snapshotRepo = '';
 const FRONTEND_BRIDGE_REQUEST_SOURCE = 'papers-feed-frontend';
@@ -69,6 +70,29 @@ function saveQuickNotes() {
     localStorage.setItem('quickNotes', JSON.stringify(obj));
   } catch (e) {
     console.warn('Failed to save quick notes:', e);
+  }
+}
+
+// Load deleted paper keys from localStorage
+function loadDeletedPaperKeys() {
+  try {
+    const stored = localStorage.getItem('deletedPaperKeys');
+    if (!stored) return;
+    const parsed = JSON.parse(stored);
+    if (Array.isArray(parsed)) {
+      deletedPaperKeys = new Set(parsed.filter(key => typeof key === 'string'));
+    }
+  } catch (e) {
+    console.warn('Failed to load deleted paper keys:', e);
+  }
+}
+
+// Save deleted paper keys to localStorage
+function saveDeletedPaperKeys() {
+  try {
+    localStorage.setItem('deletedPaperKeys', JSON.stringify(Array.from(deletedPaperKeys)));
+  } catch (e) {
+    console.warn('Failed to save deleted paper keys:', e);
   }
 }
 
@@ -1016,18 +1040,133 @@ async function updatePaperReadStatus(paper, dateStr) {
   await persistReadStatusViaLegacyGitHub(paper, dateStr);
 }
 
+async function persistPaperDeletionViaExtension(paperKey) {
+  if (!paperKey) {
+    throw new Error('Missing paper key');
+  }
+
+  const requestId = `pf-delete-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+  return new Promise((resolve, reject) => {
+    let timeoutId = null;
+
+    function cleanup() {
+      window.removeEventListener('message', onMessage);
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
+    }
+
+    function onMessage(event) {
+      if (event.source !== window) return;
+      const message = event.data;
+      if (!message || message.source !== FRONTEND_BRIDGE_RESPONSE_SOURCE) return;
+      if (message.requestId !== requestId) return;
+
+      cleanup();
+
+      if (message.success) {
+        resolve();
+      } else {
+        reject(new Error(message.error || 'Extension rejected delete request'));
+      }
+    }
+
+    timeoutId = setTimeout(() => {
+      cleanup();
+      reject(new Error('Timed out waiting for extension response'));
+    }, 5000);
+
+    window.addEventListener('message', onMessage);
+    window.postMessage({
+      source: FRONTEND_BRIDGE_REQUEST_SOURCE,
+      type: 'deletePaper',
+      requestId,
+      payload: {
+        paperKey
+      }
+    }, getPostMessageTargetOrigin());
+  });
+}
+
+async function persistPaperDeletionViaLegacyGitHub(paper) {
+  const token = getLegacyGitHubToken();
+  if (!token || !snapshotRepo || !paper.issueNumber) {
+    throw new Error('No extension bridge and no legacy GitHub token configured');
+  }
+
+  const apiBase = `https://api.github.com/repos/${snapshotRepo}/issues/${paper.issueNumber}`;
+  const headers = {
+    'Authorization': `token ${token}`,
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+
+  const labelsResponse = await fetch(`${apiBase}/labels`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ labels: ['archived'] })
+  });
+
+  if (!labelsResponse.ok) {
+    throw new Error(`Failed to archive paper labels (${labelsResponse.status})`);
+  }
+
+  const closeResponse = await fetch(apiBase, {
+    method: 'PATCH',
+    headers,
+    body: JSON.stringify({ state: 'closed' })
+  });
+
+  if (!closeResponse.ok) {
+    throw new Error(`Failed to close archived paper issue (${closeResponse.status})`);
+  }
+}
+
+async function persistPaperDeletion(paper) {
+  try {
+    await persistPaperDeletionViaExtension(paper.paperKey);
+    return;
+  } catch (extensionError) {
+    console.warn('Extension delete sync unavailable; falling back to legacy GitHub token path', extensionError);
+  }
+
+  await persistPaperDeletionViaLegacyGitHub(paper);
+}
+
+function removePaperFromLocalState(paperKey) {
+  if (!paperKey) return;
+
+  deletedPaperKeys.add(paperKey);
+  manuallyReadPapers.delete(paperKey);
+  quickNotes.delete(paperKey);
+
+  allData = allData.filter(p => p.paperKey !== paperKey);
+
+  saveDeletedPaperKeys();
+  saveManuallyReadPapers();
+  saveQuickNotes();
+}
+
 async function deletePaper(paper) {
   if (!paper) {
     alert('Cannot delete: no paper selected.');
     return;
   }
 
-  if (!confirm(`Delete "${paper.title}" from your view?\n\nNote: This only removes it from the current session. It will reappear on page refresh.`)) {
+  if (!confirm(`Permanently delete "${paper.title}"?\n\nThis removes it from future sessions and syncs the deletion when possible.`)) {
     return;
   }
 
-  // Remove paper from in-memory data
-  allData = allData.filter(p => p.paperKey !== paper.paperKey);
+  let syncError = null;
+  try {
+    await persistPaperDeletion(paper);
+  } catch (error) {
+    syncError = error;
+    console.warn('Failed to sync paper deletion to gh-store:', error);
+  }
+
+  removePaperFromLocalState(paper.paperKey);
 
   // Refresh the table
   table.replaceData(allData);
@@ -1035,6 +1174,10 @@ async function deletePaper(paper) {
 
   // Close the sidebar
   hideDetails();
+
+  if (syncError) {
+    alert(`Paper was deleted locally, but sync failed: ${syncError.message || 'Unknown error'}`);
+  }
 }
 
 function hideDetails() {
@@ -1113,6 +1256,10 @@ function processComplexData(data) {
   const paperKeys = Object.keys(objects).filter(key => key.startsWith("paper:"));
 
   for (const paperKey of paperKeys) {
+    if (deletedPaperKeys.has(paperKey)) {
+      continue;
+    }
+
     const paperId = extractObjectId(paperKey, "paper");
     const paperRaw = objects[paperKey];
     const paperData = paperRaw.data;
@@ -1672,6 +1819,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load manually read papers from localStorage
     loadManuallyReadPapers();
     loadQuickNotes();
+    loadDeletedPaperKeys();
 
     // Fetch data file with cache-busting to ensure fresh data
     fetch(`gh-store-snapshot.json?t=${Date.now()}`)
@@ -1688,6 +1836,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Persist merged read status (snapshot + localStorage) back to localStorage
         saveManuallyReadPapers();
         saveQuickNotes();
+        saveDeletedPaperKeys();
 
         // Initialize table and heatmap
         initTable(allData);

@@ -24,6 +24,10 @@ let popupManager: PopupManager | null = null;
 let sourceManager: SourceIntegrationManager | null = null;
 const READ_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
+interface StoreIssueSummary {
+  number: number;
+}
+
 function isTrustedFrontendUrl(url: string | undefined): boolean {
   if (!url || !githubRepo) return false;
 
@@ -176,6 +180,11 @@ function setupMessageListeners() {
 
     if (message.type === 'frontendUpdateManualReadStatus') {
       handleFrontendUpdateManualReadStatus(message, sender, sendResponse);
+      return true; // Will respond asynchronously
+    }
+
+    if (message.type === 'frontendDeletePaper') {
+      handleFrontendDeletePaper(message, sender, sendResponse);
       return true; // Will respond asynchronously
     }
     
@@ -338,6 +347,108 @@ async function handleFrontendUpdateManualReadStatus(
     sendResponse({ success: true });
   } catch (error) {
     logger.error('Error syncing manual read status from frontend', error);
+    sendResponse({
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+}
+
+function toInteractionObjectId(paperKey: string): string | null {
+  if (paperKey.startsWith('paper:')) {
+    return `interactions:${paperKey.slice('paper:'.length)}`;
+  }
+  if (paperKey.startsWith('paper.')) {
+    return `interactions.${paperKey.slice('paper.'.length)}`;
+  }
+  return null;
+}
+
+async function findIssueNumberForObject(
+  client: GitHubStoreClient,
+  objectId: string
+): Promise<number | null> {
+  const matchingIssues = await client.fetchFromGitHub<StoreIssueSummary[]>('/issues', {
+    method: 'GET',
+    params: {
+      labels: `stored-object,UID:${objectId}`,
+      state: 'all'
+    }
+  });
+
+  if (!matchingIssues || matchingIssues.length === 0) {
+    return null;
+  }
+
+  return matchingIssues[0].number;
+}
+
+async function archiveObjectById(
+  client: GitHubStoreClient,
+  objectId: string
+): Promise<boolean> {
+  const issueNumber = await findIssueNumberForObject(client, objectId);
+  if (!issueNumber) {
+    return false;
+  }
+
+  await client.fetchFromGitHub(`/issues/${issueNumber}/labels`, {
+    method: 'POST',
+    body: JSON.stringify({ labels: ['archived'] })
+  });
+  await client.fetchFromGitHub(`/issues/${issueNumber}`, {
+    method: 'PATCH',
+    body: JSON.stringify({ state: 'closed' })
+  });
+
+  return true;
+}
+
+async function handleFrontendDeletePaper(
+  message: {
+    paperKey?: string;
+  },
+  sender: chrome.runtime.MessageSender,
+  sendResponse: (response: any) => void
+): Promise<void> {
+  const paperKey = typeof message.paperKey === 'string' ? message.paperKey.trim() : '';
+
+  if (!isTrustedFrontendUrl(sender.url)) {
+    sendResponse({ success: false, error: 'Untrusted frontend origin' });
+    return;
+  }
+
+  if (!paperKey) {
+    sendResponse({ success: false, error: 'Invalid paper key' });
+    return;
+  }
+
+  if (!paperManager) {
+    sendResponse({ success: false, error: 'GitHub sync is not configured in extension options' });
+    return;
+  }
+
+  try {
+    const client = paperManager.getClient();
+    const archivedPaper = await archiveObjectById(client, paperKey);
+    if (!archivedPaper) {
+      sendResponse({ success: false, error: 'Paper not found in store' });
+      return;
+    }
+
+    const interactionsKey = toInteractionObjectId(paperKey);
+    if (interactionsKey) {
+      try {
+        await archiveObjectById(client, interactionsKey);
+      } catch (interactionArchiveError) {
+        logger.warn(`Failed to archive interaction log for ${interactionsKey}`, interactionArchiveError);
+      }
+    }
+
+    logger.info(`Archived paper ${paperKey} from frontend`, { sender: sender.url });
+    sendResponse({ success: true });
+  } catch (error) {
+    logger.error('Error deleting paper from frontend', error);
     sendResponse({
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error'
