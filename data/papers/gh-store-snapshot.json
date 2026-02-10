@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T14:31:16.560296+00:00",
+  "snapshot_time": "2026-02-10T14:35:19.359150+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1640,6 +1640,30 @@
         "object_id": "paper:newspapers.7E0B6343",
         "created_at": "2026-02-10T14:30:13+00:00",
         "updated_at": "2026-02-10T14:30:47+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.4376E96": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "4376E96",
+        "url": "https://www.bookforum.com/",
+        "title": "Bookforum",
+        "authors": "",
+        "abstract": "The online edition of Bookforum Magazine.",
+        "timestamp": "2026-02-10T14:34:18.924Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 74,
+        "object_id": "paper:url.4376E96",
+        "created_at": "2026-02-10T14:34:19+00:00",
+        "updated_at": "2026-02-10T14:34:45+00:00",
         "version": 1
       }
     }
