@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T14:46:19.216009+00:00",
+  "snapshot_time": "2026-02-10T14:48:21.376912+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1719,6 +1719,30 @@
         "object_id": "paper:arxiv.2601.19913",
         "created_at": "2026-02-10T14:45:21+00:00",
         "updated_at": "2026-02-10T14:45:47+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.506F4058": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "506F4058",
+        "url": "https://media.licdn.com/dms/document/media/v2/D4E1FAQFSB5OvcNbALA/feedshare-document-url-metadata-scrapper-pdf/B4EZw_o8RPH8A4-/0/1770594224671?e=1771254000&v=beta&t=aGhL2aWPwKzZJr2O2z99r3X4MfV9LNzf2NS9rbf63dA",
+        "title": "506F4058",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-10T14:47:30.762Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 77,
+        "object_id": "paper:url.506F4058",
+        "created_at": "2026-02-10T14:47:31+00:00",
+        "updated_at": "2026-02-10T14:47:54+00:00",
         "version": 1
       }
     }
