@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T13:59:14.921562+00:00",
+  "snapshot_time": "2026-02-10T14:03:46.282042+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1577,6 +1577,39 @@
         "object_id": "paper:url.54553779",
         "created_at": "2026-02-10T13:58:21+00:00",
         "updated_at": "2026-02-10T13:58:46+00:00",
+        "version": 1
+      }
+    },
+    "paper:newspapers.4CFA6FAA": {
+      "data": {
+        "sourceId": "newspapers",
+        "paperId": "4CFA6FAA",
+        "url": "https://www.nytimes.com/2026/02/08/business/ai-claude-romance-books.html",
+        "title": "The New Fabio Is Claude",
+        "authors": "https://www.nytimes.com/by/alexandra-alter",
+        "abstract": "The romance industry, always at the vanguard of technological change, is rapidly adapting to A.I. Not everyone is on board.",
+        "timestamp": "2026-02-10T14:02:36.333Z",
+        "rating": "novote",
+        "publishedDate": "20260208",
+        "tags": [
+          "Artificial intelligence",
+          "Books",
+          "Publishing",
+          "Sex",
+          "Love",
+          "Writer",
+          "Anthropic",
+          "audio-neutral-inquisitive"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 72,
+        "object_id": "paper:newspapers.4CFA6FAA",
+        "created_at": "2026-02-10T14:02:36+00:00",
+        "updated_at": "2026-02-10T14:03:11+00:00",
         "version": 1
       }
     }
