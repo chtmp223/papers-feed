@@ -14,6 +14,7 @@ let selectedPaperKey = null;
 let snapshotRepo = '';
 const FRONTEND_BRIDGE_REQUEST_SOURCE = 'papers-feed-frontend';
 const FRONTEND_BRIDGE_RESPONSE_SOURCE = 'papers-feed-extension';
+const THEME_STORAGE_KEY = 'papersFeedTheme';
 
 // Load manually read papers from localStorage
 function loadManuallyReadPapers() {
@@ -93,6 +94,119 @@ function saveDeletedPaperKeys() {
     localStorage.setItem('deletedPaperKeys', JSON.stringify(Array.from(deletedPaperKeys)));
   } catch (e) {
     console.warn('Failed to save deleted paper keys:', e);
+  }
+}
+
+function getStoredThemePreference() {
+  try {
+    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+    return storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : null;
+  } catch (e) {
+    console.warn('Failed to read theme preference:', e);
+    return null;
+  }
+}
+
+function getSystemThemePreference() {
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
+}
+
+function getCurrentTheme() {
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+}
+
+function refreshHeatmap() {
+  if (currentDetailsPaper) {
+    const singlePaperActivity = extractReadingActivityData([currentDetailsPaper], currentHeatmapMetric);
+    createReadingHeatmap(singlePaperActivity);
+    return;
+  }
+
+  if (filterManager) {
+    filterManager.updateHeatmap();
+    return;
+  }
+
+  if (allData.length > 0) {
+    const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
+    createReadingHeatmap(activityData);
+  }
+}
+
+function updateThemeToggleButton(theme) {
+  const themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle) return;
+
+  const isDark = theme === 'dark';
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+  themeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+
+  const icon = themeToggle.querySelector('i');
+  if (icon) {
+    icon.className = `fas fa-${isDark ? 'sun' : 'moon'}`;
+  }
+
+  const label = themeToggle.querySelector('.theme-toggle-label');
+  if (label) {
+    label.textContent = isDark ? 'Light' : 'Dark';
+  }
+}
+
+function applyTheme(theme, options = {}) {
+  const { persist = true, rerender = true } = options;
+  const normalizedTheme = theme === 'dark' ? 'dark' : 'light';
+
+  document.documentElement.setAttribute('data-theme', normalizedTheme);
+  updateThemeToggleButton(normalizedTheme);
+
+  if (persist) {
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, normalizedTheme);
+    } catch (e) {
+      console.warn('Failed to save theme preference:', e);
+    }
+  }
+
+  if (rerender) {
+    refreshHeatmap();
+  }
+}
+
+function bindThemeToggle() {
+  const themeToggle = document.getElementById('theme-toggle');
+  if (!themeToggle || themeToggle.dataset.boundThemeToggle === 'true') return;
+
+  themeToggle.dataset.boundThemeToggle = 'true';
+  themeToggle.addEventListener('click', function () {
+    const nextTheme = getCurrentTheme() === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme, { persist: true, rerender: true });
+  });
+}
+
+function initializeTheme() {
+  const preAppliedTheme = document.documentElement.getAttribute('data-theme');
+  const initialTheme =
+    preAppliedTheme === 'dark' || preAppliedTheme === 'light'
+      ? preAppliedTheme
+      : (getStoredThemePreference() || getSystemThemePreference());
+
+  applyTheme(initialTheme, { persist: false, rerender: false });
+  bindThemeToggle();
+
+  if (!window.matchMedia) return;
+
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const applySystemThemeChange = (event) => {
+    if (getStoredThemePreference()) return;
+    applyTheme(event.matches ? 'dark' : 'light', { persist: false, rerender: true });
+  };
+
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', applySystemThemeChange);
+  } else if (typeof mediaQuery.addListener === 'function') {
+    mediaQuery.addListener(applySystemThemeChange);
   }
 }
 
@@ -178,12 +292,7 @@ function toggleReadStatus(paper, cell) {
 
 // Update heatmap after toggling read status
 function updateHeatmapAfterReadToggle() {
-  if (filterManager) {
-    filterManager.updateHeatmap();
-  } else {
-    const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
-    createReadingHeatmap(activityData);
-  }
+  refreshHeatmap();
 }
 
 // Utility function to normalize dates using Chrono
@@ -480,10 +589,7 @@ function createReadingHeatmap(data) {
 
   if (!data || data.length === 0) {
     container.append("div")
-      .style("text-align", "center")
-      .style("color", "#666")
-      .style("font-size", "12px")
-      .style("padding", "20px")
+      .attr("class", "heatmap-empty-state")
       .text(currentDetailsPaper ? "No reading sessions for this paper" : "No reading activity data available");
     return;
   }
@@ -540,11 +646,15 @@ function createReadingHeatmap(data) {
 
   // Create color scale - let D3 handle everything
   const maxCount = d3.max(data, d => d.count) || 1;
+  const isDarkMode = getCurrentTheme() === 'dark';
+  const emptyCellColor =
+    getComputedStyle(document.documentElement).getPropertyValue('--heatmap-empty-color').trim()
+    || (isDarkMode ? '#1f2937' : '#ebedf0');
 
-  const paletteHeatmap = d3.interpolateGreens; //d3.interpolateYlGn; //d3.interpolateBlues;
+  const paletteHeatmap = isDarkMode ? d3.interpolateYlGn : d3.interpolateGreens;
   const colorScale = maxCount > 10
     ? d3.scaleSequentialLog(paletteHeatmap).domain([1, maxCount])
-    : d3.scaleSequential(paletteHeatmap).domain([0, maxCount]);
+    : d3.scaleSequential(paletteHeatmap).domain([1, Math.max(1, maxCount)]);
 
   // Generate all dates in our range
   const allDates = d3.timeDays(startDateTime, new Date(endDateTime.getTime() + 24 * 60 * 60 * 1000));
@@ -569,7 +679,7 @@ function createReadingHeatmap(data) {
     .attr("fill", d => {
       const dateStr = d3.timeFormat("%Y-%m-%d")(d);
       const count = dataMap.get(dateStr) || 0;
-      return colorScale(count);
+      return count > 0 ? colorScale(count) : emptyCellColor;
     })
     .on("mouseover", function (event, d) {
       const dateStr = d3.timeFormat("%Y-%m-%d")(d);
@@ -1632,17 +1742,7 @@ function setupEventListeners() {
   document.getElementById("heatmap-metric-selector").addEventListener("change", function (e) {
     currentHeatmapMetric = e.target.value;
     console.log("Heatmap metric changed to:", currentHeatmapMetric);
-
-    // Update heatmap based on current state
-    if (currentDetailsPaper) {
-      const singlePaperActivity = extractReadingActivityData([currentDetailsPaper], currentHeatmapMetric);
-      createReadingHeatmap(singlePaperActivity);
-    } else if (filterManager && filterManager.filters.size > 0) {
-      filterManager.updateHeatmap();
-    } else {
-      const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
-      createReadingHeatmap(activityData);
-    }
+    refreshHeatmap();
   });
 
   // Global search with debouncing for preview
@@ -1823,6 +1923,8 @@ function formatDateRangeDescription(fromDate, toDate) {
 
 // Load and initialize
 document.addEventListener("DOMContentLoaded", function () {
+  initializeTheme();
+
   // Password gate
   const overlay = document.getElementById("password-overlay");
   const passwordForm = document.getElementById("password-form");
@@ -1857,8 +1959,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateReadProgressBar();
 
         // Create initial heatmap with default metric
-        const activityData = extractReadingActivityData(allData, currentHeatmapMetric);
-        createReadingHeatmap(activityData);
+        refreshHeatmap();
 
         setupEventListeners();
       })
