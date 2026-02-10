@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T15:42:51.428187+00:00",
+  "snapshot_time": "2026-02-10T15:55:35.668447+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -1872,6 +1872,30 @@
         "object_id": "paper:url.724A098A",
         "created_at": "2026-02-10T15:41:28+00:00",
         "updated_at": "2026-02-10T15:42:01+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.7ED72707": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "7ED72707",
+        "url": "https://code.claude.com/docs/en/sub-agents",
+        "title": "Create custom subagents - Claude Code Docs",
+        "authors": "",
+        "abstract": "Create and use specialized AI subagents in Claude Code for task-specific workflows and improved context management.",
+        "timestamp": "2026-02-10T15:54:43.852Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 83,
+        "object_id": "paper:url.7ED72707",
+        "created_at": "2026-02-10T15:54:44+00:00",
+        "updated_at": "2026-02-10T15:55:08+00:00",
         "version": 1
       }
     }
