@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-11T13:42:17.705573+00:00",
+  "snapshot_time": "2026-02-11T14:02:22.834291+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2248,6 +2248,30 @@
         "object_id": "paper:url.676EA0DC",
         "created_at": "2026-02-11T13:41:29+00:00",
         "updated_at": "2026-02-11T13:41:49+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.75A89B95": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "75A89B95",
+        "url": "https://substack.com/home/post/p-184497902",
+        "title": "books that made me",
+        "authors": "Substack",
+        "abstract": "42 books from a lifetime of reading",
+        "timestamp": "2026-02-11T14:01:35.241Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 98,
+        "object_id": "paper:url.75A89B95",
+        "created_at": "2026-02-11T14:01:35+00:00",
+        "updated_at": "2026-02-11T14:01:56+00:00",
         "version": 1
       }
     }
