@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-11T16:28:15.181962+00:00",
+  "snapshot_time": "2026-02-11T16:37:14.586485+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2349,6 +2349,30 @@
         "object_id": "paper:arxiv.2601.12134",
         "created_at": "2026-02-11T16:27:18+00:00",
         "updated_at": "2026-02-11T16:27:44+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.388A6126": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "388A6126",
+        "url": "https://github.com/qwibitai/nanoclaw",
+        "title": "qwibitai/nanoclaw: A lightweight alternative to Clawdbot / OpenClaw that runs in Apple containers for security. Connects to WhatsApp, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK",
+        "authors": "",
+        "abstract": "A lightweight alternative to Clawdbot / OpenClaw that runs in Apple containers for security. Connects to WhatsApp, has memory, scheduled jobs, and runs directly on Anthropic&#39;s Agents SDK - qwib...",
+        "timestamp": "2026-02-11T16:36:20.138Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 102,
+        "object_id": "paper:url.388A6126",
+        "created_at": "2026-02-11T16:36:20+00:00",
+        "updated_at": "2026-02-11T16:36:46+00:00",
         "version": 1
       }
     }
