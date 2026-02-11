@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-10T23:42:46.835805+00:00",
+  "snapshot_time": "2026-02-11T13:39:37.156494+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2150,6 +2150,56 @@
         "object_id": "paper:arxiv.2601.21257",
         "created_at": "2026-02-10T23:41:54+00:00",
         "updated_at": "2026-02-10T23:42:12+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.400447": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "400447",
+        "url": "https://qcontinuum.substack.com/p/spying-chrome-extensions-287-extensions-495",
+        "title": "Spying Chrome Extensions: 287 Extensions spying on 37M users",
+        "authors": "Q Continuum",
+        "abstract": "Summary",
+        "timestamp": "2026-02-11T13:38:48.690Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 95,
+        "object_id": "paper:url-misc.400447",
+        "created_at": "2026-02-11T13:38:48+00:00",
+        "updated_at": "2026-02-11T13:39:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.09624": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.09624",
+        "url": "https://arxiv.org/abs/2602.09624",
+        "title": "MILE-RefHumEval: A Reference-Free, Multi-Independent LLM Framework for Human-Aligned Evaluation",
+        "authors": "Nalin Srun, Parisa Rastin, Gu\u00e9na\u00ebl Cabanes, Lydia Boudjeloud Assala",
+        "abstract": "We introduce MILE-RefHumEval, a reference-free framework for evaluating Large Language Models (LLMs) without ground-truth annotations or evaluator coordination. It leverages an ensemble of independently prompted evaluators guided by a human-aligned schema, supporting both discrete and continuous scoring judgement. With task-specific prompts from best candidate selection, summarization and image captioning to dialogue, MILE-RefHumEval provides flexible, interpretable, and scalable assessments. Experiments show it aligns closely with human judgments, outperforms prior methods, and reduces computational overhead, offering an efficient, robust, and human-aligned solution for real-world LLM evaluation.",
+        "timestamp": "2026-02-11T13:38:15.591Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/10",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 94,
+        "object_id": "paper:arxiv.2602.09624",
+        "created_at": "2026-02-11T13:38:15+00:00",
+        "updated_at": "2026-02-11T13:38:39+00:00",
         "version": 1
       }
     }
