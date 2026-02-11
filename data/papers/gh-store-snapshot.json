@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-11T16:38:23.976190+00:00",
+  "snapshot_time": "2026-02-11T21:36:18.406042+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2399,6 +2399,54 @@
         "object_id": "paper:arxiv.2505.23840",
         "created_at": "2026-02-11T16:37:28+00:00",
         "updated_at": "2026-02-11T16:37:52+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.15DF551C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "15DF551C",
+        "url": "https://x.com/C_Hendrick/status/2021014941717917797",
+        "title": "Carl Hendrick on X: \"Why haven't we have a great AI novel yet? \nBecause LLMs are compression engines trained on the statistical regularities of human text. When generating stories, they produce a kind of average of all stories in the training distribution. This is why LLM fiction tends to be so\" / X",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-11T21:35:30.320Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 105,
+        "object_id": "paper:url.15DF551C",
+        "created_at": "2026-02-11T21:35:30+00:00",
+        "updated_at": "2026-02-11T21:35:49+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.46A0BBB7": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "46A0BBB7",
+        "url": "https://x.com/adamjohnsonCHI/status/2021619507010388269",
+        "title": "Adam Johnson on X: \"It absolutely cannot \u201ccompare bodies of literature at high levels of abstraction\u201d or \u201cwrite entire books\u201d of any quality. This is simply not true. It can produce summations of technical writing or highly derivative pastiche that is barely readable. This is just horseshit.\" / X",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-11T21:35:26.578Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 104,
+        "object_id": "paper:url.46A0BBB7",
+        "created_at": "2026-02-11T21:35:26+00:00",
+        "updated_at": "2026-02-11T21:35:51+00:00",
         "version": 1
       }
     }
