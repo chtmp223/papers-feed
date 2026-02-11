@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-11T21:36:18.406042+00:00",
+  "snapshot_time": "2026-02-11T22:59:34.801662+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2447,6 +2447,32 @@
         "object_id": "paper:url.46A0BBB7",
         "created_at": "2026-02-11T21:35:26+00:00",
         "updated_at": "2026-02-11T21:35:51+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2510.09770": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2510.09770",
+        "url": "https://arxiv.org/abs/2510.09770",
+        "title": "GOLD PANNING: Iterative Bayesian Signal Anchoring for Many-Document Needle-in-Haystack Reasoning",
+        "authors": "Adam Byerly, Daniel Khashabi",
+        "abstract": "Large language models (LLMs) exhibit pronounced position bias in long-context needle-in-haystack problems, systematically prioritizing the location of information over its relevance. While current mitigations rely on white-box access, this is effectively impossible for many state-of-the-art models. We introduce GOLD PANNING, a black-box Bayesian framework that performs inference-time active search over long contexts by (i) reordering documents to concentrate high-belief items in highly diagnostic positions (signal anchoring) and (ii) updating beliefs over document relevance from model outputs. Unlike conventional active learning, which prioritizes uncertainty reduction, GOLD PANNING leverages anchoring -- once flagged, keep it in sight -- to preserve weak cues. We implement this using iterative assignment derived from the model's diagnosticity profile, which provably identifies a target among NN documents in O(logN)O(\\log N) rounds, ensuring scalability to many-document this http URL needle-in-a-haystack retrieval and long-context QA, GOLD PANNING matches Permutation Self-Consistency's target identification with 30\u2212\u22126530--65% fewer queries and remains effective under calibration mismatch, suggesting coarse positional ordering drives performance gains. These results demonstrate that inherent model biases need not be failures, but can be used as tools for control.",
+        "timestamp": "2026-02-11T22:58:51.386Z",
+        "rating": "novote",
+        "publishedDate": "2025/10/10",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 106,
+        "object_id": "paper:arxiv.2510.09770",
+        "created_at": "2026-02-11T22:58:51+00:00",
+        "updated_at": "2026-02-11T22:59:09+00:00",
         "version": 1
       }
     }
