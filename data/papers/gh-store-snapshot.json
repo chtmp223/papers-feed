@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-11T16:37:14.586485+00:00",
+  "snapshot_time": "2026-02-11T16:38:23.976190+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2373,6 +2373,32 @@
         "object_id": "paper:url.388A6126",
         "created_at": "2026-02-11T16:36:20+00:00",
         "updated_at": "2026-02-11T16:36:46+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2505.23840": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2505.23840",
+        "url": "https://arxiv.org/abs/2505.23840",
+        "title": "Measuring Sycophancy of Language Models in Multi-turn Dialogues",
+        "authors": "Jiseung Hong, Grace Byun, Seungone Kim, Kai Shu, Jinho D. Choi",
+        "abstract": "Large Language Models (LLMs) are expected to provide helpful and harmless responses, yet they often exhibit sycophancy--conforming to user beliefs regardless of factual accuracy or ethical soundness. Prior research on sycophancy has primarily focused on single-turn factual correctness, overlooking the dynamics of real-world interactions. In this work, we introduce SYCON Bench, a novel benchmark for evaluating sycophantic behavior in multi-turn, free-form conversational settings. Our benchmark measures how quickly a model conforms to the user (Turn of Flip) and how frequently it shifts its stance under sustained user pressure (Number of Flip). Applying SYCON Bench to 17 LLMs across three real-world scenarios, we find that sycophancy remains a prevalent failure mode. Our analysis shows that alignment tuning amplifies sycophantic behavior, whereas model scaling and reasoning optimization strengthen the model's ability to resist undesirable user views. Reasoning models generally outperform instruction-tuned models but often fail when they over-index on logical exposition instead of directly addressing the user's underlying beliefs. Finally, we evaluate four additional prompting strategies and demonstrate that adopting a third-person perspective reduces sycophancy by up to 63.8% in debate scenario. We release our code and data at this https URL.",
+        "timestamp": "2026-02-11T16:37:28.356Z",
+        "rating": "novote",
+        "publishedDate": "2025/05/28",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 103,
+        "object_id": "paper:arxiv.2505.23840",
+        "created_at": "2026-02-11T16:37:28+00:00",
+        "updated_at": "2026-02-11T16:37:52+00:00",
         "version": 1
       }
     }
