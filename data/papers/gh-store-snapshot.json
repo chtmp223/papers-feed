@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-11T13:39:37.156494+00:00",
+  "snapshot_time": "2026-02-11T13:40:47.355736+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2200,6 +2200,30 @@
         "object_id": "paper:arxiv.2602.09624",
         "created_at": "2026-02-11T13:38:15+00:00",
         "updated_at": "2026-02-11T13:38:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.7768B4A4": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "7768B4A4",
+        "url": "https://lcamtuf.substack.com/p/its-all-a-blur",
+        "title": "It's all a blur",
+        "authors": "lcamtuf",
+        "abstract": "If you follow information security discussions on the internet, you might have heard that blurring an image is not a good way of redacting its contents.",
+        "timestamp": "2026-02-11T13:39:57.565Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 96,
+        "object_id": "paper:url-misc.7768B4A4",
+        "created_at": "2026-02-11T13:39:57+00:00",
+        "updated_at": "2026-02-11T13:40:20+00:00",
         "version": 1
       }
     }
