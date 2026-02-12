@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-12T01:22:24.421579+00:00",
+  "snapshot_time": "2026-02-12T14:02:22.809308+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2545,6 +2545,86 @@
         "object_id": "paper:url.667FE82F",
         "created_at": "2026-02-12T01:21:40+00:00",
         "updated_at": "2026-02-12T01:21:58+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2410.02428": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2410.02428",
+        "url": "https://arxiv.org/abs/2410.02428",
+        "title": "Collective Critics for Creative Story Generation",
+        "authors": "Minwook Bae, Hyounghun Kim",
+        "abstract": "Generating a long story of several thousand words with narrative coherence using Large Language Models (LLMs) has been a challenging task. Previous research has addressed this challenge by proposing different frameworks that create a story plan and generate a long story based on that plan. However, these frameworks have been mainly focusing on maintaining narrative coherence in stories, often overlooking creativity in story planning and the expressiveness of the stories generated from those plans, which are desirable properties to captivate readers' interest. In this paper, we propose Collective Critics for Creative Story Generation framework (CritiCS), which is composed of plan refining stage (CrPlan) and story generation stage (CrText), to integrate a collective revision mechanism that promotes those properties into long-form story generation process. Specifically, in each stage, a group of LLM critics and one leader collaborate to incrementally refine drafts of plan and story throughout multiple rounds. Extensive human evaluation shows that the CritiCS can significantly enhance story creativity and reader engagement, while also maintaining narrative coherence. Furthermore, the design of the framework allows active participation from human writers in any role within the critique process, enabling interactive human-machine collaboration in story writing.",
+        "timestamp": "2026-02-12T14:01:38.725Z",
+        "rating": "novote",
+        "publishedDate": "2024/10/03",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 113,
+        "object_id": "paper:arxiv.2410.02428",
+        "created_at": "2026-02-12T14:01:39+00:00",
+        "updated_at": "2026-02-12T14:02:02+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2601.07149": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2601.07149",
+        "url": "https://arxiv.org/abs/2601.07149",
+        "title": "Rewarding Creativity: A Human-Aligned Generative Reward Model for Reinforcement Learning in Storytelling",
+        "authors": "Zhaoyan Li, Hang Lei, Yujia Wang, Lanbo Liu, Hao Liu, Liang Yu",
+        "abstract": "While Large Language Models (LLMs) can generate fluent text, producing high-quality creative stories remains challenging. Reinforcement Learning (RL) offers a promising solution but faces two critical obstacles: designing reliable reward signals for subjective storytelling quality and mitigating training instability. This paper introduces the Reinforcement Learning for Creative Storytelling (RLCS) framework to systematically address both challenges. First, we develop a Generative Reward Model (GenRM) that provides multi-dimensional analysis and explicit reasoning about story preferences, trained through supervised fine-tuning on demonstrations with reasoning chains distilled from strong teacher models, followed by GRPO-based refinement on expanded preference data. Second, we introduce an entropy-based reward shaping strategy that dynamically prioritizes learning on confident errors and uncertain correct predictions, preventing overfitting on already-mastered patterns. Experiments demonstrate that GenRM achieves 68\\% alignment with human creativity judgments, and RLCS significantly outperforms strong baselines including Gemini-2.5-Pro in overall story quality. This work provides a practical pipeline for applying RL to creative domains, effectively navigating the dual challenges of reward modeling and training stability.",
+        "timestamp": "2026-02-12T14:01:28.997Z",
+        "rating": "novote",
+        "publishedDate": "2026/01/12",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 112,
+        "object_id": "paper:arxiv.2601.07149",
+        "created_at": "2026-02-12T14:01:29+00:00",
+        "updated_at": "2026-02-12T14:01:48+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6132AA67": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6132AA67",
+        "url": "https://www.mdpi.com/2076-3417/15/6/2971",
+        "title": "Evaluating Creativity: Can LLMs Be Good Evaluators in Creative Writing Tasks?",
+        "authors": "Kim, Sungeun, Oh, Dongsuk",
+        "abstract": "The evaluation of creative writing has long been a complex and subjective process, made even more intriguing by the rise of advanced Artificial Intelligence (AI) tools like Large Language Models (LLMs). This study evaluates the potential of LLMs as reliable and consistent evaluators of creative texts, directly comparing their performance with traditional human evaluations. The analysis focuses on key creative criteria, including fluency, flexibility, elaboration, originality, usefulness, and specific creativity strategies. Results demonstrate that LLMs provide consistent and objective evaluations, achieving higher Inter-Annotator Agreement (IAA) compared with human evaluators. However, LLMs face limitations in recognizing nuanced, culturally specific, and context-dependent aspects of creativity. Conversely, human evaluators, despite lower consistency and higher subjectivity, exhibit strengths in capturing deeper contextual insights. These findings highlight the need for the further refinement of LLMs to address the complexities of creative writing evaluation.",
+        "timestamp": "2026-02-12T14:01:12.100Z",
+        "rating": "novote",
+        "publishedDate": "2025-03-10",
+        "tags": [
+          "large language models (LLMs) evaluation"
+        ],
+        "doi": "10.3390/app15062971",
+        "journalName": "Applied Sciences 2025, Vol. 15, Page 2971",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 111,
+        "object_id": "paper:url.6132AA67",
+        "created_at": "2026-02-12T14:01:12+00:00",
+        "updated_at": "2026-02-12T14:01:36+00:00",
         "version": 1
       }
     }
