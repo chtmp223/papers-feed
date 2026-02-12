@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-12T14:02:22.809308+00:00",
+  "snapshot_time": "2026-02-12T14:08:08.940544+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2625,6 +2625,30 @@
         "object_id": "paper:url.6132AA67",
         "created_at": "2026-02-12T14:01:12+00:00",
         "updated_at": "2026-02-12T14:01:36+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2025.acl-long.1254": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2025.acl-long.1254",
+        "url": "https://aclanthology.org/2025.acl-long.1254/",
+        "title": "Help Me Write a Story: Evaluating LLMs\u2019 Ability to Generate Writing Feedback",
+        "authors": "Hannah Rashkin, Elizabeth Clark, Fantine Huot, Mirella Lapata",
+        "abstract": "AbstractCan LLMs provide support to creative writers by giving meaningful writing feedback? In this paper, we explore the challenges and limitations of model-generated writing feedback by defining a new task, dataset, and evaluation frameworks. To study model performance in a controlled manner, we present a novel test set of 1,300 stories that we corrupted to intentionally introduce writing issues. We study the performance of commonly used LLMs in this task with both automatic and human evaluation metrics. Our analysis shows that current models have strong out-of-the-box behavior in many respects\u2014providing specific and mostly accurate writing feedback. However, models often fail to identify the biggest writing issue in the story and to correctly decide when to offer critical vs. positive feedback.",
+        "timestamp": "2026-02-12T14:00:59.425Z",
+        "rating": "novote",
+        "publishedDate": "2025/7",
+        "tags": [],
+        "doi": "10.18653/v1/2025.acl-long.1254",
+        "journalName": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 110,
+        "object_id": "paper:acl-anthology.2025.acl-long.1254",
+        "created_at": "2026-02-12T14:00:59+00:00",
+        "updated_at": "2026-02-12T14:07:38+00:00",
         "version": 1
       }
     }
