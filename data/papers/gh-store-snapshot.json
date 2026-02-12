@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-12T18:03:49.190998+00:00",
+  "snapshot_time": "2026-02-12T18:56:32.378473+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2847,6 +2847,30 @@
         "object_id": "paper:arxiv.2602.10908",
         "created_at": "2026-02-12T18:02:53+00:00",
         "updated_at": "2026-02-12T18:03:18+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.42F10F94": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "42F10F94",
+        "url": "https://platform.claude.com/docs/en/resources/prompt-library/library",
+        "title": "Prompt Library",
+        "authors": "",
+        "abstract": "Claude API Documentation",
+        "timestamp": "2026-02-12T18:55:24.309Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 122,
+        "object_id": "paper:url.42F10F94",
+        "created_at": "2026-02-12T18:55:24+00:00",
+        "updated_at": "2026-02-12T18:56:03+00:00",
         "version": 1
       }
     }
