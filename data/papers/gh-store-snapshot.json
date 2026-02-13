@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T19:52:32.636718+00:00",
+  "snapshot_time": "2026-02-13T19:53:43.375261+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3031,6 +3031,32 @@
         "object_id": "paper:arxiv.2510.12487",
         "created_at": "2026-02-13T19:51:46+00:00",
         "updated_at": "2026-02-13T19:52:09+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2511.04486": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2511.04486",
+        "url": "https://arxiv.org/abs/2511.04486",
+        "title": "EDIT-Bench: Evaluating LLM Abilities to Perform Real-World Instructed Code Edits",
+        "authors": "Wayne Chi, Valerie Chen, Ryan Shar, Aditya Mittal, Jenny Liang, Wei-Lin Chiang, Anastasios Nikolas Angelopoulos, Ion Stoica, Graham Neubig, Ameet Talwalkar, Chris Donahue",
+        "abstract": "Instructed code editing, where LLMs directly modify a developer's existing code based on a user instruction, is becoming a widely used interaction mode in AI coding assistants. However, few benchmarks directly evaluate this capability and current datasets often rely on artificial sources. We introduce EDIT-Bench, a benchmark for evaluating LLM code editing capabilities grounded in real-world usage, i.e., user instructions and code contexts collected in the wild. EDIT-Bench comprises of 540 problems, multiple natural and programming languages, and a diverse set of real-world use cases, ranging from resolving errors to adding features. EDIT-Bench introduces context-dependent problems that require the model to understand code context, highlighted code, and cursor position in addition to the user instruction. We evaluate 40 diverse LLMs and observe that EDIT-Bench is a challenging set of problems where only 1 model scores over 60%. We find that model performance varies across different categories of user instructions. Further, we find that varying levels of contextual information greatly affect task success rate, with performance varying up to 11%, indicating the importance of evaluating with realistic context.",
+        "timestamp": "2026-02-13T19:52:29.324Z",
+        "rating": "novote",
+        "publishedDate": "2025/11/06",
+        "tags": [
+          "Software Engineering (cs.SE)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 129,
+        "object_id": "paper:arxiv.2511.04486",
+        "created_at": "2026-02-13T19:52:29+00:00",
+        "updated_at": "2026-02-13T19:52:52+00:00",
         "version": 1
       }
     }
