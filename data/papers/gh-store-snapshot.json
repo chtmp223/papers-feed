@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T20:09:58.586555+00:00",
+  "snapshot_time": "2026-02-13T22:29:09.548752+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3107,6 +3107,30 @@
         "object_id": "paper:nature.s42256-025-01169-6",
         "created_at": "2026-02-13T20:08:36+00:00",
         "updated_at": "2026-02-13T20:09:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6F9EE56B": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6F9EE56B",
+        "url": "https://m-joon-ixix.github.io/assets/files/Illusions-of-the-Gold-Standard_ARR-Jan2026.pdf",
+        "title": "6F9EE56B",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-13T22:28:07.611Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "pdf"
+      },
+      "meta": {
+        "issue_number": 132,
+        "object_id": "paper:url.6F9EE56B",
+        "created_at": "2026-02-13T22:28:07+00:00",
+        "updated_at": "2026-02-13T22:28:37+00:00",
         "version": 1
       }
     }
