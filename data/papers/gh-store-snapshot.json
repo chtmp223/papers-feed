@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-12T18:56:32.378473+00:00",
+  "snapshot_time": "2026-02-13T13:43:38.422287+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2871,6 +2871,30 @@
         "object_id": "paper:url.42F10F94",
         "created_at": "2026-02-12T18:55:24+00:00",
         "updated_at": "2026-02-12T18:56:03+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6B2919C7": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6B2919C7",
+        "url": "https://monosketch.io/",
+        "title": "MonoSketch - Unleash your ideas with ASCII",
+        "authors": "",
+        "abstract": "MonoSketch is a powerful ASCII sketching and diagramming app that lets you effortlessly transform your ideas into visually stunning designs.",
+        "timestamp": "2026-02-13T13:42:54.428Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 123,
+        "object_id": "paper:url.6B2919C7",
+        "created_at": "2026-02-13T13:42:54+00:00",
+        "updated_at": "2026-02-13T13:43:14+00:00",
         "version": 1
       }
     }
