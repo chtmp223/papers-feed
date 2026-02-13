@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T19:53:43.375261+00:00",
+  "snapshot_time": "2026-02-13T20:08:22.299789+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3057,6 +3057,30 @@
         "object_id": "paper:arxiv.2511.04486",
         "created_at": "2026-02-13T19:52:29+00:00",
         "updated_at": "2026-02-13T19:52:52+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.78223B6A": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "78223B6A",
+        "url": "https://humanlm.stanford.edu/index.html",
+        "title": "HumanLM",
+        "authors": "",
+        "abstract": "HumanLM: Simulating Users with State Alignment Beats Response Imitation",
+        "timestamp": "2026-02-13T20:07:18.027Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 130,
+        "object_id": "paper:url.78223B6A",
+        "created_at": "2026-02-13T20:07:18+00:00",
+        "updated_at": "2026-02-13T20:07:39+00:00",
         "version": 1
       }
     }
