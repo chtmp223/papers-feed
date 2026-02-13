@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T20:08:22.299789+00:00",
+  "snapshot_time": "2026-02-13T20:09:58.586555+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3081,6 +3081,32 @@
         "object_id": "paper:url.78223B6A",
         "created_at": "2026-02-13T20:07:18+00:00",
         "updated_at": "2026-02-13T20:07:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:nature.s42256-025-01169-6": {
+      "data": {
+        "sourceId": "nature",
+        "paperId": "s42256-025-01169-6",
+        "url": "https://www.nature.com/articles/s42256-025-01169-6",
+        "title": "When large language models are reliable for judging empathic communication",
+        "authors": "Kumar, Aakriti",
+        "abstract": "Large language models (LLMs) excel at generating empathic responses in text-based conversations. But, how reliably do they judge the nuances of empathic communication? Here we investigate this question by comparing how experts, crowdworkers and LLMs annotate empathic communication across four evaluative frameworks drawn from psychology, natural language processing and communications applied to 200 real-world conversations where one speaker shares a personal problem and the other offers support. Drawing on 3,150 expert annotations, 2,844 crowd annotations and 3,150 LLM annotations, we assess interrater reliability between these three annotator groups. We find that expert agreement is high but varies across the frameworks\u2019 subcomponents depending on their clarity, complexity and subjectivity. We show that expert agreement offers a more informative benchmark for contextualizing LLM performance than standard classification metrics. Across all four frameworks, LLMs consistently approach this expert level benchmark and exceed the reliability of crowdworkers. These results demonstrate how LLMs, when validated on specific tasks with appropriate benchmarks, can support transparency and oversight in emotionally sensitive applications including their use as conversational companions. Kumar et al. show that large language models (LLMs) nearly match expert reliability and outperform laypeople when assessing empathic communication across multiple frameworks. The performance of both LLMs and experts depends on clear and specific evaluation criteria.",
+        "timestamp": "2026-02-13T20:08:36.471Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-11",
+        "tags": [
+          "Business and management"
+        ],
+        "doi": "10.1038/s42256-025-01169-6",
+        "journalName": "Nature Machine Intelligence 2026",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 131,
+        "object_id": "paper:nature.s42256-025-01169-6",
+        "created_at": "2026-02-13T20:08:36+00:00",
+        "updated_at": "2026-02-13T20:09:11+00:00",
         "version": 1
       }
     }
