@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T19:42:01.515301+00:00",
+  "snapshot_time": "2026-02-13T19:46:23.429621+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2980,6 +2980,30 @@
         "object_id": "paper:arxiv.2602.12237",
         "created_at": "2026-02-13T19:41:00+00:00",
         "updated_at": "2026-02-13T19:41:38+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2B4B4F76": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2B4B4F76",
+        "url": "https://code.claude.com/docs/en/how-claude-code-works",
+        "title": "How Claude Code works - Claude Code Docs",
+        "authors": "",
+        "abstract": "Understand the agentic loop, built-in tools, and how Claude Code interacts with your project.",
+        "timestamp": "2026-02-13T19:44:54.970Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 127,
+        "object_id": "paper:url.2B4B4F76",
+        "created_at": "2026-02-13T19:44:55+00:00",
+        "updated_at": "2026-02-13T19:45:41+00:00",
         "version": 1
       }
     }
