@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T19:32:19.819557+00:00",
+  "snapshot_time": "2026-02-13T19:42:01.515301+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2952,6 +2952,34 @@
         "object_id": "paper:arxiv.2602.12005",
         "created_at": "2026-02-13T19:31:06+00:00",
         "updated_at": "2026-02-13T19:31:30+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.12237": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.12237",
+        "url": "https://arxiv.org/abs/2602.12237",
+        "title": "Olmix: A Framework for Data Mixing Throughout LM Development",
+        "authors": "Mayee F. Chen, Tyler Murray, David Heineman, Matt Jordan, Hannaneh Hajishirzi, Christopher R\u00e9, Luca Soldaini, Kyle Lo",
+        "abstract": "Data mixing -- determining the ratios of data from different domains -- is a first-order concern for training language models (LMs). While existing mixing methods show promise, they fall short when applied during real-world LM development. We present Olmix, a framework that addresses two such challenges. First, the configuration space for developing a mixing method is not well understood -- design choices across existing methods lack justification or consensus and overlook practical issues like data constraints. We conduct a comprehensive empirical study of this space, identifying which design choices lead to a strong mixing method. Second, in practice, the domain set evolves throughout LM development as datasets are added, removed, partitioned, and revised -- a problem setting largely unaddressed by existing works, which assume fixed domains. We study how to efficiently recompute the mixture after the domain set is updated, leveraging information from past mixtures. We introduce mixture reuse, a mechanism that reuses existing ratios and recomputes ratios only for domains affected by the update. Over a sequence of five domain-set updates mirroring real-world LM development, mixture reuse matches the performance of fully recomputing the mix after each update with 74% less compute and improves over training without mixing by 11.6% on downstream tasks.",
+        "timestamp": "2026-02-13T19:41:00.485Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/12",
+        "tags": [
+          "Machine Learning (cs.LG)",
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 126,
+        "object_id": "paper:arxiv.2602.12237",
+        "created_at": "2026-02-13T19:41:00+00:00",
+        "updated_at": "2026-02-13T19:41:38+00:00",
         "version": 1
       }
     }
