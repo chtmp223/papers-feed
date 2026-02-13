@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-13T13:43:38.422287+00:00",
+  "snapshot_time": "2026-02-13T19:20:05.290882+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -2895,6 +2895,37 @@
         "object_id": "paper:url.6B2919C7",
         "created_at": "2026-02-13T13:42:54+00:00",
         "updated_at": "2026-02-13T13:43:14+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.61759AF0": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "61759AF0",
+        "url": "https://www.alphaxiv.org/abs/intrinsic-credit-assignment",
+        "title": "Intrinsic Credit Assignment for Long Horizon Interaction | alphaXiv",
+        "authors": "",
+        "abstract": "View recent discussion. Abstract: This work proposes \u2206Belief-RL, a method that leverages a language model's own intrinsic beliefs to reward intermediate progress in long horizon tasks. The method utilizes the change in the probability an agent assigns to the target solution for credit assignment, and teaches information-seeking capabilities that consistently outperform purely outcome-based rewards for RL.",
+        "timestamp": "2026-02-13T19:19:14.858Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [
+          "alphaxiv",
+          "arxiv",
+          "forum",
+          "discussion",
+          "explore",
+          "trending papers"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 124,
+        "object_id": "paper:url.61759AF0",
+        "created_at": "2026-02-13T19:19:15+00:00",
+        "updated_at": "2026-02-13T19:19:40+00:00",
         "version": 1
       }
     }
