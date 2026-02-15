@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-15T01:14:35.537002+00:00",
+  "snapshot_time": "2026-02-15T02:23:49.000982+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3206,6 +3206,30 @@
         "object_id": "paper:url.11394F17",
         "created_at": "2026-02-15T01:13:55+00:00",
         "updated_at": "2026-02-15T01:14:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.3E457B80": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "3E457B80",
+        "url": "https://www.theatlantic.com/family/2026/01/friend-group-loneliness/685528/",
+        "title": "The Friend-Group Fallacy",
+        "authors": "Jenny Singer",
+        "abstract": "Many people yearn for a crew, but having one is not actually the norm.",
+        "timestamp": "2026-02-15T02:23:05.133Z",
+        "rating": "novote",
+        "publishedDate": "2026-01-07T14:48:15Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 136,
+        "object_id": "paper:url.3E457B80",
+        "created_at": "2026-02-15T02:23:05+00:00",
+        "updated_at": "2026-02-15T02:23:25+00:00",
         "version": 1
       }
     }
