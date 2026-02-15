@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-15T02:23:49.000982+00:00",
+  "snapshot_time": "2026-02-15T15:49:41.485828+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3230,6 +3230,36 @@
         "object_id": "paper:url.3E457B80",
         "created_at": "2026-02-15T02:23:05+00:00",
         "updated_at": "2026-02-15T02:23:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2FFAB8CF": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2FFAB8CF",
+        "url": "https://nichehunt.app/blog/ai-going-to-kill-app-subscriptions",
+        "title": "Niche Hunt \u2014 App ideas people actually want",
+        "authors": "",
+        "abstract": "Curated niche app opportunities from Reddit, scored by difficulty and demand.",
+        "timestamp": "2026-02-15T15:48:59.010Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [
+          "app ideas",
+          "niche apps",
+          "mobile development",
+          "indie hacker",
+          "startup ideas"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 137,
+        "object_id": "paper:url.2FFAB8CF",
+        "created_at": "2026-02-15T15:48:59+00:00",
+        "updated_at": "2026-02-15T15:49:18+00:00",
         "version": 1
       }
     }
