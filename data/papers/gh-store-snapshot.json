@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-14T16:57:00.083263+00:00",
+  "snapshot_time": "2026-02-15T00:13:32.173795+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3155,6 +3155,30 @@
         "object_id": "paper:url-misc.4E1986C7",
         "created_at": "2026-02-14T16:56:19+00:00",
         "updated_at": "2026-02-14T16:56:40+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.180DDC29": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "180DDC29",
+        "url": "https://empiricrafting.substack.com/p/why-cant-your-ai-agent-book-a-flight",
+        "title": "Why Can\u2019t Your AI Agent Book a Flight? ",
+        "authors": "Andrey Fradkin",
+        "abstract": "The Argument for Facilitating and Legally Protecting Agentic Access Online",
+        "timestamp": "2026-02-15T00:12:10.019Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 134,
+        "object_id": "paper:url-misc.180DDC29",
+        "created_at": "2026-02-15T00:12:10+00:00",
+        "updated_at": "2026-02-15T00:12:31+00:00",
         "version": 1
       }
     }
