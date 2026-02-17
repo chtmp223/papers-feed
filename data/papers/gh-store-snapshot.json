@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-17T23:21:43.668726+00:00",
+  "snapshot_time": "2026-02-17T23:22:55.248258+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3363,6 +3363,34 @@
         "object_id": "paper:arxiv.2505.06120",
         "created_at": "2026-02-17T23:21:02+00:00",
         "updated_at": "2026-02-17T23:21:22+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2512.14982": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2512.14982",
+        "url": "https://arxiv.org/abs/2512.14982",
+        "title": "Prompt Repetition Improves Non-Reasoning LLMs",
+        "authors": "Yaniv Leviathan, Matan Kalman, Yossi Matias",
+        "abstract": "When not using reasoning, repeating the input prompt improves performance for popular models (Gemini, GPT, Claude, and Deepseek) without increasing the number of generated tokens or latency.",
+        "timestamp": "2026-02-17T23:22:15.905Z",
+        "rating": "novote",
+        "publishedDate": "2025/12/17",
+        "tags": [
+          "Machine Learning (cs.LG)",
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 142,
+        "object_id": "paper:arxiv.2512.14982",
+        "created_at": "2026-02-17T23:22:16+00:00",
+        "updated_at": "2026-02-17T23:22:33+00:00",
         "version": 1
       }
     }
