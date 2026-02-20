@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-20T02:57:51.839781+00:00",
+  "snapshot_time": "2026-02-20T15:39:52.028039+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3542,6 +3542,35 @@
         "object_id": "paper:url.12CF30A0",
         "created_at": "2026-02-20T02:57:04+00:00",
         "updated_at": "2026-02-20T02:57:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2601.17569": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2601.17569",
+        "url": "https://arxiv.org/abs/2601.17569",
+        "title": "Improving User Privacy in Personalized Generation: Client-Side Retrieval-Augmented Modification of Server-Side Generated Speculations",
+        "authors": "Alireza Salemi, Hamed Zamani",
+        "abstract": "Personalization is crucial for aligning Large Language Model (LLM) outputs with individual user preferences and background knowledge. State-of-the-art solutions are based on retrieval augmentation, where relevant context from a user profile is retrieved for LLM consumption. These methods deal with a trade-off between exposing retrieved private data to cloud providers and relying on less capable local models. We introduce P3P^3, an interactive framework for high-quality personalization without revealing private profiles to server-side LLMs. In P3P^3, a large server-side model generates a sequence of kk draft tokens based solely on the user query, while a small client-side model, with retrieval access to the user's private profile, evaluates and modifies these drafts to better reflect user preferences. This process repeats until an end token is generated. Experiments on LaMP-QA, a recent benchmark consisting of three personalized question answering datasets, show that P3P^3 consistently outperforms both non-personalized server-side and personalized client-side baselines, achieving statistically significant improvements of 7.47.4% to 99% on average. Importantly, P3P^3 recovers 90.390.3% to 95.795.7% of the utility of a ``leaky'' upper-bound scenario in which the full profile is exposed to the large server-side model. Privacy analyses, including linkability and attribute inference attacks, indicate that P3P^3 preserves the privacy of a non-personalized server-side model, introducing only marginal additional leakage (1.51.5%--3.53.5%) compared to submitting a query without any personal context. Additionally, the framework is efficient for edge deployment, with the client-side model generating only 9.29.2% of the total tokens. These results demonstrate that P3P^3 provides a practical, effective solution for personalized generation with improved privacy.",
+        "timestamp": "2026-02-20T15:39:02.470Z",
+        "rating": "novote",
+        "publishedDate": "2026/01/24",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Cryptography and Security (cs.CR)",
+          "Information Retrieval (cs.IR)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 149,
+        "object_id": "paper:arxiv.2601.17569",
+        "created_at": "2026-02-20T15:39:02+00:00",
+        "updated_at": "2026-02-20T15:39:26+00:00",
         "version": 1
       }
     }
