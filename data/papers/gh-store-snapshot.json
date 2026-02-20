@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-20T15:39:52.028039+00:00",
+  "snapshot_time": "2026-02-20T15:41:50.220477+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3571,6 +3571,34 @@
         "object_id": "paper:arxiv.2601.17569",
         "created_at": "2026-02-20T15:39:02+00:00",
         "updated_at": "2026-02-20T15:39:26+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.16800": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.16800",
+        "url": "https://arxiv.org/abs/2602.16800",
+        "title": "Large-scale online deanonymization with LLMs",
+        "authors": "Simon Lermen, Daniel Paleka, Joshua Swanson, Michael Aerni, Nicholas Carlini, Florian Tram\u00e8r",
+        "abstract": "We show that large language models can be used to perform at-scale deanonymization. With full Internet access, our agent can re-identify Hacker News users and Anthropic Interviewer participants at high precision, given pseudonymous online profiles and conversations alone, matching what would take hours for a dedicated human investigator. We then design attacks for the closed-world setting. Given two databases of pseudonymous individuals, each containing unstructured text written by or about that individual, we implement a scalable attack pipeline that uses LLMs to: (1) extract identity-relevant features, (2) search for candidate matches via semantic embeddings, and (3) reason over top candidates to verify matches and reduce false positives. Compared to prior deanonymization work (e.g., on the Netflix prize) that required structured data or manual feature engineering, our approach works directly on raw user content across arbitrary platforms. We construct three datasets with known ground-truth data to evaluate our attacks. The first links Hacker News to LinkedIn profiles, using cross-platform references that appear in the profiles. Our second dataset matches users across Reddit movie discussion communities; and the third splits a single user's Reddit history in time to create two pseudonymous profiles to be matched. In each setting, LLM-based methods substantially outperform classical baselines, achieving up to 68% recall at 90% precision compared to near 0% for the best non-LLM method. Our results show that the practical obscurity protecting pseudonymous users online no longer holds and that threat models for online privacy need to be reconsidered.",
+        "timestamp": "2026-02-20T15:41:03.081Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/18",
+        "tags": [
+          "Cryptography and Security (cs.CR)",
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 150,
+        "object_id": "paper:arxiv.2602.16800",
+        "created_at": "2026-02-20T15:41:03+00:00",
+        "updated_at": "2026-02-20T15:41:25+00:00",
         "version": 1
       }
     }
