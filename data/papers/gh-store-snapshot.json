@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-19T21:08:01.397844+00:00",
+  "snapshot_time": "2026-02-20T00:31:33.464012+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3466,6 +3466,30 @@
         "object_id": "paper:arxiv.2602.13949",
         "created_at": "2026-02-19T21:07:13+00:00",
         "updated_at": "2026-02-19T21:07:36+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.B142443": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "B142443",
+        "url": "https://surgehq.ai/blog",
+        "title": "Blog | Surge AI",
+        "authors": "",
+        "abstract": "Our latest thoughts, notes, and insights from the post-training frontier.",
+        "timestamp": "2026-02-20T00:30:50.867Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 146,
+        "object_id": "paper:url.B142443",
+        "created_at": "2026-02-20T00:30:51+00:00",
+        "updated_at": "2026-02-20T00:31:09+00:00",
         "version": 1
       }
     }
