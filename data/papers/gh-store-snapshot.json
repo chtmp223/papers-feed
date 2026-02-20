@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-20T00:31:33.464012+00:00",
+  "snapshot_time": "2026-02-20T01:46:23.392137+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3490,6 +3490,34 @@
         "object_id": "paper:url.B142443",
         "created_at": "2026-02-20T00:30:51+00:00",
         "updated_at": "2026-02-20T00:31:09+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.15198": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.15198",
+        "url": "https://arxiv.org/abs/2602.15198",
+        "title": "Colosseum: Auditing Collusion in Cooperative Multi-Agent Systems",
+        "authors": "Mason Nakamura, Abhinav Kumar, Saswat Das, Sahar Abdelnabi, Saaduddin Mahmud, Ferdinando Fioretto, Shlomo Zilberstein, Eugene Bagdasarian",
+        "abstract": "Multi-agent systems, where LLM agents communicate through free-form language, enable sophisticated coordination for solving complex cooperative tasks. This surfaces a unique safety problem when individual agents form a coalition and \\emph{collude} to pursue secondary goals and degrade the joint objective. In this paper, we present Colosseum, a framework for auditing LLM agents' collusive behavior in multi-agent settings. We ground how agents cooperate through a Distributed Constraint Optimization Problem (DCOP) and measure collusion via regret relative to the cooperative optimum. Colosseum tests each LLM for collusion under different objectives, persuasion tactics, and network topologies. Through our audit, we show that most out-of-the-box models exhibited a propensity to collude when a secret communication channel was artificially formed. Furthermore, we discover ``collusion on paper'' when agents plan to collude in text but would often pick non-collusive actions, thus providing little effect on the joint task. Colosseum provides a new way to study collusion by measuring communications and actions in rich yet verifiable environments.",
+        "timestamp": "2026-02-20T01:45:32.811Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/16",
+        "tags": [
+          "Multiagent Systems (cs.MA)",
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 147,
+        "object_id": "paper:arxiv.2602.15198",
+        "created_at": "2026-02-20T01:45:33+00:00",
+        "updated_at": "2026-02-20T01:45:55+00:00",
         "version": 1
       }
     }
