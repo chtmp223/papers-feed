@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-20T15:42:22.619700+00:00",
+  "snapshot_time": "2026-02-20T15:43:55.301187+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3626,6 +3626,32 @@
         "object_id": "paper:arxiv.2602.16820",
         "created_at": "2026-02-20T15:41:39+00:00",
         "updated_at": "2026-02-20T15:41:57+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.16942": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.16942",
+        "url": "https://arxiv.org/abs/2602.16942",
+        "title": "SourceBench: Can AI Answers Reference Quality Web Sources?",
+        "authors": "Hexi Jin, Stephen Liu, Yuheng Li, Simran Malik, Yiying Zhang",
+        "abstract": "Large language models (LLMs) increasingly answer queries by citing web sources, but existing evaluations emphasize answer correctness rather than evidence quality. We introduce SourceBench, a benchmark for measuring the quality of cited web sources across 100 real-world queries spanning informational, factual, argumentative, social, and shopping intents. SourceBench uses an eight-metric framework covering content quality (content relevance, factual accuracy, objectivity) and page-level signals (e.g., freshness, authority/accountability, clarity), and includes a human-labeled dataset with a calibrated LLM-based evaluator that matches expert judgments closely. We evaluate eight LLMs, Google Search, and three AI search tools over 3996 cited sources using SourceBench and conduct further experiments to understand the evaluation results. Overall, our work reveals four key new insights that can guide future research in the direction of GenAI and web search.",
+        "timestamp": "2026-02-20T15:43:05.649Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/18",
+        "tags": [
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 152,
+        "object_id": "paper:arxiv.2602.16942",
+        "created_at": "2026-02-20T15:43:05+00:00",
+        "updated_at": "2026-02-20T15:43:27+00:00",
         "version": 1
       }
     }
