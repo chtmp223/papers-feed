@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-22T13:15:00.960129+00:00",
+  "snapshot_time": "2026-02-22T15:03:30.831944+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3731,6 +3731,32 @@
         "object_id": "paper:arxiv.2602.16699",
         "created_at": "2026-02-22T13:14:17+00:00",
         "updated_at": "2026-02-22T13:14:38+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.13517": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.13517",
+        "url": "https://arxiv.org/abs/2602.13517",
+        "title": "Think Deep, Not Just Long: Measuring LLM Reasoning Effort via Deep-Thinking Tokens",
+        "authors": "Wei-Lin Chen, Liqian Peng, Tian Tan, Chao Zhao, Blake JianHang Chen, Ziqian Lin, Alec Go, Yu Meng",
+        "abstract": "Large language models (LLMs) have demonstrated impressive reasoning capabilities by scaling test-time compute via long Chain-of-Thought (CoT). However, recent findings suggest that raw token counts are unreliable proxies for reasoning quality: increased generation length does not consistently correlate with accuracy and may instead signal \"overthinking,\" leading to performance degradation. In this work, we quantify inference-time effort by identifying deep-thinking tokens -- tokens where internal predictions undergo significant revisions in deeper model layers prior to convergence. Across four challenging mathematical and scientific benchmarks (AIME 24/25, HMMT 25, and GPQA-diamond) and a diverse set of reasoning-focused models (GPT-OSS, DeepSeek-R1, and Qwen3), we show that deep-thinking ratio (the proportion of deep-thinking tokens in a generated sequence) exhibits a robust and consistently positive correlation with accuracy, substantially outperforming both length-based and confidence-based baselines. Leveraging this insight, we introduce Think@n, a test-time scaling strategy that prioritizes samples with high deep-thinking ratios. We demonstrate that Think@n matches or exceeds standard self-consistency performance while significantly reducing inference costs by enabling the early rejection of unpromising generations based on short prefixes.",
+        "timestamp": "2026-02-22T15:02:46.386Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/13",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 156,
+        "object_id": "paper:arxiv.2602.13517",
+        "created_at": "2026-02-22T15:02:46+00:00",
+        "updated_at": "2026-02-22T15:03:08+00:00",
         "version": 1
       }
     }
