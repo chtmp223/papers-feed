@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-22T12:57:36.731085+00:00",
+  "snapshot_time": "2026-02-22T13:15:00.960129+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3704,6 +3704,33 @@
         "object_id": "paper:url.77C263D5",
         "created_at": "2026-02-22T12:56:57+00:00",
         "updated_at": "2026-02-22T12:57:16+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.16699": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.16699",
+        "url": "https://arxiv.org/abs/2602.16699",
+        "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
+        "authors": "Wenxuan Ding, Nicholas Tomlin, Greg Durrett",
+        "abstract": "LLMs are increasingly being used for complex problems which are not necessarily resolved in a single response, but require interacting with an environment to acquire information. In these scenarios, LLMs must reason about inherent cost-uncertainty tradeoffs in when to stop exploring and commit to an answer. For instance, on a programming task, an LLM should test a generated code snippet if it is uncertain about the correctness of that code; the cost of writing a test is nonzero, but typically lower than the cost of making a mistake. In this work, we show that we can induce LLMs to explicitly reason about balancing these cost-uncertainty tradeoffs, then perform more optimal environment exploration. We formalize multiple tasks, including information retrieval and coding, as sequential decision-making problems under uncertainty. Each problem has latent environment state that can be reasoned about via a prior which is passed to the LLM agent. We introduce a framework called Calibrate-Then-Act (CTA), where we feed the LLM this additional context to enable it to act more optimally. This improvement is preserved even under RL training of both the baseline and CTA. Our results on information-seeking QA and on a simplified coding task show that making cost-benefit tradeoffs explicit with CTA can help agents discover more optimal decision-making strategies.",
+        "timestamp": "2026-02-22T13:14:17.770Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/18",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 155,
+        "object_id": "paper:arxiv.2602.16699",
+        "created_at": "2026-02-22T13:14:17+00:00",
+        "updated_at": "2026-02-22T13:14:38+00:00",
         "version": 1
       }
     }
