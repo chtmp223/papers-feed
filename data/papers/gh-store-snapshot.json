@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T14:51:03.546082+00:00",
+  "snapshot_time": "2026-02-24T16:37:13.994644+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3904,6 +3904,34 @@
         "object_id": "paper:acl-anthology.2025.in2writing-1.9",
         "created_at": "2026-02-24T14:49:45+00:00",
         "updated_at": "2026-02-24T14:50:10+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.14299": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.14299",
+        "url": "https://www.arxiv.org/abs/2602.14299",
+        "title": "Does Socialization Emerge in AI Agent Society? A Case Study of Moltbook",
+        "authors": "Ming Li, Xirui Li, Tianyi Zhou",
+        "abstract": "As large language model agents increasingly populate networked environments, a fundamental question arises: do artificial intelligence (AI) agent societies undergo convergence dynamics similar to human social systems? Lately, Moltbook approximates a plausible future scenario in which autonomous agents participate in an open-ended, continuously evolving online society. We present the first large-scale systemic diagnosis of this AI agent society. Beyond static observation, we introduce a quantitative diagnostic framework for dynamic evolution in AI agent societies, measuring semantic stabilization, lexical turnover, individual inertia, influence persistence, and collective consensus. Our analysis reveals a system in dynamic balance in Moltbook: while the global average of semantic contents stabilizes rapidly, individual agents retain high diversity and persistent lexical turnover, defying homogenization. However, agents exhibit strong individual inertia and minimal adaptive response to interaction partners, preventing mutual influence and consensus. Consequently, influence remains transient with no persistent supernodes, and the society fails to develop a stable structure and consensus due to the absence of shared social memory. These findings demonstrate that scale and interaction density alone are insufficient to induce socialization, providing actionable design and analysis principles for upcoming next-generation AI agent societies.",
+        "timestamp": "2026-02-24T16:36:02.432Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/15",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Computers and Society (cs.CY)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 163,
+        "object_id": "paper:arxiv.2602.14299",
+        "created_at": "2026-02-24T16:36:02+00:00",
+        "updated_at": "2026-02-24T16:36:44+00:00",
         "version": 1
       }
     }
