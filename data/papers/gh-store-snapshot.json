@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T18:44:54.028123+00:00",
+  "snapshot_time": "2026-02-24T19:42:39.292899+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4113,6 +4113,41 @@
         "object_id": "paper:url.E6AF77C",
         "created_at": "2026-02-24T18:44:13+00:00",
         "updated_at": "2026-02-24T18:44:31+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1C83EE7B": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1C83EE7B",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6176178",
+        "title": "Position: Agentic Systems Should be General",
+        "authors": "Bandel, Elron, Yehudai, Asaf, Lacoste, Alexandre, Ghosh, Avijit, Neubig, Graham, Mitchell, Margaret, Shmueli-Scheuer, Michal, Choshen, Leshem",
+        "abstract": "We call for the development of agentic systems that thrive in new environments. Agentic systems, comprising foundation models, tools, and an execution strategy,",
+        "timestamp": "2026-02-24T19:41:58.775Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [
+          "SSRN",
+          "Position: Agentic Systems Should be General",
+          "Elron Bandel",
+          "Asaf Yehudai",
+          "Alexandre Lacoste",
+          "Avijit Ghosh",
+          "Graham Neubig",
+          "Margaret Mitchell",
+          "Michal Shmueli-Scheuer",
+          "Leshem Choshen"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 171,
+        "object_id": "paper:url.1C83EE7B",
+        "created_at": "2026-02-24T19:41:58+00:00",
+        "updated_at": "2026-02-24T19:42:18+00:00",
         "version": 1
       }
     }
