@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T16:37:13.994644+00:00",
+  "snapshot_time": "2026-02-24T16:39:20.260645+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3932,6 +3932,34 @@
         "object_id": "paper:arxiv.2602.14299",
         "created_at": "2026-02-24T16:36:02+00:00",
         "updated_at": "2026-02-24T16:36:44+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2601.19532": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2601.19532",
+        "url": "https://arxiv.org/abs/2601.19532",
+        "title": "Benchmarks Saturate When The Model Gets Smarter Than The Judge",
+        "authors": "Marthe Ballon, Andres Algaba, Brecht Verbeken, Vincent Ginis",
+        "abstract": "Benchmarks are important tools to track progress in the development of Large Language Models (LLMs), yet inaccuracies in datasets and evaluation methods consistently undermine their effectiveness. Here, we present Omni-MATH-2, a manually revised version of the Omni-MATH dataset comprising a clean, exact-answer subset (n=4181n{=}4181) and a tagged, non-standard subset (n=247n{=}247). Each problem was audited to ensure LaTeX compilability, solvability and verifiability, which involved adding missing figures or information, labeling problems requiring a proof, estimation or image, and removing clutter. This process significantly reduces dataset-induced noise, thereby providing a more precise assessment of model performance. The annotated dataset also allows us to evaluate judge-induced noise by comparing GPT-5 mini with the original Omni-Judge, revealing substantial discrepancies between judges on both the clean and tagged problem subsets. Expert annotations reveal that Omni-Judge is wrong in 96.4%96.4\\% of the judge disagreements, indicating its inability to differentiate between models' abilities, even well before saturation of the benchmark occurs. As problems become more challenging, we find that increasingly competent judges become essential in order to prevent judge errors from masking genuine differences between models. Finally, neither judge identifies the present failure modes for the subset of tagged problems, demonstrating that dataset quality and judge reliability are both critical to develop accurate benchmarks of model performance.",
+        "timestamp": "2026-02-24T16:38:19.381Z",
+        "rating": "novote",
+        "publishedDate": "2026/01/27",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 164,
+        "object_id": "paper:arxiv.2601.19532",
+        "created_at": "2026-02-24T16:38:19+00:00",
+        "updated_at": "2026-02-24T16:38:47+00:00",
         "version": 1
       }
     }
