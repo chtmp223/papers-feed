@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T14:34:04.073143+00:00",
+  "snapshot_time": "2026-02-24T14:49:32.257710+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -3829,6 +3829,33 @@
         "object_id": "paper:url.1AF7872C",
         "created_at": "2026-02-24T14:33:09+00:00",
         "updated_at": "2026-02-24T14:33:34+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.15851": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.15851",
+        "url": "https://www.arxiv.org/abs/2602.15851",
+        "title": "Narrative Theory-Driven LLM Methods for Automatic Story Generation and Understanding: A Survey",
+        "authors": "David Y. Liu, Aditya Joshi, Paul Dawson",
+        "abstract": "Applications of narrative theories using large language models (LLMs) deliver promising use-cases in automatic story generation and understanding tasks. Our survey examines how natural language processing (NLP) research engages with fields of narrative studies, and proposes a taxonomy for ongoing efforts that reflect established distinctions in narratology. We discover patterns in the following: narrative datasets and tasks, narrative theories and NLP pipeline and methodological trends in prompting and fine-tuning. We highlight how LLMs enable easy connections of NLP pipelines with abstract narrative concepts and opportunities for interdisciplinary collaboration. Challenges remain in attempts to work towards any unified definition or benchmark of narrative related tasks, making model comparison difficult. For future directions, instead of the pursuit of a single, generalised benchmark for 'narrative quality', we believe that progress benefits more from efforts that focus on the following: defining and improving theory-based metrics for individual narrative attributes to incrementally improve model performance; conducting large-scale, theory-driven literary/social/cultural analysis; and creating experiments where outputs can be used to validate or refine narrative theories. This work provides a contextual foundation for more systematic and theoretically informed narrative research in NLP by providing an overview to ongoing research efforts and the broader narrative studies landscape.",
+        "timestamp": "2026-02-24T14:48:45.114Z",
+        "rating": "novote",
+        "publishedDate": "2026/01/23",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 160,
+        "object_id": "paper:arxiv.2602.15851",
+        "created_at": "2026-02-24T14:48:45+00:00",
+        "updated_at": "2026-02-24T14:49:06+00:00",
         "version": 1
       }
     }
