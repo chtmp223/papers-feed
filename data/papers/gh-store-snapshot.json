@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T18:29:55.180734+00:00",
+  "snapshot_time": "2026-02-24T18:44:54.028123+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4089,6 +4089,30 @@
         "object_id": "paper:url.651AA765",
         "created_at": "2026-02-24T18:29:07+00:00",
         "updated_at": "2026-02-24T18:29:27+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.E6AF77C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "E6AF77C",
+        "url": "https://ghuntley.com/loop/",
+        "title": "everything is a ralph loop",
+        "authors": "",
+        "abstract": "I\u2019ve been thinking about how I build software is so very very different how I used to do it three years ago.\n\nNo, I\u2019m not talking about acceleration through usage of AI but instead at a more fundamental level of approach, techniques and best practices.\n\nStandard software practices",
+        "timestamp": "2026-02-24T18:44:13.055Z",
+        "rating": "novote",
+        "publishedDate": "2026-01-17T06:43:54.000Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 170,
+        "object_id": "paper:url.E6AF77C",
+        "created_at": "2026-02-24T18:44:13+00:00",
+        "updated_at": "2026-02-24T18:44:31+00:00",
         "version": 1
       }
     }
