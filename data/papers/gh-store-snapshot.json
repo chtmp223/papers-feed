@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T18:10:55.168097+00:00",
+  "snapshot_time": "2026-02-24T18:15:01.842485+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4038,6 +4038,33 @@
         "object_id": "paper:url.46CD1644",
         "created_at": "2026-02-24T18:10:03+00:00",
         "updated_at": "2026-02-24T18:10:29+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2601.14691": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2601.14691",
+        "url": "https://arxiv.org/abs/2601.14691",
+        "title": "Gaming the Judge: Unfaithful Chain-of-Thought Can Undermine Agent Evaluation",
+        "authors": "Muhammad Khalifa, Lajanugen Logeswaran, Jaekyeom Kim, Sungryull Sohn, Yunxiang Zhang, Moontae Lee, Hao Peng, Lu Wang, Honglak Lee",
+        "abstract": "Large language models (LLMs) are increasingly used as judges to evaluate agent performance, particularly in non-verifiable settings where judgments rely on agent trajectories including chain-of-thought (CoT) reasoning. This paradigm implicitly assumes that the agent's CoT faithfully reflects both its internal reasoning and the underlying environment state. We show this assumption is brittle: LLM judges are highly susceptible to manipulation of agent reasoning traces. By systematically rewriting agent CoTs while holding actions and observations fixed, we demonstrate that manipulated reasoning alone can inflate false positive rates of state-of-the-art VLM judges by up to 90% across 800 trajectories spanning diverse web tasks. We study manipulation strategies spanning style-based approaches that alter only the presentation of reasoning and content-based approaches that fabricate signals of task progress, and find that content-based manipulations are consistently more effective. We evaluate prompting-based techniques and scaling judge-time compute, which reduce but do not fully eliminate susceptibility to manipulation. Our findings reveal a fundamental vulnerability in LLM-based evaluation and highlight the need for judging mechanisms that verify reasoning claims against observable evidence.",
+        "timestamp": "2026-02-24T18:14:11.223Z",
+        "rating": "novote",
+        "publishedDate": "2026/01/21",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 168,
+        "object_id": "paper:arxiv.2601.14691",
+        "created_at": "2026-02-24T18:14:11+00:00",
+        "updated_at": "2026-02-24T18:14:32+00:00",
         "version": 1
       }
     }
