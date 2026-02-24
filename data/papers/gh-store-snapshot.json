@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T18:15:01.842485+00:00",
+  "snapshot_time": "2026-02-24T18:29:55.180734+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4065,6 +4065,30 @@
         "object_id": "paper:arxiv.2601.14691",
         "created_at": "2026-02-24T18:14:11+00:00",
         "updated_at": "2026-02-24T18:14:32+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.651AA765": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "651AA765",
+        "url": "https://blackgirlbytes.github.io/agentic-eng-patterns-for-the-rest-of-us-slides/",
+        "title": "Agentic Engineering Patterns for the Rest of Us",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-24T18:29:07.087Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 169,
+        "object_id": "paper:url.651AA765",
+        "created_at": "2026-02-24T18:29:07+00:00",
+        "updated_at": "2026-02-24T18:29:27+00:00",
         "version": 1
       }
     }
