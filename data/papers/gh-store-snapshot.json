@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-24T18:10:18.214420+00:00",
+  "snapshot_time": "2026-02-24T18:10:55.168097+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4014,6 +4014,30 @@
         "object_id": "paper:arxiv.2602.20021",
         "created_at": "2026-02-24T18:09:33+00:00",
         "updated_at": "2026-02-24T18:09:55+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.46CD1644": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "46CD1644",
+        "url": "https://erdavis.com/2025/12/31/what-is-the-most-middle-name/",
+        "title": "What is the most \u201cmiddle\u201d name? \u2013 Data Stuff",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-02-24T18:10:03.259Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 167,
+        "object_id": "paper:url.46CD1644",
+        "created_at": "2026-02-24T18:10:03+00:00",
+        "updated_at": "2026-02-24T18:10:29+00:00",
         "version": 1
       }
     }
