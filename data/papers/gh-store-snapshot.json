@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-25T13:28:39.770970+00:00",
+  "snapshot_time": "2026-02-25T15:46:16.072933+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4196,6 +4196,32 @@
         "object_id": "paper:url.2032DDC7",
         "created_at": "2026-02-25T13:27:57+00:00",
         "updated_at": "2026-02-25T13:28:17+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.17655": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.17655",
+        "url": "https://arxiv.org/abs/2602.17655",
+        "title": "What Language is This? Ask Your Tokenizer",
+        "authors": "Clara Meister, Ahmetcan Yavuz, Pietro Lesci, Tiago Pimentel",
+        "abstract": "Language Identification (LID) is an important component of many multilingual natural language processing pipelines, where it facilitates corpus curation, training data analysis, and cross-lingual evaluation of large language models. Despite near-perfect performance on high-resource languages, existing systems remain brittle in low-resource and closely related language settings. We introduce UniLID, a simple and efficient LID method based on the UnigramLM tokenization algorithm, leveraging its probabilistic framing, parameter estimation technique and inference strategy. In short, we learn language-conditional unigram distributions over a shared tokenizer vocabulary but treat segmentation as a language-specific phenomenon. Our formulation is data- and compute-efficient, supports incremental addition of new languages without retraining existing models, and can naturally be integrated into existing language model tokenization pipelines. Empirical evaluations against widely used baselines, including fastText, GlotLID, and CLD3, show that UniLID achieves competitive performance on standard benchmarks, substantially improves sample efficiency in low-resource settings - surpassing 70% accuracy with as few as five labeled samples per language - and delivers large gains on fine-grained dialect identification.",
+        "timestamp": "2026-02-25T15:45:18.760Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/19",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 174,
+        "object_id": "paper:arxiv.2602.17655",
+        "created_at": "2026-02-25T15:45:19+00:00",
+        "updated_at": "2026-02-25T15:45:41+00:00",
         "version": 1
       }
     }
