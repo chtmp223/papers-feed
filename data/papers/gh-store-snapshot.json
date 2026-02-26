@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-02-25T15:46:16.072933+00:00",
+  "snapshot_time": "2026-02-26T00:09:30.073761+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4222,6 +4222,32 @@
         "object_id": "paper:arxiv.2602.17655",
         "created_at": "2026-02-25T15:45:19+00:00",
         "updated_at": "2026-02-25T15:45:41+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2510.14865": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2510.14865",
+        "url": "https://arxiv.org/abs/2510.14865",
+        "title": "Midtraining Bridges Pretraining and Posttraining Distributions",
+        "authors": "Emmy Liu, Graham Neubig, Chenyan Xiong",
+        "abstract": "Midtraining, the practice of mixing specialized data with more general pretraining data in an intermediate training phase, has become widespread in language model development, yet there is little understanding of what makes it effective. We propose that midtraining functions as distributional bridging by providing better initialization for posttraining. We conduct controlled pretraining experiments, and find that midtraining benefits are largest for domains distant from general pretraining data, such as code and math, and scale with the proximity advantage the midtraining data provides toward the target distribution. In these domains, midtraining consistently outperforms continued pretraining on specialized data alone both in-domain and in terms of mitigating forgetting. We further conduct an investigation on the starting time and mixture weight of midtraining data, using code as a case study, and find that time of introduction and mixture weight interact strongly such that early introduction of specialized data is amenable to high mixture weights, while late introduction requires lower ones. This suggests that late introduction of specialized data outside a plasticity window cannot be compensated for by increasing data mixtures later in training. Beyond midtraining itself, this suggests that distributional transitions between any training phases may benefit from similar bridging strategies.",
+        "timestamp": "2026-02-26T00:08:43.351Z",
+        "rating": "novote",
+        "publishedDate": "2025/10/16",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 175,
+        "object_id": "paper:arxiv.2510.14865",
+        "created_at": "2026-02-26T00:08:43+00:00",
+        "updated_at": "2026-02-26T00:09:07+00:00",
         "version": 1
       }
     }
