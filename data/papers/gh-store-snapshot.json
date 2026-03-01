@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-01T15:01:29.906341+00:00",
+  "snapshot_time": "2026-03-01T15:04:05.768726+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4324,6 +4324,30 @@
         "object_id": "paper:url.7F87E1C0",
         "created_at": "2026-03-01T15:00:44+00:00",
         "updated_at": "2026-03-01T15:01:05+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.73995FCC": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "73995FCC",
+        "url": "https://substack.com/inbox/post/189164354",
+        "title": "Where will I be happy?",
+        "authors": "Substack",
+        "abstract": "The Drift's advice column #2",
+        "timestamp": "2026-03-01T15:03:22.044Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 179,
+        "object_id": "paper:url.73995FCC",
+        "created_at": "2026-03-01T15:03:22+00:00",
+        "updated_at": "2026-03-01T15:03:42+00:00",
         "version": 1
       }
     }
