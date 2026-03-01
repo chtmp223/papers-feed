@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-01T15:05:02.111933+00:00",
+  "snapshot_time": "2026-03-01T19:47:56.346191+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4372,6 +4372,32 @@
         "object_id": "paper:url.34021F0A",
         "created_at": "2026-03-01T15:04:18+00:00",
         "updated_at": "2026-03-01T15:04:36+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.16162": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.16162",
+        "url": "https://arxiv.org/abs/2602.16162",
+        "title": "LLMs Exhibit Significantly Lower Uncertainty in Creative Writing Than Professional Writers",
+        "authors": "Peiqi Sui",
+        "abstract": "We argue that uncertainty is a key and understudied limitation of LLMs' performance in creative writing, which is often characterized as trite and clich\u00e9-ridden. Literary theory identifies uncertainty as a necessary condition for creative expression, while current alignment strategies steer models away from uncertain outputs to ensure factuality and reduce hallucination. We formalize this tension by quantifying the \"uncertainty gap\" between human-authored stories and model-generated continuations. Through a controlled information-theoretic analysis of 28 LLMs on high-quality storytelling datasets, we demonstrate that human writing consistently exhibits significantly higher uncertainty than model outputs. We find that instruction-tuned and reasoning models exacerbate this trend compared to their base counterparts; furthermore, the gap is more pronounced in creative writing than in functional domains, and strongly correlates to writing quality. Achieving human-level creativity requires new uncertainty-aware alignment paradigms that can distinguish between destructive hallucinations and the constructive ambiguity required for literary richness.",
+        "timestamp": "2026-03-01T19:47:12.698Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/18",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 181,
+        "object_id": "paper:arxiv.2602.16162",
+        "created_at": "2026-03-01T19:47:12+00:00",
+        "updated_at": "2026-03-01T19:47:32+00:00",
         "version": 1
       }
     }
