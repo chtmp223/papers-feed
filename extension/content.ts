@@ -1,7 +1,6 @@
 // content.ts
 // Content script with simplified session tracking
 
-import { LinkProcessor } from './source-integration/link-processor';
 import { SourceIntegration, Message } from './source-integration/types';
 import { PaperMetadata } from './papers/types';
 import { loguru } from './utils/logger';
@@ -35,29 +34,6 @@ const FRONTEND_BRIDGE_REQUEST_SOURCE = 'papers-feed-frontend';
 const FRONTEND_BRIDGE_RESPONSE_SOURCE = 'papers-feed-extension';
 const READ_DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 
-// Create link processor
-const linkProcessor = new LinkProcessor((sourceId, paperId, link) => {
-  // Callback when link is found
-  injectAnnotationButton(link, sourceId, paperId);
-});
-
-// Initialize sources
-function initializeSources() {
-  // Register each source with the link processor
-  for (const source of sourceIntegrations) {
-    logger.debug(`Initializing source: ${source.id}`);
-    
-    // Register patterns with link processor
-    source.urlPatterns.forEach(pattern => {
-      linkProcessor.registerPattern({
-        sourceId: source.id,
-        pattern,
-        extractPaperId: (url: string) => source.extractPaperId(url)
-      });
-    });
-  }
-}
-
 // Inject common styles
 function injectStyles() {
   if (document.getElementById('paper-tracker-styles')) {
@@ -65,20 +41,6 @@ function injectStyles() {
   }
   
   const styles = `
-  .paper-annotator {
-    display: inline-block;
-    margin-left: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-    vertical-align: baseline;
-  }
-
-  .paper-annotator:hover {
-    opacity: 1;
-  }
-
   .paper-popup-wrapper {
     position: fixed;
     z-index: 10000;
@@ -181,46 +143,6 @@ function injectStyles() {
   logger.debug('Injected styles');
 }
 
-// Add annotation button to link
-function injectAnnotationButton(link: HTMLAnchorElement, sourceId: string, paperId: string): void {
-  // Skip if already processed
-  if (link.nextSibling && 
-      link.nextSibling.nodeType === Node.ELEMENT_NODE &&
-      (link.nextSibling as Element).classList.contains('paper-annotator')) {
-    return;
-  }
-  
-  // Create annotator button
-  const annotator = document.createElement('span');
-  annotator.className = 'paper-annotator';
-  annotator.textContent = '📝';
-  annotator.title = 'Add annotation';
-  
-  // Store data attributes
-  annotator.dataset.sourceId = sourceId;
-  annotator.dataset.paperId = paperId;
-  
-  // Add click handler
-  annotator.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    // Send message to background script to show popup
-    chrome.runtime.sendMessage({
-      type: 'showAnnotationPopup',
-      sourceId,
-      paperId,
-      position: {
-        x: e.clientX,
-        y: e.clientY
-      }
-    });
-  });
-  
-  // Add to page next to link
-  link.parentNode?.insertBefore(annotator, link.nextSibling);
-}
-
 // Get source that can handle a URL
 function getSourceForUrl(url: string): SourceIntegration | null {
   for (const source of sourceIntegrations) {
@@ -234,8 +156,7 @@ function getSourceForUrl(url: string): SourceIntegration | null {
 // Set up click-outside handler for popups
 document.addEventListener('click', (e) => {
   if (activePopup && 
-      !activePopup.contains(e.target as Node) && 
-      !(e.target as Element).classList.contains('paper-annotator')) {
+      !activePopup.contains(e.target as Node)) {
     activePopup.parentElement?.remove();
     activePopup = null;
   }
@@ -643,8 +564,7 @@ chrome.runtime.onMessage.addListener((message: any, sender, sendResponse) => {
   }
   
   if (message.type === 'processPage') {
-    // Re-process the entire page
-    linkProcessor.processLinks(document);
+    // Kept for compatibility with older popup/background flows.
     sendResponse({ success: true });
     return true;
   }
@@ -660,15 +580,6 @@ chrome.runtime.onMessage.addListener((message: any, sender, sendResponse) => {
 
   // Inject styles
   injectStyles();
-  
-  // Initialize sources
-  initializeSources();
-  
-  // Process links
-  linkProcessor.processLinks(document);
-  
-  // Start observing for new links
-  linkProcessor.startObserving(document);
   
   // Set initial tab visibility
   isTabVisible = document.visibilityState === 'visible';
