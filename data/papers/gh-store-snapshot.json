@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-02T13:31:19.726424+00:00",
+  "snapshot_time": "2026-03-02T15:07:00.523329+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4452,6 +4452,58 @@
         "object_id": "paper:arxiv.2602.24188",
         "created_at": "2026-03-02T13:30:16+00:00",
         "updated_at": "2026-03-02T13:30:40+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2410.10934": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2410.10934",
+        "url": "https://arxiv.org/abs/2410.10934",
+        "title": "Agent-as-a-Judge: Evaluate Agents with Agents",
+        "authors": "Mingchen Zhuge, Changsheng Zhao, Dylan Ashley, Wenyi Wang, Dmitrii Khizbullin, Yunyang Xiong, Zechun Liu, Ernie Chang, Raghuraman Krishnamoorthi, Yuandong Tian, Yangyang Shi, Vikas Chandra, J\u00fcrgen Schmidhuber",
+        "abstract": "Contemporary evaluation techniques are inadequate for agentic systems. These approaches either focus exclusively on final outcomes -- ignoring the step-by-step nature of agentic systems, or require excessive manual labour. To address this, we introduce the Agent-as-a-Judge framework, wherein agentic systems are used to evaluate agentic systems. This is an organic extension of the LLM-as-a-Judge framework, incorporating agentic features that enable intermediate feedback for the entire task-solving process. We apply the Agent-as-a-Judge to the task of code generation. To overcome issues with existing benchmarks and provide a proof-of-concept testbed for Agent-as-a-Judge, we present DevAI, a new benchmark of 55 realistic automated AI development tasks. It includes rich manual annotations, like a total of 365 hierarchical user requirements. We benchmark three of the popular agentic systems using Agent-as-a-Judge and find it dramatically outperforms LLM-as-a-Judge and is as reliable as our human evaluation baseline. Altogether, we believe that Agent-as-a-Judge marks a concrete step forward for modern agentic systems -- by providing rich and reliable reward signals necessary for dynamic and scalable self-improvement.",
+        "timestamp": "2026-03-02T15:06:13.932Z",
+        "rating": "novote",
+        "publishedDate": "2024/10/14",
+        "tags": [
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 185,
+        "object_id": "paper:arxiv.2410.10934",
+        "created_at": "2026-03-02T15:06:14+00:00",
+        "updated_at": "2026-03-02T15:06:32+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2508.02994": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2508.02994",
+        "url": "https://arxiv.org/abs/2508.02994",
+        "title": "When AIs Judge AIs: The Rise of Agent-as-a-Judge Evaluation for LLMs",
+        "authors": "Fangyi Yu",
+        "abstract": "As large language models (LLMs) grow in capability and autonomy, evaluating their outputs-especially in open-ended and complex tasks-has become a critical bottleneck. A new paradigm is emerging: using AI agents as the evaluators themselves. This \"agent-as-a-judge\" approach leverages the reasoning and perspective-taking abilities of LLMs to assess the quality and safety of other models, promising calable and nuanced alternatives to human evaluation. In this review, we define the agent-as-a-judge concept, trace its evolution from single-model judges to dynamic multi-agent debate frameworks, and critically examine their strengths and shortcomings. We compare these approaches across reliability, cost, and human alignment, and survey real-world deployments in domains such as medicine, law, finance, and education. Finally, we highlight pressing challenges-including bias, robustness, and meta evaluation-and outline future research directions. By bringing together these strands, our review demonstrates how agent-based judging can complement (but not replace) human oversight, marking a step toward trustworthy, scalable evaluation for next-generation LLMs.",
+        "timestamp": "2026-03-02T15:06:04.164Z",
+        "rating": "novote",
+        "publishedDate": "2025/08/05",
+        "tags": [
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 184,
+        "object_id": "paper:arxiv.2508.02994",
+        "created_at": "2026-03-02T15:06:04+00:00",
+        "updated_at": "2026-03-02T15:06:25+00:00",
         "version": 1
       }
     }
