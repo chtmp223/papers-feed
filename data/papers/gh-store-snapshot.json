@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-02T16:08:47.643181+00:00",
+  "snapshot_time": "2026-03-02T22:10:33.853099+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4650,6 +4650,34 @@
         "object_id": "paper:url.7734EA77",
         "created_at": "2026-03-02T16:07:56+00:00",
         "updated_at": "2026-03-02T16:08:20+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2504.21035": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2504.21035",
+        "url": "https://arxiv.org/abs/2504.21035",
+        "title": "A False Sense of Privacy: Evaluating Textual Data Sanitization Beyond Surface-level Privacy Leakage",
+        "authors": "Rui Xin, Niloofar Mireshghallah, Shuyue Stella Li, Michael Duan, Hyunwoo Kim, Yejin Choi, Yulia Tsvetkov, Sewoong Oh, Pang Wei Koh",
+        "abstract": "Sanitizing sensitive text data typically involves removing personally identifiable information (PII) or generating synthetic data under the assumption that these methods adequately protect privacy; however, their effectiveness is often only assessed by measuring the leakage of explicit identifiers but ignoring nuanced textual markers that can lead to re-identification. We challenge the above illusion of privacy by proposing a new framework that evaluates re-identification attacks to quantify individual privacy risks upon data release. Our approach shows that seemingly innocuous auxiliary information -- such as routine social activities -- can be used to infer sensitive attributes like age or substance use history from sanitized data. For instance, we demonstrate that Azure's commercial PII removal tool fails to protect 74\\% of information in the MedQA dataset. Although differential privacy mitigates these risks to some extent, it significantly reduces the utility of the sanitized text for downstream tasks. Our findings indicate that current sanitization techniques offer a \\textit{false sense of privacy}, highlighting the need for more robust methods that protect against semantic-level information leakage.",
+        "timestamp": "2026-03-02T22:09:40.721Z",
+        "rating": "novote",
+        "publishedDate": "2025/04/28",
+        "tags": [
+          "Cryptography and Security (cs.CR)",
+          "Computation and Language (cs.CL)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 192,
+        "object_id": "paper:arxiv.2504.21035",
+        "created_at": "2026-03-02T22:09:40+00:00",
+        "updated_at": "2026-03-02T22:09:58+00:00",
         "version": 1
       }
     }
