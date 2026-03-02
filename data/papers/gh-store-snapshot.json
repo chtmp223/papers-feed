@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-02T15:11:21.906822+00:00",
+  "snapshot_time": "2026-03-02T15:33:59.504828+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4528,6 +4528,32 @@
         "object_id": "paper:url.24803690",
         "created_at": "2026-03-02T15:10:30+00:00",
         "updated_at": "2026-03-02T15:10:53+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2512.02240": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2512.02240",
+        "url": "https://arxiv.org/abs/2512.02240",
+        "title": "Lightweight Latent Reasoning for Narrative Tasks",
+        "authors": "Alexander Gurung, Nikolay Malkin, Mirella Lapata",
+        "abstract": "Large language models (LLMs) tackle complex tasks by generating long chains of thought or \"reasoning traces\" that act as latent variables in the generation of an output given a query. A model's ability to generate such traces can be optimized with reinforcement learning (RL) to improve their utility in predicting an answer. This optimization comes at a high computational cost, especially for narrative-related tasks that involve retrieving and processing many tokens. To this end, we propose LiteReason, a latent reasoning method that can be interleaved with standard token sampling and easily combined with RL techniques. LiteReason employs a lightweight Reasoning Projector module, trained to produce continuous latent tokens that help the model 'skip' reasoning steps. During RL, the policy model decides when to activate the projector, switching between latent and discrete reasoning as needed. Experimental results on plot hole detection and book chapter generation show that our method outperforms latent reasoning baselines and comes close to matching non-latent RL training, while reducing final reasoning length by 77-92%. Overall, LiteReason guides RL training to a more efficient part of the performance-computation tradeoff curve.",
+        "timestamp": "2026-03-02T15:33:10.229Z",
+        "rating": "novote",
+        "publishedDate": "2025/12/01",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 187,
+        "object_id": "paper:arxiv.2512.02240",
+        "created_at": "2026-03-02T15:33:10+00:00",
+        "updated_at": "2026-03-02T15:33:33+00:00",
         "version": 1
       }
     }
