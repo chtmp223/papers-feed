@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-03T16:08:54.221675+00:00",
+  "snapshot_time": "2026-03-03T16:16:54.479519+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4749,6 +4749,33 @@
         "object_id": "paper:url.74E07820",
         "created_at": "2026-03-03T16:08:02+00:00",
         "updated_at": "2026-03-03T16:08:26+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.01791": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.01791",
+        "url": "https://arxiv.org/abs/2603.01791",
+        "title": "Semantic Novelty Trajectories in 80,000 Books: A Cross-Corpus Embedding Analysis",
+        "authors": "Fred Zimmerman",
+        "abstract": "I apply Schmidhuber's compression progress theory of interestingness at corpus scale, analyzing semantic novelty trajectories in more than 80,000 books spanning two centuries of English-language publishing. Using sentence-transformer paragraph embeddings and a running-centroid novelty measure, I compare 28,730 pre-1920 Project Gutenberg books (PG19) against 52,796 modern English books (Books3, approximately 1990-2010). The principal findings are fourfold. First, mean paragraph-level novelty is roughly 10% higher in modern books (0.503 vs. 0.459). Second, trajectory circuitousness -- the ratio of cumulative path length to net displacement in embedding space -- nearly doubles in the modern corpus (+67%). Third, convergent narrative curves, in which novelty declines toward a settled semantic register, are 2.3x more common in pre-1920 literature. Fourth, novelty is orthogonal to reader quality ratings (r = -0.002), suggesting that interestingness in Schmidhuber's sense is structurally independent of perceived literary merit. Clustering paragraph-level trajectories via PAA-16 representations reveals eight distinct narrative-shape archetypes whose distribution shifts substantially between eras. All analysis code and an interactive exploration toolkit are publicly available at this https URL.",
+        "timestamp": "2026-03-03T16:16:04.339Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/02",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Information Retrieval (cs.IR)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 196,
+        "object_id": "paper:arxiv.2603.01791",
+        "created_at": "2026-03-03T16:16:04+00:00",
+        "updated_at": "2026-03-03T16:16:28+00:00",
         "version": 1
       }
     }
