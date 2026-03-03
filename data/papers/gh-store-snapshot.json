@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-03T16:16:54.479519+00:00",
+  "snapshot_time": "2026-03-03T16:19:15.391194+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4776,6 +4776,32 @@
         "object_id": "paper:arxiv.2603.01791",
         "created_at": "2026-03-03T16:16:04+00:00",
         "updated_at": "2026-03-03T16:16:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.01220": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.01220",
+        "url": "https://arxiv.org/abs/2603.01220",
+        "title": "Generative AI & Fictionality: How Novels Power Large Language Models",
+        "authors": "Edwin Roland, Richard Jean So",
+        "abstract": "Generative models, like the one in ChatGPT, are powered by their training data. The models are simply next-word predictors, based on patterns learned from vast amounts of pre-existing text. Since the first generation of GPT, it is striking that the most popular datasets have included substantial collections of novels. For the engineers and research scientists who build these models, there is a common belief that the language in fiction is rich enough to cover all manner of social and communicative phenomena, yet the belief has gone mostly unexamined. How does fiction shape the outputs of generative AI? Specifically, what are novels' effects relative to other forms of text, such as newspapers, Reddit, and Wikipedia? Since the 1970s, literature scholars such as Catherine Gallagher and James Phelan have developed robust and insightful accounts of how fiction operates as a form of discourse and language. Through our study of an influential open-source model (BERT), we find that LLMs leverage familiar attributes and affordances of fiction, while also fomenting new qualities and forms of social response. We argue that if contemporary culture is increasingly shaped by generative AI and machine learning, any analysis of today's various modes of cultural production must account for a relatively novel dimension: computational training data.",
+        "timestamp": "2026-03-03T16:18:21.500Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/01",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 197,
+        "object_id": "paper:arxiv.2603.01220",
+        "created_at": "2026-03-03T16:18:21+00:00",
+        "updated_at": "2026-03-03T16:18:48+00:00",
         "version": 1
       }
     }
