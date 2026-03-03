@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-03T16:19:15.391194+00:00",
+  "snapshot_time": "2026-03-03T16:20:21.687918+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4802,6 +4802,34 @@
         "object_id": "paper:arxiv.2603.01220",
         "created_at": "2026-03-03T16:18:21+00:00",
         "updated_at": "2026-03-03T16:18:48+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.00051": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.00051",
+        "url": "https://arxiv.org/abs/2603.00051",
+        "title": "LitBench: A Graph-Centric Large Language Model Benchmarking Tool For Literature Tasks",
+        "authors": "Andreas Varvarigos, Ali Maatouk, Jiasheng Zhang, Ngoc Bui, Jialin Chen, Leandros Tassiulas, Rex Ying",
+        "abstract": "While large language models (LLMs) have become the de facto framework for literature-related tasks, they still struggle to function as domain-specific literature agents due to their inability to connect pieces of knowledge and reason across domain-specific contexts, terminologies, and nomenclatures. This challenge underscores the need for a tool that facilitates such domain-specific adaptation and enables rigorous benchmarking across literature tasks. To that end, we introduce LitBench, a benchmarking tool designed to enable the development and evaluation of domain-specific LLMs tailored to literature-related tasks. At its core, LitBench uses a data curation process that generates domain-specific literature sub-graphs and constructs training and evaluation datasets based on the textual attributes of the resulting nodes and edges. The tool is designed for flexibility, supporting the curation of literature graphs across any domain chosen by the user, whether high-level fields or specialized interdisciplinary areas. In addition to dataset curation, LitBench defines a comprehensive suite of literature tasks, ranging from node and edge level analyses to advanced applications such as related work generation. These tasks enable LLMs to internalize domain-specific knowledge and relationships embedded in the curated graph during training, while also supporting rigorous evaluation of model performance. Our results show that small domain-specific LLMs trained and evaluated on LitBench datasets achieve competitive performance compared to state-of-the-art models like GPT-4o and DeepSeek-R1. To enhance accessibility and ease of use, we open-source the tool along with an AI agent tool that streamlines data curation, model training, and evaluation.",
+        "timestamp": "2026-03-03T16:19:28.109Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/10",
+        "tags": [
+          "Digital Libraries (cs.DL)",
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 198,
+        "object_id": "paper:arxiv.2603.00051",
+        "created_at": "2026-03-03T16:19:28+00:00",
+        "updated_at": "2026-03-03T16:19:53+00:00",
         "version": 1
       }
     }
