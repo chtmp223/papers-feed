@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-04T14:11:20.302617+00:00",
+  "snapshot_time": "2026-03-04T14:33:59.738988+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4743,13 +4743,14 @@
         ],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-03-04"
       },
       "meta": {
         "issue_number": 195,
         "object_id": "paper:url.74E07820",
         "created_at": "2026-03-03T16:08:02+00:00",
-        "updated_at": "2026-03-03T16:08:26+00:00",
+        "updated_at": "2026-03-04T14:33:29+00:00",
         "version": 1
       }
     },
