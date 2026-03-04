@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-04T22:21:28.190986+00:00",
+  "snapshot_time": "2026-03-04T23:14:24.385227+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4984,6 +4984,39 @@
         "object_id": "paper:nature.s41562-026-02423-6",
         "created_at": "2026-03-04T18:23:16+00:00",
         "updated_at": "2026-03-04T18:23:41+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.34047A43": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "34047A43",
+        "url": "https://www.japantimes.co.jp/commentary/2026/02/25/japan/sorry-soseki-i-wish-we-had-ai-translation-aeons-ago/?utm_medium=social&utm_source=facebook&utm_type=image#Echobox=1772014711-2",
+        "title": "Sorry Soseki, I wish we had AI translation aeons ago",
+        "authors": "Damian Flanagan",
+        "abstract": "It should come as little surprise then that one of the jobs at risk of complete replacement by AI is that of translators.",
+        "timestamp": "2026-03-04T23:13:19.415Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-25T15:35:00+09:00",
+        "tags": [
+          "Natsume Soseki",
+          "Gunter Grass",
+          "translation",
+          "books",
+          "LITERATURE",
+          "AI",
+          "TECH",
+          "LANGUAGE"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 203,
+        "object_id": "paper:url.34047A43",
+        "created_at": "2026-03-04T23:13:19+00:00",
+        "updated_at": "2026-03-04T23:13:49+00:00",
         "version": 1
       }
     }
