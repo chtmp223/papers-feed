@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-04T14:54:58.490985+00:00",
+  "snapshot_time": "2026-03-04T15:05:25.399596+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4909,6 +4909,30 @@
         "object_id": "paper:url.610F1FCF",
         "created_at": "2026-03-04T14:54:00+00:00",
         "updated_at": "2026-03-04T14:54:26+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.55EA0B25": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "55EA0B25",
+        "url": "https://unsloth.ai/docs/models/qwen3.5/fine-tune",
+        "title": "Qwen3.5 Fine-tuning Guide | Unsloth Documentation",
+        "authors": "",
+        "abstract": "Learn how to fine-tune Qwen3.5 LLMs with Unsloth.",
+        "timestamp": "2026-03-04T15:04:22.913Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 200,
+        "object_id": "paper:url.55EA0B25",
+        "created_at": "2026-03-04T15:04:23+00:00",
+        "updated_at": "2026-03-04T15:04:49+00:00",
         "version": 1
       }
     }
