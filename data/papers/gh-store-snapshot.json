@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-04T15:07:26.432838+00:00",
+  "snapshot_time": "2026-03-04T18:24:12.882763+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4957,6 +4957,32 @@
         "object_id": "paper:url.540BC2D4",
         "created_at": "2026-03-04T15:06:22+00:00",
         "updated_at": "2026-03-04T15:06:45+00:00",
+        "version": 1
+      }
+    },
+    "paper:nature.s41562-026-02423-6": {
+      "data": {
+        "sourceId": "nature",
+        "paperId": "s41562-026-02423-6",
+        "url": "https://www.nature.com/articles/s41562-026-02423-6?utm_source=twitter&utm_medium=social&utm_campaign=nathumbehav",
+        "title": "Low fertility may persist and could be good for the economy",
+        "authors": "Marois, Guillaume",
+        "abstract": "",
+        "timestamp": "2026-03-04T18:23:16.006Z",
+        "rating": "novote",
+        "publishedDate": "2026-03-02",
+        "tags": [
+          "Social sciences"
+        ],
+        "doi": "10.1038/s41562-026-02423-6",
+        "journalName": "Nature Human Behaviour 2026",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 202,
+        "object_id": "paper:nature.s41562-026-02423-6",
+        "created_at": "2026-03-04T18:23:16+00:00",
+        "updated_at": "2026-03-04T18:23:41+00:00",
         "version": 1
       }
     }
