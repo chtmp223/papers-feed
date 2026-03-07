@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-07T02:53:30.617163+00:00",
+  "snapshot_time": "2026-03-07T03:59:17.819996+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5140,6 +5140,30 @@
         "object_id": "paper:url.546507AA",
         "created_at": "2026-03-07T02:52:47+00:00",
         "updated_at": "2026-03-07T02:53:09+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1E16A0C8": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1E16A0C8",
+        "url": "https://www.strongerbyscience.com/the-belt-bible/",
+        "title": "The Belt Bible",
+        "authors": "Greg Nuckols",
+        "abstract": "Whether or not to use a lifting belt is a highly contentious subject. What effects do belts actually have, and who should (and shouldn't) use them?",
+        "timestamp": "2026-03-07T03:58:39.703Z",
+        "rating": "novote",
+        "publishedDate": "2015-01-23T17:27:58+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 209,
+        "object_id": "paper:url.1E16A0C8",
+        "created_at": "2026-03-07T03:58:39+00:00",
+        "updated_at": "2026-03-07T03:58:57+00:00",
         "version": 1
       }
     }
