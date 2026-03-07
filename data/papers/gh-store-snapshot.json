@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-06T15:51:44.306225+00:00",
+  "snapshot_time": "2026-03-07T02:53:30.617163+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5116,6 +5116,30 @@
         "object_id": "paper:url.4DDC4E46",
         "created_at": "2026-03-06T15:50:56+00:00",
         "updated_at": "2026-03-06T15:51:20+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.546507AA": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "546507AA",
+        "url": "https://x.com/danielsusskind/status/2029928114323644859",
+        "title": "Daniel Susskind on X: \"The way in which goalposts keep moving on AI is fascinating. If we are now doing literary criticism about the nature of 'good' or 'bad' writing, forcing ourselves to come up with new criteria like 'the writing doesn't impress so much on a second read', something has happened ...\" / X",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-03-07T02:52:47.420Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 208,
+        "object_id": "paper:url.546507AA",
+        "created_at": "2026-03-07T02:52:47+00:00",
+        "updated_at": "2026-03-07T02:53:09+00:00",
         "version": 1
       }
     }
