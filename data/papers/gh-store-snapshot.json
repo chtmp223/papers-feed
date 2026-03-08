@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-07T14:56:39.052180+00:00",
+  "snapshot_time": "2026-03-08T23:13:33.951203+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5212,6 +5212,30 @@
         "object_id": "paper:url.38272DCD",
         "created_at": "2026-03-07T14:55:52+00:00",
         "updated_at": "2026-03-07T14:56:13+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.68489B89": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "68489B89",
+        "url": "https://osf.io/preprints/psyarxiv/xcg26_v1",
+        "title": "Estimating the threat of AI-agent responding across online survey platforms",
+        "authors": "Chen, Stephanie, Urminsky, Oleg, Zhang, Grace, Walatka, Robert, Fernandez, Kiant\u00e9, Low, Andrea, Bogard, Jonathan, Fox, Craig",
+        "abstract": "Recent research and advances in LLMs have led to widespread concern that AI agents could pose as human online survey-takers. However, it remains unclear how prevalent AI agents are on these platforms and how to effectively detect AI agents. We validated a series of AI detection tests that effectively separated verified-human participants from three AI agents (designed using various prompts). Using these tests, we collected surveys on seven online platforms and find high variance in rates of participants failing AI tests, ranging from 6% to 41% across platforms (compared to a 2.4% in-person human false-positive rate). We demonstrate that undetected AI agents can impact the results of online surveys. Our findings suggest that while there is an urgent need for AI detection tests and consistent, systematic monitoring of data quality on online platforms, currently some platforms seem to provide data with a low rate of AI agents.",
+        "timestamp": "2026-03-08T23:12:51.281Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 212,
+        "object_id": "paper:url-misc.68489B89",
+        "created_at": "2026-03-08T23:12:51+00:00",
+        "updated_at": "2026-03-08T23:13:11+00:00",
         "version": 1
       }
     }
