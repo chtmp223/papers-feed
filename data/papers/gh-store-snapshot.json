@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-09T14:26:14.868397+00:00",
+  "snapshot_time": "2026-03-09T22:28:26.946433+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5289,6 +5289,32 @@
         "object_id": "paper:arxiv.2511.09710",
         "created_at": "2026-03-09T14:25:15+00:00",
         "updated_at": "2026-03-09T14:25:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:nature.d41586-026-00441-y": {
+      "data": {
+        "sourceId": "nature",
+        "paperId": "d41586-026-00441-y",
+        "url": "https://www.nature.com/articles/d41586-026-00441-y",
+        "title": "Pok\u00e9mon turns 30 \u2014 how the fictional pocket monsters shaped science",
+        "authors": "Miryam Naddaf0",
+        "abstract": "The Japanese media sensation has inspired generations of researchers in fields as diverse as evolution, biodiversity and research integrity.",
+        "timestamp": "2026-03-09T22:27:42.250Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-27",
+        "tags": [
+          "Biodiversity"
+        ],
+        "doi": "",
+        "journalName": "Nature 2026",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 215,
+        "object_id": "paper:nature.d41586-026-00441-y",
+        "created_at": "2026-03-09T22:27:42+00:00",
+        "updated_at": "2026-03-09T22:28:03+00:00",
         "version": 1
       }
     }
