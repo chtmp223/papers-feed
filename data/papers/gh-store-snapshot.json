@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T15:54:40.954909+00:00",
+  "snapshot_time": "2026-03-10T17:17:00.952183+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5493,6 +5493,30 @@
         "object_id": "paper:url.4110D741",
         "created_at": "2026-03-10T15:52:43+00:00",
         "updated_at": "2026-03-10T15:54:17+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.762955B6": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "762955B6",
+        "url": "https://www.nytimes.com/interactive/2026/03/09/business/ai-writing-quiz.html",
+        "title": "Who\u2019s a Better Writer: A.I. or Humans? Take Our Quiz.",
+        "authors": "",
+        "abstract": "A.I. chatbots contain the sum of all human knowledge. That can make them pretty good writers.",
+        "timestamp": "2026-03-10T17:16:08.621Z",
+        "rating": "novote",
+        "publishedDate": "2026-03-09T09:00:34.000Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 223,
+        "object_id": "paper:url.762955B6",
+        "created_at": "2026-03-10T17:16:08+00:00",
+        "updated_at": "2026-03-10T17:16:32+00:00",
         "version": 1
       }
     }
