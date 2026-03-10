@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T13:23:27.267620+00:00",
+  "snapshot_time": "2026-03-10T13:37:41.889174+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5363,6 +5363,34 @@
         "object_id": "paper:url.267DCBAC",
         "created_at": "2026-03-10T13:22:39+00:00",
         "updated_at": "2026-03-10T13:23:01+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.03823": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.03823",
+        "url": "https://arxiv.org/abs/2603.03823",
+        "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration",
+        "authors": "Jialong Chen, Xander Xu, Hu Wei, Chuan Chen, Bing Zhao",
+        "abstract": "Large language model (LLM)-powered agents have demonstrated strong capabilities in automating software engineering tasks such as static bug fixing, as evidenced by benchmarks like SWE-bench. However, in the real world, the development of mature software is typically predicated on complex requirement changes and long-term feature iterations -- a process that static, one-shot repair paradigms fail to capture. To bridge this gap, we propose \\textbf{SWE-CI}, the first repository-level benchmark built upon the Continuous Integration loop, aiming to shift the evaluation paradigm for code generation from static, short-term \\textit{functional correctness} toward dynamic, long-term \\textit{maintainability}. The benchmark comprises 100 tasks, each corresponding on average to an evolution history spanning 233 days and 71 consecutive commits in a real-world code repository. SWE-CI requires agents to systematically resolve these tasks through dozens of rounds of analysis and coding iterations. SWE-CI provides valuable insights into how well agents can sustain code quality throughout long-term evolution.",
+        "timestamp": "2026-03-10T13:36:53.466Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/04",
+        "tags": [
+          "Software Engineering (cs.SE)",
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 218,
+        "object_id": "paper:arxiv.2603.03823",
+        "created_at": "2026-03-10T13:36:53+00:00",
+        "updated_at": "2026-03-10T13:37:15+00:00",
         "version": 1
       }
     }
