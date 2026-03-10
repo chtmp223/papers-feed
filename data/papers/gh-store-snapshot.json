@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T15:54:08.807500+00:00",
+  "snapshot_time": "2026-03-10T15:54:40.954909+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5469,6 +5469,30 @@
         "object_id": "paper:url.56FA3EE9",
         "created_at": "2026-03-10T15:53:07+00:00",
         "updated_at": "2026-03-10T15:53:40+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.4110D741": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "4110D741",
+        "url": "https://thebaffler.com/latest/the-darkness-from-the-darkness-giraldi",
+        "title": "The Darkness from the Darkness | William Giraldi",
+        "authors": "",
+        "abstract": "The world prefers us in pain.",
+        "timestamp": "2026-03-10T15:52:42.982Z",
+        "rating": "novote",
+        "publishedDate": "2026-03-05T12:59:00+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 221,
+        "object_id": "paper:url.4110D741",
+        "created_at": "2026-03-10T15:52:43+00:00",
+        "updated_at": "2026-03-10T15:54:17+00:00",
         "version": 1
       }
     }
