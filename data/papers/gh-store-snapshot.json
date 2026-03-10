@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T13:39:08.774296+00:00",
+  "snapshot_time": "2026-03-10T14:24:07.416618+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -4797,13 +4797,14 @@
         ],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-03-10"
       },
       "meta": {
         "issue_number": 197,
         "object_id": "paper:arxiv.2603.01220",
         "created_at": "2026-03-03T16:18:21+00:00",
-        "updated_at": "2026-03-03T16:18:48+00:00",
+        "updated_at": "2026-03-10T14:22:05+00:00",
         "version": 1
       }
     },
@@ -4927,13 +4928,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-03-10"
       },
       "meta": {
         "issue_number": 200,
         "object_id": "paper:url.55EA0B25",
         "created_at": "2026-03-04T15:04:23+00:00",
-        "updated_at": "2026-03-04T15:04:49+00:00",
+        "updated_at": "2026-03-10T14:22:10+00:00",
         "version": 1
       }
     },
