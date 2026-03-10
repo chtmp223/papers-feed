@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T15:52:50.273445+00:00",
+  "snapshot_time": "2026-03-10T15:54:08.807500+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5445,6 +5445,30 @@
         "object_id": "paper:url.389EB34A",
         "created_at": "2026-03-10T15:51:58+00:00",
         "updated_at": "2026-03-10T15:52:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.56FA3EE9": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "56FA3EE9",
+        "url": "https://www.haloscope.org/post/what-perfume-reveals-to-us-about-power",
+        "title": "What Perfume Reveals to Us About Power | HALOSCOPE",
+        "authors": "",
+        "abstract": "And the olfactory ethics of nostalgia.",
+        "timestamp": "2026-03-10T15:53:07.541Z",
+        "rating": "novote",
+        "publishedDate": "2024-12-09T15:00:15.714Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 222,
+        "object_id": "paper:url.56FA3EE9",
+        "created_at": "2026-03-10T15:53:07+00:00",
+        "updated_at": "2026-03-10T15:53:40+00:00",
         "version": 1
       }
     }
