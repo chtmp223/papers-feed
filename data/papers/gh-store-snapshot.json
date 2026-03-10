@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T14:24:07.416618+00:00",
+  "snapshot_time": "2026-03-10T15:14:57.598882+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5394,6 +5394,32 @@
         "object_id": "paper:arxiv.2603.03823",
         "created_at": "2026-03-10T13:36:53+00:00",
         "updated_at": "2026-03-10T13:37:15+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2510.24941": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2510.24941",
+        "url": "https://arxiv.org/abs/2510.24941",
+        "title": "Can Aha Moments Be Fake? Identifying True and Decorative Thinking Steps in Chain-of-Thought",
+        "authors": "Jiachen Zhao, Yiyou Sun, Weiyan Shi, Dawn Song",
+        "abstract": "Large language models can generate long chain-of-thought (CoT) reasoning, but it remains unclear whether the verbalized steps reflect the models' internal thinking. In this work, we propose a True Thinking Score (TTS) to quantify the causal contribution of each step in CoT to the model's final prediction. Our experiments show that LLMs often interleave between true-thinking steps (which are genuinely used to compute the final output) and decorative-thinking steps (which give the appearance of reasoning but have minimal causal influence). We reveal that only a small subset of the total reasoning steps causally drive the model's prediction: e.g., on AIME, only an average of 2.3% of reasoning steps in CoT have a TTS >= 0.7 (range: 0-1) for Qwen-2.5. Furthermore, we find that LLMs can be steered to internally follow or disregard specific steps in their verbalized CoT using the identified TrueThinking direction. We highlight that self-verification steps in CoT (i.e., aha moments) can be decorative, while steering along the TrueThinking direction can force internal reasoning over these steps. Overall, our work reveals that LLMs often verbalize reasoning steps without performing them internally, challenging the efficiency of LLM reasoning and the trustworthiness of CoT.",
+        "timestamp": "2026-03-10T15:14:00.174Z",
+        "rating": "novote",
+        "publishedDate": "2025/10/28",
+        "tags": [
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 219,
+        "object_id": "paper:arxiv.2510.24941",
+        "created_at": "2026-03-10T15:14:00+00:00",
+        "updated_at": "2026-03-10T15:14:28+00:00",
         "version": 1
       }
     }
