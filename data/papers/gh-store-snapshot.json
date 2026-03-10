@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-09T22:42:22.622856+00:00",
+  "snapshot_time": "2026-03-10T13:23:27.267620+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5339,6 +5339,30 @@
         "object_id": "paper:url.2DB858E8",
         "created_at": "2026-03-09T22:41:39+00:00",
         "updated_at": "2026-03-09T22:41:59+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.267DCBAC": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "267DCBAC",
+        "url": "https://howisfelix.today/?",
+        "title": "howisFelix.today? \u00b7 Felix Krause",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-03-10T13:22:38.960Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 217,
+        "object_id": "paper:url.267DCBAC",
+        "created_at": "2026-03-10T13:22:39+00:00",
+        "updated_at": "2026-03-10T13:23:01+00:00",
         "version": 1
       }
     }
