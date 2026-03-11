@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-10T21:20:16.719378+00:00",
+  "snapshot_time": "2026-03-11T15:42:56.341529+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5541,6 +5541,32 @@
         "object_id": "paper:url.3AB4980E",
         "created_at": "2026-03-10T21:19:28+00:00",
         "updated_at": "2026-03-10T21:19:50+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.08647": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.08647",
+        "url": "https://arxiv.org/abs/2603.08647",
+        "title": "Grow, Don't Overwrite: Fine-tuning Without Forgetting",
+        "authors": "Dyah Adila, Hanna Mazzawi, Benoit Dherin, Xavier Gonzalvo",
+        "abstract": "Adapting pre-trained models to specialized tasks often leads to catastrophic forgetting, where new knowledge overwrites foundational capabilities. Existing methods either compromise performance on the new task or struggle to balance training stability with efficient reuse of pre-trained knowledge. We introduce a novel function-preserving expansion method that resolves this dilemma. Our technique expands model capacity by replicating pre-trained parameters within transformer submodules and applying a scaling correction that guarantees the expanded model is mathematically identical to the original at initialization, enabling stable training while exploiting existing knowledge. Empirically, our method eliminates the trade-off between plasticity and stability, matching the performance of full fine-tuning on downstream tasks without any degradation of the model's original capabilities. Furthermore, we demonstrate the modularity of our approach, showing that by selectively expanding a small subset of layers we can achieve the same performance as full fine-tuning at a fraction of the computational cost.",
+        "timestamp": "2026-03-11T15:41:59.696Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/09",
+        "tags": [
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 225,
+        "object_id": "paper:arxiv.2603.08647",
+        "created_at": "2026-03-11T15:41:59+00:00",
+        "updated_at": "2026-03-11T15:42:25+00:00",
         "version": 1
       }
     }
