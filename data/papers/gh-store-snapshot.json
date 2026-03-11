@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-11T15:42:56.341529+00:00",
+  "snapshot_time": "2026-03-11T15:43:39.844637+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5567,6 +5567,32 @@
         "object_id": "paper:arxiv.2603.08647",
         "created_at": "2026-03-11T15:41:59+00:00",
         "updated_at": "2026-03-11T15:42:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.07392": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.07392",
+        "url": "https://arxiv.org/abs/2603.07392",
+        "title": "Can Large Language Models Keep Up? Benchmarking Online Adaptation to Continual Knowledge Streams",
+        "authors": "Jiyeon Kim, Hyunji Lee, Dylan Zhou, Sue Hyun Park, Seunghyun Yoon, Trung Bui, Franck Dernoncourt, Sungmin Cha, Minjoon Seo",
+        "abstract": "LLMs operating in dynamic real-world contexts often encounter knowledge that evolves continuously or emerges incrementally. To remain accurate and effective, models must adapt to newly arriving information on the fly. We introduce Online Adaptation to Continual Knowledge Streams(OAKS) to evaluate this capability, establishing a benchmark for online adaptation over streaming, continually updating knowledge. Specifically, the benchmark is structured as a sequence of fine-grained context chunks where facts change dynamically across time intervals. OAKS comprises two datasets: OAKS-BABI and OAKS-Novel, where individual facts evolve multiple times across context chunks. These datasets include dense annotations to measure whether models track changes accurately. Evaluating 14 models with varied inference approaches, we observe significant limitations in current methodologies. Both state-of-the-art models and agentic memory systems fail to adapt robustly on OAKS, demonstrating delays in state-tracking and susceptibility to distraction within streaming environments.",
+        "timestamp": "2026-03-11T15:42:50.239Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/08",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 226,
+        "object_id": "paper:arxiv.2603.07392",
+        "created_at": "2026-03-11T15:42:50+00:00",
+        "updated_at": "2026-03-11T15:43:11+00:00",
         "version": 1
       }
     }
