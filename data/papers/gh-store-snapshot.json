@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-11T15:43:39.844637+00:00",
+  "snapshot_time": "2026-03-11T20:46:01.746155+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5593,6 +5593,30 @@
         "object_id": "paper:arxiv.2603.07392",
         "created_at": "2026-03-11T15:42:50+00:00",
         "updated_at": "2026-03-11T15:43:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.3099BC05": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "3099BC05",
+        "url": "https://posttrainbench.com/",
+        "title": "PostTrainBench",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-03-11T20:45:14.376Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 227,
+        "object_id": "paper:url.3099BC05",
+        "created_at": "2026-03-11T20:45:14+00:00",
+        "updated_at": "2026-03-11T20:45:37+00:00",
         "version": 1
       }
     }
