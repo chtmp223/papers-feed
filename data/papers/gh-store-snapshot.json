@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-12T19:43:50.587650+00:00",
+  "snapshot_time": "2026-03-13T14:27:34.809807+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5641,6 +5641,35 @@
         "object_id": "paper:url-misc.5F49EE7D",
         "created_at": "2026-03-12T19:43:03+00:00",
         "updated_at": "2026-03-12T19:43:24+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.68EE30D9": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "68EE30D9",
+        "url": "https://www.wired.com/story/ai-agent-rentahuman-bots-hire-humans/",
+        "title": "The Rise of RentAHuman, the Marketplace Where Bots Put People to Work",
+        "authors": "Kyle MacNeill",
+        "abstract": "WIRED spoke with the Zoomer founders of a platform where AI agents hire humans to do real-world tasks. Their pitch: \"People would love to have a clanker as their boss.\"",
+        "timestamp": "2026-03-13T14:26:45.650Z",
+        "rating": "novote",
+        "publishedDate": "2026-02-18T11:00:00.000Z",
+        "tags": [
+          "artificial intelligence",
+          "startups",
+          "founders",
+          "agentic ai"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 229,
+        "object_id": "paper:url.68EE30D9",
+        "created_at": "2026-03-13T14:26:45+00:00",
+        "updated_at": "2026-03-13T14:27:09+00:00",
         "version": 1
       }
     }
