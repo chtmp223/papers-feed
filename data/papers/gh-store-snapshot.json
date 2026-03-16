@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-16T15:41:44.483036+00:00",
+  "snapshot_time": "2026-03-16T16:16:57.349473+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5826,6 +5826,30 @@
         "object_id": "paper:arxiv.2509.11826",
         "created_at": "2026-03-16T15:40:48+00:00",
         "updated_at": "2026-03-16T15:41:13+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2BDE5324": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2BDE5324",
+        "url": "https://github.com/ianarawjo/promptstats",
+        "title": "ianarawjo/promptstats: Statistical analysis methods for comparing prompt and model performance in LLM evaluations.",
+        "authors": "",
+        "abstract": "Statistical analysis methods for comparing prompt and model performance in LLM evaluations. - ianarawjo/promptstats",
+        "timestamp": "2026-03-16T16:16:04.388Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 236,
+        "object_id": "paper:url.2BDE5324",
+        "created_at": "2026-03-16T16:16:04+00:00",
+        "updated_at": "2026-03-16T16:16:28+00:00",
         "version": 1
       }
     }
