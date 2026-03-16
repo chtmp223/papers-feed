@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-16T14:30:20.301698+00:00",
+  "snapshot_time": "2026-03-16T15:19:14.053348+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5722,6 +5722,33 @@
         "object_id": "paper:arxiv.2603.12229",
         "created_at": "2026-03-16T14:29:30+00:00",
         "updated_at": "2026-03-16T14:29:52+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.09095": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.09095",
+        "url": "https://arxiv.org/abs/2603.09095",
+        "title": "Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+        "authors": "Kaiser Sun, Xiaochuang Yuan, Hongjun Liu, Chen Zhao, Cheng Zhang, Mark Dredze, Fan Bai",
+        "abstract": "Multimodal large language models (MLLMs) can process text presented as images, yet they often perform worse than when the same content is provided as textual tokens. We systematically diagnose this \"modality gap\" by evaluating seven MLLMs across seven benchmarks in five input modes, spanning both synthetically rendered text and realistic document images from arXiv PDFs to Wikipedia pages. We find that the modality gap is task- and data-dependent. For example, math tasks degrade by over 60 points on synthetic renderings, while natural document images often match or exceed text-mode performance. Rendering choices such as font and resolution are strong confounds, with font alone swinging accuracy by up to 47 percentage points. To understand this, we conduct a grounded-theory error analysis of over 4,000 examples, revealing that image mode selectively amplifies reading errors (calculation and formatting failures) while leaving knowledge and reasoning errors largely unchanged, and that some models exhibit a chain-of-thought reasoning collapse under visual input. Motivated by these findings, we propose a self-distillation method that trains the model on its own pure text reasoning traces paired with image inputs, raising image-mode accuracy on GSM8K from 30.71% to 92.72% and transferring to unseen benchmarks without catastrophic forgetting. Overall, our study provides a systematic understanding of the modality gap and suggests a practical path toward improving visual text understanding in multimodal language models.",
+        "timestamp": "2026-03-16T15:18:18.196Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/10",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Computer Vision and Pattern Recognition (cs.CV)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 232,
+        "object_id": "paper:arxiv.2603.09095",
+        "created_at": "2026-03-16T15:18:18+00:00",
+        "updated_at": "2026-03-16T15:18:43+00:00",
         "version": 1
       }
     }
