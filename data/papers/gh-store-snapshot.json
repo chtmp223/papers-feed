@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-16T16:16:57.349473+00:00",
+  "snapshot_time": "2026-03-16T20:09:33.285606+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5850,6 +5850,30 @@
         "object_id": "paper:url.2BDE5324",
         "created_at": "2026-03-16T16:16:04+00:00",
         "updated_at": "2026-03-16T16:16:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.568CA288": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "568CA288",
+        "url": "https://yalereview.org/article/vincenzo-latronico-a-nights-sleep",
+        "title": "Vincenzo Latronico's Object of Desire: A Night's Sleep",
+        "authors": "",
+        "abstract": "My insomnia had no cause but its effects were everywhere, which is one of Aristotle's definitions of God. Vincenzo Latronico on four decades of\u2026",
+        "timestamp": "2026-03-16T20:08:36.492Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 237,
+        "object_id": "paper:url.568CA288",
+        "created_at": "2026-03-16T20:08:36+00:00",
+        "updated_at": "2026-03-16T20:09:05+00:00",
         "version": 1
       }
     }
