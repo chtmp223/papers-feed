@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-16T15:34:38.528134+00:00",
+  "snapshot_time": "2026-03-16T15:40:40.437880+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5775,6 +5775,30 @@
         "object_id": "paper:arxiv.2505.10798",
         "created_at": "2026-03-16T15:33:40+00:00",
         "updated_at": "2026-03-16T15:34:06+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.4441FC28": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "4441FC28",
+        "url": "https://www.interconnects.ai/p/the-next-phase-of-open-models?utm_source=post-email-title&publication_id=48206&post_id=190338833&utm_campaign=email-post-title&isFreemail=true&r=4w5a66&triedRedirect=true&utm_medium=email",
+        "title": "What comes next with open models",
+        "authors": "Nathan Lambert",
+        "abstract": "Markets, capabilities, cope, and bewilderment in the industrialization of language models.",
+        "timestamp": "2026-03-16T15:39:47.542Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 234,
+        "object_id": "paper:url.4441FC28",
+        "created_at": "2026-03-16T15:39:47+00:00",
+        "updated_at": "2026-03-16T15:40:09+00:00",
         "version": 1
       }
     }
