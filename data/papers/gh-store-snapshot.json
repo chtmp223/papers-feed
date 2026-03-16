@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-13T17:20:04.903193+00:00",
+  "snapshot_time": "2026-03-16T14:30:20.301698+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5696,6 +5696,32 @@
         "object_id": "paper:arxiv.2603.09970",
         "created_at": "2026-03-13T17:19:22+00:00",
         "updated_at": "2026-03-13T17:19:42+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.12229": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.12229",
+        "url": "https://arxiv.org/abs/2603.12229",
+        "title": "Language Model Teams as Distributed Systems",
+        "authors": "Elizabeth Mieczkowski, Katherine M. Collins, Ilia Sucholutsky, Natalia V\u00e9lez, Thomas L. Griffiths",
+        "abstract": "Large language models (LLMs) are growing increasingly capable, prompting recent interest in LLM teams. Yet, despite increased deployment of LLM teams at scale, we lack a principled framework for addressing key questions such as when a team is helpful, how many agents to use, how structure impacts performance -- and whether a team is better than a single agent. Rather than designing and testing these possibilities through trial-and-error, we propose using distributed systems as a principled foundation for creating and evaluating LLM teams. We find that many of the fundamental advantages and challenges studied in distributed computing also arise in LLM teams, highlighting the rich practical insights that can come from the cross-talk of these two fields of study.",
+        "timestamp": "2026-03-16T14:29:30.636Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/12",
+        "tags": [
+          "Multiagent Systems (cs.MA)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 231,
+        "object_id": "paper:arxiv.2603.12229",
+        "created_at": "2026-03-16T14:29:30+00:00",
+        "updated_at": "2026-03-16T14:29:52+00:00",
         "version": 1
       }
     }
