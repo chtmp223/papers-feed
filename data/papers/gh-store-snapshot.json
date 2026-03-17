@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-17T11:02:00.076295+00:00",
+  "snapshot_time": "2026-03-17T18:26:48.633055+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5902,6 +5902,30 @@
         "object_id": "paper:arxiv.2603.13545",
         "created_at": "2026-03-17T11:01:09+00:00",
         "updated_at": "2026-03-17T11:01:35+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.3534E077": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "3534E077",
+        "url": "https://www.theatlantic.com/technology/2026/03/ai-creative-writing/686418/?gift=ew64ZJVzcA6tYX59fXOkC0mLSRL_AtSfnBAcnVirUVA&utm_source=copy-link&utm_medium=social&utm_campaign=share",
+        "title": "The Human Skill That Eludes AI",
+        "authors": "Jasmine Sun",
+        "abstract": "Why can\u2019t language models write well?",
+        "timestamp": "2026-03-17T18:25:47.780Z",
+        "rating": "novote",
+        "publishedDate": "2026-03-17T15:25:02Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 239,
+        "object_id": "paper:url.3534E077",
+        "created_at": "2026-03-17T18:25:48+00:00",
+        "updated_at": "2026-03-17T18:26:14+00:00",
         "version": 1
       }
     }
