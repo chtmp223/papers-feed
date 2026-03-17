@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-17T21:31:02.546602+00:00",
+  "snapshot_time": "2026-03-17T23:26:24.938774+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6034,6 +6034,30 @@
         "object_id": "paper:arxiv.2603.03308",
         "created_at": "2026-03-17T20:53:28+00:00",
         "updated_at": "2026-03-17T21:30:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6EAEDEE4": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6EAEDEE4",
+        "url": "https://github.com/hardikpandya/stop-slop",
+        "title": "hardikpandya/stop-slop: A skill file for removing AI tells from prose",
+        "authors": "",
+        "abstract": "A skill file for removing AI tells from prose. Contribute to hardikpandya/stop-slop development by creating an account on GitHub.",
+        "timestamp": "2026-03-17T22:51:47.870Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 244,
+        "object_id": "paper:url.6EAEDEE4",
+        "created_at": "2026-03-17T22:51:48+00:00",
+        "updated_at": "2026-03-17T23:26:00+00:00",
         "version": 1
       }
     }
