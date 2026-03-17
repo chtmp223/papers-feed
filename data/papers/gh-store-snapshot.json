@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-17T21:06:25.015327+00:00",
+  "snapshot_time": "2026-03-17T21:31:02.546602+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6007,6 +6007,33 @@
         "object_id": "paper:arxiv.2602.11286",
         "created_at": "2026-03-17T21:05:41+00:00",
         "updated_at": "2026-03-17T21:06:03+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.03308": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.03308",
+        "url": "https://arxiv.org/abs/2603.03308",
+        "title": "Old Habits Die Hard: How Conversational History Geometrically Traps LLMs",
+        "authors": "Adi Simhi, Fazl Barez, Martin Tutek, Yonatan Belinkov, Shay B. Cohen",
+        "abstract": "How does the conversational past of large language models (LLMs) influence their future performance? Recent work suggests that LLMs are affected by their conversational history in unexpected ways. For instance, hallucinations in prior interactions may influence subsequent model responses. In this work, we introduce History-Echoes, a framework that investigates how conversational history biases subsequent generations. The framework explores this bias from two perspectives: probabilistically, we model conversations as Markov chains to quantify state consistency; geometrically, we measure the consistency of consecutive hidden representations. Across three model families and six datasets spanning diverse phenomena, our analysis reveals a strong correlation between the two perspectives. By bridging these perspectives, we demonstrate that behavioral persistence manifests as a geometric trap, where gaps in the latent space confine the model's trajectory. Code available at this https URL.",
+        "timestamp": "2026-03-17T20:53:28.153Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/08",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 242,
+        "object_id": "paper:arxiv.2603.03308",
+        "created_at": "2026-03-17T20:53:28+00:00",
+        "updated_at": "2026-03-17T21:30:39+00:00",
         "version": 1
       }
     }
