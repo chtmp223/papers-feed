@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-17T18:26:48.633055+00:00",
+  "snapshot_time": "2026-03-17T18:27:32.518399+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5926,6 +5926,32 @@
         "object_id": "paper:url.3534E077",
         "created_at": "2026-03-17T18:25:48+00:00",
         "updated_at": "2026-03-17T18:26:14+00:00",
+        "version": 1
+      }
+    },
+    "paper:nature.d41586-026-00843-y": {
+      "data": {
+        "sourceId": "nature",
+        "paperId": "d41586-026-00843-y",
+        "url": "https://www.nature.com/articles/d41586-026-00843-y?utm_source=x&utm_medium=social&utm_campaign=nature&linkId=60886487",
+        "title": "AI and the PhD student: friend or foe?",
+        "authors": "Linda Nordling0",
+        "abstract": "Graduate students increasingly use artificial-intelligence tools to draft, code and search \u2014 but many fear it could erode the very skills a doctorate is meant to build.",
+        "timestamp": "2026-03-17T18:26:42.348Z",
+        "rating": "novote",
+        "publishedDate": "2026-03-16",
+        "tags": [
+          "Careers"
+        ],
+        "doi": "",
+        "journalName": "Nature 2026 651:8106",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 240,
+        "object_id": "paper:nature.d41586-026-00843-y",
+        "created_at": "2026-03-17T18:26:42+00:00",
+        "updated_at": "2026-03-17T18:27:04+00:00",
         "version": 1
       }
     }
