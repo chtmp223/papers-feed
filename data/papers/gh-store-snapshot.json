@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-16T20:09:33.285606+00:00",
+  "snapshot_time": "2026-03-17T11:02:00.076295+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5874,6 +5874,34 @@
         "object_id": "paper:url.568CA288",
         "created_at": "2026-03-16T20:08:36+00:00",
         "updated_at": "2026-03-16T20:09:05+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.13545": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.13545",
+        "url": "https://arxiv.org/abs/2603.13545",
+        "title": "The AI Fiction Paradox",
+        "authors": "Katherine Elkins",
+        "abstract": "AI development has a fiction dependency problem: models are built on massive corpora of modern fiction and desperately need more of it, yet they struggle to generate it. I term this the AI-Fiction Paradox and it is particularly startling because in machine learning, training data typically determines output quality. This paper offers a theoretically precise account of why fiction resists AI generation by identifying three distinct challenges for current architectures. First, fiction depends on what I call narrative causation, a form of plot logic where events must feel both surprising in the moment and retrospectively inevitable. This temporal paradox fundamentally conflicts with the forward-generation logic of transformer architectures. Second, I identify an informational revaluation challenge: fiction systematically violates the computational assumption that informational importance aligns with statistical salience, requiring readers and models alike to retrospectively reweight the significance of narrative details in ways that current attention mechanisms cannot perform. Third, drawing on over seven years of collaborative research on sentiment arcs, I argue that compelling fiction requires multi-scale emotional architecture, the orchestration of sentiment at word, sentence, scene, and arc levels simultaneously. Together, these three challenges explain both why AI companies have risked billion-dollar lawsuits for access to modern fiction and why that fiction remains so difficult to replicate. The analysis also raises urgent questions about what happens when these challenges are overcome. Fiction concentrates uniquely powerful cognitive and emotional patterns for modeling human behavior, and mastery of these patterns by AI systems would represent not just a creative achievement but a potent vehicle for human manipulation at scale.",
+        "timestamp": "2026-03-17T11:01:09.234Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/13",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)",
+          "Computers and Society (cs.CY)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 238,
+        "object_id": "paper:arxiv.2603.13545",
+        "created_at": "2026-03-17T11:01:09+00:00",
+        "updated_at": "2026-03-17T11:01:35+00:00",
         "version": 1
       }
     }
