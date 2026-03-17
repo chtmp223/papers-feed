@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-17T19:43:43.828229+00:00",
+  "snapshot_time": "2026-03-17T21:06:25.015327+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -5980,6 +5980,33 @@
         "object_id": "paper:arxiv.2602.20294",
         "created_at": "2026-03-17T19:42:59+00:00",
         "updated_at": "2026-03-17T19:43:19+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.11286": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.11286",
+        "url": "https://arxiv.org/abs/2602.11286",
+        "title": "Grok in the Wild: Characterizing the Roles and Uses of Large Language Models on Social Media",
+        "authors": "Katelyn Xiaoying Mei, Robert Wolfe, Nicholas Weber, Martin Saveski",
+        "abstract": "xAI's large language model, Grok, is called by millions of people each week on the social media platform X. Prior work characterizing how large language models are used has focused on private, one-on-one interactions. Grok's deployment on X represents a major departure from this setting, with interactions occurring in a public social space. In this paper, we systematically sample three months of interaction data to investigate how, when, and to what effect Grok is used on X. At the platform level, we find that Grok responds to 62% of requests, that the majority (51%) are in English, and that engagement is low, with half of Grok's responses receiving 20 or fewer views after 48 hours. We also inductively build a taxonomy of 10 roles that LLMs play in mediating social interactions and use these roles to analyze 41,735 interactions with Grok on X. We find that Grok most often serves as an information provider but, in contrast to LLM use in private one-on-one settings, also takes on roles related to dispute management, such as truth arbiter, advocate, and adversary. Finally, we characterize the population of X users who prompted Grok and find that their self-expressed interests are closely related to the roles the model assumes in the corresponding interactions. Our findings provide an initial quantitative description of human-AI interactions on X, and a broader understanding of the diverse roles that large language models might play in our online social spaces.",
+        "timestamp": "2026-03-17T21:05:41.190Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/11",
+        "tags": [
+          "Social and Information Networks (cs.SI)",
+          "Computers and Society (cs.CY)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 243,
+        "object_id": "paper:arxiv.2602.11286",
+        "created_at": "2026-03-17T21:05:41+00:00",
+        "updated_at": "2026-03-17T21:06:03+00:00",
         "version": 1
       }
     }
