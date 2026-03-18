@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-18T18:24:05.260591+00:00",
+  "snapshot_time": "2026-03-18T20:16:41.768936+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6162,6 +6162,30 @@
         "object_id": "paper:arxiv.2603.16177",
         "created_at": "2026-03-18T18:23:16+00:00",
         "updated_at": "2026-03-18T18:23:40+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.564B688B": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "564B688B",
+        "url": "https://www.thecapitalrunner.com/dmvrunningroutes?utm_source=thecapitalrunner&utm_medium=newsletter&utm_campaign=the-capital-runner",
+        "title": "DMV Running Routes App \u2014 The Capital Runner",
+        "authors": "",
+        "abstract": "Find the right DMV running route for your workout.",
+        "timestamp": "2026-03-18T20:15:47.156Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 249,
+        "object_id": "paper:url.564B688B",
+        "created_at": "2026-03-18T20:15:47+00:00",
+        "updated_at": "2026-03-18T20:16:15+00:00",
         "version": 1
       }
     }
