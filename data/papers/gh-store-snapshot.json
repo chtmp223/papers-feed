@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-18T14:19:19.476689+00:00",
+  "snapshot_time": "2026-03-18T18:24:05.260591+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6136,6 +6136,32 @@
         "object_id": "paper:arxiv.2603.16120",
         "created_at": "2026-03-18T14:07:59+00:00",
         "updated_at": "2026-03-18T14:18:52+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.16177": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.16177",
+        "url": "https://arxiv.org/abs/2603.16177",
+        "title": "The Finetuner's Fallacy: When to Pretrain with Your Finetuning Data",
+        "authors": "Christina Baek, Ricardo Pio Monti, David Schwab, Amro Abbas, Rishabh Adiga, Cody Blakeney, Maximilian B\u00f6ther, Paul Burstein, Aldo Gael Carranza, Alvin Deng, Parth Doshi, Vineeth Dorna, Alex Fang, Tony Jiang, Siddharth Joshi, Brett W. Larsen, Jason Chan Lee, Katherine L. Mentzer, Luke Merrick, Haakon Mongstad, Fan Pan, Anshuman Suri, Darren Teh, Jason Telanoff, Jack Urbanek, Zhengping Wang, Josh Wills, Haoli Yin, Aditi Raghunathan, J. Zico Kolter, Bogdan Gaza, Ari Morcos, Matthew Leavitt, Pratyush Maini",
+        "abstract": "Real-world model deployments demand strong performance on narrow domains where data is often scarce. Typically, practitioners finetune models to specialize them, but this risks overfitting to the domain and forgetting general knowledge. We study a simple strategy, specialized pretraining (SPT), where a small domain dataset, typically reserved for finetuning, is repeated starting from pretraining as a fraction of the total tokens. Across three specialized domains (ChemPile, MusicPile, and ProofPile), SPT improves domain performance and preserves general capabilities after finetuning compared to standard pretraining. In our experiments, SPT reduces the pretraining tokens needed to reach a given domain performance by up to 1.75x. These gains grow when the target domain is underrepresented in the pretraining corpus: on domains far from web text, a 1B SPT model outperforms a 3B standard pretrained model. Beyond these empirical gains, we derive overfitting scaling laws to guide practitioners in selecting the optimal domain-data repetition for a given pretraining compute budget. Our observations reveal the finetuner's fallacy: while finetuning may appear to be the cheapest path to domain adaptation, introducing specialized domain data during pretraining stretches its utility. SPT yields better specialized domain performance (via reduced overfitting across repeated exposures) and better general domain performance (via reduced forgetting during finetuning), ultimately achieving stronger results with fewer parameters and less total compute when amortized over inference. To get the most out of domain data, incorporate it as early in training as possible.",
+        "timestamp": "2026-03-18T18:23:16.152Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/17",
+        "tags": [
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 248,
+        "object_id": "paper:arxiv.2603.16177",
+        "created_at": "2026-03-18T18:23:16+00:00",
+        "updated_at": "2026-03-18T18:23:40+00:00",
         "version": 1
       }
     }
