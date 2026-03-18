@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-18T00:54:54.555623+00:00",
+  "snapshot_time": "2026-03-18T14:19:19.476689+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6110,6 +6110,32 @@
         "object_id": "paper:arxiv.2505.16934",
         "created_at": "2026-03-18T00:43:37+00:00",
         "updated_at": "2026-03-18T00:43:43+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.16120": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.16120",
+        "url": "https://arxiv.org/abs/2603.16120",
+        "title": "Language Models Don't Know What You Want: Evaluating Personalization in Deep Research Needs Real Users",
+        "authors": "Nishant Balepur, Malachi Hamada, Varsha Kishore, Sergey Feldman, Amanpreet Singh, Pao Siangliulue, Joseph Chee Chang, Eunsol Choi, Jordan Lee Boyd-Graber, Aakanksha Naik",
+        "abstract": "Deep Research (DR) tools (e.g. OpenAI DR) help researchers cope with ballooning publishing counts. Such tools can synthesize scientific papers to answer researchers' queries, but lack understanding of their users. We change that in MyScholarQA (MySQA), a personalized DR tool that: 1) infers a profile of a user's research interests; 2) proposes personalized actions for a user's input query; and 3) writes a multi-section report for the query that follows user-approved actions. We first test MySQA with NLP's standard protocol: we design a benchmark of synthetic users and LLM judges, where MySQA beats baselines in citation metrics and personalized action-following. However, we suspect this process does not cover all aspects of personalized DR users value, so we interview users in an online version of MySQA to unmask them. We reveal nine nuanced errors of personalized DR undetectable by our LLM judges, and we study qualitative feedback to form lessons for future DR design. In all, we argue for a pillar of personalization that easy-to-use LLM judges can lead NLP to overlook: real progress in personalization is only possible with real users.",
+        "timestamp": "2026-03-18T14:07:59.646Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/17",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 247,
+        "object_id": "paper:arxiv.2603.16120",
+        "created_at": "2026-03-18T14:07:59+00:00",
+        "updated_at": "2026-03-18T14:18:52+00:00",
         "version": 1
       }
     }
