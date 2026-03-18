@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-17T23:26:24.938774+00:00",
+  "snapshot_time": "2026-03-18T00:54:54.555623+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6058,6 +6058,58 @@
         "object_id": "paper:url.6EAEDEE4",
         "created_at": "2026-03-17T22:51:48+00:00",
         "updated_at": "2026-03-17T23:26:00+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2509.25154": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2509.25154",
+        "url": "https://arxiv.org/abs/2509.25154",
+        "title": "Who's Your Judge? On the Detectability of LLM-Generated Judgments",
+        "authors": "Dawei Li, Zhen Tan, Chengshuai Zhao, Bohan Jiang, Baixiang Huang, Pingchuan Ma, Abdullah Alnaibari, Kai Shu, Huan Liu",
+        "abstract": "Large Language Model (LLM)-based judgments leverage powerful LLMs to efficiently evaluate candidate content and provide judgment scores. However, the inherent biases and vulnerabilities of LLM-generated judgments raise concerns, underscoring the urgent need for distinguishing them in sensitive scenarios like academic peer reviewing. In this work, we propose and formalize the task of judgment detection and systematically investigate the detectability of LLM-generated judgments. Unlike LLM-generated text detection, judgment detection relies solely on judgment scores and candidates, reflecting real-world scenarios where textual feedback is often unavailable in the detection process. Our preliminary analysis shows that existing LLM-generated text detection methods perform poorly given their incapability to capture the interaction between judgment scores and candidate content -- an aspect crucial for effective judgment detection. Inspired by this, we introduce \\textit{J-Detector}, a lightweight and transparent neural detector augmented with explicitly extracted linguistic and LLM-enhanced features to link LLM judges' biases with candidates' properties for accurate detection. Experiments across diverse datasets demonstrate the effectiveness of \\textit{J-Detector} and show how its interpretability enables quantifying biases in LLM judges. Finally, we analyze key factors affecting the detectability of LLM-generated judgments and validate the practical utility of judgment detection in real-world scenarios.",
+        "timestamp": "2026-03-18T00:54:05.242Z",
+        "rating": "novote",
+        "publishedDate": "2025/09/29",
+        "tags": [
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 246,
+        "object_id": "paper:arxiv.2509.25154",
+        "created_at": "2026-03-18T00:54:05+00:00",
+        "updated_at": "2026-03-18T00:54:26+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2505.16934": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2505.16934",
+        "url": "https://arxiv.org/abs/2505.16934",
+        "title": "In-Context Watermarks for Large Language Models",
+        "authors": "Yepeng Liu, Xuandong Zhao, Christopher Kruegel, Dawn Song, Yuheng Bu",
+        "abstract": "The growing use of large language models (LLMs) for sensitive applications has highlighted the need for effective watermarking techniques to ensure the provenance and accountability of AI-generated text. However, most existing watermarking methods require access to the decoding process, limiting their applicability in real-world settings. One illustrative example is the use of LLMs by dishonest reviewers in the context of academic peer review, where conference organizers have no access to the model used but still need to detect AI-generated reviews. Motivated by this gap, we introduce In-Context Watermarking (ICW), which embeds watermarks into generated text solely through prompt engineering, leveraging LLMs' in-context learning and instruction-following abilities. We investigate four ICW strategies at different levels of granularity, each paired with a tailored detection method. We further examine the Indirect Prompt Injection (IPI) setting as a specific case study, in which watermarking is covertly triggered by modifying input documents such as academic manuscripts. Our experiments validate the feasibility of ICW as a model-agnostic, practical watermarking approach. Moreover, our findings suggest that as LLMs become more capable, ICW offers a promising direction for scalable and accessible content attribution.",
+        "timestamp": "2026-03-18T00:43:37.015Z",
+        "rating": "novote",
+        "publishedDate": "2025/05/22",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 245,
+        "object_id": "paper:arxiv.2505.16934",
+        "created_at": "2026-03-18T00:43:37+00:00",
+        "updated_at": "2026-03-18T00:43:43+00:00",
         "version": 1
       }
     }
