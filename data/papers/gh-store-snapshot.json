@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-20T15:37:05.577619+00:00",
+  "snapshot_time": "2026-03-21T02:59:47.119044+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6294,6 +6294,30 @@
         "object_id": "paper:newspapers.443FC31C",
         "created_at": "2026-03-20T14:40:31+00:00",
         "updated_at": "2026-03-20T15:36:42+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.70D51A4C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "70D51A4C",
+        "url": "https://storymaps.arcgis.com/stories/e71a6044c8a54dcb8d1334f7425a301b",
+        "title": "University of Maryland  Cherry Tree Blossoms",
+        "authors": " \n",
+        "abstract": "UMD Arboretum & Botanical Garden",
+        "timestamp": "2026-03-21T02:59:07.118Z",
+        "rating": "novote",
+        "publishedDate": "2024-03-06T16:08:36.108Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 254,
+        "object_id": "paper:url.70D51A4C",
+        "created_at": "2026-03-21T02:59:07+00:00",
+        "updated_at": "2026-03-21T02:59:27+00:00",
         "version": 1
       }
     }
