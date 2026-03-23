@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-23T15:19:55.922370+00:00",
+  "snapshot_time": "2026-03-23T15:20:57.167803+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6507,7 +6507,7 @@
         "title": "Flipping the Dialogue: Training and Evaluating User Language Models",
         "authors": "Tarek Naous, Philippe Laban, Wei Xu, Jennifer Neville",
         "abstract": "Conversations with LMs involve two participants: a human user leading the conversation, and an LM assistant responding to the user's request. To satisfy this specific role, LMs are post-trained to be helpful assistants -- optimized to produce exhaustive and well-structured responses, free of ambiguity and grammar errors. User utterances, on the other hand, are rarely perfected, with each user phrasing requests in unique ways, sometimes putting in partial effort at each turn and refining on the fly. To evaluate LM performance in realistic settings, prior work simulated users in multi-turn conversations, often prompting an LLM originally trained to be a helpful assistant to act as a user. However, we show that assistant LMs make for poor user simulators, with the surprising finding that better assistants yield worse simulators. Instead, we introduce purpose-built User Language Models (User LMs) - models post-trained to simulate human users in multi-turn conversations. Through various evaluations, we show how User LMs align better with human behavior and achieve better simulation robustness than existing simulation methods. When leveraging User LMs to simulate coding and math conversations, the performance of a strong assistant (GPT-4o) drops from 74.6% to 57.4%, confirming that more realistic simulation environments lead to assistant struggles as they fail to cope with the nuances of users in multi-turn setups.",
-        "timestamp": "2026-03-23T15:19:06.261Z",
+        "timestamp": "2026-03-23T15:20:04.297Z",
         "rating": "novote",
         "publishedDate": "2025/10/08",
         "tags": [
@@ -6518,10 +6518,10 @@
         "sourceType": "url"
       },
       "meta": {
-        "issue_number": 262,
+        "issue_number": 263,
         "object_id": "paper:arxiv.2510.06552",
-        "created_at": "2026-03-23T15:19:06+00:00",
-        "updated_at": "2026-03-23T15:19:29+00:00",
+        "created_at": "2026-03-23T15:20:04+00:00",
+        "updated_at": "2026-03-23T15:20:27+00:00",
         "version": 1
       }
     }
