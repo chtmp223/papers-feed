@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-23T14:22:58.611013+00:00",
+  "snapshot_time": "2026-03-23T14:50:43.567348+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6395,6 +6395,30 @@
         "object_id": "paper:arxiv.2602.16938",
         "created_at": "2026-03-23T14:22:06+00:00",
         "updated_at": "2026-03-23T14:22:30+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2024.findings-emnlp.908": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2024.findings-emnlp.908",
+        "url": "https://aclanthology.org/2024.findings-emnlp.908/",
+        "title": "Socratic Human Feedback (SoHF): Expert Steering Strategies for LLM Code Generation",
+        "authors": "Subramanian Chidambaram, Li Erran Li, Min Bai, Xiaopeng Li, Kaixiang Lin, Xiong Zhou, Alex C. Williams",
+        "abstract": "AbstractLarge Language Models (LLMs) are increasingly used for generating code solutions, empowered by features like self-debugging and self-reflection. However, LLMs often struggle with complex programming problems without human guidance. This paper investigates the strategies employed by expert programmers to steer code-generating LLMs toward successful outcomes. Through a study involving experts using natural language to guide GPT-4, Gemini Ultra, and, Claude 3.5 Sonnet on highly difficult programming challenges, we frame our analysis using the \u201cSocratic Feedback\u201d paradigm for understanding effective steering strategies. By analyzing 30 conversational transcripts across all three models, we map observed feedback strategies to five stages of Socratic Questioning: Definition, Elenhus, Maieutic, Dialectic, and Counter-factual reasoning. We find evidence that by employing a combination of different Socratic feedback strategies across multiple turns, programmers successfully guided the models to solve 74% of the problems that the models initially failed to solve on their own.",
+        "timestamp": "2026-03-23T14:49:49.393Z",
+        "rating": "novote",
+        "publishedDate": "2024/11",
+        "tags": [],
+        "doi": "10.18653/v1/2024.findings-emnlp.908",
+        "journalName": "Findings of the Association for Computational Linguistics: EMNLP 2024",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 258,
+        "object_id": "paper:acl-anthology.2024.findings-emnlp.908",
+        "created_at": "2026-03-23T14:49:49+00:00",
+        "updated_at": "2026-03-23T14:50:11+00:00",
         "version": 1
       }
     }
