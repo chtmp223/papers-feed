@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-23T14:15:24.366912+00:00",
+  "snapshot_time": "2026-03-23T14:22:58.611013+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6369,6 +6369,32 @@
         "object_id": "paper:acl-anthology.2026.eacl-long.200",
         "created_at": "2026-03-23T14:14:02+00:00",
         "updated_at": "2026-03-23T14:14:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.16938": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.16938",
+        "url": "https://arxiv.org/abs/2602.16938",
+        "title": "ConvApparel: A Benchmark Dataset and Validation Framework for User Simulators in Conversational Recommenders",
+        "authors": "Ofer Meshi, Krisztian Balog, Sally Goldman, Avi Caciularu, Guy Tennenholtz, Jihwan Jeong, Amir Globerson, Craig Boutilier",
+        "abstract": "The promise of LLM-based user simulators to improve conversational AI is hindered by a critical \"realism gap,\" leading to systems that are optimized for simulated interactions, but may fail to perform well in the real world. We introduce ConvApparel, a new dataset of human-AI conversations designed to address this gap. Its unique dual-agent data collection protocol -- using both \"good\" and \"bad\" recommenders -- enables counterfactual validation by capturing a wide spectrum of user experiences, enriched with first-person annotations of user satisfaction. We propose a comprehensive validation framework that combines statistical alignment, a human-likeness score, and counterfactual validation to test for generalization. Our experiments reveal a significant realism gap across all simulators. However, the framework also shows that data-driven simulators outperform a prompted baseline, particularly in counterfactual validation where they adapt more realistically to unseen behaviors, suggesting they embody more robust, if imperfect, user models.",
+        "timestamp": "2026-03-23T14:22:06.296Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/18",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 257,
+        "object_id": "paper:arxiv.2602.16938",
+        "created_at": "2026-03-23T14:22:06+00:00",
+        "updated_at": "2026-03-23T14:22:30+00:00",
         "version": 1
       }
     }
