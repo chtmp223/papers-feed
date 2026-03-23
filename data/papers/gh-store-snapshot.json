@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-21T02:59:47.119044+00:00",
+  "snapshot_time": "2026-03-23T14:15:24.366912+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6318,6 +6318,57 @@
         "object_id": "paper:url.70D51A4C",
         "created_at": "2026-03-21T02:59:07+00:00",
         "updated_at": "2026-03-21T02:59:27+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2404.18231": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2404.18231",
+        "url": "https://arxiv.org/abs/2404.18231",
+        "title": "From Persona to Personalization: A Survey on Role-Playing Language Agents",
+        "authors": "Jiangjie Chen, Xintao Wang, Rui Xu, Siyu Yuan, Yikai Zhang, Wei Shi, Jian Xie, Shuang Li, Ruihan Yang, Tinghui Zhu, Aili Chen, Nianqi Li, Lida Chen, Caiyu Hu, Siye Wu, Scott Ren, Ziquan Fu, Yanghua Xiao",
+        "abstract": "Recent advancements in large language models (LLMs) have significantly boosted the rise of Role-Playing Language Agents (RPLAs), i.e., specialized AI systems designed to simulate assigned personas. By harnessing multiple advanced abilities of LLMs, including in-context learning, instruction following, and social intelligence, RPLAs achieve a remarkable sense of human likeness and vivid role-playing performance. RPLAs can mimic a wide range of personas, ranging from historical figures and fictional characters to real-life individuals. Consequently, they have catalyzed numerous AI applications, such as emotional companions, interactive video games, personalized assistants and copilots, and digital clones. In this paper, we conduct a comprehensive survey of this field, illustrating the evolution and recent progress in RPLAs integrating with cutting-edge LLM technologies. We categorize personas into three types: 1) Demographic Persona, which leverages statistical stereotypes; 2) Character Persona, focused on well-established figures; and 3) Individualized Persona, customized through ongoing user interactions for personalized services. We begin by presenting a comprehensive overview of current methodologies for RPLAs, followed by the details for each persona type, covering corresponding data sourcing, agent construction, and evaluation. Afterward, we discuss the fundamental risks, existing limitations, and future prospects of RPLAs. Additionally, we provide a brief review of RPLAs in AI applications, which reflects practical user demands that shape and drive RPLA research. Through this work, we aim to establish a clear taxonomy of RPLA research and applications, and facilitate future research in this critical and ever-evolving field, and pave the way for a future where humans and RPLAs coexist in harmony.",
+        "timestamp": "2026-03-23T14:14:25.105Z",
+        "rating": "novote",
+        "publishedDate": "2024/04/28",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 256,
+        "object_id": "paper:arxiv.2404.18231",
+        "created_at": "2026-03-23T14:14:25+00:00",
+        "updated_at": "2026-03-23T14:14:52+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2026.eacl-long.200": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2026.eacl-long.200",
+        "url": "https://aclanthology.org/2026.eacl-long.200/",
+        "title": "A Survey on LLM-based Conversational User Simulation",
+        "authors": "Bo Ni, Yu Wang, Leyao Wang, Branislav Kveton, Franck Dernoncourt, Yu Xia, Hongjie Chen, Reuben Luera, Samyadeep Basu, Subhojyoti Mukherjee, Puneet Mathur, Nesreen K. Ahmed, Junda Wu, Li Li, Huixin Zhang, Ruiyi Zhang, Tong Yu, Sungchul Kim, Jiuxiang Gu, Zhengzhong Tu, Alexa Siu, Zichao Wang, Seunghyun Yoon, Nedim Lipka, Namyong Park, Zihao Lin, Trung Bui, Yue Zhao, Tyler Derr, Ryan A. Rossi",
+        "abstract": "AbstractUser simulation has long played a vital role in computer science due to its potential to support a wide range of applications. Language, as the primary medium of human communication, forms the foundation of social interaction and behavior. Consequently, simulating conversational behavior has become a key area of study. Recent advancements in large language models (LLMs) have significantly catalyzed progress in this domain by enabling high-fidelity generation of synthetic user conversation. In this paper, we survey recent advancements in LLM-based conversational user simulation. We introduce a novel taxonomy covering user granularity and simulation objectives. Additionally, we systematically analyze core techniques and evaluation methodologies. We aim to keep the research community informed of the latest advancements in conversational user simulation and to further facilitate future research by identifying open challenges and organizing existing work under a unified framework.",
+        "timestamp": "2026-03-23T14:14:02.209Z",
+        "rating": "novote",
+        "publishedDate": "2026/3",
+        "tags": [],
+        "doi": "",
+        "journalName": "Proceedings of the 19th Conference of the European Chapter of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 255,
+        "object_id": "paper:acl-anthology.2026.eacl-long.200",
+        "created_at": "2026-03-23T14:14:02+00:00",
+        "updated_at": "2026-03-23T14:14:25+00:00",
         "version": 1
       }
     }
