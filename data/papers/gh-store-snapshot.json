@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-23T15:14:42.276145+00:00",
+  "snapshot_time": "2026-03-23T15:15:55.881376+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6472,6 +6472,30 @@
         "object_id": "paper:acl-anthology.2025.sigdial-1.5",
         "created_at": "2026-03-23T15:13:55+00:00",
         "updated_at": "2026-03-23T15:14:16+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2024.acl-long.409": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2024.acl-long.409",
+        "url": "https://aclanthology.org/2024.acl-long.409/",
+        "title": "Trial and Error: Exploration-Based Trajectory Optimization of LLM Agents",
+        "authors": "Yifan Song, Da Yin, Xiang Yue, Jie Huang, Sujian Li (\u674e\u7d20\u5efa), Bill Yuchen Lin",
+        "abstract": "AbstractLarge Language Models (LLMs) have become integral components in various autonomous agent systems.In this study, we present an exploration-based trajectory optimization approach, referred to as ETO. This learning method is designed to enhance the performance of open LLM agents. Contrary to previous studies that exclusively train on successful expert trajectories, our method allows agents to learn from their exploration failures. This leads to improved performance through an iterative optimization framework. During the exploration phase, the agent interacts with the environment while completing given tasks, gathering failure trajectories to create contrastive trajectory pairs. In the subsequent training phase, the agent utilizes these trajectory preference pairs to update its policy using contrastive learning methods like DPO. This iterative cycle of exploration and training fosters continued improvement in the agents. Our experiments on three complex tasks demonstrate that ETO consistently surpasses baseline performance by a large margin. Furthermore, an examination of task-solving efficiency and potential in scenarios lacking expert trajectory underscores the effectiveness of our approach.",
+        "timestamp": "2026-03-23T15:15:01.047Z",
+        "rating": "novote",
+        "publishedDate": "2024/8",
+        "tags": [],
+        "doi": "10.18653/v1/2024.acl-long.409",
+        "journalName": "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 261,
+        "object_id": "paper:acl-anthology.2024.acl-long.409",
+        "created_at": "2026-03-23T15:15:01+00:00",
+        "updated_at": "2026-03-23T15:15:25+00:00",
         "version": 1
       }
     }
