@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-23T15:08:28.325393+00:00",
+  "snapshot_time": "2026-03-23T15:14:42.276145+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6448,6 +6448,30 @@
         "object_id": "paper:arxiv.2406.01633",
         "created_at": "2026-03-23T15:07:44+00:00",
         "updated_at": "2026-03-23T15:08:05+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2025.sigdial-1.5": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2025.sigdial-1.5",
+        "url": "https://aclanthology.org/2025.sigdial-1.5/",
+        "title": "clem:todd: A Framework for the Systematic Benchmarking of LLM-Based Task-Oriented Dialogue System Realisations",
+        "authors": "Kranti Chalamalasetti, Sherzod Hakimov, David Schlangen",
+        "abstract": "AbstractThe emergence of instruction-tuned large language models (LLMs) has advanced the field of dialogue systems, enabling both realistic user simulations and robust multi-turn conversational agents. However, existing research often evaluates these components in isolation, either focusing on a single user simulator or a specific system design, limiting the generalisability of insights across architectures and configurations. In this work, we propose clem:todd (chat-optimized LLMs for task-oriented dialogue systems development), a flexible framework for systematically evaluating dialogue systems under consistent conditions. clem:todd enables detailed benchmarking across combinations of user simulators and dialogue systems, whether existing models from literature or newly developed ones. To the best of our knowledge, clem:todd is the first evaluation framework for task-oriented dialogue systems that supports plug-and-play integration and ensures uniform datasets, evaluation metrics, and computational constraints. We showcase clem:todd\u2019s flexibility by re-evaluating existing task-oriented dialogue systems within this unified setup and integrating three newly proposed dialogue systems into the same evaluation pipeline. Our results provide actionable insights into how architecture, scale, and prompting strategies affect dialogue performance, offering practical guidance for building efficient and effective conversational AI systems.",
+        "timestamp": "2026-03-23T15:13:54.887Z",
+        "rating": "novote",
+        "publishedDate": "2025/8",
+        "tags": [],
+        "doi": "",
+        "journalName": "Proceedings of the 26th Annual Meeting of the Special Interest Group on Discourse and Dialogue",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 260,
+        "object_id": "paper:acl-anthology.2025.sigdial-1.5",
+        "created_at": "2026-03-23T15:13:55+00:00",
+        "updated_at": "2026-03-23T15:14:16+00:00",
         "version": 1
       }
     }
