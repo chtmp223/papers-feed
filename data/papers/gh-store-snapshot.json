@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-23T21:08:53.784661+00:00",
+  "snapshot_time": "2026-03-25T04:13:43.264976+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6574,6 +6574,30 @@
         "object_id": "paper:arxiv.2510.26130",
         "created_at": "2026-03-23T21:08:08+00:00",
         "updated_at": "2026-03-23T21:08:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.59830F92": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "59830F92",
+        "url": "https://neelguha.github.io/blog/2026/templates/",
+        "title": "Templates for machine learning research papers | Neel Guha",
+        "authors": "",
+        "abstract": "PhD student in Computer Science at Stanford University.",
+        "timestamp": "2026-03-25T01:57:05.153Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 266,
+        "object_id": "paper:url.59830F92",
+        "created_at": "2026-03-25T01:57:05+00:00",
+        "updated_at": "2026-03-25T01:57:28+00:00",
         "version": 1
       }
     }
