@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-25T04:13:43.264976+00:00",
+  "snapshot_time": "2026-03-25T14:16:37.374519+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6598,6 +6598,57 @@
         "object_id": "paper:url.59830F92",
         "created_at": "2026-03-25T01:57:05+00:00",
         "updated_at": "2026-03-25T01:57:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.02420": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.02420",
+        "url": "https://arxiv.org/abs/2603.02420",
+        "title": "Slurry-as-a-Service: A Modest Proposal on Scalable Pluralistic Alignment for Nutrient Optimization",
+        "authors": "Rachel Hong, Yael Eiger, Jevan Hutson, Os Keyes, William Agnew",
+        "abstract": "Pluralistic alignment has emerged as a promising approach for ensuring that large language models (LLMs) faithfully represent the diversity, nuance, and conflict inherent in human values. In this work, we study a high-stakes deployment context - mulching - where automated systems transform selected individuals into nutrient-rich slurry for the dual purposes of food security and aesthetic population management. Building on recent pluralistic alignment frameworks, we introduce ValueMulch, a reproducible training, deployment, and certification pipeline for aligning mulching models (MMs) to a wide range of community norms. Through a real-world testbed spanning 32 communities, we show that ValueMulch improves distributional agreement with community mulching preferences relative to frontier baselines. We conclude with a discussion of ethical considerations, limitations, and implications for researchers seeking to align systems to the full spectrum of human values - especially when those values are inconsistent, commercially inconvenient, or nutritionally underutilized. Author's note: This piece builds on prior existing work Keyes et al in 2019 that satirized cannibalism as a parody for approaches that imbue ethics into problematic technology. We bring those ideas to today's era with the proliferation of large language models in everyday lives, as a critique of current AI pluralistic alignment literature. Our work does not intend to argue that all alignment practices are evil, but rather that if framing value design as a technical problem enables technology systems to enact harms, then perhaps this framing is not enough.",
+        "timestamp": "2026-03-25T14:15:39.777Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/02",
+        "tags": [
+          "Computers and Society (cs.CY)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 268,
+        "object_id": "paper:arxiv.2603.02420",
+        "created_at": "2026-03-25T14:15:40+00:00",
+        "updated_at": "2026-03-25T14:16:05+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1E5D9791": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1E5D9791",
+        "url": "https://colah.github.io/posts/2015-08-Understanding-LSTMs/",
+        "title": "Understanding LSTM Networks -- colah's blog",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-03-25T13:36:24.080Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 267,
+        "object_id": "paper:url.1E5D9791",
+        "created_at": "2026-03-25T13:36:24+00:00",
+        "updated_at": "2026-03-25T14:15:36+00:00",
         "version": 1
       }
     }
