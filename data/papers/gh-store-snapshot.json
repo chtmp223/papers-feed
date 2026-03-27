@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-27T17:34:20.235374+00:00",
+  "snapshot_time": "2026-03-27T17:55:06.705265+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6748,6 +6748,30 @@
         "object_id": "paper:acl-anthology.2025.emnlp-main.1786",
         "created_at": "2026-03-27T17:33:34+00:00",
         "updated_at": "2026-03-27T17:33:54+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.564634E7": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "564634E7",
+        "url": "https://github.com/AlexsJones/llmfit",
+        "title": "AlexsJones/llmfit: Hundreds of models & providers. One command to find what runs on your hardware.",
+        "authors": "",
+        "abstract": "Hundreds of models & providers. One command to find what runs on your hardware. - AlexsJones/llmfit",
+        "timestamp": "2026-03-27T17:54:22.382Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 273,
+        "object_id": "paper:url.564634E7",
+        "created_at": "2026-03-27T17:54:22+00:00",
+        "updated_at": "2026-03-27T17:54:43+00:00",
         "version": 1
       }
     }
