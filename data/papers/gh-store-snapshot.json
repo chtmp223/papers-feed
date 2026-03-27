@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-27T13:17:49.971887+00:00",
+  "snapshot_time": "2026-03-27T13:42:10.807613+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6697,6 +6697,33 @@
         "object_id": "paper:url.1577560C",
         "created_at": "2026-03-27T13:17:07+00:00",
         "updated_at": "2026-03-27T13:17:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2505.11010": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2505.11010",
+        "url": "https://arxiv.org/abs/2505.11010",
+        "title": "ReviewInstruct: A Review-Driven Multi-Turn Conversations Generation Method for Large Language Models",
+        "authors": "Jiangxu Wu, Cong Wang, TianHuang Su, Jun Yang, Haozhi Lin, Chao Zhang, Ming Peng, Kai Shi, SongPan Yang, BinQing Pan, ZiXian Li, Ni Yang, ZhenYu Yang",
+        "abstract": "The effectiveness of large language models (LLMs) in conversational AI is hindered by their reliance on single-turn supervised fine-tuning (SFT) data, which limits contextual coherence in multi-turn dialogues. Existing methods for generating multi-turn dialogue data struggle to ensure both diversity and quality in instructions. To address this, we propose Review-Instruct, a novel framework that synthesizes multi-turn conversations through an iterative \"Ask-Respond-Review\" process involving three agent roles: a Candidate, multiple Reviewers, and a Chairman. The framework iteratively refines instructions by incorporating Reviewer feedback, enhancing dialogue diversity and difficulty. We construct a multi-turn dataset using the Alpaca dataset and fine-tune the LLaMA2-13B model. Evaluations on MT-Bench, MMLU-Pro, and Auto-Arena demonstrate significant improvements, achieving absolute gains of 2.9\\% on MMLU-Pro and 2\\% on MT-Bench compared to prior state-of-the-art models based on LLaMA2-13B. Ablation studies confirm the critical role of the Review stage and the use of multiple Reviewers in boosting instruction diversity and difficulty. Our work highlights the potential of review-driven, multi-agent frameworks for generating high-quality conversational data at scale.",
+        "timestamp": "2026-03-27T13:41:24.250Z",
+        "rating": "novote",
+        "publishedDate": "2025/05/16",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 271,
+        "object_id": "paper:arxiv.2505.11010",
+        "created_at": "2026-03-27T13:41:24+00:00",
+        "updated_at": "2026-03-27T13:41:49+00:00",
         "version": 1
       }
     }
