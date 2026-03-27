@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-26T17:43:51.627252+00:00",
+  "snapshot_time": "2026-03-27T13:17:49.971887+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6673,6 +6673,30 @@
         "object_id": "paper:url.56421FCB",
         "created_at": "2026-03-26T17:43:04+00:00",
         "updated_at": "2026-03-26T17:43:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1577560C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1577560C",
+        "url": "https://101ads.org/",
+        "title": "101 Ads \u2014 Highway 101 Billboard Map",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-03-27T13:17:06.728Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 270,
+        "object_id": "paper:url.1577560C",
+        "created_at": "2026-03-27T13:17:07+00:00",
+        "updated_at": "2026-03-27T13:17:25+00:00",
         "version": 1
       }
     }
