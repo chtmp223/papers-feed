@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-27T17:55:06.705265+00:00",
+  "snapshot_time": "2026-03-28T14:56:54.818299+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6772,6 +6772,60 @@
         "object_id": "paper:url.564634E7",
         "created_at": "2026-03-27T17:54:22+00:00",
         "updated_at": "2026-03-27T17:54:43+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2511.01824": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2511.01824",
+        "url": "https://arxiv.org/abs/2511.01824",
+        "title": "Simulating Environments with Reasoning Models for Agent Training",
+        "authors": "Yuetai Li, Huseyin A Inan, Xiang Yue, Wei-Ning Chen, Lukas Wutschitz, Janardhan Kulkarni, Radha Poovendran, Robert Sim, Saravan Rajmohan",
+        "abstract": "LLM agents excel in compact environments requiring deep reasoning but remain brittle when operating in broader, more complex contexts that demand robustness across diverse tools and schemas. Building bespoke environments for training is heavy, brittle, and limits progress. In this paper, we demonstrate that LLMs can simulate realistic environment feedback without access to actual testbed data or APIs. Inspired by this capability, we propose two frameworks: Simia-SFT, a pipeline that synthesizes SFT data by amplifying small seed sets into diverse trajectories in an environment-agnostic manner, and Simia-RL, a framework that enables RL training without real environment implementations through LLM-simulated feedback. Fine-tuning open models yields consistent improvements across multiple benchmarks, surpassing GPT-4o and approaching o4-mini on \u03c42\\tau^2-Bench. Together, Simia-SFT and Simia-RL enable scalable agent training without environment engineering, replacing heavy and brittle implementations with flexible LLM-based simulation.",
+        "timestamp": "2026-03-28T14:56:09.160Z",
+        "rating": "novote",
+        "publishedDate": "2025/11/03",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 275,
+        "object_id": "paper:arxiv.2511.01824",
+        "created_at": "2026-03-28T14:56:09+00:00",
+        "updated_at": "2026-03-28T14:56:31+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.03303": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.03303",
+        "url": "https://arxiv.org/abs/2603.03303",
+        "title": "HumanLM: Simulating Users with State Alignment Beats Response Imitation",
+        "authors": "Shirley Wu, Evelyn Choi, Arpandeep Khatua, Zhanghan Wang, Joy He-Yueya, Tharindu Cyril Weerasooriya, Wei Wei, Diyi Yang, Jure Leskovec, James Zou",
+        "abstract": "Large Language Models (LLMs) are increasingly used to simulate how specific users respond to a given context, enabling more user-centric applications that rely on user feedback. However, existing user simulators mostly imitate surface-level patterns and language styles, which fail to reflect the underlying states of real users (e.g., beliefs and emotions). To address these limitations, we propose a novel training framework, HumanLM, which builds user simulators that accurately reflect real users. Our key insight is that, in addition to generating responses, the model should generate natural-language latent states that align with ground-truth responses through reinforcement learning. These latent states correspond to a set of psychologically grounded state dimensions that drive how real users respond. HumanLM further synthesizes these aligned latent states into responses that accurately represent real users. For extensive evaluation, we develop Humanual, a comprehensive benchmark for simulating real users based on public data. Humanual consists of six large-scale datasets with 26k users and 216k responses in total, spanning diverse tasks such as generating user responses to daily life issues, political blogs, and chat sessions with LLM assistants. Across datasets, HumanLM significantly outperforms alternative approaches, achieving an average relative improvement of 16.3% in alignment scores from an LLM judge. In a real-time simulation study with 111 participants, HumanLM achieves the highest similarity to real user responses and competitive human-likeness scores.",
+        "timestamp": "2026-03-28T14:56:06.310Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/07",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 274,
+        "object_id": "paper:arxiv.2603.03303",
+        "created_at": "2026-03-28T14:56:06+00:00",
+        "updated_at": "2026-03-28T14:56:27+00:00",
         "version": 1
       }
     }
