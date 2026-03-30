@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-28T14:56:54.818299+00:00",
+  "snapshot_time": "2026-03-30T16:48:58.172631+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6826,6 +6826,32 @@
         "object_id": "paper:arxiv.2603.03303",
         "created_at": "2026-03-28T14:56:06+00:00",
         "updated_at": "2026-03-28T14:56:27+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2603.20907": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2603.20907",
+        "url": "https://arxiv.org/abs/2603.20907",
+        "title": "The Hidden Puppet Master: Predicting Human Belief Change in Manipulative LLM Dialogues",
+        "authors": "Jocelyn Shen, Amina Luvsanchultem, Jessica Kim, Kynnedy Smith, Valdemar Danry, Kantwon Rogers, Hae Won Park, Maarten Sap, Cynthia Breazeal",
+        "abstract": "As users increasingly turn to LLMs for practical and personal advice, they become vulnerable to subtle steering toward hidden incentives misaligned with their own interests. While existing NLP research has benchmarked manipulation detection, these efforts often rely on simulated debates and remain fundamentally decoupled from actual human belief shifts in real-world scenarios. We introduce PUPPET, a theoretical taxonomy and resource that bridges this gap by focusing on the moral direction of hidden incentives in everyday, advice-giving contexts. We provide an evaluation dataset of N=1,035 human-LLM interactions, where we measure users' belief shifts. Our analysis reveals a critical disconnect in current safety paradigms: while models can be trained to detect manipulative strategies, they do not correlate with the magnitude of resulting belief change. As such, we define the task of belief shift prediction and show that while state-of-the-art LLMs achieve moderate correlation (r=0.3-0.5), they systematically underestimate the intensity of human belief susceptibility. This work establishes a theoretically grounded and behaviorally validated foundation for AI social safety efforts by studying incentive-driven manipulation in LLMs during everyday, practical user queries.",
+        "timestamp": "2026-03-30T16:47:58.065Z",
+        "rating": "novote",
+        "publishedDate": "2026/03/21",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 276,
+        "object_id": "paper:arxiv.2603.20907",
+        "created_at": "2026-03-30T16:47:58+00:00",
+        "updated_at": "2026-03-30T16:48:29+00:00",
         "version": 1
       }
     }
