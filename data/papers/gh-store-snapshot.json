@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-03-30T16:48:58.172631+00:00",
+  "snapshot_time": "2026-03-31T18:19:25.643604+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6852,6 +6852,34 @@
         "object_id": "paper:arxiv.2603.20907",
         "created_at": "2026-03-30T16:47:58+00:00",
         "updated_at": "2026-03-30T16:48:29+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2511.05650": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2511.05650",
+        "url": "https://arxiv.org/abs/2511.05650",
+        "title": "Optimizing Diversity and Quality through Base-Aligned Model Collaboration",
+        "authors": "Yichen Wang, Chenghao Yang, Tenghao Huang, Muhao Chen, Jonathan May, Mina Lee",
+        "abstract": "Alignment has greatly improved large language models (LLMs)' output quality at the cost of diversity, yielding highly similar outputs across generations. We propose Base-Aligned Model Collaboration (BACo), an inference-time token-level model collaboration framework that dynamically combines a base LLM with its aligned counterpart to optimize diversity and quality. Inspired by prior work (Fei et al., 2025), BACo employs routing strategies that determine, at each token, from which model to decode based on next-token prediction uncertainty and predicted contents' semantic role. Prior diversity-promoting methods, such as retraining, prompt engineering, and multi-sampling methods, improve diversity but often degrade quality or require costly decoding or post-training. In contrast, BACo achieves both high diversity and quality post hoc within a single pass, while offering strong controllability. We explore a family of routing strategies, across three open-ended generation tasks and 13 metrics covering diversity and quality, BACo consistently surpasses state-of-the-art inference-time baselines. With our best router, BACo achieves a 21.3% joint improvement in diversity and quality. Human evaluations also mirror these improvements. The results suggest that collaboration between base and aligned models can optimize and control diversity and quality.",
+        "timestamp": "2026-03-31T18:18:36.199Z",
+        "rating": "novote",
+        "publishedDate": "2025/11/07",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 277,
+        "object_id": "paper:arxiv.2511.05650",
+        "created_at": "2026-03-31T18:18:36+00:00",
+        "updated_at": "2026-03-31T18:19:00+00:00",
         "version": 1
       }
     }
