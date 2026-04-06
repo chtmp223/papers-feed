@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-03T13:58:53.482072+00:00",
+  "snapshot_time": "2026-04-06T09:47:33.871297+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6955,6 +6955,32 @@
         "object_id": "paper:url.41C06FB4",
         "created_at": "2026-04-03T13:22:10+00:00",
         "updated_at": "2026-04-03T13:58:30+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.01657": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.01657",
+        "url": "https://arxiv.org/abs/2604.01657",
+        "title": "What Do Claim Verification Datasets Actually Test? A Reasoning Trace Analysis",
+        "authors": "Delip Rao, Chris Callison-Burch",
+        "abstract": "Despite rapid progress in claim verification, we lack a systematic understanding of what reasoning these benchmarks actually exercise. We generate structured reasoning traces for 24K claim-verification examples across 9 datasets using GPT-4o-mini and find that direct evidence extraction dominates, while multi-sentence synthesis and numerical reasoning are severely under-represented. A dataset-level breakdown reveals stark biases: some datasets almost exclusively test lexical matching, while others require information synthesis in roughly half of cases. Using a compact 1B-parameter reasoning verifier, we further characterize five error types and show that error profiles vary dramatically by domain -- general-domain verification is dominated by lexical overlap bias, scientific verification by overcautiousness, and mathematical verification by arithmetic reasoning failures. Our findings suggest that high benchmark scores primarily reflect retrieval-plus-entailment ability. We outline recommendations for building more challenging evaluation suites that better test the reasoning capabilities verification systems need.",
+        "timestamp": "2026-04-06T09:46:54.851Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/02",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 281,
+        "object_id": "paper:arxiv.2604.01657",
+        "created_at": "2026-04-06T09:46:55+00:00",
+        "updated_at": "2026-04-06T09:47:13+00:00",
         "version": 1
       }
     }
