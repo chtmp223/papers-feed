@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-07T15:07:02.034177+00:00",
+  "snapshot_time": "2026-04-07T16:07:24.387754+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7008,6 +7008,30 @@
         "object_id": "paper:arxiv.2604.01652",
         "created_at": "2026-04-07T15:05:56+00:00",
         "updated_at": "2026-04-07T15:06:23+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.7A56DBC3": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "7A56DBC3",
+        "url": "https://substack.com/home/post/p-192854144",
+        "title": "morning walks and listening to full albums will save you",
+        "authors": "Substack",
+        "abstract": "postcard 69: on mental health and the importance of morning walks and full albums",
+        "timestamp": "2026-04-07T16:06:28.891Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 283,
+        "object_id": "paper:url.7A56DBC3",
+        "created_at": "2026-04-07T16:06:29+00:00",
+        "updated_at": "2026-04-07T16:06:50+00:00",
         "version": 1
       }
     }
