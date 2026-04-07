@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-07T16:07:24.387754+00:00",
+  "snapshot_time": "2026-04-07T19:46:57.507308+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7032,6 +7032,32 @@
         "object_id": "paper:url.7A56DBC3",
         "created_at": "2026-04-07T16:06:29+00:00",
         "updated_at": "2026-04-07T16:06:50+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.02319": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.02319",
+        "url": "https://arxiv.org/abs/2604.02319",
+        "title": "No Single Best Model for Diversity: Learning a Router for Sample Diversity",
+        "authors": "Yuhan Liu, Fangyuan Xu, Vishakh Padmakumar, Daphne Ippolito, Eunsol Choi",
+        "abstract": "When posed with prompts that permit a large number of valid answers, comprehensively generating them is the first step towards satisfying a wide range of users. In this paper, we study methods to elicit a comprehensive set of valid responses. To evaluate this, we introduce \\textbf{diversity coverage}, a metric that measures the total quality scores assigned to each \\textbf{unique} answer in the predicted answer set relative to the best possible answer set with the same number of answers. Using this metric, we evaluate 18 LLMs, finding no single model dominates at generating diverse responses to a wide range of open-ended prompts. Yet, per each prompt, there exists a model that outperforms all other models significantly at generating a diverse answer set. Motivated by this finding, we introduce a router that predicts the best model for each query. On NB-Wildchat, our trained router outperforms the single best model baseline (26.3% vs $23.8%). We further show generalization to an out-of-domain dataset (NB-Curated) as well as different answer-generation prompting strategies. Our work lays foundation for studying generating comprehensive answers when we have access to a suite of models.",
+        "timestamp": "2026-04-07T19:46:06.371Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/02",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 284,
+        "object_id": "paper:arxiv.2604.02319",
+        "created_at": "2026-04-07T19:46:06+00:00",
+        "updated_at": "2026-04-07T19:46:29+00:00",
         "version": 1
       }
     }
