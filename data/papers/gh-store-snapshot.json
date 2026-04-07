@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-07T19:46:57.507308+00:00",
+  "snapshot_time": "2026-04-07T20:21:35.612054+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7058,6 +7058,32 @@
         "object_id": "paper:arxiv.2604.02319",
         "created_at": "2026-04-07T19:46:06+00:00",
         "updated_at": "2026-04-07T19:46:29+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2410.15553": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2410.15553",
+        "url": "https://arxiv.org/abs/2410.15553",
+        "title": "Multi-IF: Benchmarking LLMs on Multi-Turn and Multilingual Instructions Following",
+        "authors": "Yun He, Di Jin, Chaoqi Wang, Chloe Bi, Karishma Mandyam, Hejia Zhang, Chen Zhu, Ning Li, Tengyu Xu, Hongjiang Lv, Shruti Bhosale, Chenguang Zhu, Karthik Abinav Sankararaman, Eryk Helenowski, Melanie Kambadur, Aditya Tayade, Hao Ma, Han Fang, Sinong Wang",
+        "abstract": "Large Language Models (LLMs) have demonstrated impressive capabilities in various tasks, including instruction following, which is crucial for aligning model outputs with user expectations. However, evaluating LLMs' ability to follow instructions remains challenging due to the complexity and subjectivity of human language. Current benchmarks primarily focus on single-turn, monolingual instructions, which do not adequately reflect the complexities of real-world applications that require handling multi-turn and multilingual interactions. To address this gap, we introduce Multi-IF, a new benchmark designed to assess LLMs' proficiency in following multi-turn and multilingual instructions. Multi-IF, which utilizes a hybrid framework combining LLM and human annotators, expands upon the IFEval by incorporating multi-turn sequences and translating the English prompts into another 7 languages, resulting in a dataset of 4,501 multilingual conversations, where each has three turns. Our evaluation of 14 state-of-the-art LLMs on Multi-IF reveals that it presents a significantly more challenging task than existing benchmarks. All the models tested showed a higher rate of failure in executing instructions correctly with each additional turn. For example, o1-preview drops from 0.877 at the first turn to 0.707 at the third turn in terms of average accuracy over all languages. Moreover, languages with non-Latin scripts (Hindi, Russian, and Chinese) generally exhibit higher error rates, suggesting potential limitations in the models' multilingual capabilities. We release Multi-IF prompts and the evaluation code base to encourage further research in this critical area.",
+        "timestamp": "2026-04-07T20:20:53.541Z",
+        "rating": "novote",
+        "publishedDate": "2024/10/21",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 285,
+        "object_id": "paper:arxiv.2410.15553",
+        "created_at": "2026-04-07T20:20:53+00:00",
+        "updated_at": "2026-04-07T20:21:14+00:00",
         "version": 1
       }
     }
