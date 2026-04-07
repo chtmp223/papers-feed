@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-06T09:47:33.871297+00:00",
+  "snapshot_time": "2026-04-07T15:07:02.034177+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -6981,6 +6981,33 @@
         "object_id": "paper:arxiv.2604.01657",
         "created_at": "2026-04-06T09:46:55+00:00",
         "updated_at": "2026-04-06T09:47:13+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.01652": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.01652",
+        "url": "https://arxiv.org/abs/2604.01652",
+        "title": "ThinknCheck: Grounded Claim Verification with Compact, Reasoning-Driven, and Interpretable Models",
+        "authors": "Delip Rao, Feijiang Han, Chris Callison-Burch",
+        "abstract": "We present ThinknCheck, a 1B-parameter verifier for grounded claim verification that first produces a short, structured rationale and then a binary verdict. We construct LLMAggreFact-Think, a 24.1k reasoning-augmented training set derived from LLMAggreFact, and fine-tune a 4-bit Gemma3 model to follow this format. On LLMAggreFact, ThinknCheck attains 78.1 balanced accuracy (BAcc), surpassing MiniCheck-7B (77.4) with 7x fewer parameters; removing the reasoning step reduces BAcc to 57.5. On SciFact, ThinknCheck reaches 64.7 BAcc, a +14.7 absolute gain over MiniCheck-7B. By contrast, zero-shot chain-of-thought on the base Gemma3-1B harms accuracy relative to direct answers, and preference optimization with a simple format+accuracy reward underperforms supervised reasoning. To probe the latter, we introduce GSMClaims and a domain-specialized variant, ThinknCheck-Science, which improves across benchmarks, including 61.0\\% accuracy on GSMClaims. Overall, explicit, supervised reasoning enables compact verifiers that are competitive while remaining resource-efficient and interpretable.",
+        "timestamp": "2026-04-07T15:05:56.263Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/02",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 282,
+        "object_id": "paper:arxiv.2604.01652",
+        "created_at": "2026-04-07T15:05:56+00:00",
+        "updated_at": "2026-04-07T15:06:23+00:00",
         "version": 1
       }
     }
