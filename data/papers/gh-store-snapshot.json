@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-08T14:26:08.897687+00:00",
+  "snapshot_time": "2026-04-08T14:36:20.748687+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7168,6 +7168,109 @@
         "object_id": "paper:url-misc.414A017D",
         "created_at": "2026-04-08T14:24:56+00:00",
         "updated_at": "2026-04-08T14:25:22+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2509.02910": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2509.02910",
+        "url": "https://arxiv.org/abs/2509.02910",
+        "title": "The Basic B*** Effect: The Use of LLM-based Agents Reduces the Distinctiveness and Diversity of People's Choices",
+        "authors": "Sandra C. Matz, C. Blaine Horton, Sofie Goethals",
+        "abstract": "Large language models (LLMs) increasingly act on people's behalf: they write emails, buy groceries, and book restaurants. While the outsourcing of human decision-making to AI can be both efficient and effective, it raises a fundamental question: how does delegating identity-defining choices to AI reshape who people become? We study the impact of agentic LLMs on two identity-relevant outcomes: interpersonal distinctiveness - how unique a person's choices are relative to others - and intrapersonal diversity - the breadth of a single person's choices over time. Using real choices drawn from social-media behavior of 1,000 U.S. users (110,000 choices in total), we compare a generic and personalized agent to a human baseline. Both agents shift people's choices toward more popular options, reducing the distinctiveness of their behaviors and preferences. While the use of personalized agents tempers this homogenization (compared to the generic AI), it also more strongly compresses the diversity of people's preference portfolios by narrowing what they explore across topics and psychological affinities. Understanding how AI agents might flatten human experience, and how using generic versus personalized agents involves distinctiveness-diversity trade-offs, is critical for designing systems that augment rather than constrain human agency, and for safeguarding diversity in thought, taste, and expression.",
+        "timestamp": "2026-04-08T14:35:27.911Z",
+        "rating": "novote",
+        "publishedDate": "2025/09/03",
+        "tags": [
+          "Human-Computer Interaction (cs.HC)",
+          "Artificial Intelligence (cs.AI)",
+          "Computers and Society (cs.CY)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 293,
+        "object_id": "paper:arxiv.2509.02910",
+        "created_at": "2026-04-08T14:35:28+00:00",
+        "updated_at": "2026-04-08T14:35:53+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.6EF9788B": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "6EF9788B",
+        "url": "https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(26)00003-3",
+        "title": "The homogenizing effect of large language models on human expression and thought",
+        "authors": "Zhivar Sourati, Alireza S. Ziabari, Morteza Dehghani",
+        "abstract": "<h2>Abstract</h2><p>Cognitive diversity, reflected in variations of language, perspective, and reasoning, is essential to creativity and collective intelligence. This diversity is rich and grounded in culture, history, and individual experience. Yet, as large language models (LLMs) become deeply embedded in people's lives, they risk standardizing language and reasoning. We synthesize evidence across linguistics, psychology, cognitive science, and computer science to show how LLMs reflect and reinforce dominant styles while marginalizing alternative voices and reasoning strategies. We examine how their design and widespread use contribute to this effect by mirroring patterns in their training data and amplifying convergence as all people increasingly rely on the same models across contexts. Unchecked, this homogenization risks flattening the cognitive landscapes that drive collective intelligence and adaptability.</p>",
+        "timestamp": "2026-04-08T14:35:15.884Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "10.1016/j.tics.2026.01.003",
+        "journalName": "Trends in Cognitive Sciences",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 292,
+        "object_id": "paper:url-misc.6EF9788B",
+        "created_at": "2026-04-08T14:35:16+00:00",
+        "updated_at": "2026-04-08T14:35:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2409.11360": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2409.11360",
+        "url": "https://arxiv.org/abs/2409.11360",
+        "title": "AI Suggestions Homogenize Writing Toward Western Styles and Diminish Cultural Nuances",
+        "authors": "Dhruv Agarwal, Mor Naaman, Aditya Vashistha",
+        "abstract": "Large language models (LLMs) are being increasingly integrated into everyday products and services, such as coding tools and writing assistants. As these embedded AI applications are deployed globally, there is a growing concern that the AI models underlying these applications prioritize Western values. This paper investigates what happens when a Western-centric AI model provides writing suggestions to users from a different cultural background. We conducted a cross-cultural controlled experiment with 118 participants from India and the United States who completed culturally grounded writing tasks with and without AI suggestions. Our analysis reveals that AI provided greater efficiency gains for Americans compared to Indians. Moreover, AI suggestions led Indian participants to adopt Western writing styles, altering not just what is written but also how it is written. These findings show that Western-centric AI models homogenize writing toward Western norms, diminishing nuances that differentiate cultural expression.",
+        "timestamp": "2026-04-08T14:34:53.198Z",
+        "rating": "novote",
+        "publishedDate": "2024/09/17",
+        "tags": [
+          "Human-Computer Interaction (cs.HC)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "10.1145/3706598.3713564",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 291,
+        "object_id": "paper:arxiv.2409.11360",
+        "created_at": "2026-04-08T14:34:53+00:00",
+        "updated_at": "2026-04-08T14:35:21+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.EE3C960": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "EE3C960",
+        "url": "https://dl.acm.org/doi/full/10.1145/3706598.3713564",
+        "title": "AI Suggestions Homogenize Writing Toward Western Styles and Diminish Cultural Nuances | Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-04-08T14:34:47.089Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 290,
+        "object_id": "paper:url-misc.EE3C960",
+        "created_at": "2026-04-08T14:34:47+00:00",
+        "updated_at": "2026-04-08T14:35:10+00:00",
         "version": 1
       }
     }
