@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-08T14:24:49.934453+00:00",
+  "snapshot_time": "2026-04-08T14:26:08.897687+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7144,6 +7144,30 @@
         "object_id": "paper:url-misc.7EB8EA6D",
         "created_at": "2026-04-08T14:23:48+00:00",
         "updated_at": "2026-04-08T14:24:13+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.414A017D": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "414A017D",
+        "url": "https://direct.mit.edu/tacl/article/doi/10.1162/TACL.a.47/134150",
+        "title": "Benchmarking Linguistic Diversity of Large Language Models",
+        "authors": "Guo, Yanzhu, Shang, Guokan, Clavel, Chlo\u00e9",
+        "abstract": "Abstract. The development and evaluation of Large Language Models (LLMs) has primarily focused on their task-solving capabilities, with recent models even surpassing human performance in some areas. However, this focus often neglects whether machine-generated language matches the human level of diversity, in terms of vocabulary choice, syntactic construction, and expression of meaning, raising questions about whether the fundamentals of language generation have been fully addressed. This paper emphasizes the importance of examining the preservation of human linguistic richness by language models, given the concerning surge in online content produced or aided by LLMs. We adapt a comprehensive framework for evaluating LLMs from various linguistic diversity perspectives including lexical, syntactic, and semantic dimensions. Using this framework, we benchmark several state-of-the-art LLMs across all diversity dimensions, and conduct an in-depth analysis for syntactic diversity. Finally, we analyze how the design, development, and deployment choices of LLMs impact the linguistic diversity of their outputs, focusing on the creative task of story generation.",
+        "timestamp": "2026-04-08T14:24:56.548Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "10.1162/TACL.a.47",
+        "journalName": "Transactions of the Association for Computational Linguistics",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 288,
+        "object_id": "paper:url-misc.414A017D",
+        "created_at": "2026-04-08T14:24:56+00:00",
+        "updated_at": "2026-04-08T14:25:22+00:00",
         "version": 1
       }
     }
