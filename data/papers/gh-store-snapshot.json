@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-08T15:04:22.531485+00:00",
+  "snapshot_time": "2026-04-08T18:18:58.132165+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7297,6 +7297,30 @@
         "object_id": "paper:arxiv.2510.22954",
         "created_at": "2026-04-08T14:32:08+00:00",
         "updated_at": "2026-04-08T15:03:48+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.ABBCDBE": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "ABBCDBE",
+        "url": "https://artificialanalysis.ai/",
+        "title": "AI Model & API Providers Analysis | Artificial Analysis",
+        "authors": "",
+        "abstract": "Comparison and analysis of AI models and API hosting providers. Independent benchmarks across key performance metrics including quality, price, output speed & latency.",
+        "timestamp": "2026-04-08T18:17:34.778Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 294,
+        "object_id": "paper:url.ABBCDBE",
+        "created_at": "2026-04-08T18:17:35+00:00",
+        "updated_at": "2026-04-08T18:18:12+00:00",
         "version": 1
       }
     }
