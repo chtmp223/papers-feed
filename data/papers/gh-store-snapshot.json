@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-08T18:18:58.132165+00:00",
+  "snapshot_time": "2026-04-09T15:36:35.313557+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7321,6 +7321,30 @@
         "object_id": "paper:url.ABBCDBE",
         "created_at": "2026-04-08T18:17:35+00:00",
         "updated_at": "2026-04-08T18:18:12+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.225E5B1A": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "225E5B1A",
+        "url": "https://ryandreyer.substack.com/p/beginners-bike-guide-for-703-and",
+        "title": "Beginner's Bike Guide For 70.3 & Ironman",
+        "authors": "Ryan Dreyer",
+        "abstract": "Part 1 of 3: entry considerations, new vs. used, road vs. TT, brands, sizes and more",
+        "timestamp": "2026-04-09T15:35:42.824Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 295,
+        "object_id": "paper:url-misc.225E5B1A",
+        "created_at": "2026-04-09T15:35:43+00:00",
+        "updated_at": "2026-04-09T15:36:05+00:00",
         "version": 1
       }
     }
