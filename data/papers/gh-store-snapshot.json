@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-09T15:36:35.313557+00:00",
+  "snapshot_time": "2026-04-10T18:07:06.785139+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7345,6 +7345,35 @@
         "object_id": "paper:url-misc.225E5B1A",
         "created_at": "2026-04-09T15:35:43+00:00",
         "updated_at": "2026-04-09T15:36:05+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.08423": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.08423",
+        "url": "https://arxiv.org/abs/2604.08423",
+        "title": "Synthetic Data for any Differentiable Target",
+        "authors": "Tristan Thrush, Sung Min Park, Herman Brunborg, Luke Bailey, Marcel Roed, Neil Band, Christopher Potts, Tatsunori Hashimoto",
+        "abstract": "What are the limits of controlling language models via synthetic training data? We develop a reinforcement learning (RL) primitive, the Dataset Policy Gradient (DPG), which can precisely optimize synthetic data generators to produce a dataset of targeted examples. When used for supervised fine-tuning (SFT) of a target model, these examples cause the target model to do well on a differentiable metric of our choice. Our approach achieves this by taking exact data attribution via higher-order gradients and using those scores as policy gradient rewards. We prove that this procedure closely approximates the true, intractable gradient for the synthetic data generator. To illustrate the potential of DPG, we show that, using only SFT on generated examples, we can cause the target model's LM head weights to (1) embed a QR code, (2) embed the pattern \ud835\udffc\ud835\udffd\\texttt{67}, and (3) have lower \u21132\\ell^2 norm. We additionally show that we can cause the generator to (4) rephrase inputs in a new language and (5) produce a specific UUID, even though neither of these objectives is conveyed in the generator's input prompts. These findings suggest that DPG is a powerful and flexible technique for shaping model properties using only synthetic training examples.",
+        "timestamp": "2026-04-10T18:06:15.607Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/09",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Machine Learning (cs.LG)",
+          "Machine Learning (stat.ML)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 296,
+        "object_id": "paper:arxiv.2604.08423",
+        "created_at": "2026-04-10T18:06:15+00:00",
+        "updated_at": "2026-04-10T18:06:39+00:00",
         "version": 1
       }
     }
