@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-10T18:07:06.785139+00:00",
+  "snapshot_time": "2026-04-14T14:35:02.409659+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7374,6 +7374,30 @@
         "object_id": "paper:arxiv.2604.08423",
         "created_at": "2026-04-10T18:06:15+00:00",
         "updated_at": "2026-04-10T18:06:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.60311893": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "60311893",
+        "url": "https://www.lesswrong.com/posts/DTDoyDTtC8R3bCiTx/from-personas-to-intentions-towards-a-science-of-motivations",
+        "title": "From personas to intentions: towards a science of motivations for AI models",
+        "authors": "David Africa, Jacob Pfau",
+        "abstract": "TLDR: \u2022  * Behavior-only descriptions are useful, but insufficient for aligning advanced models with high assurance.\n * Two models can look equally a\u2026",
+        "timestamp": "2026-04-14T14:34:02.974Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 297,
+        "object_id": "paper:url.60311893",
+        "created_at": "2026-04-14T14:34:03+00:00",
+        "updated_at": "2026-04-14T14:34:29+00:00",
         "version": 1
       }
     }
