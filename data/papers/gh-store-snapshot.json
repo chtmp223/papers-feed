@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-14T14:35:02.409659+00:00",
+  "snapshot_time": "2026-04-14T19:45:43.163386+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7398,6 +7398,35 @@
         "object_id": "paper:url.60311893",
         "created_at": "2026-04-14T14:34:03+00:00",
         "updated_at": "2026-04-14T14:34:29+00:00",
+        "version": 1
+      }
+    },
+    "paper:openreview.kHVzEjThKE": {
+      "data": {
+        "sourceId": "openreview",
+        "paperId": "kHVzEjThKE",
+        "url": "https://openreview.net/forum?id=kHVzEjThKE",
+        "title": "What Do Large Language Models Know About Opinions?",
+        "authors": "Erfan Jahanparast, Zhiqing Hong, Serina Chang",
+        "abstract": "What large language models (LLMs) know about human opinions has important implications for aligning LLMs with human values, simulating humans with LLMs, and understanding what LLMs learn during training.  While prior works have tested LLMs' knowledge of opinions via their next-token outputs, we present the first study to probe LLMs' internal knowledge of opinions, evaluating LLMs across 22 demographic groups on a wide range of topics.  First, we show that LLMs' internal knowledge of opinions far exceeds what is revealed by their outputs, with a 52-66\\% improvement in alignment with the human answer distribution; this improvement is competitive with fine-tuning but nearly 300$\\times$ less computationally expensive.  Second, we find that knowledge of opinions emerges rapidly in the middle layers of the LLM and identify the final unembeddings as the source of the discrepancy between internal knowledge and outputs.  Third, using sparse autoencoders, we trace the knowledge of opinions in the LLM's residual stream back to attention heads, and we identify specific attention head features that selectively encode different demographic groups. Through steerability experiments, we show that manipulating these features causally alters the LLM's outputs, aligning them more or less closely with different groups. These findings open new avenues for building value-aligned and computationally efficient LLMs, with applications in survey research, social simulation, and human-centered AI.  Our code is available at https://github.com/schang-lab/llm-opinions.",
+        "timestamp": "2026-04-14T19:44:38.942Z",
+        "rating": "novote",
+        "publishedDate": "26 Jan 2026",
+        "tags": [
+          "large language models",
+          "opinions",
+          "computational social science",
+          "interpretability"
+        ],
+        "doi": "",
+        "journalName": "ICLR 2026 Poster",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 299,
+        "object_id": "paper:openreview.kHVzEjThKE",
+        "created_at": "2026-04-14T19:44:39+00:00",
+        "updated_at": "2026-04-14T19:45:02+00:00",
         "version": 1
       }
     }
