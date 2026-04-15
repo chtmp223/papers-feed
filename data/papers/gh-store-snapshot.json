@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-15T16:00:33.029051+00:00",
+  "snapshot_time": "2026-04-15T16:55:27.790581+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7635,6 +7635,30 @@
         "object_id": "paper:arxiv.2602.01654",
         "created_at": "2026-04-15T15:59:42+00:00",
         "updated_at": "2026-04-15T16:00:03+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.9B5ACED": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "9B5ACED",
+        "url": "https://mot.isitopen.ai/model/903",
+        "title": "Amber | Model Openness Tool",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-04-15T16:11:50.676Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 308,
+        "object_id": "paper:url.9B5ACED",
+        "created_at": "2026-04-15T16:11:50+00:00",
+        "updated_at": "2026-04-15T16:55:02+00:00",
         "version": 1
       }
     }
