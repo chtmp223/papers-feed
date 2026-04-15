@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-15T15:59:50.522177+00:00",
+  "snapshot_time": "2026-04-15T16:00:33.029051+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7609,6 +7609,32 @@
         "object_id": "paper:url.53F5DC12",
         "created_at": "2026-04-15T15:59:05+00:00",
         "updated_at": "2026-04-15T15:59:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2602.01654": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2602.01654",
+        "url": "https://arxiv.org/abs/2602.01654",
+        "title": "Steering Vector Fields for Context-Aware Inference-Time Control in Large Language Models",
+        "authors": "Jiaqian Li, Yanshu Li, Kuan-Hao Huang",
+        "abstract": "Steering vectors (SVs) offer a lightweight way to control large language models (LLMs) at inference time by shifting hidden activations, providing a practical middle ground between prompting and fine-tuning. Yet SVs can be unreliable in practice. Some concepts are unsteerable, and even when steering helps on average it can backfire for a non-trivial fraction of inputs. Reliability also degrades in long-form generation and multi-attribute steering. We take a geometric view of these failures. A static SV applies the same update vector everywhere in representation space, implicitly assuming that the concept-improving direction is constant across contexts. When the locally effective direction varies with the current activation, a single global vector can become misaligned, which yields weak or reversed effects. Guided by this perspective, we propose Steering Vector Fields (SVF), which learns a differentiable concept scoring function whose local gradient defines the steering direction at each activation, making interventions explicitly context-dependent. This formulation supports coordinated multi-layer interventions in a shared, aligned concept space, and enables efficient long-form and multi-attribute control within a unified framework. Across multiple LLMs and steering tasks, SVF delivers stronger and more reliable control, improving the practicality of inference-time steering.",
+        "timestamp": "2026-04-15T15:59:42.539Z",
+        "rating": "novote",
+        "publishedDate": "2026/02/02",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 307,
+        "object_id": "paper:arxiv.2602.01654",
+        "created_at": "2026-04-15T15:59:42+00:00",
+        "updated_at": "2026-04-15T16:00:03+00:00",
         "version": 1
       }
     }
