@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-15T15:56:58.184970+00:00",
+  "snapshot_time": "2026-04-15T15:58:29.405531+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7559,6 +7559,32 @@
         "object_id": "paper:arxiv.2507.06203",
         "created_at": "2026-04-15T15:56:06+00:00",
         "updated_at": "2026-04-15T15:56:33+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2504.09378": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2504.09378",
+        "url": "https://arxiv.org/abs/2504.09378",
+        "title": "Can you map it to English? The Role of Cross-Lingual Alignment in Multilingual Performance of LLMs",
+        "authors": "Kartik Ravisankar, Hyojung Han, Sarah Wiegreffe, Marine Carpuat",
+        "abstract": "Large language models (LLMs) can answer prompts in many languages, despite being trained predominantly on English; yet, the mechanisms driving this generalization remain poorly understood. This work asks: How does an LLM's ability to align representations of non-English inputs to English impact its performance on natural language understanding (NLU) tasks? We study the role of representation alignment in instance-level task decisions, complementing prior analyses conducted both at the language level and task-independently. We introduce the Discriminative Alignment Index ($\\DALI$\\DALI) to quantify instance-level alignment across 24 languages other than English and three distinct NLU tasks. Results show that incorrect NLU predictions are strongly associated with lower representation alignment with English in the model's middle layers. Through activation patching, we show that incorrect predictions in languages other than English can be fixed by patching their parallel English activations in the middle layers, thereby demonstrating the causal role of representation (mis)alignment in cross-lingual correctness.",
+        "timestamp": "2026-04-15T15:57:26.068Z",
+        "rating": "novote",
+        "publishedDate": "2025/04/13",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 305,
+        "object_id": "paper:arxiv.2504.09378",
+        "created_at": "2026-04-15T15:57:26+00:00",
+        "updated_at": "2026-04-15T15:57:49+00:00",
         "version": 1
       }
     }
