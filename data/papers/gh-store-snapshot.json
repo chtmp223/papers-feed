@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-14T20:05:05.472887+00:00",
+  "snapshot_time": "2026-04-15T13:28:26.812873+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7480,6 +7480,33 @@
         "object_id": "paper:arxiv.2601.02535",
         "created_at": "2026-04-14T20:04:15+00:00",
         "updated_at": "2026-04-14T20:04:39+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.09443": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.09443",
+        "url": "https://arxiv.org/abs/2604.09443",
+        "title": "Many-Tier Instruction Hierarchy in LLM Agents",
+        "authors": "Jingyu Zhang, Tianjian Li, William Jurayj, Hongyuan Zhan, Benjamin Van Durme, Daniel Khashabi",
+        "abstract": "Large language model agents receive instructions from many sources-system messages, user prompts, tool outputs, other agents, and more-each carrying different levels of trust and authority. When these instructions conflict, agents must reliably follow the highest-privilege instruction to remain safe and effective. The dominant paradigm, instruction hierarchy (IH), assumes a fixed, small set of privilege levels (typically fewer than five) defined by rigid role labels (e.g., system > user). This is inadequate for real-world agentic settings, where conflicts can arise across far more sources and contexts. In this work, we propose Many-Tier Instruction Hierarchy (ManyIH), a paradigm for resolving instruction conflicts among instructions with arbitrarily many privilege levels. We introduce ManyIH-Bench, the first benchmark for ManyIH. ManyIH-Bench requires models to navigate up to 12 levels of conflicting instructions with varying privileges, comprising 853 agentic tasks (427 coding and 426 instruction-following). ManyIH-Bench composes constraints developed by LLMs and verified by humans to create realistic and difficult test cases spanning 46 real-world agents. Our experiments show that even the current frontier models perform poorly (~40% accuracy) when instruction conflict scales. This work underscores the urgent need for methods that explicitly target fine-grained, scalable instruction conflict resolution in agentic settings.",
+        "timestamp": "2026-04-15T13:27:38.789Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/10",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 302,
+        "object_id": "paper:arxiv.2604.09443",
+        "created_at": "2026-04-15T13:27:39+00:00",
+        "updated_at": "2026-04-15T13:27:59+00:00",
         "version": 1
       }
     }
