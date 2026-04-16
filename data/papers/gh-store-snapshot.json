@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-16T13:34:11.452731+00:00",
+  "snapshot_time": "2026-04-16T17:50:43.955899+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7683,6 +7683,32 @@
         "object_id": "paper:url.2A7C32AC",
         "created_at": "2026-04-16T13:33:19+00:00",
         "updated_at": "2026-04-16T13:33:44+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.09854": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.09854",
+        "url": "https://arxiv.org/abs/2604.09854",
+        "title": "Spoiler Alert: Narrative Forecasting as a Metric for Tension in LLM Storytelling",
+        "authors": "Peiqi Sui, Yutong Zhu, Tianyi Cheng, Peter West, Richard Jean So, Hoyt Long, Ari Holtzman",
+        "abstract": "LLMs have so far failed both to generate consistently compelling stories and to recognize this failure--on the leading creative-writing benchmark (EQ-Bench), LLM judges rank zero-shot AI stories above New Yorker short stories, a gold standard for literary fiction. We argue that existing rubrics overlook a key dimension of compelling human stories: narrative tension. We introduce the 100-Endings metric, which walks through a story sentence by sentence: at each position, a model predicts how the story will end 100 times given only the text so far, and we measure tension as how often predictions fail to match the ground truth. Beyond the mismatch rate, the sentence-level curve yields complementary statistics, such as inflection rate, a geometric measure of how frequently the curve reverses direction, tracking twists and revelations. Unlike rubric-based judges, 100-Endings correctly ranks New Yorker stories far above LLM outputs. Grounded in narratological principles, we design a story-generation pipeline using structural constraints, including analysis of story templates, idea formulation, and narrative scaffolding. Our pipeline significantly increases narrative tension as measured by the 100-Endings metric, while maintaining performance on the EQ-Bench leaderboard.",
+        "timestamp": "2026-04-16T17:49:56.019Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/10",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 310,
+        "object_id": "paper:arxiv.2604.09854",
+        "created_at": "2026-04-16T17:49:56+00:00",
+        "updated_at": "2026-04-16T17:50:15+00:00",
         "version": 1
       }
     }
