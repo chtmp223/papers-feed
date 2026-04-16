@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-15T16:55:27.790581+00:00",
+  "snapshot_time": "2026-04-16T13:34:11.452731+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7659,6 +7659,30 @@
         "object_id": "paper:url.9B5ACED",
         "created_at": "2026-04-15T16:11:50+00:00",
         "updated_at": "2026-04-15T16:55:02+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2A7C32AC": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2A7C32AC",
+        "url": "https://deepmind.google.com/frontiers/fabula/about",
+        "title": "Fabula | About",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-04-16T13:33:18.705Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 309,
+        "object_id": "paper:url.2A7C32AC",
+        "created_at": "2026-04-16T13:33:19+00:00",
+        "updated_at": "2026-04-16T13:33:44+00:00",
         "version": 1
       }
     }
