@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-16T17:50:43.955899+00:00",
+  "snapshot_time": "2026-04-17T01:02:02.956044+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7709,6 +7709,30 @@
         "object_id": "paper:arxiv.2604.09854",
         "created_at": "2026-04-16T17:49:56+00:00",
         "updated_at": "2026-04-16T17:50:15+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1A10C167": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1A10C167",
+        "url": "https://www.thoughtfullab.com/",
+        "title": "Introducing PostTrainBench",
+        "authors": "",
+        "abstract": "How well can AI agents post-train language models? We built PostTrainBench to find out.",
+        "timestamp": "2026-04-17T01:01:14.032Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 311,
+        "object_id": "paper:url.1A10C167",
+        "created_at": "2026-04-17T01:01:14+00:00",
+        "updated_at": "2026-04-17T01:01:37+00:00",
         "version": 1
       }
     }
