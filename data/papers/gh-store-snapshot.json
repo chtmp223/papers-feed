@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-17T01:02:02.956044+00:00",
+  "snapshot_time": "2026-04-17T14:21:18.997460+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7733,6 +7733,30 @@
         "object_id": "paper:url.1A10C167",
         "created_at": "2026-04-17T01:01:14+00:00",
         "updated_at": "2026-04-17T01:01:37+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.40CA881A": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "40CA881A",
+        "url": "https://nightingal3.github.io/blog/2026/04/16/compute-grants/",
+        "title": "How to apply for and get compute grants (for students) \u00b7 Idle Words",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-04-17T14:20:33.188Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 312,
+        "object_id": "paper:url.40CA881A",
+        "created_at": "2026-04-17T14:20:33+00:00",
+        "updated_at": "2026-04-17T14:20:52+00:00",
         "version": 1
       }
     }
