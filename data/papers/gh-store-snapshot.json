@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-19T19:52:57.480414+00:00",
+  "snapshot_time": "2026-04-21T12:40:21.989900+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7783,6 +7783,35 @@
         "object_id": "paper:arxiv.2603.28054",
         "created_at": "2026-04-19T19:52:14+00:00",
         "updated_at": "2026-04-19T19:52:34+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2510.17516": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2510.17516",
+        "url": "https://arxiv.org/abs/2510.17516",
+        "title": "SimBench: Benchmarking the Ability of Large Language Models to Simulate Human Behaviors",
+        "authors": "Tiancheng Hu, Joachim Baumann, Lorenzo Lupo, Nigel Collier, Dirk Hovy, Paul R\u00f6ttger",
+        "abstract": "Large language model (LLM) simulations of human behavior have the potential to revolutionize the social and behavioral sciences, if and only if they faithfully reflect real human behaviors. Current evaluations of simulation fidelity are fragmented, based on bespoke tasks and metrics, creating a patchwork of incomparable results. To address this, we introduce SimBench, the first large-scale, standardized benchmark for a robust, reproducible science of LLM simulation. By unifying 20 diverse datasets covering tasks from moral decision-making to economic choice across a large global participant pool, SimBench provides the necessary foundation to ask fundamental questions about when, how, and why LLM simulations succeed or fail. We show that the best LLMs today achieve meaningful but modest simulation fidelity (score: 40.80/100), with performance scaling log-linearly with model size but not with increased inference-time compute. We discover an alignment-simulation tradeoff: instruction tuning improves performance on low-entropy (consensus) questions but degrades it on high-entropy (diverse) ones. Models particularly struggle when simulating specific demographic groups. Finally, we demonstrate that simulation ability correlates most strongly with knowledge-intensive reasoning (MMLU-Pro, r = 0.939). By making progress measurable, we aim to accelerate the development of more faithful LLM simulators.",
+        "timestamp": "2026-04-21T12:39:32.932Z",
+        "rating": "novote",
+        "publishedDate": "2025/10/20",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Computers and Society (cs.CY)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 314,
+        "object_id": "paper:arxiv.2510.17516",
+        "created_at": "2026-04-21T12:39:33+00:00",
+        "updated_at": "2026-04-21T12:39:56+00:00",
         "version": 1
       }
     }
