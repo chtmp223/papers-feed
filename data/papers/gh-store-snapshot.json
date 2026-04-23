@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-21T16:59:14.518725+00:00",
+  "snapshot_time": "2026-04-23T20:25:42.537161+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7908,6 +7908,30 @@
         "object_id": "paper:url.5AA588C7",
         "created_at": "2026-04-21T16:58:23+00:00",
         "updated_at": "2026-04-21T16:58:48+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.13A17AAD": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "13A17AAD",
+        "url": "https://huggingface.co/datasets/janepan9917/when-benchmarks-talk/blob/main/when_benchmarks_talk.tar.gz",
+        "title": "when_benchmarks_talk.tar.gz \u00b7 janepan9917/when-benchmarks-talk at main",
+        "authors": "",
+        "abstract": "We\u2019re on a journey to advance and democratize artificial intelligence through open source and open science.",
+        "timestamp": "2026-04-23T20:24:58.411Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 319,
+        "object_id": "paper:url.13A17AAD",
+        "created_at": "2026-04-23T20:24:58+00:00",
+        "updated_at": "2026-04-23T20:25:18+00:00",
         "version": 1
       }
     }
