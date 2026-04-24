@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-23T20:25:42.537161+00:00",
+  "snapshot_time": "2026-04-24T13:04:45.014114+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7932,6 +7932,33 @@
         "object_id": "paper:url.13A17AAD",
         "created_at": "2026-04-23T20:24:58+00:00",
         "updated_at": "2026-04-23T20:25:18+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.17283": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.17283",
+        "url": "https://arxiv.org/abs/2604.17283",
+        "title": "HorizonBench: Long-Horizon Personalization with Evolving Preferences",
+        "authors": "Shuyue Stella Li, Bhargavi Paranjape, Kerem Oktar, Zhongyao Ma, Gelin Zhou, Lin Guan, Na Zhang, Sem Park, Lin Chen, Diyi Yang, Yulia Tsvetkov, Asli Celikyilmaz",
+        "abstract": "User preferences evolve across months of interaction, and tracking them requires inferring when a stated preference has been changed by a subsequent life event. We define this problem as long-horizon personalization and observe that progress on it is limited by data availability and measurement, with no existing resource providing both naturalistic long-horizon interactions and the ground-truth provenance needed to diagnose why models fail. We introduce a data generator that produces conversations from a structured mental state graph, yielding ground-truth provenance for every preference change across 6-month timelines, and from it construct HorizonBench, a benchmark of 4,245 items from 360 simulated users with 6-month conversation histories averaging ~4,300 turns and ~163K tokens. HorizonBench provides a testbed for long-context modeling, memory-augmented architectures, theory-of-mind reasoning, and user modeling. Across 25 frontier models, the best model reaches 52.8% and most score at or below the 20% chance baseline. When these models err on evolved preferences, over a third of the time they select the user's originally stated value without tracking the updated user state. This belief-update failure persists across context lengths and expression explicitness levels, identifying state-tracking capability as the primary bottleneck for long-horizon personalization.",
+        "timestamp": "2026-04-24T13:03:58.234Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/19",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 320,
+        "object_id": "paper:arxiv.2604.17283",
+        "created_at": "2026-04-24T13:03:58+00:00",
+        "updated_at": "2026-04-24T13:04:18+00:00",
         "version": 1
       }
     }
