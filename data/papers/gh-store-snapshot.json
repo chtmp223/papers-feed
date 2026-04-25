@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-25T17:45:49.803156+00:00",
+  "snapshot_time": "2026-04-25T17:48:56.573718+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8011,6 +8011,40 @@
         "object_id": "paper:arxiv.2505.02820",
         "created_at": "2026-04-25T17:45:07+00:00",
         "updated_at": "2026-04-25T17:45:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:openreview.ymJuBifPUy": {
+      "data": {
+        "sourceId": "openreview",
+        "paperId": "ymJuBifPUy",
+        "url": "https://openreview.net/forum?id=ymJuBifPUy",
+        "title": "AutoMetrics: Approximate Human Judgments with Automatically Generated Evaluators",
+        "authors": "Michael J Ryan, Yanzhe Zhang, Amol Salunkhe, Yi Chu, Di Xu, Diyi Yang",
+        "abstract": "Evaluating user-facing AI applications remains a central challenge, especially in open-ended domains such as travel planning, clinical note generation, or dialogue. The gold standard is user feedback (e.g., thumbs up/down) or behavioral signals (e.g., retention), but these are often scarce in prototypes and research projects, or too-slow to use for system optimization. We present **AutoMetrics**, a framework for synthesizing evaluation metrics under low-data constraints. AutoMetrics combines retrieval from **MetricBank**, a collection of 48 metrics we curate, with automatically generated LLM-as-a-Judge criteria informed by lightweight human feedback. These metrics are composed via regression to maximize correlation with human signal.  AutoMetrics takes you from expensive measures to interpretable automatic metrics. Across 5 diverse tasks, AutoMetrics improves Kendall correlation with human ratings by up to 33.4% over LLM-as-a-Judge while requiring fewer than 100 feedback points. We show that AutoMetrics can be used as a proxy reward to equal effect as a verifiable reward. We release the full AutoMetrics toolkit and MetricBank to accelerate adaptive evaluation of LLM applications.",
+        "timestamp": "2026-04-25T17:48:15.845Z",
+        "rating": "novote",
+        "publishedDate": "26 Jan 2026",
+        "tags": [
+          "evaluation",
+          "LLM-as-a-judge",
+          "metrics",
+          "human feedback",
+          "open-ended tasks",
+          "user-centered evaluation",
+          "data-efficient evaluation",
+          "automatic metric generation",
+          "benchmarking"
+        ],
+        "doi": "",
+        "journalName": "ICLR 2026 Poster",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 323,
+        "object_id": "paper:openreview.ymJuBifPUy",
+        "created_at": "2026-04-25T17:48:16+00:00",
+        "updated_at": "2026-04-25T17:48:35+00:00",
         "version": 1
       }
     }
