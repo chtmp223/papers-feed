@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-24T17:32:59.996230+00:00",
+  "snapshot_time": "2026-04-25T17:45:49.803156+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -7983,6 +7983,34 @@
         "object_id": "paper:acl-anthology.2024.emnlp-main.1124",
         "created_at": "2026-04-24T17:32:15+00:00",
         "updated_at": "2026-04-24T17:32:35+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2505.02820": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2505.02820",
+        "url": "https://arxiv.org/abs/2505.02820",
+        "title": "AutoLibra: Agent Metric Induction from Open-Ended Human Feedback",
+        "authors": "Hao Zhu, Phil Cuvin, Xinkai Yu, Charlotte Ka Yee Yan, Jason Zhang, Diyi Yang",
+        "abstract": "Agents are predominantly evaluated and optimized via task success metrics, which are coarse, rely on manual design from experts, and fail to reward intermediate emergent behaviors. We propose **AutoLibra**, a framework for agent evaluation, that transforms open-ended human feedback *e.g.* \"If you find that the button is disabled, don't click it again\", or \"This agent has too much autonomy to decide what to do on its own\" into metrics for evaluating fine-grained behaviors in agent trajectories. AutoLibra accomplishes this by grounding feedback to an agent's behavior, clustering similar positive and negative behaviors, and creating concrete metrics with clear definitions and concrete examples, which can be used for prompting LLM-as-a-Judge as evaluators. We further propose two meta metrics to evaluate the alignment of a set of (induced) metrics with open feedback: \"coverage\" and \"redundancy\". Through optimizing these meta-metrics, we experimentally demonstrate AutoLibra's ability to induce more concrete agent evaluation metrics than the ones proposed in previous agent evaluation benchmarks and discover new metrics to analyze agents. We also present two applications of AutoLibra in agent improvement: First, we show that AutoLibra serve human prompt engineers for diagonalize agent failures and improve prompts iterative. Moreover, we find that AutoLibra can induce metrics for automatic optimization for agents, which makes agents improve through self-regulation. Our results suggest that AutoLibra is a powerful task-agnostic tool for evaluating and improving language agents.",
+        "timestamp": "2026-04-25T17:45:07.263Z",
+        "rating": "novote",
+        "publishedDate": "2025/05/05",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 322,
+        "object_id": "paper:arxiv.2505.02820",
+        "created_at": "2026-04-25T17:45:07+00:00",
+        "updated_at": "2026-04-25T17:45:25+00:00",
         "version": 1
       }
     }
