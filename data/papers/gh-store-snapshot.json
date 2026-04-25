@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-25T17:49:41.094119+00:00",
+  "snapshot_time": "2026-04-25T17:56:51.734825+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8069,6 +8069,32 @@
         "object_id": "paper:url.72761F30",
         "created_at": "2026-04-25T17:49:04+00:00",
         "updated_at": "2026-04-25T17:49:20+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.07629": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.07629",
+        "url": "https://arxiv.org/abs/2604.07629",
+        "title": "Behavior Latticing: Inferring User Motivations from Unstructured Interactions",
+        "authors": "Dora Zhao, Michelle S. Lam, Diyi Yang, Michael S. Bernstein",
+        "abstract": "A long-standing vision of computing is the personal AI system: one that understands us well enough to address our underlying needs. Today's AI focuses on what users do, ignoring why they might be doing such things in the first place. As a result, AI systems default to optimizing or repeating existing behaviors (e.g., user has ChatGPT complete their homework) even when they run counter to users' needs (e.g., gaining subject expertise). Instead we require systems that can make connections across observations, synthesizing them into insights about the motivations underlying these behaviors (e.g., user's ongoing commitments make it difficult to prioritize learning despite expressed desire to do so). We introduce an architecture for building user understanding through behavior latticing, connecting seemingly disparate behaviors, synthesizing them into insights, and repeating this process over long spans of interaction data. Doing so affords new capabilities, including being able to infer users' needs rather than just their tasks and connecting subtle patterns to produce conclusions that users themselves may not have previously realized. In an evaluation, we validate that behavior latticing produces accurate insights about the user with significantly greater interpretive depth compared to state-of-the-art approaches. To demonstrate the new interactive capabilities that behavior lattices afford, we instantiate a personal AI agent steered by user insights, finding that our agent is significantly better at addressing users' needs while still providing immediate utility.",
+        "timestamp": "2026-04-25T17:56:09.353Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/08",
+        "tags": [
+          "Human-Computer Interaction (cs.HC)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 325,
+        "object_id": "paper:arxiv.2604.07629",
+        "created_at": "2026-04-25T17:56:09+00:00",
+        "updated_at": "2026-04-25T17:56:26+00:00",
         "version": 1
       }
     }
