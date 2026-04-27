@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-27T15:33:57.384032+00:00",
+  "snapshot_time": "2026-04-27T15:41:27.715222+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8265,6 +8265,35 @@
         "object_id": "paper:url.297CC175",
         "created_at": "2026-04-27T15:33:05+00:00",
         "updated_at": "2026-04-27T15:33:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.87391E3": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "87391E3",
+        "url": "https://www.esquire.com/entertainment/books/a500/incarnations-burned-children-david-foster-wallace-0900/",
+        "title": "Incarnations of Burned Children",
+        "authors": "",
+        "abstract": "When daddy was hanging a door. Exceedingly short fiction from the author of Infinite Jest.",
+        "timestamp": "2026-04-27T15:40:37.807Z",
+        "rating": "novote",
+        "publishedDate": "2009-04-21T00:10:00Z",
+        "tags": [
+          "fiction",
+          "short story",
+          "david foster wallace",
+          "incarnations of burned children"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 332,
+        "object_id": "paper:url.87391E3",
+        "created_at": "2026-04-27T15:40:38+00:00",
+        "updated_at": "2026-04-27T15:41:01+00:00",
         "version": 1
       }
     }
