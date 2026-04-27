@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-27T15:49:42.080209+00:00",
+  "snapshot_time": "2026-04-27T15:51:05.054691+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8342,6 +8342,32 @@
         "object_id": "paper:arxiv.2604.22294",
         "created_at": "2026-04-27T15:48:48+00:00",
         "updated_at": "2026-04-27T15:49:11+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.22503": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.22503",
+        "url": "https://arxiv.org/abs/2604.22503",
+        "title": "Measuring and Mitigating Persona Distortions from AI Writing Assistance",
+        "authors": "Paul R\u00f6ttger, Kobi Hackenburg, Hannah Rose Kirk, Christopher Summerfield",
+        "abstract": "Hundreds of millions of people use artificial intelligence (AI) for writing assistance. Here, we evaluated how AI writing assistance distorts writer personas - their perceived beliefs, personality, and identity. In three large-scale experiments, writers (N=2,939) wrote political opinion paragraphs with and without AI assistance. Separate groups of readers (N=11,091) blindly evaluated these paragraphs across 29 socially salient dimensions of reader perception, spanning political opinion, writing quality, writer personality, emotions, and demographics. AI writing assistance produced persona distortions across all dimensions: with AI, writers seemed more opinionated, competent, and positive, and their perceived demographic profile shifted towards more privileged groups. Writers objected to many of the observed distortions, yet continued to prefer AI-assisted text even when made aware of them. We successfully mitigated objectionable persona distortions at the model level by training reward models on our experimental data (10,008 paragraphs, 2,903,596 ratings) to steer AI outputs towards faithful representation of writer stance. However, this came at a cost to user acceptance, suggesting an entanglement between desirable and undesirable properties of AI writing assistance that may be difficult to resolve. Together, our findings demonstrate that persona distortions from AI writing assistance are pervasive and persistent even under realistic conditions of human oversight, which carries implications for public discourse, trust, and democratic deliberation that scale with AI adoption.",
+        "timestamp": "2026-04-27T15:50:10.817Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/24",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 335,
+        "object_id": "paper:arxiv.2604.22503",
+        "created_at": "2026-04-27T15:50:11+00:00",
+        "updated_at": "2026-04-27T15:50:36+00:00",
         "version": 1
       }
     }
