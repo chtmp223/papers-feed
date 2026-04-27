@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-27T15:53:29.218034+00:00",
+  "snapshot_time": "2026-04-27T19:57:09.119198+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8393,6 +8393,35 @@
         "object_id": "paper:url.1DD2F5E5",
         "created_at": "2026-04-27T15:52:37+00:00",
         "updated_at": "2026-04-27T15:53:02+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.16529": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.16529",
+        "url": "https://arxiv.org/abs/2604.16529",
+        "title": "Scaling Test-Time Compute for Agentic Coding",
+        "authors": "Joongwon Kim, Wannan Yang, Kelvin Niu, Hongming Zhang, Yun Zhu, Eryk Helenowski, Ruan Silva, Zhengxing Chen, Srinivasan Iyer, Manzil Zaheer, Daniel Fried, Hannaneh Hajishirzi, Sanjeev Arora, Gabriel Synnaeve, Ruslan Salakhutdinov, Anirudh Goyal",
+        "abstract": "Test-time scaling has become a powerful way to improve large language models. However, existing methods are best suited to short, bounded outputs that can be directly compared, ranked or refined. Long-horizon coding agents violate this premise: each attempt produces an extended trajectory of actions, observations, errors, and partial progress taken by the agent. In this setting, the main challenge is no longer generating more attempts, but representing prior experience in a form that can be effectively selected from and reused. We propose a test-time scaling framework for agentic coding based on compact representations of rollout trajectories. Our framework converts each rollout into a structured summary that preserves its salient hypotheses, progress, and failure modes while discarding low-signal trace details. This representation enables two complementary forms of inference-time scaling. For parallel scaling, we introduce Recursive Tournament Voting (RTV), which recursively narrows a population of rollout summaries through small-group comparisons. For sequential scaling, we adapt Parallel-Distill-Refine (PDR) to the agentic setting by conditioning new rollouts on summaries distilled from prior attempts. Our method consistently improves the performance of frontier coding agents across SWE-Bench Verified and Terminal-Bench v2.0. For example, by using our method Claude-4.5-Opus improves from 70.9% to 77.6% on SWE-Bench Verified (mini-SWE-agent) and 46.9% to 59.1% on Terminal-Bench v2.0 (Terminus 1). Our results suggest that test-time scaling for long-horizon agents is fundamentally a problem of representation, selection, and reuse.",
+        "timestamp": "2026-04-27T18:52:20.920Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/16",
+        "tags": [
+          "Software Engineering (cs.SE)",
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 337,
+        "object_id": "paper:arxiv.2604.16529",
+        "created_at": "2026-04-27T18:52:21+00:00",
+        "updated_at": "2026-04-27T18:52:44+00:00",
         "version": 1
       }
     }
