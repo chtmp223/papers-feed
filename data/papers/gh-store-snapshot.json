@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-27T15:51:05.054691+00:00",
+  "snapshot_time": "2026-04-27T15:53:29.218034+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8141,13 +8141,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-04-27"
       },
       "meta": {
         "issue_number": 327,
         "object_id": "paper:url.5309F8D",
         "created_at": "2026-04-27T14:40:15+00:00",
-        "updated_at": "2026-04-27T14:40:40+00:00",
+        "updated_at": "2026-04-27T15:52:24+00:00",
         "version": 1
       }
     },
@@ -8368,6 +8369,30 @@
         "object_id": "paper:arxiv.2604.22503",
         "created_at": "2026-04-27T15:50:11+00:00",
         "updated_at": "2026-04-27T15:50:36+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1DD2F5E5": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1DD2F5E5",
+        "url": "https://lareviewofbooks.org/article/infinite-jest-david-foster-wallace-4chan-incels-feminism/",
+        "title": "\u2018Infinite Jest,\u2019 the Internet, and the Politics of Reading | Los Angeles Review of Books",
+        "authors": "",
+        "abstract": "On the internet reception and collective reading of David Foster Wallace\u2019s magnum opus, on the occasion of its 30th anniversary reissue. ",
+        "timestamp": "2026-04-27T15:52:37.475Z",
+        "rating": "novote",
+        "publishedDate": "2026-04-22T12:30:00.000Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 336,
+        "object_id": "paper:url.1DD2F5E5",
+        "created_at": "2026-04-27T15:52:37+00:00",
+        "updated_at": "2026-04-27T15:53:02+00:00",
         "version": 1
       }
     }
