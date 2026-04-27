@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-27T14:52:37.139940+00:00",
+  "snapshot_time": "2026-04-27T14:55:05.491895+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8172,6 +8172,30 @@
         "object_id": "paper:url.43BC964B",
         "created_at": "2026-04-27T14:51:02+00:00",
         "updated_at": "2026-04-27T14:51:27+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.E731E2C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "E731E2C",
+        "url": "https://www.newsweek.com/2015/01/16/turbulent-genius-david-foster-wallace-297688.html",
+        "title": "The Turbulent Genius of David Foster Wallace",
+        "authors": "",
+        "abstract": "A new book from David Foster Wallace, six years after his death, revives the debate about his greatness...and why so many otherwise smart readers can't see it.",
+        "timestamp": "2026-04-27T14:54:17.578Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 329,
+        "object_id": "paper:url.E731E2C",
+        "created_at": "2026-04-27T14:54:17+00:00",
+        "updated_at": "2026-04-27T14:54:38+00:00",
         "version": 1
       }
     }
