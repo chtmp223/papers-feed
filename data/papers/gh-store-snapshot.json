@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-27T14:55:05.491895+00:00",
+  "snapshot_time": "2026-04-27T15:00:09.597286+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8196,6 +8196,35 @@
         "object_id": "paper:url.E731E2C",
         "created_at": "2026-04-27T14:54:17+00:00",
         "updated_at": "2026-04-27T14:54:38+00:00",
+        "version": 1
+      }
+    },
+    "paper:newspapers.7FBDB6A3": {
+      "data": {
+        "sourceId": "newspapers",
+        "paperId": "7FBDB6A3",
+        "url": "https://www.nytimes.com/2024/12/07/opinion/men-fiction-novels.html",
+        "title": "Opinion | The Disappearance of Literary Men Should Worry Everyone (Published 2024)",
+        "authors": "https://www.nytimes.com/by/david-j-morris",
+        "abstract": "What happens if half the population is no longer involved in reading and writing?",
+        "timestamp": "2026-04-27T14:59:23.377Z",
+        "rating": "novote",
+        "publishedDate": "20241207",
+        "tags": [
+          "Books",
+          "Writer",
+          "Publishing",
+          "Men and Boys"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 330,
+        "object_id": "paper:newspapers.7FBDB6A3",
+        "created_at": "2026-04-27T14:59:23+00:00",
+        "updated_at": "2026-04-27T14:59:45+00:00",
         "version": 1
       }
     }
