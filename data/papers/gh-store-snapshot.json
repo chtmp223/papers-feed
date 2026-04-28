@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-28T12:48:06.077298+00:00",
+  "snapshot_time": "2026-04-28T15:04:52.531379+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8473,6 +8473,34 @@
         "object_id": "paper:arxiv.2604.21253",
         "created_at": "2026-04-28T12:47:14+00:00",
         "updated_at": "2026-04-28T12:47:37+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.23747": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.23747",
+        "url": "https://arxiv.org/abs/2604.23747",
+        "title": "SFT-then-RL Outperforms Mixed-Policy Methods for LLM Reasoning",
+        "authors": "Alexis Limozin, Eduard Durech, Torsten Hoefler, Imanol Schlag, Valentina Pyatkin",
+        "abstract": "Recent mixed-policy optimization methods for LLM reasoning that interleave or blend supervised and reinforcement learning signals report improvements over the standard SFT-then-RL pipeline. We show that numerous recently published research papers rely on a faulty baseline caused by two distinct bugs: a CPU-offloaded optimizer bug in DeepSpeed that silently drops intermediate micro-batches during gradient accumulation (affecting multiple downstream frameworks including TRL, OpenRLHF and Llama-Factory), and a loss aggregation bug in OpenRLHF that incorrectly weights per-mini-batch losses. Together they suppress SFT performance, with the optimizer bug accounting for most of the gap and the loss aggregation bug contributing a smaller additional effect. Once corrected, the standard SFT-then-RL pipeline surpasses every published mixed-policy method we evaluate by +3.8 points on math benchmarks with Qwen2.5-Math-7B and by +22.2 points with Llama-3.1-8B. Even a truncated variant with just 50 RL steps outperforms mixed-policy methods on math benchmarks while using fewer FLOPs.",
+        "timestamp": "2026-04-28T15:03:52.502Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/26",
+        "tags": [
+          "Machine Learning (cs.LG)",
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 341,
+        "object_id": "paper:arxiv.2604.23747",
+        "created_at": "2026-04-28T15:03:52+00:00",
+        "updated_at": "2026-04-28T15:04:20+00:00",
         "version": 1
       }
     }
