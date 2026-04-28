@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-28T15:44:47.554461+00:00",
+  "snapshot_time": "2026-04-28T19:58:37.016458+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8525,6 +8525,30 @@
         "object_id": "paper:url.5A28E926",
         "created_at": "2026-04-28T15:43:55+00:00",
         "updated_at": "2026-04-28T15:44:15+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.558922A": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "558922A",
+        "url": "https://zorazrw.github.io/files/position-haicode.pdf#page=9.01",
+        "title": "558922A",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-04-28T19:57:50.662Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 343,
+        "object_id": "paper:url.558922A",
+        "created_at": "2026-04-28T19:57:50+00:00",
+        "updated_at": "2026-04-28T19:58:13+00:00",
         "version": 1
       }
     }
