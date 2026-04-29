@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-28T19:59:28.243901+00:00",
+  "snapshot_time": "2026-04-29T01:11:06.621864+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8573,6 +8573,32 @@
         "object_id": "paper:url.6976A48B",
         "created_at": "2026-04-28T19:58:26+00:00",
         "updated_at": "2026-04-28T19:58:51+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.05273": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.05273",
+        "url": "https://arxiv.org/abs/2604.05273",
+        "title": "Beneath the Surface: Investigating LLMs' Capabilities for Communicating with Subtext",
+        "authors": "Kabir Ahuja, Yuxuan Li, Andrew Kyle Lampinen",
+        "abstract": "Human communication is fundamentally creative, and often makes use of subtext -- implied meaning that goes beyond the literal content of the text. Here, we systematically study whether language models can use subtext in communicative settings, and introduce four new evaluation suites to assess these capabilities. Our evaluation settings range from writing & interpreting allegories to playing multi-agent and multi-modal games inspired by the rules of board games like Dixit. We find that frontier models generally exhibit a strong bias towards overly literal, explicit communication, and thereby fail to account for nuanced constraints -- even the best performing models generate literal clues 60% of times in one of our environments -- Visual Allusions. However, we find that some models can sometimes make use of common ground with another party to help them communicate with subtext, achieving 30%-50% reduction in overly literal clues; but they struggle at inferring presence of a common ground when not explicitly stated. For allegory understanding, we find paratextual and persona conditions to significantly shift the interpretation of subtext. Overall, our work provides quantifiable measures for an inherently complex and subjective phenomenon like subtext and reveals many weaknesses and idiosyncrasies of current LLMs. We hope this research to inspire future work towards socially grounded creative communication and reasoning.",
+        "timestamp": "2026-04-29T01:10:22.888Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/07",
+        "tags": [
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 345,
+        "object_id": "paper:arxiv.2604.05273",
+        "created_at": "2026-04-29T01:10:23+00:00",
+        "updated_at": "2026-04-29T01:10:43+00:00",
         "version": 1
       }
     }
