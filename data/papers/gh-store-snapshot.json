@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-29T17:50:00.256129+00:00",
+  "snapshot_time": "2026-04-29T19:52:23.231243+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8671,6 +8671,36 @@
         "object_id": "paper:url.59640AFB",
         "created_at": "2026-04-29T17:49:03+00:00",
         "updated_at": "2026-04-29T17:49:28+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.22750": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.22750",
+        "url": "https://arxiv.org/abs/2604.22750",
+        "title": "How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks",
+        "authors": "Longju Bai, Zhemin Huang, Xingyao Wang, Jiao Sun, Rada Mihalcea, Erik Brynjolfsson, Alex Pentland, Jiaxin Pei",
+        "abstract": "The wide adoption of AI agents in complex human workflows is driving rapid growth in LLM token consumption. When agents are deployed on tasks that require a significant amount of tokens, three questions naturally arise: (1) Where do AI agents spend the tokens? (2) Which models are more token-efficient? and (3) Can agents predict their token usage before task execution? In this paper, we present the first systematic study of token consumption patterns in agentic coding tasks. We analyze trajectories from eight frontier LLMs on SWE-bench Verified and evaluate models' ability to predict their own token costs before task execution. We find that: (1) agentic tasks are uniquely expensive, consuming 1000x more tokens than code reasoning and code chat, with input tokens rather than output tokens driving the overall cost; (2) token usage is highly variable and inherently stochastic: runs on the same task can differ by up to 30x in total tokens, and higher token usage does not translate into higher accuracy; instead, accuracy often peaks at intermediate cost and saturates at higher costs; (3) models vary substantially in token efficiency: on the same tasks, Kimi-K2 and Claude-Sonnet-4.5, on average, consume over 1.5 million more tokens than GPT-5; (4) task difficulty rated by human experts only weakly aligns with actual token costs, revealing a fundamental gap between human-perceived complexity and the computational effort agents actually expend; and (5) frontier models fail to accurately predict their own token usage (with weak-to-moderate correlations, up to 0.39) and systematically underestimate real token costs. Our study offers new insights into the economics of AI agents and can inspire future research in this direction.",
+        "timestamp": "2026-04-29T19:51:32.973Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/24",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Artificial Intelligence (cs.AI)",
+          "Computers and Society (cs.CY)",
+          "Human-Computer Interaction (cs.HC)",
+          "Software Engineering (cs.SE)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 349,
+        "object_id": "paper:arxiv.2604.22750",
+        "created_at": "2026-04-29T19:51:33+00:00",
+        "updated_at": "2026-04-29T19:51:56+00:00",
         "version": 1
       }
     }
