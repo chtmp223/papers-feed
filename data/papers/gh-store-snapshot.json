@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-04-29T19:52:23.231243+00:00",
+  "snapshot_time": "2026-05-04T13:48:16.840872+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8701,6 +8701,30 @@
         "object_id": "paper:arxiv.2604.22750",
         "created_at": "2026-04-29T19:51:33+00:00",
         "updated_at": "2026-04-29T19:51:56+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.43858CE5": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "43858CE5",
+        "url": "https://www.nybooks.com/articles/2016/05/26/california-notes/",
+        "title": "California Notes | Joan Didion",
+        "authors": "Joan Didion",
+        "abstract": "This is not about Patricia Hearst. It is about me and the peculiar vacuum in which I grew up, a vacuum in which the Hearsts could be quite literally king of the hill.",
+        "timestamp": "2026-05-04T13:47:20.008Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 350,
+        "object_id": "paper:url.43858CE5",
+        "created_at": "2026-05-04T13:47:20+00:00",
+        "updated_at": "2026-05-04T13:47:41+00:00",
         "version": 1
       }
     }
