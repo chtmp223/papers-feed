@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-04T19:54:24.631912+00:00",
+  "snapshot_time": "2026-05-06T17:18:12.102789+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8751,6 +8751,30 @@
         "object_id": "paper:arxiv.2603.28052",
         "created_at": "2026-05-04T19:53:30+00:00",
         "updated_at": "2026-05-04T19:53:54+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.6F173CD5": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "6F173CD5",
+        "url": "https://nooneshappy.com/article/appearing-productive-in-the-workplace/",
+        "title": "Appearing Productive in The Workplace \u2014 No One's Happy",
+        "authors": "No One's Happy",
+        "abstract": "AI can produce work that looks expert without being expert. The failure arrives in two shapes, and both are reshaping the workplace.",
+        "timestamp": "2026-05-06T17:16:59.268Z",
+        "rating": "novote",
+        "publishedDate": "2026-05-28T18:00:00.000Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 352,
+        "object_id": "paper:url.6F173CD5",
+        "created_at": "2026-05-06T17:16:59+00:00",
+        "updated_at": "2026-05-06T17:17:37+00:00",
         "version": 1
       }
     }
