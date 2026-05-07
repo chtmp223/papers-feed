@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-06T17:18:12.102789+00:00",
+  "snapshot_time": "2026-05-07T18:19:29.365829+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8775,6 +8775,54 @@
         "object_id": "paper:url.6F173CD5",
         "created_at": "2026-05-06T17:16:59+00:00",
         "updated_at": "2026-05-06T17:17:37+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.448A37C6": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "448A37C6",
+        "url": "https://blog.johnozbay.com/i-left-apples-ecosystem-for-a-lenovo-chromebook-and-you-can-too.html",
+        "title": "I switched from Mac to a Lenovo Chromebook, and you can too",
+        "authors": "",
+        "abstract": "Documenting my journey switching away from Mac to a Lenovo Chromebook Plus 14",
+        "timestamp": "2026-05-07T17:10:15.995Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 354,
+        "object_id": "paper:url.448A37C6",
+        "created_at": "2026-05-07T17:10:16+00:00",
+        "updated_at": "2026-05-07T17:10:50+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.3962EF22": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "3962EF22",
+        "url": "https://blog.johnozbay.com/running-zed-editor-on-arm-chromebooks-mali-g925-crostini-2.html",
+        "title": "Running Zed Editor on ARM Chromebooks (Mali G925 / Crostini)",
+        "authors": "",
+        "abstract": "A complete guide to getting Zed running on ARM-based Chromebooks with Mali GPUs inside Crostini (the ChromeOS Linux container).",
+        "timestamp": "2026-05-07T17:09:52.556Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 353,
+        "object_id": "paper:url.3962EF22",
+        "created_at": "2026-05-07T17:09:52+00:00",
+        "updated_at": "2026-05-07T17:10:25+00:00",
         "version": 1
       }
     }
