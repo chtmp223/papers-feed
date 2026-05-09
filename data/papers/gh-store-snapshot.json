@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-07T18:19:29.365829+00:00",
+  "snapshot_time": "2026-05-09T22:12:40.773125+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8823,6 +8823,30 @@
         "object_id": "paper:url.3962EF22",
         "created_at": "2026-05-07T17:09:52+00:00",
         "updated_at": "2026-05-07T17:10:25+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.2AA9209C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "2AA9209C",
+        "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=q1UvzaAAAAAJ&sortby=pubdate&citation_for_view=q1UvzaAAAAAJ:UeHWp8X0CEIC",
+        "title": "\u202aCASPER in the Machine: Insights into Character Variety in LLM-Generated Stories\u202c",
+        "authors": "",
+        "abstract": "\u202aA Brei, A Sharma, N Sanaie, L Wang, S Chaturvedi\u202c",
+        "timestamp": "2026-05-09T22:11:53.071Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 355,
+        "object_id": "paper:url.2AA9209C",
+        "created_at": "2026-05-09T22:11:53+00:00",
+        "updated_at": "2026-05-09T22:12:10+00:00",
         "version": 1
       }
     }
