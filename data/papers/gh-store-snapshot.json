@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-12T15:30:48.251608+00:00",
+  "snapshot_time": "2026-05-12T20:35:54.922061+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8895,6 +8895,34 @@
         "object_id": "paper:acl-anthology.2025.conll-1.14",
         "created_at": "2026-05-12T15:29:40+00:00",
         "updated_at": "2026-05-12T15:30:07+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2604.28181": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2604.28181",
+        "url": "https://arxiv.org/abs/2604.28181",
+        "title": "Synthetic Computers at Scale for Long-Horizon Productivity Simulation",
+        "authors": "Tao Ge, Baolin Peng, Hao Cheng, Jianfeng Gao",
+        "abstract": "Realistic long-horizon productivity work is strongly conditioned on user-specific computer environments, where much of the work context is stored and organized through directory structures and content-rich artifacts. To scale synthetic data creation for such productivity scenarios, we introduce Synthetic Computers at Scale, a scalable methodology for creating such environments with realistic folder hierarchies and content-rich artifacts (e.g., documents, spreadsheets, and presentations). Conditioned on each synthetic computer, we run long-horizon simulations: one agent creates productivity objectives that are specific to the computer's user and require multiple professional deliverables and about a month of human work; another agent then acts as that user and keeps working across the computer -- for example, navigating the filesystem for grounding, coordinating with simulated collaborators, and producing professional artifacts -- until these objectives are completed.\nIn preliminary experiments, we create 1,000 synthetic computers and run long-horizon simulations on them; each run requires over 8 hours of agent runtime and spans more than 2,000 turns on average. These simulations produce rich experiential learning signals, whose effectiveness is validated by significant improvements in agent performance on both in-domain and out-of-domain productivity evaluations. Given that personas are abundant at billion scale, this methodology can in principle scale to millions or even billions of synthetic user worlds with sufficient compute, enabling broader coverage of diverse professions, roles, contexts, environments, and productivity needs. We argue that scalable synthetic computer creation, together with at-scale simulations, is highly promising as a foundational substrate for agent self-improvement and agentic reinforcement learning in long-horizon productivity scenarios.",
+        "timestamp": "2026-05-12T20:34:58.289Z",
+        "rating": "novote",
+        "publishedDate": "2026/04/30",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)",
+          "Machine Learning (cs.LG)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 358,
+        "object_id": "paper:arxiv.2604.28181",
+        "created_at": "2026-05-12T20:34:58+00:00",
+        "updated_at": "2026-05-12T20:35:19+00:00",
         "version": 1
       }
     }
