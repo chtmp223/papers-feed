@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-10T15:35:10.974271+00:00",
+  "snapshot_time": "2026-05-12T15:30:48.251608+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8871,6 +8871,30 @@
         "object_id": "paper:url.250DD655",
         "created_at": "2026-05-10T15:34:21+00:00",
         "updated_at": "2026-05-10T15:34:45+00:00",
+        "version": 1
+      }
+    },
+    "paper:acl-anthology.2025.conll-1.14": {
+      "data": {
+        "sourceId": "acl-anthology",
+        "paperId": "2025.conll-1.14",
+        "url": "https://aclanthology.org/2025.conll-1.14/",
+        "title": "From Stories to Statistics: Methodological Biases in LLM-Based Narrative Flow Quantification",
+        "authors": "Amal Sunny, Advay Gupta, Yashashree Chandak, Vishnu Sreekumar",
+        "abstract": "AbstractLarge Language Models (LLMs) have made significant contributions to cognitive science research. One area of application is narrative understanding. Sap et al. (2022) introduced sequentiality, an LLM-derived measure that assesses the coherence of a story based on word probability distributions. They reported that recalled stories flowed less sequentially than imagined stories. However, the robustness and generalizability of this narrative flow measure remain unverified. To assess generalizability, we apply sequentiality derived from three different LLMs to a new dataset of matched autobiographical and biographical paragraphs. Contrary to previous results, we fail to find a significant difference in narrative flow between autobiographies and biographies. Further investigation reveals biases in the original data collection process, where topic selection systematically influences sequentiality scores. Adjusting for these biases substantially reduces the originally reported effect size. A validation exercise using LLM-generated stories with \u201cgood\u201d and \u201cpoor\u201d flow further highlights the flaws in the original formulation of sequentiality. Our findings suggest that LLM-based narrative flow quantification is susceptible to methodological artifacts. Finally, we provide some suggestions for modifying the sequentiality formula to accurately capture narrative flow.",
+        "timestamp": "2026-05-12T15:29:40.361Z",
+        "rating": "novote",
+        "publishedDate": "2025/7",
+        "tags": [],
+        "doi": "10.18653/v1/2025.conll-1.14",
+        "journalName": "Proceedings of the 29th Conference on Computational Natural Language Learning",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 357,
+        "object_id": "paper:acl-anthology.2025.conll-1.14",
+        "created_at": "2026-05-12T15:29:40+00:00",
+        "updated_at": "2026-05-12T15:30:07+00:00",
         "version": 1
       }
     }
