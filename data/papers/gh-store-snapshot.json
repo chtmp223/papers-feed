@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-16T02:14:02.298631+00:00",
+  "snapshot_time": "2026-05-17T17:03:55.522389+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -8744,13 +8744,14 @@
         ],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-05-17"
       },
       "meta": {
         "issue_number": 351,
         "object_id": "paper:arxiv.2603.28052",
         "created_at": "2026-05-04T19:53:30+00:00",
-        "updated_at": "2026-05-04T19:53:54+00:00",
+        "updated_at": "2026-05-17T17:03:31+00:00",
         "version": 1
       }
     },
@@ -8768,13 +8769,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-05-17"
       },
       "meta": {
         "issue_number": 352,
         "object_id": "paper:url.6F173CD5",
         "created_at": "2026-05-06T17:16:59+00:00",
-        "updated_at": "2026-05-06T17:17:37+00:00",
+        "updated_at": "2026-05-17T17:03:31+00:00",
         "version": 1
       }
     },
@@ -8792,13 +8794,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-05-17"
       },
       "meta": {
         "issue_number": 354,
         "object_id": "paper:url.448A37C6",
         "created_at": "2026-05-07T17:10:16+00:00",
-        "updated_at": "2026-05-07T17:10:50+00:00",
+        "updated_at": "2026-05-17T17:03:30+00:00",
         "version": 1
       }
     },
@@ -8816,13 +8819,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": null
       },
       "meta": {
         "issue_number": 353,
         "object_id": "paper:url.3962EF22",
         "created_at": "2026-05-07T17:09:52+00:00",
-        "updated_at": "2026-05-07T17:10:25+00:00",
+        "updated_at": "2026-05-17T17:03:30+00:00",
         "version": 1
       }
     },
@@ -8840,13 +8844,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-05-17"
       },
       "meta": {
         "issue_number": 355,
         "object_id": "paper:url.2AA9209C",
         "created_at": "2026-05-09T22:11:53+00:00",
-        "updated_at": "2026-05-09T22:12:10+00:00",
+        "updated_at": "2026-05-17T17:03:26+00:00",
         "version": 1
       }
     },
@@ -8916,13 +8921,14 @@
         ],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-05-17"
       },
       "meta": {
         "issue_number": 358,
         "object_id": "paper:arxiv.2604.28181",
         "created_at": "2026-05-12T20:34:58+00:00",
-        "updated_at": "2026-05-12T20:35:19+00:00",
+        "updated_at": "2026-05-17T17:03:25+00:00",
         "version": 1
       }
     },
@@ -8964,13 +8970,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-05-17"
       },
       "meta": {
         "issue_number": 360,
         "object_id": "paper:url.7D26323F",
         "created_at": "2026-05-14T13:54:36+00:00",
-        "updated_at": "2026-05-14T13:55:02+00:00",
+        "updated_at": "2026-05-17T17:02:48+00:00",
         "version": 1
       }
     },
@@ -9049,6 +9056,33 @@
         "object_id": "paper:url.713BC35B",
         "created_at": "2026-05-16T02:12:59+00:00",
         "updated_at": "2026-05-16T02:13:19+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2605.12894": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2605.12894",
+        "url": "https://arxiv.org/abs/2605.12894",
+        "title": "Beyond Cooperative Simulators: Generating Realistic User Personas for Robust Evaluation of LLM Agents",
+        "authors": "Harshita Chopra, Kshitish Ghate, Aylin Caliskan, Tadayoshi Kohno, Chirag Shah, Natasha Jaques",
+        "abstract": "Large Language Model (LLM) agents are increasingly deployed in settings where they interact with a wide variety of people, including users who are unclear, impatient, or reluctant to share information. However, collecting real interaction data at scale remains expensive. The field has turned to LLM-based user simulators as stand-ins, but these simulators inherit the behavior of their underlying models: cooperative and homogeneous. As a result, agents that appear strong in simulation often fail under the unseen, diverse communication patterns of real users. To narrow this gap, we introduce Persona Policies (PPol), a plug-and-play control layer that induces realistic behavioral variation in user simulators while preserving the original task goals. Rather than hand-crafting personas, we cast persona generation as an LLM-driven evolutionary program search that optimizes a Python generator to discover behaviors and translate them into task-preserving roleplay policies. Candidate generators are guided by a multi-objective fitness score combining human-likeness with broad coverage of human behavioral patterns. Once optimized, the generator produces a diverse population of human-like personas for any task in the domain. Across tau^2-bench retail and airline domains, evolved PPol programs yield 33-62% absolute gains in fitness score over the baseline simulator. In a blinded evaluation, annotators rated PPol-conditioned users as human 80.4% of the time, close to real human traces and nearly twice as frequently as baseline simulators. Agents trained with PPol are more robust to challenging, out-of-distribution behaviors, improving task success by +17% relative to training only on existing simulated interactions. This offers a novel approach to strengthen simulator-based evaluation and training without changing tasks or rewards.",
+        "timestamp": "2026-05-17T17:02:51.195Z",
+        "rating": "novote",
+        "publishedDate": "2026/05/13",
+        "tags": [
+          "Artificial Intelligence (cs.AI)",
+          "Computation and Language (cs.CL)"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 364,
+        "object_id": "paper:arxiv.2605.12894",
+        "created_at": "2026-05-17T17:02:51+00:00",
+        "updated_at": "2026-05-17T17:03:14+00:00",
         "version": 1
       }
     }
