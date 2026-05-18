@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-17T17:03:55.522389+00:00",
+  "snapshot_time": "2026-05-18T15:59:26.716095+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9083,6 +9083,30 @@
         "object_id": "paper:arxiv.2605.12894",
         "created_at": "2026-05-17T17:02:51+00:00",
         "updated_at": "2026-05-17T17:03:14+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.7C6EFBBA": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "7C6EFBBA",
+        "url": "https://halupedia.com/",
+        "title": "Halupedia \u2014 Halupedia",
+        "authors": "",
+        "abstract": "An encyclopedia of a universe that does not exist until you visit it.",
+        "timestamp": "2026-05-18T15:58:34.336Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 365,
+        "object_id": "paper:url.7C6EFBBA",
+        "created_at": "2026-05-18T15:58:34+00:00",
+        "updated_at": "2026-05-18T15:58:58+00:00",
         "version": 1
       }
     }
