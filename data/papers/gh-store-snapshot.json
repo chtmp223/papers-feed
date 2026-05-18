@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-18T15:59:26.716095+00:00",
+  "snapshot_time": "2026-05-18T22:00:58.322455+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9107,6 +9107,38 @@
         "object_id": "paper:url.7C6EFBBA",
         "created_at": "2026-05-18T15:58:34+00:00",
         "updated_at": "2026-05-18T15:58:58+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.4263E516": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "4263E516",
+        "url": "https://vladfeinberg.com/2026/05/10/how-to-land-a-job-at-a-frontier-lab.html",
+        "title": "How to Land a Frontier Lab Job",
+        "authors": "Vlad Feinberg",
+        "abstract": "Vlad's Blog",
+        "timestamp": "2026-05-18T22:00:07.383Z",
+        "rating": "novote",
+        "publishedDate": "2026-05-10T00:00:00+00:00",
+        "tags": [
+          "career",
+          "LLM",
+          "pretraining",
+          "deepmind",
+          "research",
+          "kernels",
+          "agents"
+        ],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 366,
+        "object_id": "paper:url.4263E516",
+        "created_at": "2026-05-18T22:00:07+00:00",
+        "updated_at": "2026-05-18T22:00:33+00:00",
         "version": 1
       }
     }
