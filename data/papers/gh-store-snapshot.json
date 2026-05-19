@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-18T22:00:58.322455+00:00",
+  "snapshot_time": "2026-05-19T19:59:49.861575+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9139,6 +9139,34 @@
         "object_id": "paper:url.4263E516",
         "created_at": "2026-05-18T22:00:07+00:00",
         "updated_at": "2026-05-18T22:00:33+00:00",
+        "version": 1
+      }
+    },
+    "paper:arxiv.2504.16063": {
+      "data": {
+        "sourceId": "arxiv",
+        "paperId": "2504.16063",
+        "url": "https://arxiv.org/abs/2504.16063",
+        "title": "Free Access to World News: Reconstructing Full-Text Articles from GDELT",
+        "authors": "A. Fronzetti Colladon, R. Vestrelli",
+        "abstract": "News data have become essential resources across various disciplines. Still, access to full-text news corpora remains challenging due to high costs and the limited availability of free alternatives. This paper presents a novel Python package (gdeltnews) that reconstructs full-text newspaper articles at near-zero cost by leveraging the Global Database of Events, Language, and Tone (GDELT) Web News NGrams 3.0 dataset. Our method merges overlapping n-grams extracted from global online news to rebuild complete articles. We validate the approach on a benchmark set of 2211 articles from major U.S. news outlets, achieving up to 95% text similarity against original articles based on Levenshtein and SequenceMatcher metrics. Our tool facilitates economic forecasting, computational social science, information science, and natural language processing applications by enabling free and large-scale access to full-text news data.",
+        "timestamp": "2026-05-19T19:58:52.524Z",
+        "rating": "novote",
+        "publishedDate": "2025/04/22",
+        "tags": [
+          "Computation and Language (cs.CL)",
+          "Databases (cs.DB)",
+          "Information Retrieval (cs.IR)"
+        ],
+        "doi": "10.3390/bdcc10020045",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 367,
+        "object_id": "paper:arxiv.2504.16063",
+        "created_at": "2026-05-19T19:58:52+00:00",
+        "updated_at": "2026-05-19T19:59:17+00:00",
         "version": 1
       }
     }
