@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-22T01:40:27.647792+00:00",
+  "snapshot_time": "2026-05-23T23:05:15.021711+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9191,6 +9191,30 @@
         "object_id": "paper:url.681C024E",
         "created_at": "2026-05-22T01:39:41+00:00",
         "updated_at": "2026-05-22T01:40:02+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1E8D159E": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1E8D159E",
+        "url": "https://www.asimov.press/p/lab-notebooks",
+        "title": "A Brief History of Lab Notebooks",
+        "authors": "Asimov Press",
+        "abstract": "How experimental recordings have changed, from the Renaissance through today.",
+        "timestamp": "2026-05-23T23:04:34.124Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 369,
+        "object_id": "paper:url.1E8D159E",
+        "created_at": "2026-05-23T23:04:34+00:00",
+        "updated_at": "2026-05-23T23:04:51+00:00",
         "version": 1
       }
     }
