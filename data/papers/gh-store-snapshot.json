@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-23T23:05:15.021711+00:00",
+  "snapshot_time": "2026-05-25T05:12:46.124438+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9215,6 +9215,30 @@
         "object_id": "paper:url.1E8D159E",
         "created_at": "2026-05-23T23:04:34+00:00",
         "updated_at": "2026-05-23T23:04:51+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.7559348E": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "7559348E",
+        "url": "https://alignment.anthropic.com/2026/automated-w2s-researcher/",
+        "title": "Automated Weak-to-Strong Researcher",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-05-25T05:12:01.802Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 370,
+        "object_id": "paper:url.7559348E",
+        "created_at": "2026-05-25T05:12:02+00:00",
+        "updated_at": "2026-05-25T05:12:21+00:00",
         "version": 1
       }
     }
