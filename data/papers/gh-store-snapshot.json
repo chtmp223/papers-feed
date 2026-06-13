@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-05-25T05:12:46.124438+00:00",
+  "snapshot_time": "2026-06-13T15:02:23.782646+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9239,6 +9239,30 @@
         "object_id": "paper:url.7559348E",
         "created_at": "2026-05-25T05:12:02+00:00",
         "updated_at": "2026-05-25T05:12:21+00:00",
+        "version": 1
+      }
+    },
+    "paper:url-misc.4F3B9209": {
+      "data": {
+        "sourceId": "url-misc",
+        "paperId": "4F3B9209",
+        "url": "https://www.science.org/doi/10.1126/sciadv.adw5578",
+        "title": "Biased AI writing assistants shift users\u2019 attitudes on societal issues",
+        "authors": "",
+        "abstract": "Biased AI writing assistants shift people\u2019s attitudes about societal issues; common interventions do not prevent this influence.",
+        "timestamp": "2026-06-13T15:01:38.908Z",
+        "rating": "novote",
+        "publishedDate": "2026-03-13",
+        "tags": [],
+        "doi": "",
+        "journalName": "Science Advances",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 371,
+        "object_id": "paper:url-misc.4F3B9209",
+        "created_at": "2026-06-13T15:01:39+00:00",
+        "updated_at": "2026-06-13T15:01:59+00:00",
         "version": 1
       }
     }
