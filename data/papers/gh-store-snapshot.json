@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-06-13T15:02:23.782646+00:00",
+  "snapshot_time": "2026-06-13T15:11:09.173615+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9263,6 +9263,30 @@
         "object_id": "paper:url-misc.4F3B9209",
         "created_at": "2026-06-13T15:01:39+00:00",
         "updated_at": "2026-06-13T15:01:59+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1F390E54": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1F390E54",
+        "url": "https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing/",
+        "title": "How the Open Knowledge Format can improve data sharing | Google Cloud Blog",
+        "authors": "",
+        "abstract": "Learn how the Open Knowledge Format helps secure data sharing and improves collaboration across teams with standardized documentation.",
+        "timestamp": "2026-06-13T15:10:23.039Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 372,
+        "object_id": "paper:url.1F390E54",
+        "created_at": "2026-06-13T15:10:23+00:00",
+        "updated_at": "2026-06-13T15:10:44+00:00",
         "version": 1
       }
     }
