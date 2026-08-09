@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-07-26T18:42:18.945350+00:00",
+  "snapshot_time": "2026-08-09T16:29:31.272233+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9315,6 +9315,30 @@
         "object_id": "paper:arxiv.2607.20349",
         "created_at": "2026-07-26T18:41:36+00:00",
         "updated_at": "2026-07-26T18:41:55+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.1CB25F1C": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "1CB25F1C",
+        "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+        "title": "\"Code was never the hard part\" is an insult to all programmers",
+        "authors": "Senko Ra\u0161i\u0107",
+        "abstract": "The software development profession is in the midst of upheaval. Nobody knows how the AI revolution will play out in the end, but it is c...",
+        "timestamp": "2026-08-09T16:28:43.567Z",
+        "rating": "novote",
+        "publishedDate": "2026-08-08T09:18:22Z",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 374,
+        "object_id": "paper:url.1CB25F1C",
+        "created_at": "2026-08-09T16:28:43+00:00",
+        "updated_at": "2026-08-09T16:29:06+00:00",
         "version": 1
       }
     }
