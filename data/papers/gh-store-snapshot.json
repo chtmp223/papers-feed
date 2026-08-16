@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-08-16T17:41:26.639825+00:00",
+  "snapshot_time": "2026-08-16T17:43:08.457700+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9280,13 +9280,14 @@
         "tags": [],
         "doi": "",
         "journalName": "",
-        "sourceType": "url"
+        "sourceType": "url",
+        "manuallyRead": "2026-08-16"
       },
       "meta": {
         "issue_number": 372,
         "object_id": "paper:url.1F390E54",
         "created_at": "2026-06-13T15:10:23+00:00",
-        "updated_at": "2026-06-13T15:10:44+00:00",
+        "updated_at": "2026-08-16T17:41:57+00:00",
         "version": 1
       }
     },
@@ -9465,6 +9466,30 @@
         "object_id": "paper:url.68D7D6B7",
         "created_at": "2026-08-16T17:36:16+00:00",
         "updated_at": "2026-08-16T17:40:50+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.17D28657": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "17D28657",
+        "url": "https://commonreader.wustl.edu/winning-and-losing-at-the-great-game-of-intimacy/",
+        "title": "Winning and Losing at the Great Game of Intimacy - Common Reader",
+        "authors": "Ben",
+        "abstract": "What to call this Anton Chekhov, whom I first encountered in 1988? The Master, perhaps\u2014of vision, decency, modesty, and industry, and, one might hope, in the old game of love.",
+        "timestamp": "2026-08-16T17:42:23.980Z",
+        "rating": "novote",
+        "publishedDate": "2026-07-04T19:59:04+00:00",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 380,
+        "object_id": "paper:url.17D28657",
+        "created_at": "2026-08-16T17:42:24+00:00",
+        "updated_at": "2026-08-16T17:42:46+00:00",
         "version": 1
       }
     }
