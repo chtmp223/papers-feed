@@ -95,10 +95,56 @@
       <button class="filter-button" id="sidebar-toggle">
         <i class="fas fa-filter"></i> Filters
       </button>
+      <button class="filter-button" id="add-paper-button">
+        <i class="fas fa-plus"></i> Add Paper
+      </button>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
         <i class="fas fa-moon" aria-hidden="true"></i>
         <span class="theme-toggle-label">Dark</span>
       </button>
+    </div>
+  </div>
+
+  <!-- Add Paper Modal -->
+  <div id="add-paper-overlay" class="add-paper-overlay hidden">
+    <div class="add-paper-card">
+      <div class="add-paper-header">
+        <h2>Add Paper Manually</h2>
+        <button type="button" class="close-button" id="add-paper-close">×</button>
+      </div>
+      <form id="add-paper-form">
+        <div class="add-paper-field">
+          <label for="add-paper-title">Title *</label>
+          <input type="text" id="add-paper-title" name="title" required autocomplete="off">
+        </div>
+        <div class="add-paper-field">
+          <label for="add-paper-url">URL</label>
+          <input type="url" id="add-paper-url" name="url" placeholder="https://..." autocomplete="off">
+        </div>
+        <div class="add-paper-field">
+          <label for="add-paper-authors">Authors</label>
+          <input type="text" id="add-paper-authors" name="authors" placeholder="Comma-separated" autocomplete="off">
+        </div>
+        <div class="add-paper-row">
+          <div class="add-paper-field">
+            <label for="add-paper-published">Published Date</label>
+            <input type="text" id="add-paper-published" name="publishedDate" placeholder="e.g. 2026-01-15">
+          </div>
+          <div class="add-paper-field">
+            <label for="add-paper-tags">Tags</label>
+            <input type="text" id="add-paper-tags" name="tags" placeholder="Comma-separated">
+          </div>
+        </div>
+        <div class="add-paper-field">
+          <label for="add-paper-abstract">Abstract</label>
+          <textarea id="add-paper-abstract" name="abstract" rows="4"></textarea>
+        </div>
+        <p id="add-paper-error" class="add-paper-error"></p>
+        <div class="add-paper-actions">
+          <button type="button" class="filter-button" id="add-paper-cancel">Cancel</button>
+          <button type="submit" class="add-paper-submit" id="add-paper-submit">Add Paper</button>
+        </div>
+      </form>
     </div>
   </div>
 

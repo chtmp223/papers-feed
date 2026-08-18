@@ -1255,6 +1255,279 @@ async function persistPaperDeletion(paper) {
   return { synced: true, via: 'legacy-token' };
 }
 
+function generateManualPaperId(seed) {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i++) {
+    const char = seed.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash).toString(16).toUpperCase().substring(0, 8).padStart(8, '0');
+}
+
+async function persistPaperCreationViaExtension(paperPayload) {
+  const requestId = `pf-create-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+
+  return new Promise((resolve, reject) => {
+    let timeoutId = null;
+
+    function cleanup() {
+      window.removeEventListener('message', onMessage);
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+      }
+    }
+
+    function onMessage(event) {
+      if (event.source !== window) return;
+      const message = event.data;
+      if (!message || message.source !== FRONTEND_BRIDGE_RESPONSE_SOURCE) return;
+      if (message.requestId !== requestId) return;
+
+      cleanup();
+
+      if (message.success) {
+        resolve({ issueNumber: message.issueNumber || null });
+      } else {
+        reject(new Error(message.error || 'Extension rejected create request'));
+      }
+    }
+
+    timeoutId = setTimeout(() => {
+      cleanup();
+      reject(new Error('Timed out waiting for extension response'));
+    }, 8000);
+
+    window.addEventListener('message', onMessage);
+    window.postMessage({
+      source: FRONTEND_BRIDGE_REQUEST_SOURCE,
+      type: 'createPaper',
+      requestId,
+      payload: paperPayload
+    }, getPostMessageTargetOrigin());
+  });
+}
+
+async function persistPaperCreationViaLegacyGitHub(paperData, objectId) {
+  const token = getLegacyGitHubToken();
+  if (!token || !snapshotRepo) {
+    throw new Error('No extension bridge and no legacy GitHub token configured');
+  }
+
+  const apiBase = `https://api.github.com/repos/${snapshotRepo}`;
+  const headers = {
+    'Authorization': `token ${token}`,
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+
+  const createResponse = await fetch(`${apiBase}/issues`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({
+      title: `Stored Object: ${objectId}`,
+      body: JSON.stringify(paperData, null, 2),
+      labels: ['gh-store', 'stored-object', `UID:${objectId}`]
+    })
+  });
+
+  if (!createResponse.ok) {
+    throw new Error(`Failed to create paper issue (${createResponse.status})`);
+  }
+
+  const issue = await createResponse.json();
+
+  const commentPayload = {
+    _data: paperData,
+    _meta: {
+      client_version: '1.0.0',
+      timestamp: new Date().toISOString(),
+      update_mode: 'append',
+      issue_number: issue.number
+    },
+    type: 'initial_state'
+  };
+
+  const commentResponse = await fetch(`${apiBase}/issues/${issue.number}/comments`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ body: JSON.stringify(commentPayload, null, 2) })
+  });
+
+  if (commentResponse.ok) {
+    const comment = await commentResponse.json();
+    await fetch(`${apiBase}/issues/comments/${comment.id}/reactions`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ content: '+1' })
+    });
+    await fetch(`${apiBase}/issues/comments/${comment.id}/reactions`, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify({ content: 'rocket' })
+    });
+  }
+
+  return { issueNumber: issue.number };
+}
+
+async function persistPaperCreation(paperData, objectId) {
+  try {
+    const result = await persistPaperCreationViaExtension(paperData);
+    return { synced: true, via: 'extension', issueNumber: result.issueNumber };
+  } catch (extensionError) {
+    console.warn('Extension create sync unavailable; falling back to legacy GitHub token path', extensionError);
+  }
+
+  const token = getLegacyGitHubToken();
+  if (!token || !snapshotRepo) {
+    return { synced: false, via: 'local-only', issueNumber: null };
+  }
+
+  const result = await persistPaperCreationViaLegacyGitHub(paperData, objectId);
+  return { synced: true, via: 'legacy-token', issueNumber: result.issueNumber };
+}
+
+function openAddPaperModal() {
+  const overlay = document.getElementById('add-paper-overlay');
+  const form = document.getElementById('add-paper-form');
+  const errorEl = document.getElementById('add-paper-error');
+  if (!overlay) return;
+
+  if (form) form.reset();
+  if (errorEl) errorEl.textContent = '';
+
+  overlay.classList.remove('hidden');
+
+  const titleInput = document.getElementById('add-paper-title');
+  if (titleInput) titleInput.focus();
+}
+
+function closeAddPaperModal() {
+  const overlay = document.getElementById('add-paper-overlay');
+  if (overlay) overlay.classList.add('hidden');
+}
+
+async function addPaperManually(form) {
+  const errorEl = document.getElementById('add-paper-error');
+  const submitButton = document.getElementById('add-paper-submit');
+  if (errorEl) errorEl.textContent = '';
+
+  const title = form.title.value.trim();
+  if (!title) {
+    if (errorEl) errorEl.textContent = 'Title is required.';
+    return;
+  }
+
+  const url = form.url.value.trim();
+  const authors = form.authors.value.trim();
+  const abstract = form.abstract.value.trim();
+  const publishedDateRaw = form.publishedDate.value.trim();
+  const tags = form.tags.value.split(',').map(t => t.trim()).filter(Boolean);
+
+  const seed = url || `${title}-${Date.now()}`;
+  const paperId = generateManualPaperId(seed);
+  const sourceId = 'manual';
+  const objectId = `paper:${sourceId}.${paperId}`;
+
+  if (allData.some(p => p.paperKey === objectId)) {
+    if (errorEl) errorEl.textContent = 'A paper with this identifier already exists. Please try again.';
+    return;
+  }
+
+  const timestamp = new Date().toISOString();
+  const paperData = {
+    sourceId,
+    paperId,
+    url,
+    title,
+    authors,
+    abstract,
+    timestamp,
+    publishedDate: publishedDateRaw,
+    tags,
+    rating: 'novote',
+    sourceType: 'manual'
+  };
+
+  if (submitButton) submitButton.disabled = true;
+
+  let creationResult = null;
+  let syncError = null;
+  try {
+    creationResult = await persistPaperCreation(paperData, objectId);
+  } catch (error) {
+    syncError = error;
+    console.warn('Failed to sync manually added paper to gh-store:', error);
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
+
+  const newRow = {
+    paperKey: objectId,
+    id: paperId,
+    source: 'manual',
+    title,
+    authors,
+    abstract,
+    paperFreshness: -1,
+    published: normalizeDate(publishedDateRaw),
+    firstRead: formatDate(timestamp),
+    lastRead: formatDate(timestamp),
+    lastReadTimestamp: timestamp,
+    readingTimeSeconds: 0,
+    interactionDays: 0,
+    tags,
+    quickNote: '',
+    url,
+    rawInteractionData: [],
+    issueNumber: creationResult && creationResult.issueNumber ? creationResult.issueNumber : null
+  };
+
+  allData.unshift(newRow);
+  table.replaceData(allData);
+  updateReadProgressBar();
+  refreshHeatmap();
+  closeAddPaperModal();
+
+  if (syncError) {
+    alert(`Paper was added locally, but syncing to GitHub failed: ${syncError.message || 'Unknown error'}. It may not persist after reloading unless synced.`);
+  } else if (creationResult && creationResult.synced === false) {
+    alert('Paper added locally only (no extension bridge or GitHub token configured in this browser), so it will not persist after reloading.');
+  }
+}
+
+function setupAddPaperModal() {
+  const addButton = document.getElementById('add-paper-button');
+  const overlay = document.getElementById('add-paper-overlay');
+  const closeButton = document.getElementById('add-paper-close');
+  const cancelButton = document.getElementById('add-paper-cancel');
+  const form = document.getElementById('add-paper-form');
+
+  if (!addButton || !overlay || !form) return;
+  if (addButton.dataset.boundAddPaper === 'true') return;
+  addButton.dataset.boundAddPaper = 'true';
+
+  addButton.addEventListener('click', openAddPaperModal);
+  if (closeButton) closeButton.addEventListener('click', closeAddPaperModal);
+  if (cancelButton) cancelButton.addEventListener('click', closeAddPaperModal);
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeAddPaperModal();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
+      closeAddPaperModal();
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    addPaperManually(form);
+  });
+}
+
 function removePaperFromLocalState(paperKey) {
   if (!paperKey) return;
 
@@ -1737,6 +2010,8 @@ let currentPreviewSearchTerm = null;
 // Setup event listeners for filters and search
 function setupEventListeners() {
   const searchInput = document.getElementById("search-input");
+
+  setupAddPaperModal();
 
   // Heatmap metric selector
   document.getElementById("heatmap-metric-selector").addEventListener("change", function (e) {

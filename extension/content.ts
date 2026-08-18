@@ -254,14 +254,16 @@ function getPostMessageTargetOrigin(): string {
 function postFrontendBridgeResponse(
   requestId: string,
   success: boolean,
-  error?: string
+  error?: string,
+  extra?: Record<string, unknown>
 ): void {
   window.postMessage(
     {
       source: FRONTEND_BRIDGE_RESPONSE_SOURCE,
       requestId,
       success,
-      error
+      error,
+      ...(extra || {})
     },
     getPostMessageTargetOrigin()
   );
@@ -305,7 +307,11 @@ function setupFrontendBridgeListener(): void {
     const message = event.data;
     if (!message || typeof message !== 'object') return;
     if (message.source !== FRONTEND_BRIDGE_REQUEST_SOURCE) return;
-    if (message.type !== 'updateManualReadStatus' && message.type !== 'deletePaper') return;
+    if (
+      message.type !== 'updateManualReadStatus' &&
+      message.type !== 'deletePaper' &&
+      message.type !== 'createPaper'
+    ) return;
 
     const requestId = message.requestId;
     if (typeof requestId !== 'string' || requestId.length === 0) return;
@@ -316,6 +322,52 @@ function setupFrontendBridgeListener(): void {
     }
 
     const payload = message.payload || {};
+
+    if (message.type === 'createPaper') {
+      const title = typeof payload.title === 'string' ? payload.title.trim() : '';
+      const paperId = typeof payload.paperId === 'string' ? payload.paperId.trim() : '';
+      const sourceId = typeof payload.sourceId === 'string' && payload.sourceId.trim()
+        ? payload.sourceId.trim()
+        : 'manual';
+
+      if (!title || !paperId) {
+        postFrontendBridgeResponse(requestId, false, 'Missing required paper fields');
+        return;
+      }
+
+      chrome.runtime.sendMessage(
+        {
+          type: 'frontendCreatePaper',
+          paperData: {
+            sourceId,
+            paperId,
+            title,
+            url: typeof payload.url === 'string' ? payload.url.trim() : '',
+            authors: typeof payload.authors === 'string' ? payload.authors : '',
+            abstract: typeof payload.abstract === 'string' ? payload.abstract : '',
+            publishedDate: typeof payload.publishedDate === 'string' ? payload.publishedDate : '',
+            tags: Array.isArray(payload.tags)
+              ? payload.tags.filter((tag: unknown): tag is string => typeof tag === 'string')
+              : []
+          }
+        },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            postFrontendBridgeResponse(requestId, false, chrome.runtime.lastError.message);
+            return;
+          }
+
+          if (!response?.success) {
+            postFrontendBridgeResponse(requestId, false, response?.error || 'Paper creation sync failed');
+            return;
+          }
+
+          postFrontendBridgeResponse(requestId, true, undefined, { issueNumber: response.issueNumber ?? null });
+        }
+      );
+      return;
+    }
+
     const paperKey = typeof payload.paperKey === 'string' ? payload.paperKey.trim() : '';
 
     if (!paperKey) {

@@ -187,6 +187,11 @@ function setupMessageListeners() {
       handleFrontendDeletePaper(message, sender, sendResponse);
       return true; // Will respond asynchronously
     }
+
+    if (message.type === 'frontendCreatePaper' && message.paperData) {
+      handleFrontendCreatePaper(message, sender, sendResponse);
+      return true; // Will respond asynchronously
+    }
     
     // Other message handlers are managed by PopupManager
     
@@ -449,6 +454,76 @@ async function handleFrontendDeletePaper(
     sendResponse({ success: true });
   } catch (error) {
     logger.error('Error deleting paper from frontend', error);
+    sendResponse({
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+}
+
+async function handleFrontendCreatePaper(
+  message: {
+    paperData?: {
+      sourceId?: string;
+      paperId?: string;
+      title?: string;
+      url?: string;
+      authors?: string;
+      abstract?: string;
+      publishedDate?: string;
+      tags?: string[];
+    };
+  },
+  sender: chrome.runtime.MessageSender,
+  sendResponse: (response: any) => void
+): Promise<void> {
+  if (!isTrustedFrontendUrl(sender.url)) {
+    sendResponse({ success: false, error: 'Untrusted frontend origin' });
+    return;
+  }
+
+  const paperData = message.paperData || {};
+  const title = typeof paperData.title === 'string' ? paperData.title.trim() : '';
+  const paperId = typeof paperData.paperId === 'string' ? paperData.paperId.trim() : '';
+  const sourceId = typeof paperData.sourceId === 'string' && paperData.sourceId.trim()
+    ? paperData.sourceId.trim()
+    : 'manual';
+
+  if (!title || !paperId) {
+    sendResponse({ success: false, error: 'Missing required paper fields' });
+    return;
+  }
+
+  if (!paperManager) {
+    sendResponse({ success: false, error: 'GitHub sync is not configured in extension options' });
+    return;
+  }
+
+  try {
+    const metadata: PaperMetadata = {
+      sourceId,
+      paperId,
+      title,
+      url: paperData.url || '',
+      authors: paperData.authors || '',
+      abstract: paperData.abstract || '',
+      timestamp: new Date().toISOString(),
+      rating: 'novote',
+      publishedDate: paperData.publishedDate || '',
+      tags: Array.isArray(paperData.tags) ? paperData.tags : [],
+      sourceType: 'manual'
+    };
+
+    await paperManager.getOrCreatePaper(metadata);
+
+    const objectId = `paper:${sourceId}.${paperId}`;
+    const client = paperManager.getClient();
+    const issueNumber = await findIssueNumberForObject(client, objectId);
+
+    logger.info(`Created manually-added paper ${objectId} from frontend`, { sender: sender.url });
+    sendResponse({ success: true, issueNumber: issueNumber ?? null });
+  } catch (error) {
+    logger.error('Error creating paper from frontend', error);
     sendResponse({
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error'

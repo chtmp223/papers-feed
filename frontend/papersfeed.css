@@ -139,6 +139,126 @@
   }
 }
 
+/* Add Paper Modal */
+.add-paper-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+}
+
+.add-paper-overlay.hidden {
+  display: none;
+}
+
+.add-paper-card {
+  position: relative;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  max-width: 480px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.add-paper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.add-paper-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.add-paper-field {
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.add-paper-row {
+  display: flex;
+  gap: 14px;
+}
+
+.add-paper-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+}
+
+.add-paper-field input,
+.add-paper-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid var(--border-subtle);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.add-paper-field input:focus,
+.add-paper-field textarea:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+.add-paper-error {
+  color: #d32f2f;
+  font-size: 13px;
+  margin: 0 0 12px 0;
+  min-height: 18px;
+}
+
+.add-paper-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.add-paper-submit {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-paper-submit:hover {
+  background-color: #1558b7;
+}
+
+.add-paper-submit:disabled {
+  background-color: var(--bg-soft-hover);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
 body {
   margin: 0;
   padding: 0;
