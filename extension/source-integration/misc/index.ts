@@ -4,6 +4,18 @@
  */
 import { BaseSourceIntegration } from '../base-source';
 
+const REDDIT_POST_PATTERNS: RegExp[] = [
+  // Typical post URLs:
+  // https://www.reddit.com/r/<subreddit>/comments/<postId>/<slug>/
+  /^https?:\/\/(?:www\.|old\.|new\.)?reddit\.com\/r\/[^/]+\/comments\/[a-z0-9]+(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,
+  // Alternate post URLs:
+  // https://www.reddit.com/comments/<postId>/<slug>/
+  /^https?:\/\/(?:www\.|old\.|new\.)?reddit\.com\/comments\/[a-z0-9]+(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,
+  // Short links:
+  // https://redd.it/<postId>
+  /^https?:\/\/(?:www\.)?redd\.it\/[a-z0-9]+(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,
+];
+
 export class MiscIntegration extends BaseSourceIntegration {
   readonly id = 'url-misc';
   readonly name = 'misc tracked url';
@@ -57,6 +69,10 @@ export class MiscIntegration extends BaseSourceIntegration {
   ];
 
   canHandleUrl(url: string): boolean {
+    if (REDDIT_POST_PATTERNS.some(pattern => pattern.test(url))) {
+      return true;
+    }
+
     return this.contentScriptMatches.some(pattern => url.includes(pattern));
   }
 }

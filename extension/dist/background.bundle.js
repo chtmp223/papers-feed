@@ -1803,6 +1803,17 @@ class NewspapersIntegration extends BaseSourceIntegration {
 const newspapersIntegration = new NewspapersIntegration();
 
 // extension/source-integration/misc/index.ts
+const REDDIT_POST_PATTERNS = [
+    // Typical post URLs:
+    // https://www.reddit.com/r/<subreddit>/comments/<postId>/<slug>/
+    /^https?:\/\/(?:www\.|old\.|new\.)?reddit\.com\/r\/[^/]+\/comments\/[a-z0-9]+(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,
+    // Alternate post URLs:
+    // https://www.reddit.com/comments/<postId>/<slug>/
+    /^https?:\/\/(?:www\.|old\.|new\.)?reddit\.com\/comments\/[a-z0-9]+(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,
+    // Short links:
+    // https://redd.it/<postId>
+    /^https?:\/\/(?:www\.)?redd\.it\/[a-z0-9]+(?:\/[^?#]*)?(?:\?[^#]*)?(?:#.*)?$/i,
+];
 class MiscIntegration extends BaseSourceIntegration {
     constructor() {
         super(...arguments);
@@ -1854,6 +1865,9 @@ class MiscIntegration extends BaseSourceIntegration {
         ];
     }
     canHandleUrl(url) {
+        if (REDDIT_POST_PATTERNS.some(pattern => pattern.test(url))) {
+            return true;
+        }
         return this.contentScriptMatches.some(pattern => url.includes(pattern));
     }
 }
