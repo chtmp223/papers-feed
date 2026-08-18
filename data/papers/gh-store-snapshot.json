@@ -1,5 +1,5 @@
 {
-  "snapshot_time": "2026-08-16T17:43:08.457700+00:00",
+  "snapshot_time": "2026-08-18T18:43:05.829904+00:00",
   "repository": "chtmp223/papers-feed",
   "objects": {
     "paper:nber.w34777": {
@@ -9490,6 +9490,54 @@
         "object_id": "paper:url.17D28657",
         "created_at": "2026-08-16T17:42:24+00:00",
         "updated_at": "2026-08-16T17:42:46+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.13AAE86B": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "13AAE86B",
+        "url": "https://www.lesswrong.com/posts/eAbuPXbjakop5rSJx/your-agents-are-not-time-aware",
+        "title": "Your Agents Are Not Time Aware",
+        "authors": "Michael Ofengenden, Maksym Andriushchenko",
+        "abstract": "Work done as part of MATS 10 with Maksym Andriushchenko \u2026",
+        "timestamp": "2026-08-18T18:42:18.178Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 382,
+        "object_id": "paper:url.13AAE86B",
+        "created_at": "2026-08-18T18:42:18+00:00",
+        "updated_at": "2026-08-18T18:42:40+00:00",
+        "version": 1
+      }
+    },
+    "paper:url.32084828": {
+      "data": {
+        "sourceId": "url",
+        "paperId": "32084828",
+        "url": "https://nightingal3.github.io/blog/2026/08/09/research-retrospective/",
+        "title": "When We Did Research By Hand \u00b7 Idle Words",
+        "authors": "",
+        "abstract": "",
+        "timestamp": "2026-08-18T18:42:14.496Z",
+        "rating": "novote",
+        "publishedDate": "",
+        "tags": [],
+        "doi": "",
+        "journalName": "",
+        "sourceType": "url"
+      },
+      "meta": {
+        "issue_number": 381,
+        "object_id": "paper:url.32084828",
+        "created_at": "2026-08-18T18:42:14+00:00",
+        "updated_at": "2026-08-18T18:42:37+00:00",
         "version": 1
       }
     }
